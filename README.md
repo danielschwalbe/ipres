@@ -12,9 +12,9 @@ IPRES is a Python library for simulating an improved electoral procedure for the
 
 IPRES simulates an improved proportional electoral procedure: iterative rounds of voting guarantee that a winning party is determined, while the opposition remains proportionally represented. Every constituency is guaranteed a seat in parliament.
 
-A detailed description of the procedure can be found in the [Introduction](docs/source/en/introduction.md) or in the [HTML documentation](docs/build/html/index.html).
+A detailed description of the procedure can be found in the [Introduction](docs/source/en/introduction.md) or in the documentation ([online](https://danielschwalbe.github.io/ipres/) | [local](docs/build/html/index.html)).
 
-**Note**: The HTML documentation must be built once (see [Documentation](#documentation)) and covers both the concepts and the API reference.
+**Note**: The local HTML documentation must be built once (see [Documentation](#documentation)) and covers both the concepts and the API reference.
 
 ---
 
@@ -93,7 +93,11 @@ Build German documentation:
 cd docs && sphinx-build -b html -D language=de source build/html/de
 ```
 
-The finished documentation is located at `docs/build/html/index.html` (English) and `docs/build/html/de/index.html` (German) and can be opened directly in a browser. For the detailed translation workflow see [TRANSLATION.md](TRANSLATION.md).
+The finished documentation is located at `docs/build/html/index.html` (English) and `docs/build/html/de/index.html` (German) and can be opened directly in a browser.
+
+The build process is triggered automatically on every push to the `main` branch. The documentation is therefore always up to date and available online: [English](https://danielschwalbe.github.io/ipres/) | [German](https://danielschwalbe.github.io/ipres/de/).
+
+For the detailed translation workflow see [TRANSLATION.md](TRANSLATION.md).
 
 ### Quick Start
 

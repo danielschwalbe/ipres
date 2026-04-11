@@ -12,9 +12,9 @@ IPRES ist eine Python-Bibliothek zur Simulation eines verbesserten Wahlverfahren
 
 IPRES simuliert ein verbessertes Verhältniswahlverfahren: Durch iterative Wahlgänge wird garantiert eine Gewinnerpartei ermittelt, während die Opposition proportional repräsentiert bleibt. Jeder Wahlkreis ist im Parlament vertreten.
 
-Eine ausführliche Beschreibung des Verfahrens findet sich in der [Einführung](docs/source/de/einfuehrung.md) oder in der [HTML-Dokumentation](docs/build/html/de/index.html).
+Eine ausführliche Beschreibung des Verfahrens findet sich in der [Einführung](docs/source/de/einfuehrung.md) oder in der Dokumentation ([online](https://danielschwalbe.github.io/ipres/de/) | [lokal](docs/build/html/de/index.html)).
 
-**Hinweis**: Die HTML-Dokumentation muss einmalig gebaut werden (siehe [Dokumentation](#dokumentation)) und enthält neben den Konzepten auch die API-Referenz.
+**Hinweis**: Die lokale HTML-Dokumentation muss einmalig gebaut werden (siehe [Dokumentation](#dokumentation)) und enthält neben den Konzepten auch die API-Referenz.
 
 ---
 
@@ -93,7 +93,11 @@ Deutsche Dokumentation bauen:
 cd docs && sphinx-build -b html -D language=de source build/html/de
 ```
 
-Die fertige Dokumentation liegt in `docs/build/html/index.html` (Englisch) bzw. `docs/build/html/de/index.html` (Deutsch) und kann direkt im Browser geöffnet werden. Detaillierter Übersetzungsfluss: [TRANSLATION_de.md](TRANSLATION_de.md)
+Die fertige Dokumentation liegt in `docs/build/html/index.html` (Englisch) bzw. `docs/build/html/de/index.html` (Deutsch) und kann direkt im Browser geöffnet werden.
+
+Der Build-Prozess wird bei jedem Push auf den `main`-Branch automatisch ausgeführt. Die Dokumentation steht daher stets aktuell online zur Verfügung: [Englisch](https://danielschwalbe.github.io/ipres/) | [Deutsch](https://danielschwalbe.github.io/ipres/de/).
+
+Detaillierter Übersetzungsfluss: [TRANSLATION_de.md](TRANSLATION_de.md)
 
 ### Schnellstart
 
