@@ -1,5 +1,7 @@
 🇬🇧 [English](README.md) | 🇩🇪 Deutsch
 
+![Tests](https://github.com/danielschwalbe/ipres/actions/workflows/ci.yml/badge.svg)
+
 # IPRES – Election Simulation
 
 IPRES ist eine Python-Bibliothek zur Simulation eines verbesserten Wahlverfahrens für den Deutschen Bundestag. Sie dient dazu, das Verfahren auf Korrektheit zu testen, Fehler und Inkonsistenzen zu finden und das Verfahren zu demonstrieren.

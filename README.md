@@ -1,5 +1,7 @@
 🇬🇧 English | 🇩🇪 [Deutsch](README_de.md)
 
+![Tests](https://github.com/danielschwalbe/ipres/actions/workflows/ci.yml/badge.svg)
+
 # IPRES – Iterative Proportional Representation Election Simulation
 
 IPRES is a Python library for simulating an improved electoral procedure for the German Bundestag. It is designed to test the procedure for correctness, identify errors and inconsistencies, and demonstrate how it works.
