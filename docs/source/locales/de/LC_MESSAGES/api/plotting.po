@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/plotting.rst:2
+msgid "Plotting Utilities"
+msgstr ""
+
+#: ipres.plotting:1 of
+msgid "Basic pie chart utilities for visualising vote and seat distributions."
+msgstr "Grundlegende Tortendiagramm-Hilfsfunktionen zur Darstellung von Stimmen- und Sitzverteilungen."
+
+#: ipres.plotting.plotSeatPie:1 of
+msgid "Create a pie chart showing absolute seat counts instead of percentages."
+msgstr "Erstellt ein Tortendiagramm mit absoluten Sitzanzahlen statt Prozentwerten."
+
+#: ../../source/api/plotting.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.plotting.plotSeatPie:3 of
+msgid "Seat counts for each contestant."
+msgstr "Sitzanzahlen für jeden Bewerber."
+
+#: ipres.plotting.plotSeatPie:4 of
+msgid "Contestant labels corresponding to each entry in ``seats_arr``."
+msgstr "Bewerberbeschriftungen entsprechend den Einträgen in ``seats_arr``."
+
+#: ipres.plotting.plotSeatPie:5 ipres.plotting.plotSharePie:5 of
+msgid "Chart title."
+msgstr "Diagrammtitel."
+
+#: ../../source/api/plotting.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.plotting.plotSeatPie:7 ipres.plotting.plotSharePie:7 of
+msgid ":class:`matplotlib.figure.Figure`"
+msgstr ":class:`matplotlib.figure.Figure`"
+
+#: ../../source/api/plotting.rst
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.plotting.plotSharePie:1 of
+msgid "Create a pie chart showing vote or seat share as percentages."
+msgstr "Erstellt ein Tortendiagramm mit Stimmen- oder Sitzanteilen als Prozentwerte."
+
+#: ipres.plotting.plotSharePie:3 of
+msgid "Vote or seat counts for each contestant."
+msgstr "Stimmen- oder Sitzanzahlen für jeden Bewerber."
+
+#: ipres.plotting.plotSharePie:4 of
+msgid "Contestant labels corresponding to each entry in ``party_totals``."
+msgstr "Bewerberbeschriftungen entsprechend den Einträgen in ``party_totals``."

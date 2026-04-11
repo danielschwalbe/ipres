@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/de/mandats_zuteilung.md:1
+msgid "Mandatszuteilung"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:3
+msgid ""
+"Nach Abschluss der iterativen Verhältniswahl werden die Parlamentssitze "
+"auf die Parteien verteilt. Das Verfahren unterscheidet zwei Fälle."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:7
+msgid "Fall 1 — Gewinner erhält zugewiesene Mehrheit"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:9
+msgid ""
+"**Bedingung:** Die Gewinnerpartei (oder -koalition) hat die "
+"Parlamentsmehrheitsschwelle *nicht* durch direktes Überschreiten im "
+"letzten Wahlgang erreicht. Das ist der Fall, wenn:"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:11
+msgid ""
+"der Gewinner durch Parteiausscheidung über mehrere Runden oder durch "
+"Losentscheid festgestellt wurde, **oder**"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:12
+msgid ""
+"der Gewinner den Wahlgangschwellenwert (z. B. 52 %) zwar übertroffen hat,"
+" aber unter der Parlamentsmehrheitsschwelle (z. B. 55 %) liegt."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:14
+msgid "**Vorgehen:**"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:16
+msgid ""
+"Der Gewinner erhält genau so viele Sitze, wie zur Parlamentsmehrheit "
+"erforderlich sind (abfragbar über "
+"`ElectionConfig.getParliamentMajoritySeats()`)."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:17
+msgid ""
+"Die verbleibenden Sitze werden proportional auf die **übrigen Parteien** "
+"verteilt – anteilig nach deren Stimmanteil im **ersten Wahlgang** (vor "
+"jeder Koalitionsbildung oder Parteiausscheidung)."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:19
+msgid ""
+"Das Ergebnis des ersten Wahlgangs wird deshalb herangezogen, weil es am "
+"unmittelbarsten dem Wählerwillen entspricht: Alle Parteien traten noch "
+"an, und kein Wähler musste taktisch abstimmen."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:23
+msgid "Fall 2 — Proportionale Verteilung aller Sitze"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:25
+msgid ""
+"**Bedingung:** Der Gewinner hat die Parlamentsmehrheitsschwelle durch "
+"einen eindeutigen Sieg im letzten Wahlgang übertroffen."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:27
+msgid ""
+"**Vorgehen:** Alle Parlamentssitze werden proportional nach dem Ergebnis "
+"des **letzten Wahlgangs** verteilt. Dabei werden Koalitionsstimmen "
+"zusammengezählt."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:31
+msgid "Koalitionen"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:33
+msgid ""
+"Hat eine Koalition Sitze gewonnen, werden diese nach der Gesamtzuteilung "
+"proportional auf die Koalitionsmitglieder aufgeteilt. Als Gewichte dienen"
+" die Stimmgewichte der Mitgliedsparteien aus dem Wahlgang, in dem die "
+"Koalition gebildet wurde."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:37
+msgid "Sitzverteilungsmethode"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:39
+msgid ""
+"Sitze sind unteilbar. Eine rein proportionale Rechnung ergibt in der "
+"Regel gebrochene Zahlen (z. B. „Partei A verdient 12,7 Sitze\"), die auf "
+"ganze Zahlen gerundet werden müssen, ohne dass die Gesamtsumme verändert "
+"wird. Verschiedene Rundungsverfahren behandeln diese Nachkommastellen "
+"unterschiedlich und bevorzugen dabei tendenziell entweder größere oder "
+"kleinere Parteien. Ein solches Verfahren wird Zuteilungsverfahren "
+"genannt."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:41
+msgid ""
+"Für die proportionale Aufteilung (sowohl der Gesamtsitze als auch "
+"innerhalb von Koalitionen) wird ein Zuteilungsverfahren verwendet. Die "
+"Methode wird über den Parameter `seat_distribution_method` in "
+"[`ElectionEvaluator`](../../../src/ipres/election_evaluator.py) "
+"konfiguriert. Zur Auswahl stehen:"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid "Methode"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid "Beschreibung"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid "`SAINTE_LAGUE` *(Standard)*"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid ""
+"Sainte-Laguë/Schepers-Verfahren, auch als Webster-Verfahren bekannt. Wird"
+" beim deutschen Bundestag verwendet. Bevorzugt weder große noch kleine "
+"Parteien."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid "`D_HONDT`"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid ""
+"D'Hondt-Verfahren (höchste Durchschnittswerte). Wird in vielen "
+"europäischen Ländern eingesetzt. Begünstigt leicht größere Parteien."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid "`HARE_NIEMEYER`"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid ""
+"Hare-Niemeyer-Verfahren (größte Reste). Teilt Sitze zunächst nach dem "
+"ganzzahligen Anteil zu und vergibt Restsitze nach dem größten Rest."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:49
+msgid ""
+"Details und Verlinkung auf weiterführende Quellen: siehe "
+"[`SeatDistributionMethod`](globale_konfiguration.md) in der globalen "
+"Konfiguration."
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:53
+msgid "Konfigurationsparameter"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid "Klasse"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid "`seat_distribution_method`"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid "`ElectionEvaluator`"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid "Zuteilungsverfahren (Standard: `SAINTE_LAGUE`)"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid "`parliament_majority_margin`"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid "`ElectionConfig`"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md
+msgid ""
+"Regierungsabstand – bestimmt den Rückgabewert von "
+"`getParliamentMajoritySeats()`"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:62
+msgid "Ausführung in der Simulation"
+msgstr ""
+
+#: ../../source/de/mandats_zuteilung.md:64
+msgid ""
+"Die Klasse [`SeatDistributor`](../../src/ipres/seat_distributor.py) führt"
+" die Mandatszuteilung durch. Sie kann direkt aufgerufen oder implizit "
+"über `ElectionEvaluator.evaluate()` genutzt werden."
+msgstr ""
+

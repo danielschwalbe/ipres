@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/en/seat_allocation.md:1
+msgid "Seat Allocation"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:3
+msgid ""
+"Once the iterative proportional election is complete, parliamentary seats"
+" are distributed among the parties. The procedure distinguishes two "
+"cases."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:7
+msgid "Case 1 — Winner Receives an Assigned Majority"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:9
+msgid ""
+"**Condition:** The winning party (or coalition) did *not* reach the "
+"parliament majority threshold by directly exceeding it in the final "
+"round. This applies when:"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:11
+msgid ""
+"the winner was determined through party elimination across multiple "
+"rounds or by drawing of lots, **or**"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:12
+msgid ""
+"the winner exceeded the ballot threshold (e.g. 52 %) but falls below the "
+"parliament majority threshold (e.g. 55 %)."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:14
+msgid "**Procedure:**"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:16
+msgid ""
+"The winner receives exactly as many seats as are required for a "
+"parliament majority (retrievable via "
+"`ElectionConfig.getParliamentMajoritySeats()`)."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:17
+msgid ""
+"The remaining seats are distributed proportionally among the **other "
+"parties** — based on their vote shares in the **first round** (before any"
+" coalition formation or party elimination)."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:19
+msgid ""
+"The first-round result is used because it most directly reflects the will"
+" of the voters: all parties were still competing, and no voter had to "
+"vote tactically."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:23
+msgid "Case 2 — Proportional Distribution of All Seats"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:25
+msgid ""
+"**Condition:** The winner exceeded the parliament majority threshold "
+"through a clear victory in the final round."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:27
+msgid ""
+"**Procedure:** All parliamentary seats are distributed proportionally "
+"according to the result of the **final round**. Coalition votes are "
+"counted together."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:31
+msgid "Coalitions"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:33
+msgid ""
+"If a coalition has won seats, these are — after the overall allocation — "
+"distributed proportionally among the coalition members. The weights used "
+"are the member parties' vote weights from the round in which the "
+"coalition was formed."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:37
+msgid "Seat Distribution Method"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:39
+msgid ""
+"Seats are indivisible. A purely proportional calculation typically yields"
+" fractional numbers (e.g. \"Party A deserves 12.7 seats\"), which must be"
+" rounded to whole numbers without changing the total. Different rounding "
+"methods treat these fractions differently and tend to favour either "
+"larger or smaller parties. Such a method is called an apportionment "
+"method."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:41
+msgid ""
+"For proportional allocation (both of the total seats and within "
+"coalitions), an apportionment method is applied. The method is configured"
+" via the `seat_distribution_method` parameter in "
+"[`ElectionEvaluator`](../../../src/ipres/election_evaluator.py). The "
+"available options are:"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid "Method"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid "Description"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid "`SAINTE_LAGUE` *(default)*"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid ""
+"Sainte-Laguë/Schepers method, also known as the Webster method. Used by "
+"the German Bundestag. Favours neither large nor small parties."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid "`D_HONDT`"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid ""
+"D'Hondt method (highest averages). Used in many European countries. "
+"Slightly favours larger parties."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid "`HARE_NIEMEYER`"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid ""
+"Hare-Niemeyer method (largest remainder). First allocates seats based on "
+"the integer part of each party's quota, then awards remaining seats to "
+"the parties with the largest remainders."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:49
+msgid ""
+"For links to further references see "
+"[`SeatDistributionMethod`](global_configuration.md) in the global "
+"configuration."
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:53
+msgid "Configuration Parameters"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid "Class"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid "`seat_distribution_method`"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid "`ElectionEvaluator`"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid "Apportionment method (default: `SAINTE_LAGUE`)"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid "`parliament_majority_margin`"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid "`ElectionConfig`"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md
+msgid ""
+"Government margin — determines the return value of "
+"`getParliamentMajoritySeats()`"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:62
+msgid "Execution in the Simulation"
+msgstr ""
+
+#: ../../source/en/seat_allocation.md:64
+msgid ""
+"The class [`SeatDistributor`](../../src/ipres/seat_distributor.py) "
+"performs the seat allocation. It can be called directly or implicitly via"
+" `ElectionEvaluator.evaluate()`."
+msgstr ""
+

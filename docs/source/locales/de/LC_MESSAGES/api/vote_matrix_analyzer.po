@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/vote_matrix_analyzer.rst:2
+msgid "VoteMatrixAnalyzer"
+msgstr ""
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer:1 of
+msgid ""
+"Analyzer for vote matrices, computing relative votes and constituency "
+"importance."
+msgstr "Analysator für Stimmenmatrizen, der relative Stimmen und Wahlkreiswichtigkeit berechnet."
+
+#: ../../source/api/vote_matrix_analyzer.rst
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix of
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.getConstituencyImportanceMatrix:1
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix:3 of
+msgid ""
+"Returns the constituency importance matrix where each entry w_ij "
+"represents the relative importance of constituency i for party j."
+msgstr ""
+"Gibt die Wahlkreiswichtigkeitsmatrix zurück, in der jeder Eintrag w_ij "
+"die relative Wichtigkeit des Wahlkreises i für die Partei j darstellt."
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.getConstituencyImportanceMatrix:4
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix:6 of
+msgid ""
+"The importance is calculated as: w_ij = (M - 1) * r_ij / sum(r_kj for all"
+" k != i)"
+msgstr ""
+"Die Wichtigkeit wird berechnet als: w_ij = (M - 1) * r_ij / sum(r_kj für "
+"alle k != i)"
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.getConstituencyImportanceMatrix:7
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix:9 of
+msgid ""
+"Where: - r_ij is the proportion of votes party j received in constituency"
+" i - M is the total number of constituencies"
+msgstr ""
+"Dabei ist: - r_ij der Anteil der Stimmen, die Partei j in Wahlkreis i "
+"erhalten hat - M die Gesamtanzahl der Wahlkreise"
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.getConstituencyImportanceMatrix:11
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix:13 of
+msgid ""
+"The (M-1) normalization factor ensures that: - w_ij = 1.0 for "
+"constituencies with average importance (uniform distribution) - w_ij > "
+"1.0 for constituencies with above-average importance - w_ij < 1.0 for "
+"constituencies with below-average importance"
+msgstr ""
+"Der Normierungsfaktor (M-1) stellt sicher, dass: - w_ij = 1,0 für "
+"Wahlkreise mit durchschnittlicher Wichtigkeit (Gleichverteilung) - w_ij > "
+"1,0 für Wahlkreise mit überdurchschnittlicher Wichtigkeit - w_ij < 1,0 "
+"für Wahlkreise mit unterdurchschnittlicher Wichtigkeit"
+
+#: ../../source/api/vote_matrix_analyzer.rst
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix of
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.getConstituencyImportanceMatrix:16
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix:23 of
+msgid ""
+"Matrix with constituencies as rows and parties as columns.              "
+"Each element w_ij represents how important constituency i              is"
+" for party j relative to all other constituencies.              Values "
+"around 1.0 indicate average importance."
+msgstr ""
+"Matrix mit Wahlkreisen als Zeilen und Parteien als Spalten. Jedes Element "
+"w_ij gibt an, wie wichtig Wahlkreis i für Partei j im Vergleich zu allen "
+"anderen Wahlkreisen ist. Werte um 1,0 deuten auf durchschnittliche "
+"Wichtigkeit hin."
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.getConstituencyImportanceMatrix:18
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.getRelativeVoteMatrix:9
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix:25 of
+msgid "Matrix with constituencies as rows and parties as columns."
+msgstr "Matrix mit Wahlkreisen als Zeilen und Parteien als Spalten."
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.getConstituencyImportanceMatrix:19
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix:26 of
+msgid ""
+"Each element w_ij represents how important constituency i is for party j "
+"relative to all other constituencies. Values around 1.0 indicate average "
+"importance."
+msgstr ""
+"Jedes Element w_ij gibt an, wie wichtig Wahlkreis i für Partei j im "
+"Vergleich zu allen anderen Wahlkreisen ist. Werte um 1,0 deuten auf "
+"durchschnittliche Wichtigkeit hin."
+
+#: ../../source/api/vote_matrix_analyzer.rst
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix of
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.getRelativeVoteMatrix:1 of
+msgid ""
+"Returns the relative vote matrix where each entry r_ij contains the "
+"proportion of votes that party j received in constituency i."
+msgstr ""
+"Gibt die relative Stimmenmatrix zurück, in der jeder Eintrag r_ij den "
+"Anteil der Stimmen enthält, die Partei j in Wahlkreis i erhalten hat."
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.getRelativeVoteMatrix:4 of
+msgid ""
+"Each row (constituency) sums to 1.0, representing the distribution of "
+"votes within that constituency across all parties."
+msgstr ""
+"Jede Zeile (Wahlkreis) summiert sich auf 1,0 und stellt die "
+"Stimmenverteilung innerhalb dieses Wahlkreises auf alle Parteien dar."
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.getRelativeVoteMatrix:7 of
+msgid ""
+"Matrix with constituencies as rows and parties as columns.              "
+"Each element r_ij = votes_ij / total_votes_in_constituency_i"
+msgstr ""
+"Matrix mit Wahlkreisen als Zeilen und Parteien als Spalten. Jedes Element "
+"r_ij = Stimmen_ij / Gesamtstimmen_im_Wahlkreis_i"
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.getRelativeVoteMatrix:10 of
+msgid "Each element r_ij = votes_ij / total_votes_in_constituency_i"
+msgstr "Jedes Element r_ij = Stimmen_ij / Gesamtstimmen_im_Wahlkreis_i"
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_constituency_importance_matrix:1
+#: of
+msgid "Display the constituency importance matrix as a formatted table."
+msgstr "Zeigt die Wahlkreiswichtigkeitsmatrix als formatierte Tabelle an."
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_constituency_importance_matrix:3
+#: of
+msgid ""
+"Each element w_ij shows the relative importance of constituency i for "
+"party j. Importance is calculated as: w_ij = r_ij / Σ(r_kj for all k ≠ "
+"i)."
+msgstr ""
+"Jedes Element w_ij zeigt die relative Wichtigkeit des Wahlkreises i für "
+"die Partei j. Die Wichtigkeit wird berechnet als: w_ij = r_ij / "
+"Σ(r_kj für alle k ≠ i)."
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_constituency_importance_matrix:6
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_relative_vote_matrix:7 of
+msgid ""
+"If ``True``, return a pandas Styler (HTML-formatted, for notebooks). If "
+"``False``, return a plain DataFrame with interactive display."
+msgstr ""
+"Bei ``True`` wird ein pandas-Styler (HTML-formatiert, für Notebooks) "
+"zurückgegeben. Bei ``False`` wird ein einfacher DataFrame mit interaktiver "
+"Anzeige zurückgegeben."
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_constituency_importance_matrix:8
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_relative_vote_matrix:9 of
+msgid "Number of decimal places for display."
+msgstr "Anzahl der Dezimalstellen für die Anzeige."
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_constituency_importance_matrix:9
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_relative_vote_matrix:10
+#: of
+msgid ""
+"Maximum number of rows shown in the Styler. ``None`` shows all rows. Only"
+" respected when ``styler=True``."
+msgstr ""
+"Maximale Anzahl der im Styler angezeigten Zeilen. ``None`` zeigt alle "
+"Zeilen an. Wird nur berücksichtigt, wenn ``styler=True``."
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_constituency_importance_matrix:12
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_relative_vote_matrix:13
+#: of
+msgid ":class:`pandas.DataFrame` or :class:`pandas.io.formats.style.Styler`"
+msgstr ""
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_constituency_importance_matrix:16
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_relative_vote_matrix:17
+#: of
+msgid ""
+"Without a Styler (``styler=False``), the DataFrame retains the "
+"interactive Jupyter display with scroll options. With ``styler=True``, a "
+"formatted HTML table is returned."
+msgstr ""
+"Ohne Styler (``styler=False``) behält der DataFrame die interaktive "
+"Jupyter-Anzeige mit Scroll-Optionen. Mit ``styler=True`` wird eine "
+"formatierte HTML-Tabelle zurückgegeben."
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_relative_vote_matrix:1 of
+msgid "Display the relative vote matrix as a formatted table."
+msgstr "Zeigt die relative Stimmenmatrix als formatierte Tabelle an."
+
+#: ipres.vote_matrix_analyzer.VoteMatrixAnalyzer.show_relative_vote_matrix:3 of
+msgid ""
+"Each element r_ij shows the proportion of votes that party j received in "
+"constituency i (relative to the total votes in that constituency). Each "
+"row sums to 1.0."
+msgstr ""
+"Jedes Element r_ij zeigt den Anteil der Stimmen, die Partei j in Wahlkreis "
+"i erhalten hat (relativ zu den Gesamtstimmen in diesem Wahlkreis). Jede "
+"Zeile summiert sich auf 1,0."
+
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix:1 of
+msgid "Standalone function for backward compatibility."
+msgstr "Eigenständige Funktion für Abwärtskompatibilität."
+
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix:18 of
+msgid ""
+"DataFrame with constituencies as rows and parties as columns. Each "
+"element r_ij = votes_ij / total_votes_in_constituency_i (rows should sum "
+"to 1.0)"
+msgstr ""
+"DataFrame mit Wahlkreisen als Zeilen und Parteien als Spalten. Jedes "
+"Element r_ij = Stimmen_ij / Gesamtstimmen_im_Wahlkreis_i (Zeilen sollten "
+"sich auf 1,0 summieren)"
+
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix:21 of
+msgid "Absolute votes DataFrame for handling edge cases"
+msgstr "Absoluter Stimmen-DataFrame für die Behandlung von Grenzfällen"
+
+#: ipres.vote_matrix_analyzer.getConstituencyImportanceMatrix:32 of
+msgid "Example"
+msgstr "Beispiel"

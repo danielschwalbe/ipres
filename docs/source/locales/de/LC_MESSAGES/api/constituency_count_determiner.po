@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/constituency_count_determiner.rst:2
+msgid "ConstituencyCountDeterminer"
+msgstr "ConstituencyCountDeterminer"
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer:1 of
+msgid "Determines how many constituencies each party is allocated."
+msgstr "Bestimmt, wie viele Wahlkreise jeder Partei zugeteilt werden."
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer:3 of
+msgid ""
+"This is the second of three evaluation steps performed after a finished "
+"election. It can be used standalone or as part of "
+":class:`~ipres.election_evaluator.ElectionEvaluator`."
+msgstr ""
+"Dies ist der zweite von drei Auswertungsschritten nach einer "
+"abgeschlossenen Wahl. Er kann eigenständig oder als Teil des "
+":class:`~ipres.election_evaluator.ElectionEvaluator` verwendet werden."
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer:6 of
+msgid ""
+"Each party receives approximately half as many constituencies as seats "
+"(``seats // 2``). An integer-division correction is applied to ensure the"
+" total matches the number of constituencies exactly."
+msgstr ""
+"Jede Partei erhält ungefähr halb so viele Wahlkreise wie Sitze "
+"(``seats // 2``). Eine Ganzzahldivisionskorrektur wird angewendet, um "
+"sicherzustellen, dass die Gesamtanzahl exakt der Wahlkreisanzahl entspricht."
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer:10 of
+msgid ""
+"When the election's ``constituency_representation`` is "
+"``GOVERNING_MAJORITY``, only the winning parties are considered; "
+"opposition parties receive zero constituencies. The mode is derived "
+"automatically from "
+"``election.electionConfig.constituency_representation`` inside "
+":meth:`run`."
+msgstr ""
+"Wenn ``constituency_representation`` der Wahl ``GOVERNING_MAJORITY`` ist, "
+"werden nur die Gewinnerparteien berücksichtigt; Oppositionsparteien "
+"erhalten null Wahlkreise. Der Modus wird innerhalb von :meth:`run` "
+"automatisch aus "
+"``election.electionConfig.constituency_representation`` abgeleitet."
+
+#: ../../source/api/constituency_count_determiner.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer:17 of
+msgid ""
+"Strategy for resolving integer-division deficits. When ``None`` "
+"(default), the value is inherited from "
+"``election.electionConfig.quota_correction_strategy``."
+msgstr ""
+"Strategie zur Behebung von Ganzzahldivisionsdefiziten. Bei ``None`` "
+"(Standard) wird der Wert aus "
+"``election.electionConfig.quota_correction_strategy`` übernommen."
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer of
+msgid "type"
+msgstr ""
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer:21 of
+msgid "ipres.election_config.QuotaCorrectionStrategy | None"
+msgstr ""
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer:25 of
+msgid "Optional callback invoked during quota correction."
+msgstr "Optionaler Callback, der während der Quotenkorrektur aufgerufen wird."
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer:27 of
+msgid "callable | None"
+msgstr ""
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer:31 of
+msgid "Pre-built NumPy random generator. Takes precedence over ``seed``."
+msgstr "Vorgefertigter NumPy-Zufallsgenerator. Hat Vorrang vor ``seed``."
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer:33 of
+msgid "numpy.random._generator.Generator | None"
+msgstr ""
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer:37 of
+msgid ""
+"Seed for the random generator used in quota correction. When ``None`` "
+"(default), the value is inherited from ``election.electionConfig.seed``."
+msgstr ""
+"Seed für den bei der Quotenkorrektur verwendeten Zufallsgenerator. Bei "
+"``None`` (Standard) wird der Wert aus ``election.electionConfig.seed`` "
+"übernommen."
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer:40 of
+msgid "int | None"
+msgstr ""
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer.run:1 of
+msgid ""
+"Calculate constituency counts per party and return a party-to-count "
+"mapping."
+msgstr ""
+"Berechnet die Wahlkreisanzahl pro Partei und gibt eine Zuordnung von "
+"Partei zu Anzahl zurück."
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer.run:3 of
+msgid "A finished election with a winner."
+msgstr "Eine abgeschlossene Wahl mit einem Sieger."
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer.run:4 of
+msgid ""
+"Seat distribution as returned by "
+":class:`~ipres.seat_distributor.SeatDistributor`."
+msgstr ""
+"Sitzverteilung, wie von "
+":class:`~ipres.seat_distributor.SeatDistributor` zurückgegeben."
+
+#: ../../source/api/constituency_count_determiner.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.constituency_count_determiner.ConstituencyCountDeterminer.run:6 of
+msgid "Dictionary mapping each party name to its constituency count."
+msgstr "Wörterbuch, das jeden Parteinamen seiner Wahlkreisanzahl zuordnet."
+
+#: ../../source/api/constituency_count_determiner.rst
+msgid "Return type"
+msgstr "Rückgabetyp"

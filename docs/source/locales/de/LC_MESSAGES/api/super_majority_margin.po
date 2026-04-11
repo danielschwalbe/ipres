@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 00:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/super_majority_margin.rst:2
+msgid "Super Majority Margin"
+msgstr ""
+
+#: ipres.super_majority_margin:1 of
+msgid "Simple data class for specifying super majority margin."
+msgstr "Einfache Datenklasse zur Angabe der Supermehrheitsschwelle."
+
+#: ipres.super_majority_margin.MarginUnit:1 of
+msgid "Unit for specifying the super majority margin."
+msgstr "Einheit zur Angabe der Supermehrheitsschwelle."
+
+#: ipres.super_majority_margin.SuperMajorityMargin:1 of
+msgid "Specifies the margin for a super majority, either in percent or seats."
+msgstr "Legt die Schwelle für eine Supermehrheit fest, entweder in Prozent oder in Sitzen."
+
+#: ipres.super_majority_margin.SuperMajorityMargin:3 of
+msgid "The super majority is calculated as 50% + margin."
+msgstr "Die Supermehrheit ergibt sich aus 50 % + Schwelle."
+
+#: ipres.super_majority_margin.SuperMajorityMargin:6 of
+msgid "Examples"
+msgstr "Beispiele"
+
+#: ipres.super_majority_margin.SuperMajorityMargin:7 of
+msgid ""
+"SuperMajorityMargin(5, MarginUnit.PERCENT)  # 55% majority "
+"SuperMajorityMargin(10, MarginUnit.SEATS)   # 50% + 10 seats"
+msgstr ""
+"SuperMajorityMargin(5, MarginUnit.PERCENT)  # 55 % Mehrheit "
+"SuperMajorityMargin(10, MarginUnit.SEATS)   # 50 % + 10 Sitze"
+
+#: ipres.super_majority_margin.SuperMajorityMargin of
+msgid "Parameters"
+msgstr "Parameter"

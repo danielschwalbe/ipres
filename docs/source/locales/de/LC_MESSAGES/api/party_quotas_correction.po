@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/party_quotas_correction.rst:2
+msgid "Party Quotas Correction"
+msgstr ""
+
+#: ipres.party_quotas_correction:1 of
+msgid "Party quotas correction module."
+msgstr "Modul zur Korrektur von Parteiquoten."
+
+#: ipres.party_quotas_correction:3 of
+msgid "This module handles the correction of party quotas to ensure that:"
+msgstr "Dieses Modul behandelt die Korrektur von Parteiquoten, um sicherzustellen, dass:"
+
+#: ipres.party_quotas_correction:4 of
+msgid "sum(quotas) == number_of_constituencies"
+msgstr ""
+
+#: ipres.party_quotas_correction:6 of
+msgid ""
+"The problem arises from integer division: sum(a_i // 2) <= sum(a_i) // 2 "
+"When each party's seats are divided by 2 individually, we lose one quota "
+"for each party with an odd seat count."
+msgstr ""
+"Das Problem entsteht durch ganzzahlige Division: sum(a_i // 2) <= "
+"sum(a_i) // 2. Wenn die Sitze jeder Partei einzeln durch 2 geteilt werden, "
+"geht für jede Partei mit ungerader Sitzanzahl eine Quote verloren."
+
+#: ipres.party_quotas_correction.correct_party_quotas:1 of
+msgid ""
+"Correct party quotas to ensure sum(quotas) == sum(seats) // 2. :param "
+"quotas: Dictionary of base quotas (seats // 2 per party) :param seats: "
+"Dictionary of seat counts per party :param strategy: "
+"QuotaCorrectionStrategy enum value :param callback: Optional callback for"
+" NEGOTIATED strategy :param rng: Optional random number generator for "
+"probabilistic strategies :param seed: Optional seed for creating RNG if "
+"rng is None"
+msgstr ""
+"Korrigiert Parteiquoten, damit sum(quotas) == sum(seats) // 2. :param "
+"quotas: Wörterbuch der Basisquoten (seats // 2 pro Partei) :param seats: "
+"Wörterbuch der Sitzanzahlen pro Partei :param strategy: "
+"QuotaCorrectionStrategy-Enum-Wert :param callback: Optionaler Callback für "
+"die NEGOTIATED-Strategie :param rng: Optionaler Zufallszahlengenerator für "
+"probabilistische Strategien :param seed: Optionaler Seed zur Erstellung des "
+"RNG, wenn rng None ist"
+
+#: ../../source/api/party_quotas_correction.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.party_quotas_correction.correct_party_quotas:9 of
+msgid "Corrected quotas dictionary"
+msgstr "Wörterbuch der korrigierten Quoten"
+
+#: ../../source/api/party_quotas_correction.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ../../source/api/party_quotas_correction.rst
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.party_quotas_correction.select_parties_for_correction:1 of
+msgid "Select which parties with odd seats should receive +1 to their quota."
+msgstr "Wählt aus, welche Parteien mit ungerader Sitzanzahl +1 zu ihrer Quote erhalten sollen."
+
+#: ipres.party_quotas_correction.select_parties_for_correction:3 of
+msgid "Dictionary of parties with odd seat counts"
+msgstr "Wörterbuch der Parteien mit ungerader Sitzanzahl"
+
+#: ipres.party_quotas_correction.select_parties_for_correction:4 of
+msgid "Number of +1 corrections needed"
+msgstr "Anzahl der benötigten +1-Korrekturen"
+
+#: ipres.party_quotas_correction.select_parties_for_correction:5 of
+msgid "QuotaCorrectionStrategy enum value"
+msgstr "QuotaCorrectionStrategy-Enum-Wert"
+
+#: ipres.party_quotas_correction.select_parties_for_correction:6 of
+msgid "Optional callback for NEGOTIATED strategy"
+msgstr "Optionaler Callback für die NEGOTIATED-Strategie"
+
+#: ipres.party_quotas_correction.select_parties_for_correction:7 of
+msgid "Optional random number generator for probabilistic strategies"
+msgstr "Optionaler Zufallszahlengenerator für probabilistische Strategien"
+
+#: ipres.party_quotas_correction.select_parties_for_correction:8 of
+msgid "Optional seed for creating RNG if rng is None"
+msgstr "Optionaler Seed zur Erstellung des RNG, wenn rng None ist"
+
+#: ipres.party_quotas_correction.select_parties_for_correction:10 of
+msgid "List of party names to receive +1"
+msgstr "Liste der Parteinamen, die +1 erhalten"

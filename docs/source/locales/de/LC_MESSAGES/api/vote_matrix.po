@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/vote_matrix.rst:2
+msgid "Vote Matrix"
+msgstr ""
+
+#: ipres.vote_matrix:1 of
+msgid "Vote data container and probabilistic vote-matrix generation engine."
+msgstr "Stimmendaten-Container und Engine zur probabilistischen Stimmenmatrixgenerierung."
+
+#: ipres.vote_matrix.VoteMatrix:1 of
+msgid "Vote data produced by a simulated or real ballot."
+msgstr "Stimmendaten aus einem simulierten oder echten Wahlgang."
+
+#: ipres.vote_matrix.VoteMatrix:3 of
+msgid ""
+"Holds the raw vote counts and the contestant registry for one election "
+"round. Instances are created via :meth:`generate` or directly by passing "
+"``votes`` and ``contestants`` to the constructor."
+msgstr ""
+"Enthält die rohen Stimmenzahlen und die Bewerberregistrierung für einen "
+"Wahlgang. Instanzen werden über :meth:`generate` oder direkt durch "
+"Übergabe von ``votes`` und ``contestants`` an den Konstruktor erstellt."
+
+#: ../../source/api/vote_matrix.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.vote_matrix.VoteMatrix:9 of
+msgid ""
+"DataFrame of vote counts with constituencies as the index and contestant "
+"names as columns."
+msgstr ""
+"DataFrame mit Stimmenzahlen, wobei Wahlkreise als Index und "
+"Bewerbernamen als Spalten dienen."
+
+#: ipres.vote_matrix.VoteMatrix of
+msgid "type"
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix:12 of
+msgid "pandas.core.frame.DataFrame"
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix:16 of
+msgid ""
+"Dict mapping each contestant name to its "
+":class:`~ipres.contestant.Contestant` instance."
+msgstr ""
+"Wörterbuch, das jeden Bewerbernamen seiner "
+":class:`~ipres.contestant.Contestant`-Instanz zuordnet."
+
+#: ipres.vote_matrix.VoteMatrix:19 of
+msgid "dict[str, ipres.contestant.Contestant]"
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.generate:1 of
+msgid ""
+"Generate vote data for a ballot round and return it as a "
+":class:`VoteMatrix`."
+msgstr ""
+"Generiert Stimmendaten für einen Wahlgang und gibt sie als "
+":class:`VoteMatrix` zurück."
+
+#: ipres.vote_matrix.VoteMatrix.generate:3 of
+msgid "Configuration defining constituencies and their sizes."
+msgstr "Konfiguration, die Wahlkreise und ihre Größen definiert."
+
+#: ipres.vote_matrix.VoteMatrix.generate:5 of
+msgid "The contestants competing in the ballot."
+msgstr "Die am Wahlgang teilnehmenden Bewerber."
+
+#: ipres.vote_matrix.VoteMatrix.generate:6 of
+msgid ""
+"Vote-share probabilities for each contestant, either as a mapping of "
+"contestant name to percentage or as a sequence of percentages in the same"
+" order as ``contestants``. Values must be in percent [0, 100] and are "
+"normalised to 100 if needed. If ``None``, shares are drawn uniformly at "
+"random."
+msgstr ""
+"Stimmanteils-Wahrscheinlichkeiten für jeden Bewerber, entweder als "
+"Zuordnung von Bewerbername zu Prozentsatz oder als Folge von Prozentwerten "
+"in derselben Reihenfolge wie ``contestants``. Werte müssen in Prozent "
+"[0, 100] angegeben werden und werden bei Bedarf auf 100 normiert. Bei "
+"``None`` werden Anteile gleichverteilt zufällig gezogen."
+
+#: ipres.vote_matrix.VoteMatrix.generate:11 of
+msgid "NumPy random generator. If ``None``, a fresh default generator is created."
+msgstr "NumPy-Zufallsgenerator. Bei ``None`` wird ein neuer Standardgenerator erstellt."
+
+#: ipres.vote_matrix.VoteMatrix.generate:13 of
+msgid ""
+"Voter turnout for each constituency, either as a mapping of constituency "
+"name to percentage, as a sequence of percentages (same order as "
+"constituencies), or as a single float used as the mean for a Beta-"
+"distributed draw. Values must be in percent [0, 100]. If ``None``, "
+"turnout is drawn from a Beta(2, 2) distribution."
+msgstr ""
+"Wahlbeteiligung für jeden Wahlkreis, entweder als Zuordnung von "
+"Wahlkreisname zu Prozentsatz, als Folge von Prozentwerten (in "
+"Wahlkreisreihenfolge) oder als einzelne Gleitkommazahl, die als Mittelwert "
+"für eine Beta-verteilte Ziehung verwendet wird. Werte müssen in Prozent "
+"[0, 100] angegeben werden. Bei ``None`` wird die Beteiligung aus einer "
+"Beta(2, 2)-Verteilung gezogen."
+
+#: ipres.vote_matrix.VoteMatrix.generate:19 of
+msgid ""
+"Optional pre-computed vote matrix. When provided, random vote generation "
+"is skipped and this matrix is validated and aligned instead. Format: "
+"``index=constituency_names``, ``columns=contestant_names``, "
+"``values=vote_counts``."
+msgstr ""
+"Optionale vorberechnete Stimmenmatrix. Wenn angegeben, wird die zufällige "
+"Stimmengenerierung übersprungen und stattdessen diese Matrix validiert und "
+"ausgerichtet. Format: ``index=Wahlkreisnamen``, ``columns=Bewerbernamen``, "
+"``values=Stimmenzahlen``."
+
+#: ../../source/api/vote_matrix.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.vote_matrix.VoteMatrix.generate:25 of
+msgid "A new :class:`VoteMatrix` with ``_votes`` and ``_contestants`` populated."
+msgstr "Eine neue :class:`VoteMatrix` mit befüllten ``_votes`` und ``_contestants``."
+
+#: ../../source/api/vote_matrix.rst ipres.vote_matrix.VoteMatrix.getContestants
+#: ipres.vote_matrix.VoteMatrix.getVotes of
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.vote_matrix.VoteMatrix.getContestants:1 of
+msgid "Return the contestants dict mapping each name to its Contestant."
+msgstr "Gibt das Bewerber-Wörterbuch zurück, das jeden Namen seinem Bewerber zuordnet."
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentDesc:1 of
+msgid ""
+"Return all contestants with their total vote-share percentages in "
+"descending order."
+msgstr ""
+"Gibt alle Bewerber mit ihren Gesamtstimmanteilen in absteigender "
+"Reihenfolge zurück."
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentDesc:3 of
+msgid "Number of decimal places to round the percentages to."
+msgstr "Anzahl der Dezimalstellen, auf die die Prozentwerte gerundet werden."
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentDesc:5 of
+msgid ""
+"A pandas Series with contestant names as the index and rounded "
+"percentages (float) as values, sorted descending. The sort is stable — "
+"ties preserve the original contestant order."
+msgstr ""
+"Eine pandas-Series mit Bewerbernamen als Index und gerundeten "
+"Prozentwerten (float) als Werte, absteigend sortiert. Die Sortierung ist "
+"stabil – Gleichstände bewahren die ursprüngliche Bewerberreihenfolge."
+
+#: ../../source/api/vote_matrix.rst
+msgid "Raises"
+msgstr "Ausnahmen"
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentDesc:9
+#: ipres.vote_matrix.VoteMatrix.plot_vote_share_pie:10
+#: ipres.vote_matrix.VoteMatrix.show_votes_table:12
+#: ipres.vote_matrix.VoteMatrix.show_votes_table_percent:15 of
+msgid "If no votes are available."
+msgstr "Wenn keine Stimmen verfügbar sind."
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentThreshold:1 of
+msgid ""
+"Return the leading contestants whose cumulative share reaches a given "
+"threshold."
+msgstr ""
+"Gibt die führenden Bewerber zurück, deren kumulierter Anteil einen "
+"bestimmten Schwellenwert erreicht."
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentThreshold:3 of
+msgid ""
+"Builds on :meth:`getContestantsByPercentDesc` and returns the shortest "
+"prefix whose cumulative percentage is ``>= threshold``. If rounding "
+"prevents the threshold from being reached, the full list is returned."
+msgstr ""
+"Baut auf :meth:`getContestantsByPercentDesc` auf und gibt das kürzeste "
+"Präfix zurück, dessen kumulierter Prozentwert ``>= Schwellenwert`` ist. "
+"Wenn Rundung das Erreichen des Schwellenwerts verhindert, wird die "
+"vollständige Liste zurückgegeben."
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentThreshold:7 of
+msgid "Cumulative percentage threshold in [0, 100]."
+msgstr "Kumulierter Prozentwert-Schwellenwert in [0, 100]."
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentThreshold:8 of
+msgid "Number of decimal places passed to :meth:`getContestantsByPercentDesc`."
+msgstr "Anzahl der Dezimalstellen, die an :meth:`getContestantsByPercentDesc` übergeben werden."
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentThreshold:11 of
+msgid ""
+"A pandas Series as described in :meth:`getContestantsByPercentDesc`, "
+"truncated at the first position where the cumulative sum reaches "
+"``threshold``."
+msgstr ""
+"Eine pandas-Series wie in :meth:`getContestantsByPercentDesc` beschrieben, "
+"abgeschnitten an der ersten Stelle, an der die kumulative Summe "
+"``threshold`` erreicht."
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentThreshold:15 of
+msgid "If ``threshold`` is outside [0, 100]."
+msgstr "Wenn ``threshold`` außerhalb von [0, 100] liegt."
+
+#: ipres.vote_matrix.VoteMatrix.getVotes:1 of
+msgid ""
+"Return the raw vote-count DataFrame (index=constituencies, "
+"columns=contestants)."
+msgstr ""
+"Gibt den rohen Stimmenzahl-DataFrame zurück (index=Wahlkreise, "
+"columns=Bewerber)."
+
+#: ipres.vote_matrix.VoteMatrix.plot_vote_share_pie:1 of
+msgid "Visualise the overall vote distribution as a pie chart."
+msgstr "Stellt die Gesamtstimmenverteilung als Tortendiagramm dar."
+
+#: ipres.vote_matrix.VoteMatrix.plot_vote_share_pie:3 of
+msgid ""
+"Optional custom chart title. Defaults to a German-language summary "
+"showing the total vote count."
+msgstr ""
+"Optionaler benutzerdefinierter Diagrammtitel. Standard ist eine "
+"deutschsprachige Zusammenfassung mit der Gesamtstimmenzahl."
+
+#: ipres.vote_matrix.VoteMatrix.plot_vote_share_pie:5 of
+msgid ""
+"Minimum share threshold in percent. Contestants below this are grouped as"
+" \"Sonstige\" (default: 1.0%)."
+msgstr ""
+"Mindeststimmenanteil in Prozent. Bewerber darunter werden als „Sonstige" "
+"zusammengefasst (Standard: 1,0 %)."
+
+#: ipres.vote_matrix.VoteMatrix.plot_vote_share_pie:8 of
+msgid "matplotlib.figure.Figure"
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table:1 of
+msgid "Return the raw vote-count matrix as a DataFrame or styled table."
+msgstr "Gibt die rohe Stimmenzahlmatrix als DataFrame oder gestaltete Tabelle zurück."
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table:3 of
+msgid ""
+"If ``True``, return a pandas Styler with thousands separators and a "
+"caption, suitable for Jupyter/HTML output. If ``False`` (default), return"
+" the plain DataFrame."
+msgstr ""
+"Bei ``True`` wird ein pandas-Styler mit Tausendertrennzeichen und "
+"Beschriftung zurückgegeben, geeignet für Jupyter-/HTML-Ausgabe. Bei "
+"``False`` (Standard) wird der einfache DataFrame zurückgegeben."
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table:6 of
+msgid ""
+"If ``True``, also print the table to stdout via ``print()``. Only "
+"effective when ``styler=False``."
+msgstr ""
+"Bei ``True`` wird die Tabelle zusätzlich über ``print()`` auf der "
+"Standardausgabe ausgegeben. Nur wirksam, wenn ``styler=False``."
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table:9
+#: ipres.vote_matrix.VoteMatrix.show_votes_table_percent:12 of
+msgid ""
+"pandas.DataFrame or pandas.io.formats.style.Styler depending on "
+"``styler``."
+msgstr ""
+"pandas.DataFrame oder pandas.io.formats.style.Styler, je nach ``styler``."
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table_percent:1 of
+msgid "Return the vote-count matrix as row-wise percentages."
+msgstr "Gibt die Stimmenzahlmatrix als zeilenweise Prozentwerte zurück."
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table_percent:3 of
+#, python-format
+msgid ""
+"Each row is normalised to 100% so the values represent each contestant's "
+"share within a single constituency."
+msgstr ""
+"Jede Zeile wird auf 100 % normiert, sodass die Werte den Anteil jedes "
+"Bewerbers innerhalb eines einzelnen Wahlkreises darstellen."
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table_percent:6 of
+msgid ""
+"If ``True``, return a pandas Styler with percentage formatting and a "
+"caption. If ``False`` (default), return the plain DataFrame of float "
+"percentages."
+msgstr ""
+"Bei ``True`` wird ein pandas-Styler mit Prozentformatierung und "
+"Beschriftung zurückgegeben. Bei ``False`` (Standard) wird der einfache "
+"DataFrame mit Gleitkomma-Prozentwerten zurückgegeben."
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table_percent:9 of
+msgid "Number of decimal places for rounding and display formatting."
+msgstr "Anzahl der Dezimalstellen für Rundung und Anzeigeformatierung."

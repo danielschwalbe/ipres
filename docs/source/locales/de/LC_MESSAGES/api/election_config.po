@@ -1,0 +1,496 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/election_config.rst:2
+msgid "Election Configuration"
+msgstr ""
+
+#: ipres.election_config.ConstituencyRepresentation:1 of
+msgid "Determines how constituencies are represented in parliament."
+msgstr "Bestimmt wie Wahlkreise im Parlament repräsentiert werden."
+
+#: ipres.election_config.ConstituencyRepresentation:3 of
+msgid ""
+"ENTIRE_PARLIAMENT: Constituencies are represented across the entire "
+"parliament (not exclusively by the government majority). Total seats = 2 "
+"* number_of_constituencies."
+msgstr ""
+"Wahlkreise werden durch das gesamte Parlament repräsentiert (nicht nur "
+"durch die Regierungsfraktion). Anzahl Parlamentssitze = 2 * Anzahl der "
+"Wahlkreise."
+
+#: ipres.election_config.ConstituencyRepresentation:6 of
+msgid ""
+"GOVERNING_MAJORITY: Constituencies are represented exclusively by the "
+"government majority. Size of the government majority = 2 * "
+"number_of_constituencies. Parliament size is adjusted accordingly."
+msgstr ""
+"Wahlkreise werden durch die Regierungsfraktion repräsentiert. Größe der "
+"Regierungsfraktion = 2 * Anzahl Wahlkreise. Die Parlamentsgröße wird "
+"entsprechend angepasst."
+
+#: ipres.election_config.ElectionConfig:1 of
+msgid "Immutable configuration for an election simulation."
+msgstr "Unveränderliche Konfiguration für eine Wahlsimulation."
+
+#: ipres.election_config.ElectionConfig:3 of
+msgid ""
+"Defines all parameters needed to run an election: constituencies, "
+"participating parties, the government majority threshold, tie-breaking "
+"strategy, and an optional random seed."
+msgstr ""
+"Definiert alle Parameter zur Durchführung einer Wahl: Wahlkreise, "
+"teilnehmende Parteien, die Regierungsmehrheitsschwelle, die "
+"Gleichstandsauflösungsstrategie und einen optionalen Zufalls-Seed."
+
+#: ipres.election_config.ElectionConfig:7 of
+msgid ""
+"The total number of parliamentary seats is derived automatically from the"
+" number of constituencies and the chosen constituency representation "
+"mode."
+msgstr ""
+"Die Gesamtzahl der Parlamentssitze ergibt sich automatisch aus der Anzahl "
+"der Wahlkreise und dem gewählten Wahlkreisrepräsentationsmodus."
+
+#: ../../source/api/election_config.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.election_config.ElectionConfig:12 of
+msgid "Electoral district definitions (names, sizes, turnout rates)."
+msgstr "Wahlkreisdefinitionen (Namen, Größen, Wahlbeteiligungsraten)."
+
+#: ipres.election_config.ElectionConfig of
+msgid "type"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:15 of
+msgid "ipres.constituencies_config.ConstituenciesConfig"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:19 of
+msgid "Names of parties competing in the election."
+msgstr "Namen der an der Wahl teilnehmenden Parteien."
+
+#: ipres.election_config.ElectionConfig:21 of
+msgid "list[str]"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:25 of
+#, python-format
+msgid ""
+"How many percentage points (or seats) above 50% the winning coalition "
+"must hold in parliament for stable governance. Defaults to 5% (i.e., a "
+"55% seat threshold)."
+msgstr ""
+"Wie viele Prozentpunkte (oder Sitze) über 50 % die Gewinnerkoalition im "
+"Parlament für stabile Regierungsführung halten muss. Standard: 5 % "
+"(d. h. eine Sitzschwelle von 55 %)."
+
+#: ipres.election_config.ElectionConfig:29
+#: ipres.election_config.ElectionConfig:37 of
+msgid "ipres.super_majority_margin.SuperMajorityMargin"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:33 of
+msgid ""
+"How many percentage points above 50% a contestant must receive in a "
+"single election round to be declared the winner of that round. Defaults "
+"to 2% (i.e., a 52% threshold)."
+msgstr ""
+"Wie viele Prozentpunkte über 50 % ein Bewerber in einem einzelnen "
+"Wahlgang erhalten muss, um als Sieger dieses Wahlgangs erklärt zu werden. "
+"Standard: 2 % (d. h. eine Schwelle von 52 %)."
+
+#: ipres.election_config.ElectionConfig:41 of
+msgid "How to break ties during seat allocation. Defaults to RANDOM."
+msgstr "Wie Gleichstände bei der Sitzzuweisung aufgelöst werden. Standard: RANDOM."
+
+#: ipres.election_config.ElectionConfig:44 of
+msgid "ipres.election_round.DrawLotsStrategy"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:48 of
+msgid ""
+"Optional integer seed for the random number generator. Use for "
+"reproducible simulations."
+msgstr ""
+"Optionaler ganzzahliger Seed für den Zufallszahlengenerator. Für "
+"reproduzierbare Simulationen verwenden."
+
+#: ipres.election_config.ElectionConfig:51 of
+msgid "int | None"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:55 of
+msgid ""
+"Controls how constituency seats are distributed. Defaults to "
+"ENTIRE_PARLIAMENT (proportional across all parties). Use "
+"GOVERNING_MAJORITY to assign all constituency seats to the winning party "
+"or coalition."
+msgstr ""
+"Steuert die Verteilung der Wahlkreissitze. Standard: ENTIRE_PARLIAMENT "
+"(proportional auf alle Parteien). Mit GOVERNING_MAJORITY werden alle "
+"Wahlkreissitze der Gewinnerpartei oder -koalition zugewiesen."
+
+#: ipres.election_config.ElectionConfig:60 of
+msgid "ipres.election_config.ConstituencyRepresentation"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:64 of
+msgid ""
+"Controls the display language for tables and charts. Use ``Language.DE`` "
+"(default) for German output or ``Language.EN`` for English. Affects "
+"column headers, captions, chart titles, and number formatting in all "
+"visualization and tabulation methods."
+msgstr ""
+"Steuert die Anzeigesprache für Tabellen und Diagramme. ``Language.DE`` "
+"(Standard) für deutsche Ausgabe, ``Language.EN`` für Englisch. Betrifft "
+"Spaltenköpfe, Beschriftungen, Diagrammtitel und Zahlenformatierung in "
+"allen Visualisierungs- und Tabelliermethoden."
+
+#: ipres.election_config.ElectionConfig:69 of
+msgid "ipres.election_config.Language"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:73 of
+msgid ""
+"Default apportionment method used by "
+":class:`~ipres.seat_distributor.SeatDistributor` and "
+":class:`~ipres.election_evaluator.ElectionEvaluator` when no override is "
+"provided (default: ``SAINTE_LAGUE``)."
+msgstr ""
+"Standard-Verteilungsverfahren, das von "
+":class:`~ipres.seat_distributor.SeatDistributor` und "
+":class:`~ipres.election_evaluator.ElectionEvaluator` verwendet wird, wenn "
+"keine Überschreibung angegeben ist (Standard: ``SAINTE_LAGUE``)."
+
+#: ipres.election_config.ElectionConfig:78 of
+msgid "ipres.election_config.SeatDistributionMethod"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:82 of
+msgid ""
+"Default quota-correction strategy used by "
+":class:`~ipres.constituency_count_determiner.ConstituencyCountDeterminer`"
+" and :class:`~ipres.election_evaluator.ElectionEvaluator` when no "
+"override is provided (default: ``FAVOR_LARGE_PARTIES``)."
+msgstr ""
+"Standard-Quotenkorrekturstrategie, die von "
+":class:`~ipres.constituency_count_determiner.ConstituencyCountDeterminer`"
+" und :class:`~ipres.election_evaluator.ElectionEvaluator` verwendet wird, "
+"wenn keine Überschreibung angegeben ist "
+"(Standard: ``FAVOR_LARGE_PARTIES``)."
+
+#: ipres.election_config.ElectionConfig:87 of
+msgid "ipres.election_config.QuotaCorrectionStrategy"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:91 of
+msgid ""
+"Default constituency-assignment algorithm used by "
+":class:`~ipres.constituency_assigner.ConstituencyAssigner` and "
+":class:`~ipres.election_evaluator.ElectionEvaluator` when no override is "
+"provided (default: ``OPTIMAL``)."
+msgstr ""
+"Standard-Wahlkreiszuweisungsalgorithmus, der von "
+":class:`~ipres.constituency_assigner.ConstituencyAssigner` und "
+":class:`~ipres.election_evaluator.ElectionEvaluator` verwendet wird, wenn "
+"keine Überschreibung angegeben ist (Standard: ``OPTIMAL``)."
+
+#: ipres.election_config.ElectionConfig:96 of
+msgid "ipres.allocation.ConstituencyAllocationMethod"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:99 of
+msgid "Example"
+msgstr "Beispiel"
+
+#: ipres.election_config.ElectionConfig.getBallotMajorityPercent:1 of
+msgid ""
+"Vote-share threshold (in percent) a contestant must exceed to win a "
+"single round."
+msgstr ""
+"Stimmanteilsschwelle (in Prozent), die ein Bewerber überschreiten muss, "
+"um einen einzelnen Wahlgang zu gewinnen."
+
+#: ../../source/api/election_config.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.election_config.ElectionConfig.getBallotMajorityPercent:3 of
+msgid "50.0 + ballot margin in percent (e.g., 52.0 for a 2% margin)."
+msgstr "50,0 + Wahlgangsmarge in Prozent (z. B. 52,0 bei einer Marge von 2 %)."
+
+#: ../../source/api/election_config.rst
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.election_config.ElectionConfig.getParliamentMajorityPercent:1 of
+msgid "Parliament majority threshold in percent."
+msgstr "Parlamentsmehrheitsschwelle in Prozent."
+
+#: ipres.election_config.ElectionConfig.getParliamentMajorityPercent:3 of
+msgid "50.0 + parliamentMajorityMarginPercent (e.g., 55.0 for a 5% margin)."
+msgstr "50,0 + parlamentMajorityMarginPercent (z. B. 55,0 bei einer Marge von 5 %)."
+
+#: ipres.election_config.ElectionConfig.getParliamentMajoritySeats:1 of
+msgid "Parliament majority threshold in seats."
+msgstr "Parlamentsmehrheitsschwelle in Sitzen."
+
+#: ipres.election_config.ElectionConfig.getParliamentMajoritySeats:3 of
+msgid ""
+"Minimum number of seats needed for a parliament majority, rounded up: "
+"ceil(getParliamentMajorityPercent() * parliamentarySeats / 100)."
+msgstr ""
+"Mindestsitzanzahl für eine Parlamentsmehrheit, aufgerundet: "
+"ceil(getParliamentMajorityPercent() * parliamentarySeats / 100)."
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginPercent:1 of
+msgid "Parliament majority margin in percent, regardless of how it was specified."
+msgstr "Parlamentsmehrheitsmarge in Prozent, unabhängig von der Angabeart."
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginPercent:3 of
+msgid "If the margin was specified in seats, converts using:"
+msgstr "Wenn die Marge in Sitzen angegeben wurde, erfolgt die Umrechnung mit:"
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginPercent:4 of
+msgid "margin_percent = 100.0 * margin_seats / parliamentarySeats"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginPercent:6 of
+msgid "Margin above 50% as a float (e.g., 5.0 for a 55% threshold)."
+msgstr "Marge über 50 % als Gleitkommazahl (z. B. 5,0 für eine Schwelle von 55 %)."
+
+#: ../../source/api/election_config.rst
+msgid "Raises"
+msgstr "Ausnahmen"
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginPercent:8 of
+msgid ""
+"If parliamentarySeats is not positive (only relevant     when the margin "
+"was specified in seats)."
+msgstr ""
+"Wenn parliamentarySeats nicht positiv ist (nur relevant, wenn die Marge "
+"in Sitzen angegeben wurde)."
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginSeats:1 of
+msgid "Parliament majority margin in seats, regardless of how it was specified."
+msgstr "Parlamentsmehrheitsmarge in Sitzen, unabhängig von der Angabeart."
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginSeats:3 of
+msgid "If the margin was specified in percent, converts using:"
+msgstr "Wenn die Marge in Prozent angegeben wurde, erfolgt die Umrechnung mit:"
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginSeats:4 of
+msgid "margin_seats = ceil(parliamentarySeats * margin_percent / 100.0)"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginSeats:6 of
+msgid "Margin above half of all seats, rounded up."
+msgstr "Marge über die Hälfte aller Sitze, aufgerundet."
+
+#: ipres.election_config.ElectionConfig.parliamentMajoritySpecificationUnit:1
+#: of
+msgid ""
+"The unit (PERCENT or SEATS) used when specifying the parliament majority "
+"margin."
+msgstr ""
+"Die Einheit (PERCENT oder SEATS), in der die Parlamentsmehrheitsmarge "
+"angegeben wurde."
+
+#: ipres.election_config.ElectionConfig.parliamentarySeats:1 of
+msgid "Total number of seats in parliament."
+msgstr "Gesamtanzahl der Parlamentssitze."
+
+#: ipres.election_config.ElectionConfig.parliamentarySeats:3 of
+msgid ""
+"Computed from the number of constituencies and the constituency "
+"representation mode:"
+msgstr ""
+"Berechnet aus der Anzahl der Wahlkreise und dem Wahlkreisrepräsentationsmodus:"
+
+#: ipres.election_config.ElectionConfig.parliamentarySeats:6 of
+msgid "ENTIRE_PARLIAMENT: constituencies * 2"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentarySeats:7 of
+msgid ""
+"GOVERNING_MAJORITY: chosen so that getParliamentMajoritySeats() equals 2 "
+"* number_of_constituencies."
+msgstr ""
+"GOVERNING_MAJORITY: so gewählt, dass getParliamentMajoritySeats() dem "
+"Wert 2 * Anzahl_der_Wahlkreise entspricht."
+
+#: ipres.election_config.Language:1 of
+msgid ""
+"Language used for display output (table captions, column headers, chart "
+"titles)."
+msgstr ""
+"Sprache für die Ausgabe (Tabellenbeschriftungen, Spaltenköpfe, "
+"Diagrammtitel)."
+
+#: ipres.election_config.Language:3 of
+msgid "DE: German (default — preserves backward compatibility)"
+msgstr "DE: Deutsch (Standard — gewährleistet Abwärtskompatibilität)"
+
+#: ipres.election_config.Language:4 of
+msgid "EN: English"
+msgstr "EN: Englisch"
+
+#: ipres.election_config.QuotaCorrectionStrategy:1 of
+msgid "Enumeration of strategies for correcting party quotas."
+msgstr "Aufzählung der Strategien zur Korrektur von Parteiquoten."
+
+#: ipres.election_config.QuotaCorrectionStrategy:3 of
+msgid ""
+"When calculating party quotas as seats//2, integer division loses one "
+"quota for each party with odd seat count. This creates a deficit: "
+"sum(seats[i]//2) < sum(seats)//2"
+msgstr ""
+"Bei der Berechnung von Parteiquoten als seats//2 geht durch ganzzahlige "
+"Division für jede Partei mit ungerader Sitzanzahl eine Quote verloren. "
+"Das erzeugt ein Defizit: sum(seats[i]//2) < sum(seats)//2"
+
+#: ipres.election_config.QuotaCorrectionStrategy:7 of
+msgid ""
+"These strategies determine which parties with odd seats receive +1 to "
+"their quota to ensure: sum(quotas) == number_of_constituencies"
+msgstr ""
+"Diese Strategien bestimmen, welche Parteien mit ungerader Sitzanzahl +1 "
+"zu ihrer Quote erhalten, um sicherzustellen: "
+"sum(quotas) == Anzahl_der_Wahlkreise"
+
+#: ipres.election_config.QuotaCorrectionStrategy:10 of
+msgid "FAVOR_SMALL_PARTIES: Prioritize smallest parties (by seat count)"
+msgstr "FAVOR_SMALL_PARTIES: Bevorzuge kleinste Parteien (nach Sitzanzahl)"
+
+#: ipres.election_config.QuotaCorrectionStrategy:11 of
+msgid "FAVOR_LARGE_PARTIES: Prioritize largest parties (by seat count)"
+msgstr "FAVOR_LARGE_PARTIES: Bevorzuge größte Parteien (nach Sitzanzahl)"
+
+#: ipres.election_config.QuotaCorrectionStrategy:12 of
+msgid "PROPORTIONAL: Weighted random, probability proportional to seat count"
+msgstr "PROPORTIONAL: Gewichteter Zufall, Wahrscheinlichkeit proportional zur Sitzanzahl"
+
+#: ipres.election_config.QuotaCorrectionStrategy:13 of
+msgid ""
+"PROPORTIONAL_REVERSED: Weighted random, probabilities reversed (small "
+"parties favored)"
+msgstr ""
+"PROPORTIONAL_REVERSED: Gewichteter Zufall, Wahrscheinlichkeiten "
+"umgekehrt (kleine Parteien bevorzugt)"
+
+#: ipres.election_config.QuotaCorrectionStrategy:14 of
+msgid "RANDOM: Uniform random selection among parties with odd seats"
+msgstr "RANDOM: Gleichmäßige Zufallsauswahl unter Parteien mit ungerader Sitzanzahl"
+
+#: ipres.election_config.QuotaCorrectionStrategy:15 of
+msgid "NEGOTIATED: External callback determines which parties receive +1"
+msgstr "NEGOTIATED: Externer Callback bestimmt, welche Parteien +1 erhalten"
+
+#: ipres.election_config.SeatDistributionMethod:1 of
+msgid "Enumeration of seat distribution methods for proportional representation."
+msgstr "Aufzählung der Sitzverteilungsverfahren für die Verhältniswahl."
+
+#: ipres.election_config.SeatDistributionMethod:3 of
+msgid ""
+"SAINTE_LAGUE: Sainte-Laguë/Schepers method (used by German Bundestag). "
+"See `Wikipedia — Sainte-Laguë method <https://en.wikipedia.org/wiki"
+"/Sainte-Lagu%C3%AB_method>`_."
+msgstr ""
+"SAINTE_LAGUE: Sainte-Laguë-/Schepers-Verfahren (verwendet im deutschen "
+"Bundestag). Siehe `Wikipedia — Sainte-Laguë-Verfahren <https://de.wikipedia.org/wiki"
+"/Sainte-Lagu%C3%AB-Verfahren>`_."
+
+#: ipres.election_config.SeatDistributionMethod:5 of
+msgid ""
+"D_HONDT: D'Hondt method (used in many European countries). See `Wikipedia"
+" — D'Hondt method <https://en.wikipedia.org/wiki/D%27Hondt_method>`_."
+msgstr ""
+"D_HONDT: D'Hondt-Verfahren (in vielen europäischen Ländern gebräuchlich). "
+"Siehe `Wikipedia — D'Hondt-Verfahren <https://de.wikipedia.org/wiki"
+"/D%E2%80%99Hondt-Verfahren>`_."
+
+#: ipres.election_config.SeatDistributionMethod:7 of
+msgid ""
+"HARE_NIEMEYER: Hare-Niemeyer method (largest remainder method). See "
+"`Wikipedia — Largest remainder method "
+"<https://en.wikipedia.org/wiki/Largest_remainder_method>`_."
+msgstr ""
+"HARE_NIEMEYER: Hare-Niemeyer-Verfahren (Methode des größten Restes). "
+"Siehe `Wikipedia — Hare-Niemeyer-Verfahren "
+"<https://de.wikipedia.org/wiki/Hare-Niemeyer-Verfahren>`_."
+
+#~ msgid ""
+#~ "How many percentage points (or seats)"
+#~ " above 50% a party needs for a"
+#~ " government majority. Defaults to 5% "
+#~ "(i.e., a 55% threshold)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Controls how constituency seats are "
+#~ "distributed. Defaults to ENTIRE_PARLIAMENT "
+#~ "(proportional across all parties). Use "
+#~ "GOVERNING_MAJORITY to assign all constituency"
+#~ " seats to the winning party."
+#~ msgstr ""
+
+#~ msgid "Government majority threshold in percent."
+#~ msgstr ""
+
+#~ msgid "Government majority threshold in seats."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Minimum number of seats needed for "
+#~ "a government majority, rounded up: "
+#~ "ceil(getParliamentMajorityPercent() * parliamentarySeats"
+#~ " / 100)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Government majority margin in percent, "
+#~ "regardless of how it was specified."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Government majority margin in seats, "
+#~ "regardless of how it was specified."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The unit (PERCENT or SEATS) used "
+#~ "when specifying the government majority "
+#~ "margin."
+#~ msgstr ""
+
+#~ msgid "SAINTE_LAGUE: Sainte-Laguë/Schepers method (used by German Bundestag)"
+#~ msgstr ""
+
+#~ msgid "D_HONDT: D'Hondt method (used in many European countries)"
+#~ msgstr ""
+
+#~ msgid "HARE_NIEMEYER: Hare-Niemeyer method (largest remainder method)"
+#~ msgstr ""

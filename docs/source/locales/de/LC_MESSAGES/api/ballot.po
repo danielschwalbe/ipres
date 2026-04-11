@@ -1,0 +1,454 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/ballot.rst:2
+msgid "Ballot"
+msgstr ""
+
+#: ipres.ballot:1 of
+msgid "Ballot round execution and result evaluation for multi-round elections."
+msgstr "Ausführung von Wahlgängen und Ergebnisauswertung für Mehrrundenabstimmungen."
+
+#: ipres.ballot.Ballot:1 of
+msgid "A single voting round in an iterative election, decided by actual votes."
+msgstr "Ein einzelner Wahlgang in einer iterativen Wahl, entschieden durch echte Stimmen."
+
+#: ipres.ballot.Ballot:3 of
+msgid ""
+"Instances are created exclusively via :meth:`Ballot.run`. Each completed "
+"ballot registers itself with the parent :class:`~ipres.election.Election`"
+" and, if no winner was found, stores a ready-to-use "
+":class:`~ipres.election_round.ElectionRoundInput` for the next round."
+msgstr ""
+"Instanzen werden ausschließlich über :meth:`Ballot.run` erstellt. Jeder "
+"abgeschlossene Wahlgang registriert sich bei der übergeordneten "
+":class:`~ipres.election.Election` und speichert, falls kein Sieger "
+"gefunden wurde, einen einsatzbereiten "
+":class:`~ipres.election_round.ElectionRoundInput` für die nächste Runde."
+
+#: ipres.ballot.Ballot:8 of
+msgid ""
+":meth:`getContestantsVotesAfterPossibleCoalitions` reads directly from "
+"the ballot's :class:`~ipres.vote_matrix.VoteMatrix`. Compare this with "
+":class:`~ipres.draw_of_lots.DrawOfLots`, which delegates to the previous "
+"round."
+msgstr ""
+":meth:`getContestantsVotesAfterPossibleCoalitions` liest direkt aus der "
+":class:`~ipres.vote_matrix.VoteMatrix` des Wahlgangs. Im Vergleich dazu "
+"delegiert :class:`~ipres.draw_of_lots.DrawOfLots` an die vorherige Runde."
+
+#: ../../source/api/ballot.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.ballot.Ballot:14 of
+msgid "The input that produced this ballot."
+msgstr "Der Input, der diesen Wahlgang erzeugt hat."
+
+#: ipres.ballot.Ballot of
+msgid "type"
+msgstr ""
+
+#: ipres.ballot.Ballot:16 of
+msgid "ipres.election_round.ElectionRoundInput"
+msgstr ""
+
+#: ipres.ballot.Ballot:20 of
+msgid ""
+"Current contestants, reflecting any coalitions formed after :meth:`run` "
+"completed."
+msgstr ""
+"Aktuelle Bewerber, einschließlich aller nach Abschluss von :meth:`run` "
+"gebildeten Koalitionen."
+
+#: ipres.ballot.Ballot:23 of
+msgid "dict[str, ipres.contestant.Contestant]"
+msgstr ""
+
+#: ipres.ballot.Ballot:27 ipres.ballot.Ballot.vote_matrix:1 of
+msgid "The vote data collected in this round."
+msgstr "Die in dieser Runde erfassten Stimmendaten."
+
+#: ipres.ballot.Ballot:29 of
+msgid "ipres.vote_matrix.VoteMatrix"
+msgstr ""
+
+#: ipres.ballot.Ballot:33 of
+msgid "The winning contestant, or ``None`` if no winner was found."
+msgstr "Der siegreiche Bewerber oder ``None``, wenn kein Sieger gefunden wurde."
+
+#: ipres.ballot.Ballot:35 of
+msgid "ipres.contestant.Contestant | None"
+msgstr ""
+
+#: ipres.ballot.Ballot:39 of
+msgid ""
+"Pre-built input for the next round, or ``None`` if the election is "
+"finished."
+msgstr ""
+"Vorgefertigter Input für die nächste Runde oder ``None``, wenn die Wahl "
+"abgeschlossen ist."
+
+#: ipres.ballot.Ballot:42 of
+msgid "ipres.election_round.ElectionRoundInput | None"
+msgstr ""
+
+#: ipres.ballot.Ballot.formCoalition:1 of
+msgid "Form a coalition from existing contestants in this round."
+msgstr "Bildet eine Koalition aus bestehenden Bewerbern in dieser Runde."
+
+#: ipres.ballot.Ballot.formCoalition:3 of
+msgid ""
+"Replaces the given contestants with a single new coalition contestant and"
+" re-evaluates the round result. Vote weights for the coalition are "
+"proportional to each member's original ballot votes."
+msgstr ""
+"Ersetzt die gegebenen Bewerber durch einen einzelnen neuen "
+"Koalitions-Bewerber und wertet das Rundenergebnis neu aus. "
+"Stimmgewichte für die Koalition sind proportional zu den ursprünglichen "
+"Wahlgangstimmen jedes Mitglieds."
+
+#: ipres.ballot.Ballot.formCoalition:7 of
+msgid ""
+"Members may be single parties, coalitions from a previous round, or "
+"coalitions formed within the current round. Arbitrary nesting is "
+"permitted."
+msgstr ""
+"Mitglieder können Einzelparteien, Koalitionen aus einer vorherigen Runde "
+"oder innerhalb der aktuellen Runde gebildete Koalitionen sein. Beliebige "
+"Verschachtelung ist erlaubt."
+
+#: ipres.ballot.Ballot.formCoalition:10 of
+msgid "Display name for the new coalition."
+msgstr "Anzeigename der neuen Koalition."
+
+#: ipres.ballot.Ballot.formCoalition:11 of
+msgid ""
+"The contestants to merge, given either as "
+":class:`~ipres.contestant.Contestant` objects or as their names."
+msgstr ""
+"Die zusammenzuführenden Bewerber, entweder als "
+":class:`~ipres.contestant.Contestant`-Objekte oder als ihre Namen."
+
+#: ../../source/api/ballot.rst
+msgid "Raises"
+msgstr "Ausnahmen"
+
+#: ipres.ballot.Ballot.formCoalition:14 of
+msgid ""
+"If any contestant is not part of this round, or if the     coalition "
+"would include all contestants and no party has been     eliminated since "
+"the first round."
+msgstr ""
+"Wenn ein Bewerber nicht zu dieser Runde gehört, oder wenn die Koalition "
+"alle Bewerber umfassen würde und seit der ersten Runde keine Partei "
+"ausgeschieden ist."
+
+#: ../../source/api/ballot.rst ipres.ballot.Ballot.getBallotMajorityPercent
+#: ipres.ballot.Ballot.getContestants ipres.ballot.Ballot.getDrawLotsStrategy
+#: ipres.ballot.Ballot.getElection ipres.ballot.Ballot.getFirstRound
+#: ipres.ballot.Ballot.getNextRoundInput
+#: ipres.ballot.Ballot.getOriginalContestants
+#: ipres.ballot.Ballot.getParticipatingParties
+#: ipres.ballot.Ballot.getPreviousRound ipres.ballot.Ballot.getRoundNumber
+#: ipres.ballot.Ballot.getWinner ipres.ballot.Ballot.hasNext
+#: ipres.ballot.Ballot.hasWinner
+#: ipres.ballot.Ballot.needsDecisionByLotInNextRound
+#: ipres.ballot.Ballot.resetCoalitions ipres.ballot.Ballot.wasDecidedByLot of
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.ballot.Ballot.getBallotMajorityPercent:1 of
+msgid "Return the vote-share threshold (in percent) required to win this round."
+msgstr "Gibt die Stimmanteils-Schwelle (in Prozent) zurück, die zum Gewinn dieser Runde erforderlich ist."
+
+#: ipres.ballot.Ballot.getContestants:1 of
+msgid ""
+"Return the current contestants, including any coalitions formed after "
+":meth:`run`."
+msgstr ""
+"Gibt die aktuellen Bewerber zurück, einschließlich aller nach :meth:`run` "
+"gebildeten Koalitionen."
+
+#: ipres.ballot.Ballot.getContestantsByPercentageDesc:1 of
+msgid "Return contestants sorted by vote share in percent, highest first."
+msgstr "Gibt Bewerber nach Stimmenanteil in Prozent sortiert zurück, höchste zuerst."
+
+#: ipres.ballot.Ballot.getContestantsByPercentageDesc:3 of
+msgid ""
+"If given, return only the leading contestants whose cumulative vote share"
+" first reaches or exceeds this value (0–100). If the threshold is never "
+"reached, the full list is returned."
+msgstr ""
+"Falls angegeben, werden nur die führenden Bewerber zurückgegeben, deren "
+"kumulierter Stimmenanteil diesen Wert (0–100) erstmals erreicht oder "
+"überschreitet. Wenn der Schwellenwert nie erreicht wird, wird die "
+"vollständige Liste zurückgegeben."
+
+#: ipres.ballot.Ballot.getContestantsByPercentageDesc:7 of
+msgid "Number of decimal places to round to. ``None`` skips rounding."
+msgstr "Anzahl der Dezimalstellen zum Runden. ``None`` überspringt das Runden."
+
+#: ../../source/api/ballot.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.ballot.Ballot.getContestantsByPercentageDesc:10 of
+msgid ""
+"Series with contestant names as index and vote-share percentages as "
+"values, sorted descending."
+msgstr ""
+"Series mit Bewerbernamen als Index und Stimmanteils-Prozentwerten als "
+"Werte, absteigend sortiert."
+
+#: ipres.ballot.Ballot.getContestantsByPercentageDesc:13 of
+msgid "If ``threshold`` is outside [0, 100]."
+msgstr "Wenn ``threshold`` außerhalb von [0, 100] liegt."
+
+#: ipres.ballot.Ballot.getContestantsVotesAfterPossibleCoalitions:1 of
+msgid ""
+"Return vote totals for the current contestants, merging coalition member "
+"votes."
+msgstr ""
+"Gibt Stimmengesamtzahlen für die aktuellen Bewerber zurück und führt "
+"Koalitionsmitgliedsstimmen zusammen."
+
+#: ipres.ballot.Ballot.getContestantsVotesAfterPossibleCoalitions:3 of
+msgid ""
+"For coalitions formed after :meth:`run`, each coalition's total is the "
+"sum of its members' individual ballot votes."
+msgstr ""
+"Bei nach :meth:`run` gebildeten Koalitionen ist das Gesamtergebnis jeder "
+"Koalition die Summe der individuellen Wahlgangsstimmen ihrer Mitglieder."
+
+#: ipres.ballot.Ballot.getContestantsVotesAfterPossibleCoalitions:6 of
+msgid "If a contestant or coalition member name is missing from the ballot."
+msgstr "Wenn ein Bewerber- oder Koalitionsmitgliedsname im Wahlgang fehlt."
+
+#: ipres.ballot.Ballot.getDrawLotsStrategy:1 of
+msgid "Return the lot-drawing strategy configured for this round."
+msgstr "Gibt die für diese Runde konfigurierte Losentscheid-Strategie zurück."
+
+#: ipres.ballot.Ballot.getElection:1 of
+msgid "Return the parent :class:`~ipres.election.Election` that owns this ballot."
+msgstr "Gibt die übergeordnete :class:`~ipres.election.Election` zurück, die diesen Wahlgang besitzt."
+
+#: ipres.ballot.Ballot.getFirstRound:1 of
+msgid "Walk back through the round chain and return the very first round."
+msgstr "Durchläuft die Rundenkette rückwärts und gibt die allererste Runde zurück."
+
+#: ipres.ballot.Ballot.getNextRoundInput:1 of
+msgid ""
+"Return the pre-built :class:`~ipres.election_round.ElectionRoundInput` "
+"for the next round, or ``None`` if the election is finished."
+msgstr ""
+"Gibt den vorgefertigten :class:`~ipres.election_round.ElectionRoundInput` "
+"für die nächste Runde zurück oder ``None``, wenn die Wahl abgeschlossen ist."
+
+#: ipres.ballot.Ballot.getOriginalContestants:1 of
+msgid ""
+"Return the contestants as they were at the start of this round, before "
+"coalition formation."
+msgstr ""
+"Gibt die Bewerber zurück, wie sie zu Beginn dieser Runde waren, vor der "
+"Koalitionsbildung."
+
+#: ipres.ballot.Ballot.getOriginalContestantsVotes:1 of
+msgid ""
+"Return the total votes for each original contestant across all "
+"constituencies."
+msgstr ""
+"Gibt die Gesamtstimmen für jeden ursprünglichen Bewerber über alle "
+"Wahlkreise zurück."
+
+#: ipres.ballot.Ballot.getOriginalContestantsVotes:3 of
+msgid ""
+"Original contestants are those present at the start of the round, before "
+"any coalitions are formed."
+msgstr ""
+"Ursprüngliche Bewerber sind diejenigen, die zu Beginn der Runde vorhanden "
+"waren, bevor Koalitionen gebildet wurden."
+
+#: ipres.ballot.Ballot.getOriginalContestantsVotes:6 of
+msgid "Series with contestant names as index and integer vote totals as values."
+msgstr "Series mit Bewerbernamen als Index und ganzzahligen Stimmensummen als Werte."
+
+#: ipres.ballot.Ballot.getParticipatingParties:1 of
+msgid "Return the names of all original parties taking part in this round."
+msgstr "Gibt die Namen aller ursprünglichen Parteien zurück, die an dieser Runde teilnehmen."
+
+#: ipres.ballot.Ballot.getParticipatingParties:3 of
+msgid "For coalition contestants, each member party is listed individually."
+msgstr "Bei Koalitions-Bewerbern wird jede Mitgliedspartei einzeln aufgeführt."
+
+#: ipres.ballot.Ballot.getPreviousRound:1 of
+msgid "Return the preceding round, or ``None`` if this is the first round."
+msgstr "Gibt die vorherige Runde zurück oder ``None``, wenn dies die erste Runde ist."
+
+#: ipres.ballot.Ballot.getRoundNumber:1 of
+msgid "Return the 1-based index of this round within the election."
+msgstr "Gibt den 1-basierten Index dieser Runde innerhalb der Wahl zurück."
+
+#: ipres.ballot.Ballot.getWinner:1 of
+msgid "Return the winning contestant, or ``None`` if no winner was found."
+msgstr "Gibt den siegreichen Bewerber zurück oder ``None``, wenn kein Sieger gefunden wurde."
+
+#: ipres.ballot.Ballot.hasNext:1 of
+msgid "Return ``True`` if the election continues with another round."
+msgstr "Gibt ``True`` zurück, wenn die Wahl mit einer weiteren Runde fortgesetzt wird."
+
+#: ipres.ballot.Ballot.hasWinner:1 of
+msgid "Return ``True`` if a winner has been determined in this round."
+msgstr "Gibt ``True`` zurück, wenn in dieser Runde ein Sieger ermittelt wurde."
+
+#: ipres.ballot.Ballot.needsDecisionByLotInNextRound:1 of
+msgid "Return ``True`` if the next round would be resolved by lot."
+msgstr "Gibt ``True`` zurück, wenn die nächste Runde per Los entschieden würde."
+
+#: ipres.ballot.Ballot.needsDecisionByLotInNextRound:3 of
+msgid ""
+"This is the case when no winner has been found, exactly two contestants "
+"remain, and the previous round had the same two contestants (meaning a "
+"third identical round would trigger the lot condition)."
+msgstr ""
+"Dies ist der Fall, wenn kein Sieger gefunden wurde, genau zwei Bewerber "
+"verbleiben und die vorherige Runde dieselben zwei Bewerber hatte (was "
+"bedeutet, dass eine dritte identische Runde die Losbedingung auslösen würde)."
+
+#: ipres.ballot.Ballot.plot_vote_share_pie:1 of
+msgid "Return a pie chart of the vote-share distribution for this round."
+msgstr "Gibt ein Tortendiagramm der Stimmenanteilsverteilung für diese Runde zurück."
+
+#: ipres.ballot.Ballot.plot_vote_share_pie:3 of
+msgid ""
+"Contestants whose share falls below ``min_percent`` are grouped into a "
+"single \"Sonstige\" (other) slice."
+msgstr ""
+"Bewerber, deren Anteil unter ``min_percent`` liegt, werden in einem "
+"einzelnen „Sonstige"-Segment zusammengefasst."
+
+#: ipres.ballot.Ballot.plot_vote_share_pie:6 of
+msgid ""
+"Chart title. Defaults to a generated string showing the total vote count "
+"and round number."
+msgstr ""
+"Diagrammtitel. Standard ist eine generierte Zeichenkette mit der "
+"Gesamtstimmenzahl und der Rundennummer."
+
+#: ipres.ballot.Ballot.plot_vote_share_pie:8 of
+msgid ""
+"Minimum share a contestant must have to appear individually (default "
+"1.0%)."
+msgstr ""
+"Mindestanteil, den ein Bewerber haben muss, um einzeln dargestellt zu "
+"werden (Standard: 1,0 %)."
+
+#: ipres.ballot.Ballot.plot_vote_share_pie:11 of
+msgid ":class:`matplotlib.figure.Figure`"
+msgstr ":class:`matplotlib.figure.Figure`"
+
+#: ipres.ballot.Ballot.resetCoalitions:1 of
+msgid ""
+"Revert the contestant list to the state at the start of this round, "
+"discarding all coalitions."
+msgstr ""
+"Setzt die Bewerberliste auf den Zustand zu Beginn dieser Runde zurück "
+"und verwirft alle Koalitionen."
+
+#: ipres.ballot.Ballot.run:1 of
+msgid "Execute one ballot round and return the completed :class:`Ballot`."
+msgstr "Führt einen Wahlgang durch und gibt den abgeschlossenen :class:`Ballot` zurück."
+
+#: ipres.ballot.Ballot.run:3 of
+msgid ""
+"Deep-copies the input to isolate this round's state while preserving the "
+"shared election reference and RNG. Uses a pre-generated "
+":class:`~ipres.vote_matrix.VoteMatrix` when provided; otherwise generates"
+" a new one from the constituencies config. Registers the completed ballot"
+" with the parent Election."
+msgstr ""
+"Erstellt eine tiefe Kopie des Inputs, um den Zustand dieser Runde zu "
+"isolieren, während die gemeinsame Wahlreferenz und der RNG erhalten "
+"bleiben. Verwendet eine vorher generierte "
+":class:`~ipres.vote_matrix.VoteMatrix`, wenn angegeben; andernfalls wird "
+"eine neue aus der Wahlkreiskonfiguration erstellt. Registriert den "
+"abgeschlossenen Wahlgang bei der übergeordneten Wahl."
+
+#: ipres.ballot.Ballot.run:9 of
+msgid "All parameters required for this round."
+msgstr "Alle für diese Runde erforderlichen Parameter."
+
+#: ipres.ballot.Ballot.run:11 of
+msgid "A completed :class:`Ballot` with winner or next-round input set."
+msgstr "Ein abgeschlossener :class:`Ballot` mit gesetztem Sieger oder Next-Round-Input."
+
+#: ipres.ballot.Ballot.run:13 of
+msgid "If fewer than two contestants are provided."
+msgstr "Wenn weniger als zwei Bewerber angegeben werden."
+
+#: ipres.ballot.Ballot.show_results_table:1 of
+msgid "Return a table of vote counts and percentages for the current contestants."
+msgstr "Gibt eine Tabelle mit Stimmenzahlen und Prozentwerten für die aktuellen Bewerber zurück."
+
+#: ipres.ballot.Ballot.show_results_table:3 of
+msgid ""
+"Contestants are sorted by vote share (descending). Column names and "
+"captions use the language configured in ``ElectionConfig.language`` "
+"(``Language.DE`` by default)."
+msgstr ""
+"Bewerber sind nach Stimmenanteil (absteigend) sortiert. Spaltennamen und "
+"Beschriftungen verwenden die in ``ElectionConfig.language`` konfigurierte "
+"Sprache (standardmäßig ``Language.DE``)."
+
+#: ipres.ballot.Ballot.show_results_table:6 of
+msgid ""
+"If ``True``, return a pandas Styler with formatted columns and a caption;"
+" if ``False``, return a plain DataFrame."
+msgstr ""
+"Bei ``True`` wird ein pandas-Styler mit formatierten Spalten und "
+"Beschriftung zurückgegeben; bei ``False`` wird ein einfacher DataFrame "
+"zurückgegeben."
+
+#: ipres.ballot.Ballot.show_results_table:8 of
+msgid "Number of decimal places for the percentage column."
+msgstr "Anzahl der Dezimalstellen für die Prozentspalte."
+
+#: ipres.ballot.Ballot.show_results_table:9 of
+msgid "If ``True``, also print the DataFrame to stdout."
+msgstr "Bei ``True`` wird der DataFrame zusätzlich auf der Standardausgabe ausgegeben."
+
+#: ipres.ballot.Ballot.show_results_table:11 of
+msgid ""
+"A :class:`pandas.DataFrame` or :class:`pandas.io.formats.style.Styler` "
+"depending on ``styler``."
+msgstr ""
+"Ein :class:`pandas.DataFrame` oder :class:`pandas.io.formats.style.Styler` "
+"je nach ``styler``."
+
+#: ipres.ballot.Ballot.wasDecidedByLot:1 of
+msgid ""
+"Always returns ``False`` — a :class:`Ballot` is decided by votes, not by "
+"lot."
+msgstr ""
+"Gibt immer ``False`` zurück – ein :class:`Ballot` wird durch Stimmen, "
+"nicht per Los entschieden."

@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/en/constituency_assignment.md:1
+msgid "Constituency Assignment"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:3
+msgid ""
+"In the final step of the evaluation, each constituency is assigned to "
+"exactly one party for representation. The guiding principle: a "
+"constituency should be represented by the party for which it is most "
+"important relative to that party's other constituencies."
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:7
+msgid "Relative Importance"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:9
+msgid ""
+"First, an **importance** value is calculated for every combination of "
+"constituency and party. It expresses how strongly a constituency "
+"contributes to a party's vote share compared to the party's other "
+"constituencies."
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:11
+msgid ""
+"Let `r_ij` be the vote share of party `j` in constituency `i` (relative "
+"to all votes cast in that constituency). Then:"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:17
+msgid ""
+"The `(M−1)` normalisation ensures that a uniform vote distribution yields"
+" `w = 1.0` everywhere:"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:19
+msgid "`w > 1.0` → constituency is above-average important for this party"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:20
+msgid "`w < 1.0` → below-average important"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:21
+msgid "`w = 1.0` → average"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:23
+msgid "**Example** (5 constituencies, parties A / B / C):"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "Constituency"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "A"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "B"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "C"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "C1"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "1.22"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "0.70"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "0.73"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "C2"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "0.80"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "1.40"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "1.20"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "C3"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "0.90"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "0.91"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "1.78"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "C4"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "1.11"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "C5"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "1.00"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "1.14"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:33
+#, python-brace-format
+msgid ""
+"A is strongest in C1, B in C2, C in C3. With quotas A: 3, B: 2, C: 0 the "
+"result is `{C1: A, C2: B, C3: A, C4: A, C5: B}`."
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:37
+msgid "Allocation Methods"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:39
+msgid ""
+"Three methods are available to derive an assignment from the importance "
+"matrix and the per-party constituency counts:"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "Method"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "Description"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "`OPTIMAL` *(default)*"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid ""
+"Hungarian algorithm (Kuhn-Munkres). Finds the assignment that provably "
+"maximises the total importance score. More computationally intensive, but"
+" globally optimal."
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "`GREEDY`"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid ""
+"Iteratively assigns the (constituency, party) pair with the highest "
+"importance, as long as the party's quota has not yet been exhausted. "
+"Fast, but not globally optimal."
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "`STABLE_MATCHING`"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid ""
+"Gale-Shapley algorithm (stable matching). No constituency-party pair "
+"would simultaneously prefer a different assignment."
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:49
+msgid "Effect of `constituency_representation`"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:51
+msgid ""
+"**`ENTIRE_PARLIAMENT`** *(default)*: Importance is computed from the "
+"votes of all parties."
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:52
+msgid ""
+"**`GOVERNING_MAJORITY`**: Only the votes of the governing parties are "
+"used to compute importance."
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:56
+msgid "Configuration Parameters"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "Class"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "`constituency_allocation_method`"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "`ElectionEvaluator`"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "Allocation method (default: `OPTIMAL`)"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "`constituency_representation`"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "`ElectionConfig` + `ElectionEvaluator`"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md
+msgid "Basis for importance calculation"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:65
+msgid "Execution in the Simulation"
+msgstr ""
+
+#: ../../source/en/constituency_assignment.md:67
+msgid ""
+"The class "
+"[`ConstituencyAssigner`](../../src/ipres/constituency_assigner.py) "
+"performs this step. It takes the constituency count allocation result as "
+"input."
+msgstr ""
+

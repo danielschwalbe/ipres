@@ -1,0 +1,1175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-31 18:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api.rst:2
+msgid "API Reference"
+msgstr ""
+
+#: ipres.election_config.ConstituencyRepresentation:1 of
+msgid "Determines how constituencies are represented in parliament."
+msgstr ""
+
+#: ipres.election_config.ConstituencyRepresentation:3 of
+msgid ""
+"ENTIRE_PARLIAMENT: Constituencies are represented across the entire "
+"parliament (not exclusively by the government majority). Total seats = 2 "
+"* number_of_constituencies."
+msgstr ""
+
+#: ipres.election_config.ConstituencyRepresentation:6 of
+msgid ""
+"GOVERNING_MAJORITY: Constituencies are represented exclusively by the "
+"government majority. Size of the government majority = 2 * "
+"number_of_constituencies. Parliament size is adjusted accordingly."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:1 of
+msgid "Immutable configuration for an election simulation."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:3 of
+msgid ""
+"Defines all parameters needed to run an election: constituencies, "
+"participating parties, the government majority threshold, tie-breaking "
+"strategy, and an optional random seed."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:7 of
+msgid ""
+"The total number of parliamentary seats is derived automatically from the"
+" number of constituencies and the chosen constituency representation "
+"mode."
+msgstr ""
+
+#: ../../source/api.rst ipres.constituencies_config.ConstituenciesConfig.save
+#: ipres.election.Election.run ipres.election.Election.runNextIteration
+#: ipres.super_majority_margin.SuperMajorityMargin of
+msgid "Parameters"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:12 of
+msgid "Electoral district definitions (names, sizes, turnout rates)."
+msgstr ""
+
+#: ipres.election.Election ipres.election_config.ElectionConfig
+#: ipres.election_round.ElectionRoundInput ipres.vote_matrix.VoteMatrix of
+msgid "type"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:15 of
+msgid "ipres.constituencies_config.ConstituenciesConfig"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:19 of
+msgid "Names of parties competing in the election."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:21 of
+msgid "list[str]"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:25 of
+msgid ""
+"How many percentage points (or seats) above 50% a party needs for a "
+"government majority. Defaults to 5% (i.e., a 55% threshold)."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:29 of
+msgid "ipres.super_majority_margin.SuperMajorityMargin"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:33 of
+msgid "How to break ties during seat allocation. Defaults to RANDOM."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:36 of
+msgid "ipres.election_round.DrawLotsStrategy"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:40 of
+msgid ""
+"Optional integer seed for the random number generator. Use for "
+"reproducible simulations."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:43 of
+msgid "int | None"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:47 of
+msgid ""
+"Controls how constituency seats are distributed. Defaults to "
+"ENTIRE_PARLIAMENT (proportional across all parties). Use "
+"GOVERNING_MAJORITY to assign all constituency seats to the winning "
+"party."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig:52 of
+msgid "ipres.election_config.ConstituencyRepresentation"
+msgstr ""
+
+#: ipres.election.Election.run:12 ipres.election.Election.runNextIteration:12
+#: ipres.election_config.ElectionConfig:55 of
+msgid "Example"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.getParliamentMajorityPercent:1 of
+msgid "Government majority threshold in percent."
+msgstr ""
+
+#: ../../source/api.rst ipres.election.Election.run
+#: ipres.election.Election.runNextIteration of
+msgid "Returns"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.getParliamentMajorityPercent:3 of
+msgid "50.0 + parliamentMajorityMarginPercent (e.g., 55.0 for a 5% margin)."
+msgstr ""
+
+#: ../../source/api.rst ipres.constituencies_config.ConstituenciesConfig.save
+#: ipres.contestant.Contestant.getContainedParties
+#: ipres.contestant.Contestant.getMemberList
+#: ipres.contestant.Contestant.getMemberNames
+#: ipres.contestant.Contestant.isCoalition
+#: ipres.contestant.Contestant.isSingleParty
+#: ipres.election.Election.decisionNeededPartyReduction
+#: ipres.election.Election.getFirstIteration
+#: ipres.election.Election.getLastIteration
+#: ipres.election.Election.getNumberOfIterations
+#: ipres.election.Election.getWinner ipres.election.Election.hasWinner
+#: ipres.election.Election.isFinished ipres.election.Election.run
+#: ipres.election.Election.runNextIteration
+#: ipres.election_round.ElectionRound.getContestants
+#: ipres.election_round.ElectionRound.getContestantsVotesAfterPossibleCoalitions
+#: ipres.election_round.ElectionRound.getNextRoundInput
+#: ipres.election_round.ElectionRound.getOriginalContestants
+#: ipres.election_round.ElectionRound.getParticipatingParties
+#: ipres.election_round.ElectionRound.getPreviousRound
+#: ipres.election_round.ElectionRound.getRoundNumber
+#: ipres.election_round.ElectionRound.getWinner
+#: ipres.election_round.ElectionRound.hasNext
+#: ipres.election_round.ElectionRound.hasWinner
+#: ipres.election_round.ElectionRound.wasDecidedByLot
+#: ipres.election_round.ElectionRoundInput.numberOfContestants
+#: ipres.vote_matrix.VoteMatrix.getContestants
+#: ipres.vote_matrix.VoteMatrix.getVotes of
+msgid "Return type"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.getParliamentMajoritySeats:1 of
+msgid "Government majority threshold in seats."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.getParliamentMajoritySeats:3 of
+msgid ""
+"Minimum number of seats needed for a government majority, rounded up: "
+"ceil(getParliamentMajorityPercent() * parliamentarySeats / 100)."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginPercent:1 of
+msgid "Government majority margin in percent, regardless of how it was specified."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginPercent:3 of
+msgid "If the margin was specified in seats, converts using:"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginPercent:4 of
+msgid "margin_percent = 100.0 * margin_seats / parliamentarySeats"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginPercent:6 of
+msgid "Margin above 50% as a float (e.g., 5.0 for a 55% threshold)."
+msgstr ""
+
+#: ../../source/api.rst
+msgid "Raises"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginPercent:8 of
+msgid ""
+"If parliamentarySeats is not positive (only relevant     when the margin "
+"was specified in seats)."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginSeats:1 of
+msgid "Government majority margin in seats, regardless of how it was specified."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginSeats:3 of
+msgid "If the margin was specified in percent, converts using:"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginSeats:4 of
+msgid "margin_seats = ceil(parliamentarySeats * margin_percent / 100.0)"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentMajorityMarginSeats:6 of
+msgid "Margin above half of all seats, rounded up."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentMajoritySpecificationUnit:1
+#: of
+msgid ""
+"The unit (PERCENT or SEATS) used when specifying the government majority "
+"margin."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentarySeats:1 of
+msgid "Total number of seats in parliament."
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentarySeats:3 of
+msgid ""
+"Computed from the number of constituencies and the constituency "
+"representation mode:"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentarySeats:6 of
+msgid "ENTIRE_PARLIAMENT: constituencies * 2"
+msgstr ""
+
+#: ipres.election_config.ElectionConfig.parliamentarySeats:7 of
+msgid ""
+"GOVERNING_MAJORITY: chosen so that getParliamentMajoritySeats() equals 2"
+" * number_of_constituencies."
+msgstr ""
+
+#: ipres.election_config.Language:1 of
+msgid ""
+"Language used for display output (table captions, column headers, chart "
+"titles)."
+msgstr ""
+
+#: ipres.election_config.Language:3 of
+msgid "DE: German (default — preserves backward compatibility)"
+msgstr ""
+
+#: ipres.election_config.Language:4 of
+msgid "EN: English"
+msgstr ""
+
+#: ipres.election_config.QuotaCorrectionStrategy:1 of
+msgid "Enumeration of strategies for correcting party quotas."
+msgstr ""
+
+#: ipres.election_config.QuotaCorrectionStrategy:3 of
+msgid ""
+"When calculating party quotas as seats//2, integer division loses one "
+"quota for each party with odd seat count. This creates a deficit: "
+"sum(seats[i]//2) < sum(seats)//2"
+msgstr ""
+
+#: ipres.election_config.QuotaCorrectionStrategy:7 of
+msgid ""
+"These strategies determine which parties with odd seats receive +1 to "
+"their quota to ensure: sum(quotas) == number_of_constituencies"
+msgstr ""
+
+#: ipres.election_config.QuotaCorrectionStrategy:10 of
+msgid "FAVOR_SMALL_PARTIES: Prioritize smallest parties (by seat count)"
+msgstr ""
+
+#: ipres.election_config.QuotaCorrectionStrategy:11 of
+msgid "FAVOR_LARGE_PARTIES: Prioritize largest parties (by seat count)"
+msgstr ""
+
+#: ipres.election_config.QuotaCorrectionStrategy:12 of
+msgid "PROPORTIONAL: Weighted random, probability proportional to seat count"
+msgstr ""
+
+#: ipres.election_config.QuotaCorrectionStrategy:13 of
+msgid ""
+"PROPORTIONAL_REVERSED: Weighted random, probabilities reversed (small "
+"parties favored)"
+msgstr ""
+
+#: ipres.election_config.QuotaCorrectionStrategy:14 of
+msgid "RANDOM: Uniform random selection among parties with odd seats"
+msgstr ""
+
+#: ipres.election_config.QuotaCorrectionStrategy:15 of
+msgid "NEGOTIATED: External callback determines which parties receive +1"
+msgstr ""
+
+#: ipres.election_config.SeatDistributionMethod:1 of
+msgid "Enumeration of seat distribution methods for proportional representation."
+msgstr ""
+
+#: ipres.election_config.SeatDistributionMethod:3 of
+msgid "SAINTE_LAGUE: Sainte-Laguë/Schepers method (used by German Bundestag)"
+msgstr ""
+
+#: ipres.election_config.SeatDistributionMethod:4 of
+msgid "D_HONDT: D'Hondt method (used in many European countries)"
+msgstr ""
+
+#: ipres.election_config.SeatDistributionMethod:5 of
+msgid "HARE_NIEMEYER: Hare-Niemeyer method (largest remainder method)"
+msgstr ""
+
+#: ipres.election.Election:1 of
+msgid "Represents a complete election and manages its iterative execution."
+msgstr ""
+
+#: ipres.election.Election:3 of
+msgid ""
+"An election consists of one or more rounds of proportional voting. Voting"
+" continues until a party or coalition wins a government majority. Result "
+"evaluation (seat distribution, constituency allocation) is handled "
+"separately by ElectionEvaluator and ElectionResult."
+msgstr ""
+
+#: ipres.election.Election:10 of
+msgid ""
+"Global configuration for this election (constituencies, parties, majority"
+" threshold, etc.)."
+msgstr ""
+
+#: ipres.election.Election:13 of
+msgid "ipres.election_config.ElectionConfig"
+msgstr ""
+
+#: ipres.election.Election:17 of
+msgid "Read-only tuple of all completed election rounds, in chronological order."
+msgstr ""
+
+#: ipres.election.Election:20 of
+msgid "Example — automatic (simplest case):"
+msgstr ""
+
+#: ipres.election.Election:25 of
+msgid "Example — manual step-by-step (e.g. to form coalitions between rounds):"
+msgstr ""
+
+#: ipres.election.Election.decisionNeededPartyReduction:1 of
+msgid "Return whether the winner was determined through party reduction."
+msgstr ""
+
+#: ipres.election.Election.decisionNeededPartyReduction:3 of
+msgid ""
+"True if the election required more than one round, meaning parties were "
+"eliminated across rounds until a winner emerged."
+msgstr ""
+
+#: ipres.election.Election.getFirstIteration:1 of
+msgid "Return the first round, or None if no rounds have been run."
+msgstr ""
+
+#: ipres.election.Election.getLastIteration:1 of
+msgid "Return the most recent round, or None if no rounds have been run."
+msgstr ""
+
+#: ipres.election.Election.getNumberOfIterations:1 of
+msgid "Return the number of completed rounds."
+msgstr ""
+
+#: ipres.election.Election.getWinner:1 of
+msgid "Return the winning Contestant, or None if the election is not finished."
+msgstr ""
+
+#: ipres.election.Election.hadOutrightWinner:1 of
+msgid "Return whether the government is awarded a guaranteed seat majority."
+msgstr ""
+
+#: ipres.election.Election.hadOutrightWinner:3 of
+msgid ""
+"True if the winner was determined either through party reduction across "
+"rounds or by drawing lots — both cases where the result was not a clear "
+"proportional win in a single round."
+msgstr ""
+
+#: ipres.election.Election.hadOutrightWinner:7 of
+msgid "If the election is not yet finished."
+msgstr ""
+
+#: ipres.election.Election.hasWinner:1 of
+msgid "Return True if the election has a winner."
+msgstr ""
+
+#: ipres.election.Election.isFinished:1 of
+msgid "Return True if the election is finished (alias for hasWinner())."
+msgstr ""
+
+#: ipres.election.Election.iterations:1 of
+msgid "Read-only view of all completed election rounds."
+msgstr ""
+
+#: ipres.election.Election.run:1 of
+msgid "Run the entire election to completion."
+msgstr ""
+
+#: ipres.election.Election.run:3 of
+msgid ""
+"Executes rounds until a winner is determined. Each completed round is "
+"passed to on_iteration_finished if provided."
+msgstr ""
+
+#: ipres.election.Election.run:6 of
+msgid ""
+"Optional callback invoked after each round completes, including the final"
+" one."
+msgstr ""
+
+#: ipres.election.Election.run:9 of
+msgid "The final ElectionRound containing the winner."
+msgstr ""
+
+#: ipres.election.Election.runNextIteration:1 of
+msgid "Run the next round of the election."
+msgstr ""
+
+#: ipres.election.Election.runNextIteration:3 of
+msgid ""
+"Starts the election if no rounds have been run yet. Otherwise, continues "
+"from where the last round left off."
+msgstr ""
+
+#: ipres.election.Election.runNextIteration:6 of
+msgid ""
+"Optional pre-built input. If None, derived from the previous round's "
+"output."
+msgstr ""
+
+#: ipres.election.Election.runNextIteration:9 of
+msgid "The completed ElectionRound."
+msgstr ""
+
+#: ipres.election.Election.start:1 of
+msgid "Start the election by running the first round."
+msgstr ""
+
+#: ipres.election.Election.start:3 of
+msgid ""
+"Derives the ElectionRoundInput from electionConfig unless one is "
+"provided. Use run() to execute the entire election automatically or call "
+"runNextIteration() repeatedly for manual step-by-step control."
+msgstr ""
+
+#: ipres.election.Election.start:7 of
+msgid "Optional pre-built input. If None, derived from electionConfig."
+msgstr ""
+
+#: ipres.election.Election.start:10 of
+msgid "The completed first Ballot."
+msgstr ""
+
+#: ipres.election_round.DrawLotsStrategy:1 of
+msgid ""
+"Strategy for breaking ties between two contestants across three "
+"consecutive rounds."
+msgstr ""
+
+#: ipres.election_round.DrawLotsStrategy:3 of
+msgid ""
+"MARGINAL_LEAD: Award the win to the contestant with the higher vote "
+"count in the most recent ballot round."
+msgstr ""
+
+#: ipres.election_round.DrawLotsStrategy:5 of
+msgid "RANDOM: Break ties by uniform random selection (drawing of lots)."
+msgstr ""
+
+#: ipres.election_round.ElectionRound:1 of
+msgid "Abstract base class for a single round within an iterative election."
+msgstr ""
+
+#: ipres.election_round.ElectionRound:3 of
+msgid ""
+"An election consists of one or more rounds. Each round either produces a "
+"winner (the contestant whose vote share meets the super-majority "
+"threshold) or reduces the field of contestants for the next round."
+msgstr ""
+
+#: ipres.election_round.ElectionRound:7 of
+msgid "Two concrete subtypes exist:"
+msgstr ""
+
+#: ipres.election_round.ElectionRound:9 of
+msgid ":class:`~ipres.ballot.Ballot` — a round decided by actual votes."
+msgstr ""
+
+#: ipres.election_round.ElectionRound:10 of
+msgid ""
+":class:`~ipres.draw_of_lots.DrawOfLots` — a round decided by lot when two"
+" contestants are tied across three consecutive ballot rounds."
+msgstr ""
+
+#: ipres.election_round.ElectionRound:13 of
+msgid ""
+"Polymorphism via :meth:`getContestantsVotesAfterPossibleCoalitions` is "
+"the key mechanism: ``Ballot`` reads from its own "
+":class:`~ipres.vote_matrix.VoteMatrix`, while ``DrawOfLots`` delegates to"
+" the previous round."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.getContestants:1 of
+msgid ""
+"Return the current contestants, including any coalitions formed after the"
+" round."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.getContestantsVotesAfterPossibleCoalitions:1
+#: of
+msgid ""
+"Return vote totals for each current contestant, merging coalition member "
+"votes."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.getContestantsVotesAfterPossibleCoalitions:3
+#: of
+msgid ""
+"For :class:`~ipres.ballot.Ballot`, totals come from its own vote matrix. "
+"For :class:`~ipres.draw_of_lots.DrawOfLots`, totals are delegated to the "
+"previous ballot round."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.getNextRoundInput:1 of
+msgid ""
+"Return the pre-built input for the next round, or ``None`` if the "
+"election is finished."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.getNextRoundInput:3 of
+msgid ""
+"Always ``None`` for :class:`~ipres.draw_of_lots.DrawOfLots` (which is "
+"always terminal)."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.getOriginalContestants:1 of
+msgid ""
+"Return the contestants as they were at the start of this round, before "
+"coalition formation."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.getParticipatingParties:1 of
+msgid "Return the names of all original parties taking part in this round."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.getParticipatingParties:3 of
+msgid "For coalition contestants, each member party is listed individually."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.getPreviousRound:1 of
+msgid "Return the preceding round, or ``None`` if this is the first round."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.getRoundNumber:1 of
+msgid "Return the 1-based index of this round within the election."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.getWinner:1 of
+msgid "Return the winning contestant, or ``None`` if no winner was found."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.hasNext:1 of
+msgid ""
+"Return ``True`` if the election continues with another round after this "
+"one."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.hasWinner:1 of
+msgid "Return ``True`` if a winner was determined in this round."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.run:1 of
+msgid ""
+"Factory method: create the appropriate :class:`ElectionRound` subtype for"
+" the given input."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.run:3 of
+msgid ""
+"Checks whether the lot condition is met (same two contestants across "
+"three consecutive rounds without a winner). If so, a "
+":class:`~ipres.draw_of_lots.DrawOfLots` round is created; otherwise a "
+":class:`~ipres.ballot.Ballot` round."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.run:8 of
+msgid "All parameters required for the new round."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.run:10 of
+msgid ""
+"A completed :class:`ElectionRound` — either a "
+":class:`~ipres.ballot.Ballot` or a "
+":class:`~ipres.draw_of_lots.DrawOfLots`."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.run:13 of
+msgid ""
+"If the lot condition is met and ``DrawOfLots`` has not     yet been "
+"implemented (Phase 4)."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.wasDecidedByLot:1 of
+msgid "Return ``True`` if the winner was chosen by lot rather than by vote count."
+msgstr ""
+
+#: ipres.election_round.ElectionRound.wasDecidedByLot:3 of
+msgid ""
+":class:`~ipres.ballot.Ballot` always returns ``False``; "
+":class:`~ipres.draw_of_lots.DrawOfLots` always returns ``True``."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:1 of
+msgid "Input container for a single election round."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:3 of
+msgid ""
+"Bundles all parameters required by :meth:`ElectionRound.run`. The "
+"election reference and the random number generator are intentionally not "
+"deep-copied when a round creates the input for its successor, so that "
+"shared state (round list, RNG sequence) stays consistent across the "
+"chain."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:10 of
+msgid "The parent :class:`~ipres.election.Election` instance."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:12 of
+msgid "Election"
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:16 of
+msgid "Constituency definitions and sizes."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:18 of
+msgid "ConstituenciesConfig"
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:22 of
+msgid "Contestants competing in this round, keyed by name."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:24 of
+msgid "dict[str, Contestant]"
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:28 of
+msgid "Optional vote-share probabilities (mapping or sequence)."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:30 of
+msgid "Optional[Union[Mapping[str, float], SequenceABC[float]]]"
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:34 of
+msgid "NumPy random generator; ``None`` creates a fresh default generator."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:36 of
+msgid "Optional[np.random.Generator]"
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:40 of
+msgid "Optional per-constituency turnout (mapping, sequence, or scalar)."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:42 of
+msgid "Optional[Union[Mapping[str, float], SequenceABC[float], float]]"
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:46 of
+msgid "Vote-share threshold required to win."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:48 of
+msgid "float"
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:52 of
+msgid "Strategy used when the round must be decided by lot."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:54 of
+msgid "DrawLotsStrategy"
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:58 of
+msgid ""
+"Optional pre-generated :class:`~ipres.vote_matrix.VoteMatrix` to inject "
+"instead of simulating a new ballot."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:61 of
+msgid "Optional[VoteMatrix]"
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:65 of
+msgid "0-based index incremented to 1-based inside the round."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:67 of
+msgid "int"
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:71 of
+msgid "The preceding :class:`ElectionRound`, or ``None`` for the first."
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput:73 of
+msgid "Optional[ElectionRound]"
+msgstr ""
+
+#: ipres.election_round.ElectionRoundInput.numberOfContestants:1 of
+msgid "Return the number of contestants registered for this round."
+msgstr ""
+
+#: ipres.contestant.Contestant:1 of
+msgid ""
+"A contestant in an election, representing either a single party or a "
+"coalition."
+msgstr ""
+
+#: ipres.contestant.Contestant:3 of
+msgid ""
+"Contestants are immutable once created. Use the factory classmethods to "
+"construct instances:"
+msgstr ""
+
+#: ipres.contestant.Contestant:6 of
+msgid ":meth:`from_party` — create a single-party contestant"
+msgstr ""
+
+#: ipres.contestant.Contestant:7 of
+msgid ":meth:`as_coalition` — create a coalition from existing contestants"
+msgstr ""
+
+#: ipres.contestant.Contestant:9 of
+msgid ""
+"To create multiple single-party contestants at once, use the module-level"
+" helpers :func:`contestantsFromParties` and "
+":func:`contestantsDictFromParties`."
+msgstr ""
+
+#: ipres.contestant.Contestant.as_coalition:1 of
+msgid "Create a coalition contestant from a collection of member contestants."
+msgstr ""
+
+#: ipres.contestant.Contestant.as_coalition:3 of
+msgid "Display name for the coalition."
+msgstr ""
+
+#: ipres.contestant.Contestant.as_coalition:4 of
+msgid ""
+"The member contestants, either as a list or as a dict mapping member name"
+" to Contestant."
+msgstr ""
+
+#: ipres.contestant.Contestant.as_coalition:6 of
+msgid ""
+"Vote weight fraction for each member. If omitted, equal weights (1/n) are"
+" assigned. When provided, keys must match the member names and values "
+"should sum to 1.0."
+msgstr ""
+
+#: ipres.contestant.Contestant.as_coalition:10 of
+msgid "A new coalition Contestant."
+msgstr ""
+
+#: ipres.contestant.Contestant.from_party:1 of
+msgid "Create a single-party contestant."
+msgstr ""
+
+#: ipres.contestant.Contestant.from_party:3 of
+msgid "The name of the party."
+msgstr ""
+
+#: ipres.contestant.Contestant.from_party:5 of
+msgid "A new single-party Contestant."
+msgstr ""
+
+#: ipres.contestant.Contestant.getContainedParties:1 of
+msgid ""
+"Return the names of all single parties recursively contained in this "
+"contestant."
+msgstr ""
+
+#: ipres.contestant.Contestant.getContainedParties:3 of
+msgid ""
+"For a single party, returns a list with just its own name. For a "
+"coalition, recursively traverses all members and returns the leaf party "
+"names."
+msgstr ""
+
+#: ipres.contestant.Contestant.getMemberList:1 of
+msgid "Return the list of direct member contestants."
+msgstr ""
+
+#: ipres.contestant.Contestant.getMemberList:3
+#: ipres.contestant.Contestant.getMemberNames:3 of
+msgid "Returns an empty list for single-party contestants."
+msgstr ""
+
+#: ipres.contestant.Contestant.getMemberNames:1 of
+msgid "Return the names of direct member contestants."
+msgstr ""
+
+#: ipres.contestant.Contestant.getMemberVoteWeight:1 of
+msgid "Return the vote weight fraction of a direct coalition member (0–1)."
+msgstr ""
+
+#: ipres.contestant.Contestant.getMemberVoteWeight:3 of
+#, python-format
+msgid ""
+"The weight represents the share of votes that member contributed when the"
+" coalition was formed. For example, 0.6667 means the member contributed "
+"66.67% of the coalition's votes."
+msgstr ""
+
+#: ipres.contestant.Contestant.getMemberVoteWeight:7 of
+msgid "The name of the member to look up."
+msgstr ""
+
+#: ipres.contestant.Contestant.getMemberVoteWeight:9 of
+msgid ""
+"If called on a single-party contestant, or if     ``member_name`` is not "
+"a direct member of this coalition."
+msgstr ""
+
+#: ipres.contestant.Contestant.getMemberVoteWeightsForParties:1 of
+msgid "Return vote weight fractions for all leaf parties in this contestant."
+msgstr ""
+
+#: ipres.contestant.Contestant.getMemberVoteWeightsForParties:3 of
+#, python-brace-format
+msgid ""
+"For a single party, returns ``{party_name: 1.0}``. For a coalition, "
+"recursively multiplies member weights down to the leaf parties, so the "
+"returned fractions reflect each original party's share of the total "
+"coalition votes."
+msgstr ""
+
+#: ipres.contestant.Contestant.getMemberVoteWeightsForParties:8 of
+msgid ""
+"A dict mapping each leaf party name to its weight fraction (0–1). Values "
+"sum to 1.0."
+msgstr ""
+
+#: ipres.contestant.Contestant.isCoalition:1 of
+msgid "Return True if this contestant is a coalition of two or more members."
+msgstr ""
+
+#: ipres.contestant.Contestant.isSingleParty:1 of
+msgid "Return True if this contestant represents a single party (no members)."
+msgstr ""
+
+#: ipres.contestant.Contestant.member_vote_weights:1 of
+msgid "The vote weight fraction of each coalition member (values sum to 1.0)."
+msgstr ""
+
+#: ipres.contestant.Contestant.member_vote_weights:3 of
+msgid ""
+"Empty for single-party contestants. For coalitions, each key is a member "
+"name and the value is the share of votes that member contributed when the"
+" coalition was formed."
+msgstr ""
+
+#: ipres.contestant.Contestant.members:1 of
+msgid "The member contestants of this coalition, keyed by their name."
+msgstr ""
+
+#: ipres.contestant.Contestant.members:3 of
+msgid "Empty for single-party contestants."
+msgstr ""
+
+#: ipres.contestant.Contestant.name:1 of
+msgid "The display name of this contestant."
+msgstr ""
+
+#: ipres.contestant.contestantsDictFromParties:1 of
+msgid "Create a dict of single-party contestants, keyed by party name."
+msgstr ""
+
+#: ipres.contestant.contestantsDictFromParties:3
+#: ipres.contestant.contestantsFromParties:3 of
+msgid "The party names to create contestants for."
+msgstr ""
+
+#: ipres.contestant.contestantsDictFromParties:5 of
+msgid "A dict mapping each party name to its Contestant."
+msgstr ""
+
+#: ipres.contestant.contestantsFromParties:1 of
+msgid "Create a list of single-party contestants, one per name."
+msgstr ""
+
+#: ipres.contestant.contestantsFromParties:5 of
+msgid "A list of single-party Contestants in the same order as ``party_names``."
+msgstr ""
+
+#: ipres.constituencies_config.ConstituenciesConfig.save:1 of
+msgid ""
+"Save the constituencies DataFrame to CSV or Parquet. - If path is "
+"provided, use it. - If path is None in a Jupyter environment, provide a "
+"simple input widget. - If path is None in a GUI environment, open a file "
+"save dialog. The file format is determined by the filename suffix (.csv "
+"or .parquet). Returns the final path used."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix:1 of
+msgid "Vote data produced by a simulated or real ballot."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix:3 of
+msgid ""
+"Holds the raw vote counts and the contestant registry for one election "
+"round. Instances are created via :meth:`run` (simulation) or directly by "
+"passing ``votes`` and ``contestants`` to the constructor."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix:7 of
+msgid ""
+"Note: The simulation logic (``run()`` and its helpers) will move to the "
+"``Ballot`` voting-round class in a future refactoring step."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix:12 of
+msgid ""
+"DataFrame of vote counts with constituencies as the index and contestant "
+"names as columns."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix:15 of
+msgid "pandas.core.frame.DataFrame"
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix:19 of
+msgid ""
+"Dict mapping each contestant name to its "
+":class:`~ipres.contestant.Contestant` instance."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix:22 of
+msgid "dict[str, ipres.contestant.Contestant]"
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.getContestants:1 of
+msgid "Return the contestants dict mapping each name to its Contestant."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentDesc:1 of
+msgid ""
+"Return all contestants with their total vote-share percentages in "
+"descending order."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentDesc:3 of
+msgid "Number of decimal places to round the percentages to."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentDesc:5 of
+msgid ""
+"A pandas Series with contestant names as the index and rounded "
+"percentages (float) as values, sorted descending. The sort is stable — "
+"ties preserve the original contestant order."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentDesc:9
+#: ipres.vote_matrix.VoteMatrix.plot_vote_share_pie:10
+#: ipres.vote_matrix.VoteMatrix.show_votes_table:12
+#: ipres.vote_matrix.VoteMatrix.show_votes_table_percent:15 of
+msgid "If no votes are available."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentThreshold:1 of
+msgid ""
+"Return the leading contestants whose cumulative share reaches a given "
+"threshold."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentThreshold:3 of
+msgid ""
+"Builds on :meth:`getContestantsByPercentDesc` and returns the shortest "
+"prefix whose cumulative percentage is ``>= threshold``. If rounding "
+"prevents the threshold from being reached, the full list is returned."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentThreshold:7 of
+msgid "Cumulative percentage threshold in [0, 100]."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentThreshold:8 of
+msgid "Number of decimal places passed to :meth:`getContestantsByPercentDesc`."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentThreshold:11 of
+msgid ""
+"A pandas Series as described in :meth:`getContestantsByPercentDesc`, "
+"truncated at the first position where the cumulative sum reaches "
+"``threshold``."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.getContestantsByPercentThreshold:15 of
+msgid "If ``threshold`` is outside [0, 100]."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.getVotes:1 of
+msgid ""
+"Return the raw vote-count DataFrame (index=constituencies, "
+"columns=contestants)."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.plot_vote_share_pie:1 of
+msgid "Visualise the overall vote distribution as a pie chart."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.plot_vote_share_pie:3 of
+msgid ""
+"Optional custom chart title. Defaults to a German-language summary "
+"showing the total vote count."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.plot_vote_share_pie:5 of
+msgid ""
+"Minimum share threshold in percent. Contestants below this are grouped as"
+" \"Sonstige\" (default: 1.0%)."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.plot_vote_share_pie:8 of
+msgid "matplotlib.figure.Figure"
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.run:1 of
+msgid "Simulate a ballot and return the vote data."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.run:3 of
+msgid "Configuration defining constituencies and their sizes."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.run:5 of
+msgid "The contestants competing in the ballot."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.run:6 of
+msgid ""
+"Vote-share probabilities for each contestant, either as a mapping of "
+"contestant name to percentage or as a sequence of percentages in the same"
+" order as ``contestants``. Values must be in percent [0, 100] and are "
+"normalised to 100 if needed. If ``None``, shares are drawn uniformly at "
+"random."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.run:11 of
+msgid "NumPy random generator. If ``None``, a fresh default generator is created."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.run:13 of
+msgid ""
+"Voter turnout for each constituency, either as a mapping of constituency "
+"name to percentage, as a sequence of percentages (same order as "
+"constituencies), or as a single float used as the mean for a Beta-"
+"distributed draw. Values must be in percent [0, 100]. If ``None``, "
+"turnout is drawn from a Beta(2, 2) distribution."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.run:19 of
+msgid ""
+"Optional pre-computed vote matrix. When provided, random vote generation "
+"is skipped and this matrix is validated and aligned instead. Format: "
+"``index=constituency_names``, ``columns=contestant_names``, "
+"``values=vote_counts``."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.run:25 of
+msgid "A new :class:`VoteMatrix` with ``_votes`` and ``_contestants`` populated."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table:1 of
+msgid "Return the raw vote-count matrix as a DataFrame or styled table."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table:3 of
+msgid ""
+"If ``True``, return a pandas Styler with thousands separators and a "
+"caption, suitable for Jupyter/HTML output. If ``False`` (default), return"
+" the plain DataFrame."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table:6 of
+msgid ""
+"If ``True``, also print the table to stdout via ``print()``. Only "
+"effective when ``styler=False``."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table:9
+#: ipres.vote_matrix.VoteMatrix.show_votes_table_percent:12 of
+msgid ""
+"pandas.DataFrame or pandas.io.formats.style.Styler depending on "
+"``styler``."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table_percent:1 of
+msgid "Return the vote-count matrix as row-wise percentages."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table_percent:3 of
+#, python-format
+msgid ""
+"Each row is normalised to 100% so the values represent each contestant's "
+"share within a single constituency."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table_percent:6 of
+msgid ""
+"If ``True``, return a pandas Styler with percentage formatting and a "
+"caption. If ``False`` (default), return the plain DataFrame of float "
+"percentages."
+msgstr ""
+
+#: ipres.vote_matrix.VoteMatrix.show_votes_table_percent:9 of
+msgid "Number of decimal places for rounding and display formatting."
+msgstr ""
+
+#: ipres.super_majority_margin:1 of
+msgid "Simple data class for specifying super majority margin."
+msgstr ""
+
+#: ipres.super_majority_margin.MarginUnit:1 of
+msgid "Unit for specifying the super majority margin."
+msgstr ""
+
+#: ipres.super_majority_margin.SuperMajorityMargin:1 of
+msgid "Specifies the margin for a super majority, either in percent or seats."
+msgstr ""
+
+#: ipres.super_majority_margin.SuperMajorityMargin:3 of
+msgid "The super majority is calculated as 50% + margin."
+msgstr ""
+
+#: ipres.super_majority_margin.SuperMajorityMargin:6 of
+msgid "Examples"
+msgstr ""
+
+#: ipres.super_majority_margin.SuperMajorityMargin:7 of
+msgid ""
+"SuperMajorityMargin(5, MarginUnit.PERCENT)  # 55% majority "
+"SuperMajorityMargin(10, MarginUnit.SEATS)   # 50% + 10 seats"
+msgstr ""
+

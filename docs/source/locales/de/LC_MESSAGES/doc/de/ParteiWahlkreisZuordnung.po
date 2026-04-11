@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 00:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md:1
+msgid "Zuweisung von Wahlkreisen zu Parteien"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md:3
+msgid ""
+"Die Zuteilung der Wahlkreise zu Parteien basiert auf einer "
+"**Wichtigkeitsmatrix**: Für jeden Wahlkreis und jede Partei wird "
+"berechnet, wie wichtig dieser Wahlkreis für die Partei ist (gewichtet "
+"nach relativem Stimmanteil im Wahlkreis). Parteien erhalten eine Anzahl "
+"an Wahlkreisen proportional zu ihrer Sitzzahl."
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md:5
+msgid "Für die Zuteilung sind drei Algorithmen implementiert:"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md
+msgid "Algorithmus"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md
+msgid "Eigenschaft"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md
+msgid "Optimalität"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md
+msgid "Greedy"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md
+msgid "O(n log n), sehr schnell"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md
+msgid "Heuristik, nicht immer optimal"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md
+msgid "Optimal (Ungarische Methode)"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md
+msgid "O(n³)"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md
+msgid "Garantiert optimal"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md
+msgid "Stable Matching (Gale-Shapley)"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md
+msgid "O(n²)"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md
+msgid "Stabil (keine \"Blocking Pairs\")"
+msgstr ""
+
+#: ../../source/doc/de/ParteiWahlkreisZuordnung.md:13
+msgid ""
+"Details zu den Algorithmen sind in `ALLOCATION_STRATEGIES.md` im "
+"Projektroot dokumentiert."
+msgstr ""
+

@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/draw_of_lots.rst:2
+msgid "Draw of Lots"
+msgstr ""
+
+#: ipres.draw_of_lots:1 of
+msgid ""
+"Terminal round resolved by lot when two contestants are tied across two "
+"prior ballots."
+msgstr ""
+"Abschließende Runde, die per Los entschieden wird, wenn zwei Bewerber in "
+"zwei vorangegangenen Wahlgängen gleichauf lagen."
+
+#: ipres.draw_of_lots.DrawOfLots:1 of
+msgid "A terminal election round decided by lot rather than by votes."
+msgstr "Eine abschließende Wahlrunde, die per Los statt per Stimmenanzahl entschieden wird."
+
+#: ipres.draw_of_lots.DrawOfLots:3 of
+msgid ""
+"Created when the same two contestants have faced each other in two "
+"consecutive ballot rounds without either reaching the super-majority "
+"threshold. No third ballot is cast — this draw-of-lots round is the third"
+" round. The winner is determined by the configured "
+":class:`~ipres.election_round.DrawLotsStrategy`."
+msgstr ""
+"Wird erzeugt, wenn dieselben zwei Bewerber in zwei aufeinanderfolgenden "
+"Wahlgängen gegeneinander angetreten sind, ohne dass einer die "
+"Supermehrheitsschwelle erreicht hat. Es gibt keinen dritten Wahlgang – "
+"diese Losentscheid-Runde ist die dritte Runde. Der Sieger wird durch die "
+"konfigurierte :class:`~ipres.election_round.DrawLotsStrategy` bestimmt."
+
+#: ipres.draw_of_lots.DrawOfLots:9 of
+msgid ""
+"Vote data is delegated to the preceding :class:`~ipres.ballot.Ballot` "
+"round via :meth:`getContestantsVotesAfterPossibleCoalitions`."
+msgstr ""
+"Stimmendaten werden über "
+":meth:`getContestantsVotesAfterPossibleCoalitions` an den vorangehenden "
+":class:`~ipres.ballot.Ballot`-Wahlgang delegiert."
+
+#: ../../source/api/draw_of_lots.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.draw_of_lots.DrawOfLots:15 of
+msgid "The input that produced this draw."
+msgstr "Der Input, der diesen Losentscheid erzeugt hat."
+
+#: ipres.draw_of_lots.DrawOfLots of
+msgid "type"
+msgstr ""
+
+#: ipres.draw_of_lots.DrawOfLots:17 of
+msgid "ipres.election_round.ElectionRoundInput"
+msgstr ""
+
+#: ipres.draw_of_lots.DrawOfLots:21 of
+msgid "The two contestants competing in this draw."
+msgstr "Die zwei Bewerber, die an diesem Losentscheid teilnehmen."
+
+#: ipres.draw_of_lots.DrawOfLots:23 of
+msgid "dict[str, ipres.contestant.Contestant]"
+msgstr ""
+
+#: ipres.draw_of_lots.DrawOfLots:27 of
+msgid "The contestant selected by lot."
+msgstr "Der per Los ausgewählte Bewerber."
+
+#: ipres.draw_of_lots.DrawOfLots:29 of
+msgid "ipres.contestant.Contestant"
+msgstr ""
+
+#: ipres.draw_of_lots.DrawOfLots.getContestants:1 of
+msgid "Return the two contestants that took part in this draw."
+msgstr "Gibt die zwei Bewerber zurück, die an diesem Losentscheid teilgenommen haben."
+
+#: ../../source/api/draw_of_lots.rst
+#: ipres.draw_of_lots.DrawOfLots.getContestants
+#: ipres.draw_of_lots.DrawOfLots.getDrawLotsStrategy
+#: ipres.draw_of_lots.DrawOfLots.getElection
+#: ipres.draw_of_lots.DrawOfLots.getNextRoundInput
+#: ipres.draw_of_lots.DrawOfLots.getOriginalContestants
+#: ipres.draw_of_lots.DrawOfLots.getParticipatingParties
+#: ipres.draw_of_lots.DrawOfLots.getPreviousRound
+#: ipres.draw_of_lots.DrawOfLots.getRoundNumber
+#: ipres.draw_of_lots.DrawOfLots.getWinner
+#: ipres.draw_of_lots.DrawOfLots.hasNext
+#: ipres.draw_of_lots.DrawOfLots.hasWinner
+#: ipres.draw_of_lots.DrawOfLots.wasDecidedByLot of
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.draw_of_lots.DrawOfLots.getContestantsVotesAfterPossibleCoalitions:1
+#: of
+msgid "Delegate vote totals to the preceding ballot round."
+msgstr "Delegiert Stimmengesamtzahlen an den vorangehenden Wahlgang."
+
+#: ipres.draw_of_lots.DrawOfLots.getContestantsVotesAfterPossibleCoalitions:3
+#: of
+msgid ""
+"A draw-of-lots round has no ballot of its own; vote data always comes "
+"from the most recent :class:`~ipres.ballot.Ballot`."
+msgstr ""
+"Eine Losentscheid-Runde hat keinen eigenen Wahlgang; Stimmendaten kommen "
+"immer vom aktuellsten :class:`~ipres.ballot.Ballot`."
+
+#: ../../source/api/draw_of_lots.rst
+msgid "Raises"
+msgstr "Ausnahmen"
+
+#: ipres.draw_of_lots.DrawOfLots.getContestantsVotesAfterPossibleCoalitions:6
+#: of
+msgid ""
+"If ``previousRound`` is ``None`` (should not happen     after :meth:`run`"
+" validation)."
+msgstr ""
+"Wenn ``previousRound`` ``None`` ist (sollte nach der Validierung in "
+":meth:`run` nicht vorkommen)."
+
+#: ipres.draw_of_lots.DrawOfLots.getDrawLotsStrategy:1 of
+msgid "Return the strategy that was used to determine the winner."
+msgstr "Gibt die Strategie zurück, mit der der Sieger ermittelt wurde."
+
+#: ipres.draw_of_lots.DrawOfLots.getElection:1 of
+msgid "Return the parent :class:`~ipres.election.Election`."
+msgstr "Gibt die übergeordnete :class:`~ipres.election.Election` zurück."
+
+#: ipres.draw_of_lots.DrawOfLots.getNextRoundInput:1 of
+msgid "Always ``None`` — a :class:`DrawOfLots` is the terminal round."
+msgstr "Immer ``None`` – eine :class:`DrawOfLots`-Runde ist die abschließende Runde."
+
+#: ipres.draw_of_lots.DrawOfLots.getOriginalContestants:1 of
+msgid "Return the contestants as recorded in the round input."
+msgstr "Gibt die Bewerber zurück, wie sie im Rundeninput erfasst wurden."
+
+#: ipres.draw_of_lots.DrawOfLots.getParticipatingParties:1 of
+msgid "Return the names of all original parties taking part in this draw."
+msgstr "Gibt die Namen aller ursprünglichen Parteien zurück, die an diesem Losentscheid teilnehmen."
+
+#: ipres.draw_of_lots.DrawOfLots.getParticipatingParties:3 of
+msgid "For coalition contestants, each member party is listed individually."
+msgstr "Bei Koalitions-Bewerbern wird jede Mitgliedspartei einzeln aufgeführt."
+
+#: ipres.draw_of_lots.DrawOfLots.getPreviousRound:1 of
+msgid "Return the preceding ballot round."
+msgstr "Gibt den vorangehenden Wahlgang zurück."
+
+#: ipres.draw_of_lots.DrawOfLots.getRoundNumber:1 of
+msgid "Return the 1-based index of this round within the election."
+msgstr "Gibt den 1-basierten Index dieser Runde innerhalb der Wahl zurück."
+
+#: ipres.draw_of_lots.DrawOfLots.getWinner:1 of
+msgid "Return the contestant selected by lot."
+msgstr "Gibt den per Los ausgewählten Bewerber zurück."
+
+#: ipres.draw_of_lots.DrawOfLots.hasNext:1 of
+msgid "Always ``False`` — a :class:`DrawOfLots` is always the final round."
+msgstr "Immer ``False`` – eine :class:`DrawOfLots`-Runde ist immer die letzte Runde."
+
+#: ipres.draw_of_lots.DrawOfLots.hasWinner:1 of
+msgid "Always ``True`` — a :class:`DrawOfLots` always produces a winner."
+msgstr "Immer ``True`` – eine :class:`DrawOfLots`-Runde erzeugt immer einen Sieger."
+
+#: ipres.draw_of_lots.DrawOfLots.run:1 of
+msgid "Execute a draw-of-lots round and return the completed :class:`DrawOfLots`."
+msgstr "Führt eine Losentscheid-Runde durch und gibt die abgeschlossene :class:`DrawOfLots` zurück."
+
+#: ipres.draw_of_lots.DrawOfLots.run:3 of
+msgid ""
+"Determines the winner according to the configured "
+":class:`~ipres.election_round.DrawLotsStrategy` and registers the "
+"completed round with the parent Election."
+msgstr ""
+"Bestimmt den Sieger gemäß der konfigurierten "
+":class:`~ipres.election_round.DrawLotsStrategy` und registriert die "
+"abgeschlossene Runde bei der übergeordneten Wahl."
+
+#: ipres.draw_of_lots.DrawOfLots.run:7 of
+msgid ""
+"All parameters required for this round. ``previousRound`` must not be "
+"``None`` — votes are taken from there."
+msgstr ""
+"Alle für diese Runde erforderlichen Parameter. ``previousRound`` darf "
+"nicht ``None`` sein – Stimmen werden von dort entnommen."
+
+#: ../../source/api/draw_of_lots.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.draw_of_lots.DrawOfLots.run:10 of
+msgid "A completed :class:`DrawOfLots` with ``_winner`` set."
+msgstr "Eine abgeschlossene :class:`DrawOfLots` mit gesetztem ``_winner``."
+
+#: ipres.draw_of_lots.DrawOfLots.run:12 of
+msgid "If ``previousRound`` is ``None`` or the strategy is unknown."
+msgstr "Wenn ``previousRound`` ``None`` ist oder die Strategie unbekannt ist."
+
+#: ipres.draw_of_lots.DrawOfLots.wasDecidedByLot:1 of
+msgid "Always ``True`` — this round was decided by lot, not by vote count."
+msgstr "Immer ``True`` – diese Runde wurde per Los, nicht durch Stimmenanzahl entschieden."

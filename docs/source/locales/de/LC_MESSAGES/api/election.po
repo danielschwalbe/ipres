@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/election.rst:2
+msgid "Election"
+msgstr ""
+
+#: ipres.election:1 of
+msgid ""
+"Main election controller orchestrating iterative ballot and draw-of-lots "
+"rounds."
+msgstr ""
+"Zentraler Wahlsteuerung, der iterative Wahlgänge und Losentscheid-Runden "
+"koordiniert."
+
+#: ipres.election.Election:1 of
+msgid "Represents a complete election and manages its iterative execution."
+msgstr "Repräsentiert eine vollständige Wahl und verwaltet deren iterative Durchführung."
+
+#: ipres.election.Election:3 of
+msgid ""
+"An election consists of one or more rounds of proportional voting. Voting"
+" continues until a party or coalition wins a government majority. Result "
+"evaluation (seat distribution, constituency allocation) is handled "
+"separately by ElectionEvaluator and ElectionResult."
+msgstr ""
+"Eine Wahl besteht aus einem oder mehreren Wahlgängen nach dem "
+"Verhältniswahlprinzip. Die Abstimmung läuft weiter, bis eine Partei oder "
+"Koalition eine Regierungsmehrheit erreicht. Die Ergebnisauswertung "
+"(Sitzverteilung, Wahlkreiszuteilung) wird separat durch ElectionEvaluator "
+"und ElectionResult durchgeführt."
+
+#: ../../source/api/election.rst ipres.election.Election.run
+#: ipres.election.Election.runNextIteration of
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.election.Election:10 of
+msgid ""
+"Global configuration for this election (constituencies, parties, majority"
+" threshold, etc.)."
+msgstr ""
+"Globale Konfiguration für diese Wahl (Wahlkreise, Parteien, "
+"Mehrheitsschwelle usw.)."
+
+#: ipres.election.Election of
+msgid "type"
+msgstr ""
+
+#: ipres.election.Election:13 of
+msgid "ipres.election_config.ElectionConfig"
+msgstr ""
+
+#: ipres.election.Election:17 of
+msgid "Read-only tuple of all completed election rounds, in chronological order."
+msgstr "Schreibgeschütztes Tupel aller abgeschlossenen Wahlgänge in chronologischer Reihenfolge."
+
+#: ipres.election.Election:20 of
+msgid "Example — automatic (simplest case):"
+msgstr "Beispiel — automatisch (einfachster Fall):"
+
+#: ipres.election.Election:25 of
+msgid "Example — manual step-by-step (e.g. to form coalitions between rounds):"
+msgstr "Beispiel — manuell Schritt für Schritt (z. B. zur Koalitionsbildung zwischen Runden):"
+
+#: ipres.election.Election.decisionNeededPartyReduction:1 of
+msgid "Return whether the winner was determined through party reduction."
+msgstr "Gibt zurück, ob der Sieger durch Parteiausscheidung ermittelt wurde."
+
+#: ipres.election.Election.decisionNeededPartyReduction:3 of
+msgid ""
+"True if the election required more than one round, meaning parties were "
+"eliminated across rounds until a winner emerged."
+msgstr ""
+"True, wenn die Wahl mehr als eine Runde erforderte, d. h. Parteien wurden "
+"rundenübergreifend ausgeschieden, bis ein Sieger hervorging."
+
+#: ../../source/api/election.rst
+#: ipres.election.Election.decisionNeededPartyReduction
+#: ipres.election.Election.getFirstIteration
+#: ipres.election.Election.getLastIteration
+#: ipres.election.Election.getNumberOfIterations
+#: ipres.election.Election.getWinner ipres.election.Election.hasWinner
+#: ipres.election.Election.isFinished ipres.election.Election.run
+#: ipres.election.Election.runNextIteration of
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.election.Election.getFirstIteration:1 of
+msgid "Return the first round, or None if no rounds have been run."
+msgstr "Gibt die erste Runde zurück oder None, wenn noch keine Runden durchgeführt wurden."
+
+#: ipres.election.Election.getLastIteration:1 of
+msgid "Return the most recent round, or None if no rounds have been run."
+msgstr "Gibt die aktuellste Runde zurück oder None, wenn noch keine Runden durchgeführt wurden."
+
+#: ipres.election.Election.getNumberOfIterations:1 of
+msgid "Return the number of completed rounds."
+msgstr "Gibt die Anzahl der abgeschlossenen Runden zurück."
+
+#: ipres.election.Election.getWinner:1 of
+msgid "Return the winning Contestant, or None if the election is not finished."
+msgstr "Gibt den Sieger-Bewerber zurück oder None, wenn die Wahl noch nicht abgeschlossen ist."
+
+#: ipres.election.Election.hadOutrightWinner:1 of
+msgid ""
+"Return True if the election was won outright through a direct popular "
+"vote."
+msgstr ""
+"Gibt True zurück, wenn die Wahl durch eine direkte Volksabstimmung klar "
+"gewonnen wurde."
+
+#: ipres.election.Election.hadOutrightWinner:3 of
+msgid ""
+"True when the winner reached the required majority without party "
+"reduction across rounds or drawing of lots — i.e. in a single unforced "
+"round or through repeated rounds with an unchanged set of contestants."
+msgstr ""
+"True, wenn der Sieger die erforderliche Mehrheit ohne rundenübergreifende "
+"Parteiausscheidung oder Losentscheid erreicht hat – d. h. in einer "
+"einzelnen, unerzwungenen Runde oder durch wiederholte Runden mit "
+"unverändertem Bewerberfeld."
+
+#: ipres.election.Election.hadOutrightWinner:7 of
+msgid "False when party reduction occurred or the winner was determined by lot."
+msgstr "False, wenn Parteiausscheidung stattfand oder der Sieger durch Los ermittelt wurde."
+
+#: ../../source/api/election.rst
+msgid "Raises"
+msgstr "Ausnahmen"
+
+#: ipres.election.Election.hadOutrightWinner:9 of
+msgid "If the election is not yet finished."
+msgstr "Wenn die Wahl noch nicht abgeschlossen ist."
+
+#: ipres.election.Election.hasWinner:1 of
+msgid "Return True if the election has a winner."
+msgstr "Gibt True zurück, wenn die Wahl einen Sieger hat."
+
+#: ipres.election.Election.isFinished:1 of
+msgid "Return True if the election is finished (alias for hasWinner())."
+msgstr "Gibt True zurück, wenn die Wahl abgeschlossen ist (Alias für hasWinner())."
+
+#: ipres.election.Election.iterations:1 of
+msgid "Read-only view of all completed election rounds."
+msgstr "Schreibgeschützte Ansicht aller abgeschlossenen Wahlgänge."
+
+#: ipres.election.Election.run:1 of
+msgid "Run the entire election to completion."
+msgstr "Führt die gesamte Wahl bis zum Abschluss durch."
+
+#: ipres.election.Election.run:3 of
+msgid ""
+"Executes rounds until a winner is determined. Each completed round is "
+"passed to on_iteration_finished if provided."
+msgstr ""
+"Führt Runden durch, bis ein Sieger feststeht. Jede abgeschlossene Runde "
+"wird an on_iteration_finished übergeben, falls angegeben."
+
+#: ipres.election.Election.run:6 of
+msgid ""
+"Optional callback invoked after each round completes, including the final"
+" one."
+msgstr ""
+"Optionaler Callback, der nach Abschluss jeder Runde aufgerufen wird, "
+"einschließlich der letzten."
+
+#: ../../source/api/election.rst ipres.election.Election.run
+#: ipres.election.Election.runNextIteration of
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.election.Election.run:9 of
+msgid "The final ElectionRound containing the winner."
+msgstr "Die abschließende ElectionRound mit dem Sieger."
+
+#: ipres.election.Election.run:12 ipres.election.Election.runNextIteration:12
+#: of
+msgid "Example"
+msgstr "Beispiel"
+
+#: ipres.election.Election.runNextIteration:1 of
+msgid "Run the next round of the election."
+msgstr "Führt die nächste Runde der Wahl durch."
+
+#: ipres.election.Election.runNextIteration:3 of
+msgid ""
+"Starts the election if no rounds have been run yet. Otherwise, continues "
+"from where the last round left off."
+msgstr ""
+"Startet die Wahl, wenn noch keine Runden durchgeführt wurden. Andernfalls "
+"wird dort fortgesetzt, wo die letzte Runde aufgehört hat."
+
+#: ipres.election.Election.runNextIteration:6 of
+msgid ""
+"Optional pre-built input. If None, derived from the previous round's "
+"output."
+msgstr ""
+"Optionaler vorgefertigter Input. Bei None wird er aus der Ausgabe der "
+"vorherigen Runde abgeleitet."
+
+#: ipres.election.Election.runNextIteration:9 of
+msgid "The completed ElectionRound."
+msgstr "Die abgeschlossene ElectionRound."
+
+#: ipres.election.Election.start:1 of
+msgid "Start the election by running the first round."
+msgstr "Startet die Wahl durch Durchführung der ersten Runde."
+
+#: ipres.election.Election.start:3 of
+msgid ""
+"Derives the ElectionRoundInput from electionConfig unless one is "
+"provided. Use run() to execute the entire election automatically or call "
+"runNextIteration() repeatedly for manual step-by-step control."
+msgstr ""
+"Leitet den ElectionRoundInput aus electionConfig ab, sofern keiner "
+"angegeben wird. Mit run() kann die gesamte Wahl automatisch durchgeführt "
+"oder runNextIteration() wiederholt für manuelle Schritt-für-Schritt-"
+"Steuerung aufgerufen werden."
+
+#: ipres.election.Election.start:7 of
+msgid "Optional pre-built input. If None, derived from electionConfig."
+msgstr "Optionaler vorgefertigter Input. Bei None wird er aus electionConfig abgeleitet."
+
+#: ipres.election.Election.start:9 of
+msgid ""
+"Optional fixed votes to inject into the first round. Passed to "
+":meth:`~ipres.election_round.ElectionRoundInput.with_votes`. Overrides "
+"any ``vote_matrix`` already present in ``iterationInput``."
+msgstr ""
+"Optionale feste Stimmen, die in die erste Runde eingespielt werden. Wird "
+"an :meth:`~ipres.election_round.ElectionRoundInput.with_votes` "
+"weitergegeben. Überschreibt jede bereits in ``iterationInput`` vorhandene "
+"``vote_matrix``."
+
+#: ipres.election.Election.start:13 of
+msgid "The completed first Ballot."
+msgstr "Der abgeschlossene erste Wahlgang."
+
+#~ msgid "Return whether the government is awarded a guaranteed seat majority."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "True if the winner was determined "
+#~ "either through party reduction across "
+#~ "rounds or by drawing lots — both"
+#~ " cases where the result was not "
+#~ "a clear proportional win in a "
+#~ "single round."
+#~ msgstr ""

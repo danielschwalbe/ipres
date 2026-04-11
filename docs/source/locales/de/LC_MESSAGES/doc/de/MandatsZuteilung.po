@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 00:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/doc/de/MandatsZuteilung.md:1
+msgid "Mandatszuteilung"
+msgstr ""
+
+#: ../../source/doc/de/MandatsZuteilung.md:3
+msgid ""
+"**Gewinner im ersten Wahlgang:** Die Gewinnerpartei/-koalition erhält "
+"Sitze entsprechend ihrer Mehrheit. Die übrigen Sitze werden proportional "
+"nach dem Ergebnis des ersten Wahlgangs an die anderen Parteien verteilt."
+msgstr ""
+
+#: ../../source/doc/de/MandatsZuteilung.md:4
+msgid ""
+"**Gewinner nach mehreren Wahlgängen:** Der Gewinner erhält ebenfalls "
+"Sitze entsprechend der absoluten Mehrheit. Die restlichen Sitze verteilen"
+" sich nach dem ursprünglichen Ergebnis des ersten Wahlgangs auf alle "
+"anderen Parteien (soweit ihr Stimmenanteil für mindestens einen Sitz "
+"reicht)."
+msgstr ""
+
+#: ../../source/doc/de/MandatsZuteilung.md:6
+msgid ""
+"So ist sichergestellt, dass die Regierung stets über eine arbeitsfähige "
+"Mehrheit verfügt und gleichzeitig auch kleine Oppositionsparteien "
+"repräsentiert sind."
+msgstr ""
+

@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/apportionment.rst:2
+msgid "Apportionment"
+msgstr ""
+
+#: ipres.apportionment:1 of
+msgid "Seat apportionment algorithms (Sainte-Laguë, D'Hondt, Hare-Niemeyer)."
+msgstr "Sitzverteilungsalgorithmen (Sainte-Laguë, D'Hondt, Hare-Niemeyer)."
+
+#: ipres.apportionment.apportionSeats:1 of
+msgid "Distribute P seats among N contestants based on their vote counts."
+msgstr "Verteilt P Sitze auf N Bewerber entsprechend ihrer Stimmenzahlen."
+
+#: ../../source/api/apportionment.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.apportionment.apportionSeats:3 of
+msgid "Vote counts for each contestant."
+msgstr "Stimmenzahlen für jeden Bewerber."
+
+#: ipres.apportionment.apportionSeats:4 of
+msgid "Total number of seats to distribute."
+msgstr "Gesamtzahl der zu verteilenden Sitze."
+
+#: ipres.apportionment.apportionSeats:5 of
+msgid "Apportionment method to use (Sainte-Laguë, D'Hondt, or Hare-Niemeyer)."
+msgstr "Anzuwendendes Verteilungsverfahren (Sainte-Laguë, D'Hondt oder Hare-Niemeyer)."
+
+#: ../../source/api/apportionment.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.apportionment.apportionSeats:7 of
+msgid "Integer array of shape ``(N,)`` with the number of seats per contestant."
+msgstr "Ganzzahliges Array der Form ``(N,)`` mit der Sitzanzahl pro Bewerber."
+
+#: ../../source/api/apportionment.rst
+msgid "Return type"
+msgstr "Rückgabetyp"

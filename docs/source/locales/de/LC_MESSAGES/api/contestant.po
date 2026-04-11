@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/contestant.rst:2
+msgid "Contestant"
+msgstr ""
+
+#: ipres.contestant:1 of
+msgid ""
+"Contestant and coalition representations used throughout the election "
+"simulation."
+msgstr ""
+"Bewerber- und Koalitionsdarstellungen, die in der gesamten "
+"Wahlsimulation verwendet werden."
+
+#: ipres.contestant.Contestant:1 of
+msgid ""
+"A contestant in an election, representing either a single party or a "
+"coalition."
+msgstr ""
+"Ein Bewerber in einer Wahl, der entweder eine einzelne Partei oder eine "
+"Koalition repräsentiert."
+
+#: ipres.contestant.Contestant:3 of
+msgid ""
+"Contestants are immutable once created. Use the factory classmethods to "
+"construct instances:"
+msgstr ""
+"Bewerber sind nach ihrer Erstellung unveränderlich. Zur Erzeugung von "
+"Instanzen werden die Factory-Klassenmethoden verwendet:"
+
+#: ipres.contestant.Contestant:6 of
+msgid ":meth:`from_party` — create a single-party contestant"
+msgstr ":meth:`from_party` — erstellt einen Einzelpartei-Bewerber"
+
+#: ipres.contestant.Contestant:7 of
+msgid ":meth:`as_coalition` — create a coalition from existing contestants"
+msgstr ":meth:`as_coalition` — erstellt eine Koalition aus bestehenden Bewerbern"
+
+#: ipres.contestant.Contestant:9 of
+msgid ""
+"To create multiple single-party contestants at once, use the module-level"
+" helpers :func:`contestantsFromParties` and "
+":func:`contestantsDictFromParties`."
+msgstr ""
+"Um mehrere Einzelpartei-Bewerber auf einmal zu erzeugen, können die "
+"modulweiten Hilfsfunktionen :func:`contestantsFromParties` und "
+":func:`contestantsDictFromParties` verwendet werden."
+
+#: ../../source/api/contestant.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.contestant.Contestant.as_coalition:1 of
+msgid "Create a coalition contestant from a collection of member contestants."
+msgstr "Erstellt einen Koalitions-Bewerber aus einer Sammlung von Mitglieds-Bewerbern."
+
+#: ipres.contestant.Contestant.as_coalition:3 of
+msgid "Display name for the coalition."
+msgstr "Anzeigename der Koalition."
+
+#: ipres.contestant.Contestant.as_coalition:4 of
+msgid ""
+"The member contestants, either as a list or as a dict mapping member name"
+" to Contestant."
+msgstr ""
+"Die Mitglieds-Bewerber, entweder als Liste oder als Wörterbuch mit "
+"Zuordnung von Mitgliedsname zu Bewerber."
+
+#: ipres.contestant.Contestant.as_coalition:6 of
+msgid ""
+"Vote weight fraction for each member. If omitted, equal weights (1/n) are"
+" assigned. When provided, keys must match the member names and values "
+"should sum to 1.0."
+msgstr ""
+"Stimmgewichtsanteil für jedes Mitglied. Bei Auslassung werden gleiche "
+"Gewichte (1/n) vergeben. Wenn angegeben, müssen die Schlüssel den "
+"Mitgliedsnamen entsprechen, und die Werte sollten sich auf 1,0 summieren."
+
+#: ../../source/api/contestant.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.contestant.Contestant.as_coalition:10 of
+msgid "A new coalition Contestant."
+msgstr "Ein neuer Koalitions-Bewerber."
+
+#: ../../source/api/contestant.rst
+#: ipres.contestant.Contestant.getContainedParties
+#: ipres.contestant.Contestant.getMemberList
+#: ipres.contestant.Contestant.getMemberNames
+#: ipres.contestant.Contestant.isCoalition
+#: ipres.contestant.Contestant.isSingleParty of
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.contestant.Contestant.from_party:1 of
+msgid "Create a single-party contestant."
+msgstr "Erstellt einen Einzelpartei-Bewerber."
+
+#: ipres.contestant.Contestant.from_party:3 of
+msgid "The name of the party."
+msgstr "Der Name der Partei."
+
+#: ipres.contestant.Contestant.from_party:5 of
+msgid "A new single-party Contestant."
+msgstr "Ein neuer Einzelpartei-Bewerber."
+
+#: ipres.contestant.Contestant.getContainedParties:1 of
+msgid ""
+"Return the names of all single parties recursively contained in this "
+"contestant."
+msgstr ""
+"Gibt die Namen aller in diesem Bewerber rekursiv enthaltenen "
+"Einzelparteien zurück."
+
+#: ipres.contestant.Contestant.getContainedParties:3 of
+msgid ""
+"For a single party, returns a list with just its own name. For a "
+"coalition, recursively traverses all members and returns the leaf party "
+"names."
+msgstr ""
+"Bei einer Einzelpartei wird eine Liste mit nur ihrem eigenen Namen "
+"zurückgegeben. Bei einer Koalition werden alle Mitglieder rekursiv "
+"durchlaufen und die Blattknotennamen der Parteien zurückgegeben."
+
+#: ipres.contestant.Contestant.getMemberList:1 of
+msgid "Return the list of direct member contestants."
+msgstr "Gibt die Liste der direkten Mitglieds-Bewerber zurück."
+
+#: ipres.contestant.Contestant.getMemberList:3
+#: ipres.contestant.Contestant.getMemberNames:3 of
+msgid "Returns an empty list for single-party contestants."
+msgstr "Gibt für Einzelpartei-Bewerber eine leere Liste zurück."
+
+#: ipres.contestant.Contestant.getMemberNames:1 of
+msgid "Return the names of direct member contestants."
+msgstr "Gibt die Namen der direkten Mitglieds-Bewerber zurück."
+
+#: ipres.contestant.Contestant.getMemberVoteWeight:1 of
+msgid "Return the vote weight fraction of a direct coalition member (0–1)."
+msgstr "Gibt den Stimmgewichtsanteil eines direkten Koalitionsmitglieds zurück (0–1)."
+
+#: ipres.contestant.Contestant.getMemberVoteWeight:3 of
+#, python-format
+msgid ""
+"The weight represents the share of votes that member contributed when the"
+" coalition was formed. For example, 0.6667 means the member contributed "
+"66.67% of the coalition's votes."
+msgstr ""
+"Das Gewicht stellt den Stimmanteil dar, den das Mitglied bei der "
+"Koalitionsbildung beigetragen hat. Zum Beispiel bedeutet 0,6667, dass das "
+"Mitglied 66,67 % der Koalitionsstimmen beigetragen hat."
+
+#: ipres.contestant.Contestant.getMemberVoteWeight:7 of
+msgid "The name of the member to look up."
+msgstr "Der Name des nachzuschlagenden Mitglieds."
+
+#: ../../source/api/contestant.rst
+msgid "Raises"
+msgstr "Ausnahmen"
+
+#: ipres.contestant.Contestant.getMemberVoteWeight:9 of
+msgid ""
+"If called on a single-party contestant, or if     ``member_name`` is not "
+"a direct member of this coalition."
+msgstr ""
+"Wenn auf einem Einzelpartei-Bewerber aufgerufen, oder wenn ``member_name`` "
+"kein direktes Mitglied dieser Koalition ist."
+
+#: ipres.contestant.Contestant.getMemberVoteWeightsForParties:1 of
+msgid "Return vote weight fractions for all leaf parties in this contestant."
+msgstr "Gibt Stimmgewichtsanteile für alle Blattknoten-Parteien dieses Bewerbers zurück."
+
+#: ipres.contestant.Contestant.getMemberVoteWeightsForParties:3 of
+#, python-brace-format
+msgid ""
+"For a single party, returns ``{party_name: 1.0}``. For a coalition, "
+"recursively multiplies member weights down to the leaf parties, so the "
+"returned fractions reflect each original party's share of the total "
+"coalition votes."
+msgstr ""
+"Bei einer Einzelpartei wird ``{party_name: 1.0}`` zurückgegeben. Bei "
+"einer Koalition werden Mitgliedsgewichte rekursiv bis zu den Blattknoten-"
+"Parteien multipliziert, sodass die zurückgegebenen Anteile den "
+"Stimmanteil jeder Ursprungspartei an den Gesamtkoalitionsstimmen "
+"widerspiegeln."
+
+#: ipres.contestant.Contestant.getMemberVoteWeightsForParties:8 of
+msgid ""
+"A dict mapping each leaf party name to its weight fraction (0–1). Values "
+"sum to 1.0."
+msgstr ""
+"Ein Wörterbuch, das jeden Blattknotenparteinamen seinem Gewichtsanteil "
+"(0–1) zuordnet. Die Werte summieren sich auf 1,0."
+
+#: ipres.contestant.Contestant.isCoalition:1 of
+msgid "Return True if this contestant is a coalition of two or more members."
+msgstr "Gibt True zurück, wenn dieser Bewerber eine Koalition aus zwei oder mehr Mitgliedern ist."
+
+#: ipres.contestant.Contestant.isSingleParty:1 of
+msgid "Return True if this contestant represents a single party (no members)."
+msgstr "Gibt True zurück, wenn dieser Bewerber eine Einzelpartei repräsentiert (keine Mitglieder)."
+
+#: ipres.contestant.Contestant.member_vote_weights:1 of
+msgid "The vote weight fraction of each coalition member (values sum to 1.0)."
+msgstr "Der Stimmgewichtsanteil jedes Koalitionsmitglieds (Werte summieren sich auf 1,0)."
+
+#: ipres.contestant.Contestant.member_vote_weights:3 of
+msgid ""
+"Empty for single-party contestants. For coalitions, each key is a member "
+"name and the value is the share of votes that member contributed when the"
+" coalition was formed."
+msgstr ""
+"Leer für Einzelpartei-Bewerber. Bei Koalitionen ist jeder Schlüssel ein "
+"Mitgliedsname und der Wert der Stimmanteil, den das Mitglied bei der "
+"Koalitionsbildung beigetragen hat."
+
+#: ipres.contestant.Contestant.members:1 of
+msgid "The member contestants of this coalition, keyed by their name."
+msgstr "Die Mitglieds-Bewerber dieser Koalition, nach Namen gegliedert."
+
+#: ipres.contestant.Contestant.members:3 of
+msgid "Empty for single-party contestants."
+msgstr "Leer für Einzelpartei-Bewerber."
+
+#: ipres.contestant.Contestant.name:1 of
+msgid "The display name of this contestant."
+msgstr "Der Anzeigename dieses Bewerbers."
+
+#: ipres.contestant.contestantsDictFromParties:1 of
+msgid "Create a dict of single-party contestants, keyed by party name."
+msgstr "Erstellt ein Wörterbuch mit Einzelpartei-Bewerbern, nach Parteinamen gegliedert."
+
+#: ipres.contestant.contestantsDictFromParties:3
+#: ipres.contestant.contestantsFromParties:3 of
+msgid "The party names to create contestants for."
+msgstr "Die Parteinamen, für die Bewerber erstellt werden sollen."
+
+#: ipres.contestant.contestantsDictFromParties:5 of
+msgid "A dict mapping each party name to its Contestant."
+msgstr "Ein Wörterbuch, das jeden Parteinamen seinem Bewerber zuordnet."
+
+#: ipres.contestant.contestantsFromParties:1 of
+msgid "Create a list of single-party contestants, one per name."
+msgstr "Erstellt eine Liste von Einzelpartei-Bewerbern, einen pro Name."
+
+#: ipres.contestant.contestantsFromParties:5 of
+msgid "A list of single-party Contestants in the same order as ``party_names``."
+msgstr "Eine Liste von Einzelpartei-Bewerbern in derselben Reihenfolge wie ``party_names``."

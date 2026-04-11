@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/parties.rst:2
+msgid "Parties"
+msgstr ""
+
+#: ipres.parties:1 of
+msgid ""
+"Party configuration, loading, and interactive selection for election "
+"simulations."
+msgstr ""
+"Parteikonfiguration, Laden und interaktive Auswahl für Wahlsimulationen."
+
+#: ../../source/api/parties.rst ipres.parties.Parties.save of
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.parties.Parties.getN:1 of
+msgid "Return the number of parties."
+msgstr "Gibt die Anzahl der Parteien zurück."
+
+#: ../../source/api/parties.rst ipres.parties.Parties.getN
+#: ipres.parties.Parties.getParties ipres.parties.Parties.getPartyNames
+#: ipres.parties.Parties.save of
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.parties.Parties.getParties:1 of
+msgid "Return the underlying parties DataFrame."
+msgstr "Gibt den zugrundeliegenden Parteien-DataFrame zurück."
+
+#: ipres.parties.Parties.getPartyNames:1 of
+msgid "Return the list of party names."
+msgstr "Gibt die Liste der Parteinamen zurück."
+
+#: ipres.parties.Parties.getSelectedParties:1 of
+msgid "Return a new Parties instance containing only the specified parties."
+msgstr "Gibt eine neue Parties-Instanz zurück, die nur die angegebenen Parteien enthält."
+
+#: ipres.parties.Parties.getSelectedParties:3 of
+msgid "Names of the parties to retain."
+msgstr "Namen der beizubehaltenden Parteien."
+
+#: ../../source/api/parties.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.parties.Parties.getSelectedParties:5 of
+msgid "A new :class:`Parties` with the filtered DataFrame."
+msgstr "Eine neue :class:`Parties`-Instanz mit dem gefilterten DataFrame."
+
+#: ipres.parties.Parties.save:1 of
+msgid ""
+"Save the parties DataFrame to CSV or Parquet. - If path is provided, use "
+"it. - If path is None, open a file save dialog to let the user choose the"
+" file. The file format is determined by the filename suffix (.csv or "
+".parquet). Returns the final path used."
+msgstr ""
+"Speichert den Parteien-DataFrame als CSV oder Parquet. – Wenn ein Pfad "
+"angegeben ist, wird dieser verwendet. – Ist der Pfad None, öffnet sich "
+"ein Datei-Speicherdialog, in dem der Benutzer die Datei auswählen kann. "
+"Das Dateiformat wird anhand des Dateinamensuffixes (.csv oder .parquet) "
+"bestimmt. Gibt den tatsächlich verwendeten Pfad zurück."

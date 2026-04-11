@@ -1,0 +1,284 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/allocation.rst:2
+msgid "Constituency Allocation"
+msgstr ""
+
+#: ipres.allocation:1 of
+msgid ""
+"Constituency allocation strategies for distributing constituencies to "
+"parties."
+msgstr "Wahlkreiszuteilungsstrategien zur Verteilung von Wahlkreisen auf Parteien."
+
+#: ipres.allocation:3 of
+msgid ""
+"This module provides different strategies for assigning constituencies to"
+" parties based on importance metrics, quotas, and other criteria."
+msgstr ""
+"Dieses Modul bietet verschiedene Strategien zur Zuweisung von Wahlkreisen "
+"an Parteien, basierend auf Wichtigkeitsmetriken, Quoten und anderen "
+"Kriterien."
+
+#: ipres.allocation.ConstituencyAllocationStrategy:1 of
+msgid "Base class for constituency allocation strategies."
+msgstr "Basisklasse für Wahlkreiszuteilungsstrategien."
+
+#: ipres.allocation.ConstituencyAllocationStrategy.allocate:1 of
+msgid "Allocate constituencies to parties based on importance and quotas."
+msgstr "Verteilt Wahlkreise auf Parteien basierend auf Wichtigkeit und Quoten."
+
+#: ../../source/api/allocation.rst ipres.allocation.allocate_constituencies
+#: ipres.allocation.create_constituency_allocation_strategy of
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.allocation.ConstituencyAllocationStrategy.allocate:3 of
+msgid ""
+"DataFrame with constituencies as rows and parties as columns. Each "
+"element w_ij represents the importance of constituency i for party j."
+msgstr ""
+"DataFrame mit Wahlkreisen als Zeilen und Parteien als Spalten. Jedes "
+"Element w_ij stellt die Wichtigkeit des Wahlkreises i für die Partei j dar."
+
+#: ipres.allocation.ConstituencyAllocationStrategy.allocate:5 of
+msgid ""
+"Dictionary mapping party names to the number of constituencies they "
+"should receive. Sum of quotas must equal number of constituencies."
+msgstr ""
+"Wörterbuch, das Parteinamen auf die Anzahl der zuzuteilenden Wahlkreise "
+"abbildet. Die Summe der Quoten muss der Anzahl der Wahlkreise entsprechen."
+
+#: ipres.allocation.ConstituencyAllocationStrategy.allocate:7 of
+msgid "Random number generator for tie-breaking (optional)."
+msgstr "Zufallszahlengenerator für die Gleichstands-Auflösung (optional)."
+
+#: ../../source/api/allocation.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.allocation.ConstituencyAllocationStrategy.allocate:9 of
+msgid "Dictionary mapping constituency names to party names."
+msgstr "Wörterbuch, das Wahlkreisnamen auf Parteinamen abbildet."
+
+#: ../../source/api/allocation.rst
+msgid "Raises"
+msgstr "Ausnahmen"
+
+#: ipres.allocation.ConstituencyAllocationStrategy.allocate:11 of
+msgid "If sum of quotas doesn't match number of constituencies."
+msgstr "Wenn die Summe der Quoten nicht mit der Anzahl der Wahlkreise übereinstimmt."
+
+#: ../../source/api/allocation.rst ipres.allocation.allocate_constituencies
+#: ipres.allocation.create_constituency_allocation_strategy of
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.allocation.GreedyAllocationStrategy:1 of
+msgid ""
+"Greedy allocation strategy: repeatedly assign the (constituency, party) "
+"pair with the highest importance, respecting quotas."
+msgstr ""
+"Gierige Zuteilungsstrategie: Weist wiederholt das (Wahlkreis, Partei)-Paar "
+"mit der höchsten Wichtigkeit zu, unter Einhaltung der Quoten."
+
+#: ipres.allocation.GreedyAllocationStrategy:4 of
+msgid ""
+"This is a simple, intuitive strategy that prioritizes parties' most "
+"important constituencies first."
+msgstr ""
+"Dies ist eine einfache, intuitive Strategie, die zunächst die wichtigsten "
+"Wahlkreise der Parteien priorisiert."
+
+#: ipres.allocation.GreedyAllocationStrategy.allocate:1 of
+msgid "Allocate constituencies using greedy strategy."
+msgstr "Verteilt Wahlkreise mittels gieriger Strategie."
+
+#: ipres.allocation.GreedyAllocationStrategy.allocate:3 of
+msgid ""
+"The algorithm: 1. Find the (constituency, party) pair with highest "
+"importance 2. If party hasn't reached quota, assign constituency to party"
+" 3. Remove constituency from consideration 4. Repeat until all "
+"constituencies assigned"
+msgstr ""
+"Der Algorithmus: 1. Das (Wahlkreis, Partei)-Paar mit der höchsten "
+"Wichtigkeit finden 2. Falls die Partei ihre Quote noch nicht erreicht hat, "
+"den Wahlkreis der Partei zuweisen 3. Den Wahlkreis aus der Betrachtung "
+"entfernen 4. Wiederholen bis alle Wahlkreise zugeteilt sind"
+
+#: ipres.allocation.GreedyAllocationStrategy.allocate:9
+#: ipres.allocation.OptimalAllocationStrategy.allocate:8
+#: ipres.allocation.StableMatchingAllocationStrategy.allocate:8
+#: ipres.allocation.allocate_constituencies_greedy:3
+#: ipres.allocation.allocate_constituencies_optimal:6
+#: ipres.allocation.allocate_constituencies_stable:3 of
+msgid "Importance of each constituency for each party"
+msgstr "Wichtigkeit jedes Wahlkreises für jede Partei"
+
+#: ipres.allocation.GreedyAllocationStrategy.allocate:10
+#: ipres.allocation.OptimalAllocationStrategy.allocate:9
+#: ipres.allocation.StableMatchingAllocationStrategy.allocate:9
+#: ipres.allocation.allocate_constituencies_greedy:4
+#: ipres.allocation.allocate_constituencies_optimal:7
+#: ipres.allocation.allocate_constituencies_stable:4 of
+msgid "Number of constituencies each party should receive"
+msgstr "Anzahl der Wahlkreise, die jede Partei erhalten soll"
+
+#: ipres.allocation.GreedyAllocationStrategy.allocate:11
+#: ipres.allocation.StableMatchingAllocationStrategy.allocate:10
+#: ipres.allocation.allocate_constituencies_greedy:5
+#: ipres.allocation.allocate_constituencies_stable:5 of
+msgid "Random generator for tie-breaking"
+msgstr "Zufallsgenerator für die Gleichstands-Auflösung"
+
+#: ipres.allocation.GreedyAllocationStrategy.allocate:13
+#: ipres.allocation.OptimalAllocationStrategy.allocate:12
+#: ipres.allocation.StableMatchingAllocationStrategy.allocate:12
+#: ipres.allocation.allocate_constituencies_greedy:7
+#: ipres.allocation.allocate_constituencies_optimal:10
+#: ipres.allocation.allocate_constituencies_stable:7 of
+msgid "Dictionary mapping constituency name -> party name"
+msgstr "Wörterbuch mit Zuordnung Wahlkreisname → Parteiname"
+
+#: ipres.allocation.OptimalAllocationStrategy:1 of
+msgid ""
+"Optimal allocation strategy using Linear Programming / Hungarian "
+"Algorithm."
+msgstr ""
+"Optimale Zuteilungsstrategie mittels Linearer Programmierung / "
+"Ungarischem Algorithmus."
+
+#: ipres.allocation.OptimalAllocationStrategy:3 of
+msgid ""
+"Finds the allocation that **provably** maximizes the total importance "
+"score. Uses scipy's implementation of the Hungarian algorithm (Kuhn-"
+"Munkres)."
+msgstr ""
+"Findet die Zuteilung, die die Gesamtwichtigkeit **nachweislich** "
+"maximiert. Verwendet die scipy-Implementierung des Ungarischen Algorithmus "
+"(Kuhn-Munkres)."
+
+#: ipres.allocation.OptimalAllocationStrategy:6 of
+msgid ""
+"This is more computationally expensive than Greedy but guarantees "
+"optimality."
+msgstr ""
+"Dies ist rechenintensiver als die gierige Strategie, garantiert jedoch "
+"Optimalität."
+
+#: ipres.allocation.OptimalAllocationStrategy.allocate:1 of
+msgid "Allocate constituencies using optimal matching (Hungarian algorithm)."
+msgstr "Verteilt Wahlkreise mittels optimalem Matching (Ungarischer Algorithmus)."
+
+#: ipres.allocation.OptimalAllocationStrategy.allocate:3 of
+msgid ""
+"This solves the assignment problem optimally by: 1. Creating \"slots\" "
+"for each party based on their quota 2. Using Hungarian algorithm to find "
+"maximum weighted matching 3. Mapping back to party assignments"
+msgstr ""
+"Löst das Zuweisungsproblem optimal durch: 1. Erstellen von \"Slots\" für "
+"jede Partei basierend auf ihrer Quote 2. Einsatz des Ungarischen "
+"Algorithmus zur Maximierung des gewichteten Matchings 3. Rückzuordnung zu "
+"Partei-Zuteilungen"
+
+#: ipres.allocation.OptimalAllocationStrategy.allocate:10
+#: ipres.allocation.allocate_constituencies_optimal:8 of
+msgid "Random generator (not used, included for API consistency)"
+msgstr "Zufallsgenerator (nicht verwendet, nur für API-Konsistenz vorhanden)"
+
+#: ipres.allocation.OptimalAllocationStrategy.allocate:14 of
+msgid "If sum of quotas doesn't match number of constituencies"
+msgstr "Wenn die Summe der Quoten nicht mit der Anzahl der Wahlkreise übereinstimmt"
+
+#: ipres.allocation.StableMatchingAllocationStrategy:1 of
+msgid "Stable matching allocation strategy based on Gale-Shapley algorithm."
+msgstr "Stabile-Matching-Zuteilungsstrategie basierend auf dem Gale-Shapley-Algorithmus."
+
+#: ipres.allocation.StableMatchingAllocationStrategy:3 of
+msgid ""
+"Creates a stable allocation where no constituency-party pair would both "
+"prefer each other over their current assignments."
+msgstr ""
+"Erstellt eine stabile Zuteilung, bei der kein Wahlkreis-Partei-Paar "
+"gegenseitig die jeweils andere Zuteilung bevorzugen würde."
+
+#: ipres.allocation.StableMatchingAllocationStrategy:6 of
+msgid ""
+"This is a modified version for the many-to-one matching problem where "
+"each party can be assigned multiple constituencies (up to their quota)."
+msgstr ""
+"Dies ist eine modifizierte Version für das Viele-zu-Eins-Matching-Problem, "
+"bei dem jeder Partei mehrere Wahlkreise (bis zu ihrer Quote) zugewiesen "
+"werden können."
+
+#: ipres.allocation.StableMatchingAllocationStrategy.allocate:1 of
+msgid "Allocate constituencies using stable matching strategy."
+msgstr "Verteilt Wahlkreise mittels Stabile-Matching-Strategie."
+
+#: ipres.allocation.StableMatchingAllocationStrategy.allocate:3 of
+msgid ""
+"Uses a modified Gale-Shapley algorithm where: - Constituencies "
+"\"propose\" to parties in order of importance (from party's perspective) "
+"- Parties accept/reject based on their current assignments and quotas - "
+"Results in a stable matching"
+msgstr ""
+"Verwendet einen modifizierten Gale-Shapley-Algorithmus, bei dem: - "
+"Wahlkreise Parteien in Reihenfolge der Wichtigkeit (aus Partei-Perspektive) "
+"\"vorschlagen\" - Parteien basierend auf aktuellen Zuteilungen und Quoten "
+"annehmen/ablehnen - Ein stabiles Matching entsteht"
+
+#: ipres.allocation.allocate_constituencies:1 of
+msgid ""
+"Allocates constituencies based on the given importance matrix and quotas "
+"using the specified allocation method."
+msgstr ""
+"Verteilt Wahlkreise basierend auf der gegebenen Wichtigkeitsmatrix und den "
+"Quoten unter Verwendung der angegebenen Zuteilungsmethode."
+
+#: ipres.allocation.allocate_constituencies_greedy:1 of
+msgid "Convenience function to allocate constituencies using greedy strategy."
+msgstr "Hilfsfunktion zur Wahlkreiszuteilung mittels gieriger Strategie."
+
+#: ipres.allocation.allocate_constituencies_optimal:1 of
+msgid "Convenience function to allocate constituencies using optimal strategy."
+msgstr "Hilfsfunktion zur Wahlkreiszuteilung mittels optimaler Strategie."
+
+#: ipres.allocation.allocate_constituencies_optimal:3 of
+msgid ""
+"This finds the provably optimal allocation that maximizes total "
+"importance. Uses the Hungarian algorithm (more expensive than Greedy but "
+"guaranteed optimal)."
+msgstr ""
+"Findet die nachweislich optimale Zuteilung, die die Gesamtwichtigkeit "
+"maximiert. Verwendet den Ungarischen Algorithmus (rechenintensiver als "
+"Greedy, aber garantiert optimal)."
+
+#: ipres.allocation.allocate_constituencies_stable:1 of
+msgid ""
+"Convenience function to allocate constituencies using stable matching "
+"strategy."
+msgstr "Hilfsfunktion zur Wahlkreiszuteilung mittels Stabile-Matching-Strategie."
+
+#: ipres.allocation.create_constituency_allocation_strategy:1 of
+msgid "Creates a constituency allocation strategy based on the given method."
+msgstr "Erstellt eine Wahlkreiszuteilungsstrategie basierend auf der angegebenen Methode."

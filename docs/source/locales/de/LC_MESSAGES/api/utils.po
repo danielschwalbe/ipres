@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/utils.rst:2
+msgid "Utilities"
+msgstr ""
+
+#: ipres.utils.paths:1 of
+msgid "Utilities for locating the project root directory."
+msgstr "Hilfsfunktionen zur Ermittlung des Projektstammverzeichnisses."
+
+#: ipres.utils.paths.find_project_root:1 of
+msgid ""
+"Search upward from the current working directory until a marker file is "
+"found."
+msgstr ""
+"Sucht vom aktuellen Arbeitsverzeichnis aufwärts, bis eine Markierungsdatei "
+"gefunden wird."
+
+#: ../../source/api/utils.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.utils.paths.find_project_root:3 of
+msgid "Filename that identifies the project root. Defaults to \"pyproject.toml\"."
+msgstr "Dateiname, der das Projektstammverzeichnis kennzeichnet. Standard: \"pyproject.toml\"."
+
+#: ../../source/api/utils.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.utils.paths.find_project_root:5 of
+msgid "Path to the project root directory."
+msgstr "Pfad zum Projektstammverzeichnis."
+
+#: ../../source/api/utils.rst
+msgid "Raises"
+msgstr "Ausnahmen"
+
+#: ipres.utils.paths.find_project_root:7 of
+msgid "If no directory containing the marker file is found."
+msgstr "Wenn kein Verzeichnis mit der Markierungsdatei gefunden wird."
+
+#: ../../source/api/utils.rst
+msgid "Return type"
+msgstr "Rückgabetyp"

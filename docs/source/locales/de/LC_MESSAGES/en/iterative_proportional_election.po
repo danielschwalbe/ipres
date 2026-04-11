@@ -1,0 +1,364 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/en/iterative_proportional_election.md:1
+msgid "Iterative Proportional Representation with Guaranteed Winner"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:2
+msgid "Procedure Description"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:4
+msgid ""
+"The core of the procedure is an iterative voting process that ensures a "
+"party or coalition with a clear governing majority always emerges at the "
+"end — without requiring a forced coalition. In contrast to classical "
+"majority voting systems, which also produce winners through non-"
+"linearity, the votes of the losers are not lost until the last iteration."
+" Even those whose party has been eliminated are allowed to vote again on "
+"the reduced party list and, if necessary, give their vote to another "
+"party still in the race according to the \"lesser evil\" principle."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:7
+msgid "Step 1: First Proportional Election"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:9
+msgid ""
+"A normal proportional election is conducted. The parties are ranked by "
+"their percentage vote share."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:11
+msgid ""
+"**Is there a winner?** A party or a voluntarily formed coalition reaches "
+"an absolute majority (a pre-defined percentage slightly above 50 %, so "
+"that the government remains capable of acting even when individual "
+"members are absent) → **Procedure finished.**"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:12
+msgid "**No winner?** → Continue with step 2."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:14
+msgid "Step 2: Reduction and New Round"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:16
+msgid ""
+"The vote shares are cumulated starting with the strongest party until "
+"**two thirds** of all votes are reached or exceeded. Only the parties "
+"included in this sum take part in the next round. All voters — including "
+"those whose party has been eliminated — may vote again."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:18
+msgid "The procedure returns to step 1."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:20
+msgid "Special Case: Only Two Parties Remaining"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:22
+msgid "**First round with two parties:** Round is repeated."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:23
+msgid ""
+"**Second inconclusive round:** A random procedure decides (e.g. minimal "
+"percentage differences or drawing of lots)."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:25
+msgid "Termination"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:27
+msgid ""
+"The procedure is guaranteed to terminate because the number of competing "
+"parties is reduced in each iteration until finally only two remain."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:29
+msgid "Example (three rounds)"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "Party"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "Round 1"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "Round 2"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "Round 3"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "A"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "28 %"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "35 %"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "52 % ✓"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "B"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "25 %"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "33 %"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "48 %"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "C"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "20 %"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "32 %"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "–"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "D"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "15 %"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "E"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md
+msgid "12 %"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:39
+msgid ""
+"*After round 1:* A+B+C sum to 73 % ≥ 2/3 → D and E are eliminated. *After"
+" round 2:* A+B sum to 68 % ≥ 2/3 → C is eliminated. *Round 3:* A reaches "
+"52 % → **A wins.**"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:43
+msgid "Execution in the Simulation"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:45
+#, python-brace-format
+msgid ""
+"In the simulation, an election is started by creating an "
+"{class}`~ipres.election.Election` object. The constructor expects an "
+"{class}`~ipres.election_config.ElectionConfig` object with the global "
+"procedure configuration created in the first step."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:47
+#, python-brace-format
+msgid ""
+"The procedure is started using the {meth}`Election.run() "
+"<ipres.election.Election.run>` or the {meth}`Election.start() "
+"<ipres.election.Election.start>` method. The {meth}`Election.run() "
+"<ipres.election.Election.run>` method executes the entire procedure, "
+"while the {meth}`Election.start() <ipres.election.Election.start>` method"
+" only executes the first round and returns a reference to the executed "
+"round. This allows interactive intervention in the voting process, for "
+"example to form coalitions or to test the effect of individual "
+"parameters."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:49
+msgid "**Automatic run**:"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:57
+#, python-brace-format
+msgid ""
+"A round is represented by an instance of the "
+"{class}`~ipres.election_round.ElectionRound` class. The "
+"{class}`~ipres.election_round.ElectionRound` class knows whether another "
+"round is required or not. If so, it returns the input for the next round."
+" This can optionally be overridden manually to specifically test certain "
+"use cases."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:59
+#, python-brace-format
+msgid ""
+"A voting round is executed by calling {meth}`ElectionRound.run() "
+"<ipres.election_round.ElectionRound.run>`. ({meth}`Election.start() "
+"<ipres.election.Election.start>` also calls {meth}`ElectionRound.run() "
+"<ipres.election_round.ElectionRound.run>` internally.) The class method "
+"{meth}`ElectionRound.run() <ipres.election_round.ElectionRound.run>` "
+"takes an {class}`~ipres.election_round.ElectionRoundInput` object as a "
+"parameter and returns an {class}`~ipres.election_round.ElectionRound` "
+"object with the result of the executed voting round. Depending on whether"
+" it was a real election round or a drawing of lots, the result is an "
+"instance of {class}`~ipres.ballot.Ballot` or "
+"{class}`~ipres.draw_of_lots.DrawOfLots`. Both classes are subclasses of "
+"{class}`~ipres.election_round.ElectionRound`."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:61
+#, python-brace-format
+msgid ""
+"The procedure is only complete when there is a winner. In this case, "
+"{meth}`ElectionRound.hasNext() "
+"<ipres.election_round.ElectionRound.hasNext>` returns `False` and "
+"{meth}`ElectionRound.hasWinner() "
+"<ipres.election_round.ElectionRound.hasWinner>` is `True`. Only then can "
+"the election be evaluated."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:64
+#, python-brace-format
+msgid ""
+"By forming coalitions, a round that ended without a winner can "
+"retrospectively receive a winner. Coalitions are created by calling "
+"{meth}`Ballot.formCoalition() <ipres.ballot.Ballot.formCoalition>`. Note "
+"that coalitions can only be formed after a voting round and, once formed,"
+" must remain together until the end of the procedure — this ensures that "
+"the number of participants is reduced in each round."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:66
+msgid ""
+"For details on `Contestant` and coalition formation see the notebook "
+"[Contestant](../../notebooks/en/contestant.ipynb)."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:68
+msgid "**Manual run with coalition formation:**"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:83
+msgid "Vote Injection"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:85
+msgid ""
+"By default, the simulation generates votes randomly based on "
+"probabilities and turnout from the configuration. For tests, "
+"demonstrations, or the analysis of specific scenarios, votes can also be "
+"provided as fixed values."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:87
+#, python-brace-format
+msgid ""
+"For the first round, {meth}`Election.start() "
+"<ipres.election.Election.start>` accepts an optional `votes` parameter:"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:93
+#, python-brace-format
+msgid ""
+"For subsequent rounds, the method {meth}`ElectionRoundInput.with_votes() "
+"<ipres.election_round.ElectionRoundInput.with_votes>` is available on the"
+" input returned by {meth}`ElectionRound.getNextRoundInput() "
+"<ipres.election_round.ElectionRound.getNextRoundInput>`:"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:101
+msgid ""
+"`getNextRoundInput()` returns the prepared input for the next round — "
+"carrying over all settings (remaining contestants, threshold, strategy, "
+"etc.) but without votes. `with_votes()` adds the desired vote counts and "
+"returns a new copy of the input with the specified votes."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:103
+msgid "For multiple constituencies, pass a nested dict:"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:111
+msgid "Relevant Configuration Parameters"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:113
+msgid "`ballot_majority_margin` — Ballot threshold"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:115
+msgid ""
+"`ballot_majority_margin` controls at what vote share a single round "
+"produces a winner (default: 2% above 50% = 52%). It is independent of "
+"`parliament_majority_margin`. The margin can be specified in percent "
+"(`MarginUnit.PERCENT`) or in seats (`MarginUnit.SEATS`)."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:117
+msgid "`DrawLotsStrategy` — Lot strategy"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:119
+msgid ""
+"When two parties fail to produce a winner in two consecutive rounds, the "
+"third round is decided by lot:"
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:121
+msgid "**`DrawLotsStrategy.RANDOM`** *(default)*: uniform random draw."
+msgstr ""
+
+#: ../../source/en/iterative_proportional_election.md:122
+msgid ""
+"**`DrawLotsStrategy.MARGINAL_LEAD`**: The marginal vote difference is "
+"treated as a random outcome — the party that happened to receive slightly"
+" more votes wins."
+msgstr ""
+

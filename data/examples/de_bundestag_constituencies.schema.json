@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "German Bundestag constituencies",
+  "description": "Synthetic example dataset of all German Bundestag constituencies with names and sizes (population/voters proxy).",
+  "type": "object",
+  "properties": {
+    "dataset": {"const": "de_bundestag_constituencies"},
+    "version": {"type": "string", "const": "1.0.0"},
+    "fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "type": {"type": "string"},
+          "description": {"type": "string"},
+          "required": {"type": "boolean"}
+        },
+        "required": ["name", "type"]
+      }
+    }
+  },
+  "required": ["dataset", "version", "fields"],
+  "examples": [
+    {
+      "dataset": "de_bundestag_constituencies",
+      "version": "1.0.0",
+      "fields": [
+        {"name": "constituency_number", "type": "integer", "description": "Bundesweite Wahlkreisnummer (1..299)", "required": true},
+        {"name": "constituency_name", "type": "string", "description": "Offizieller Wahlkreisname oder Platzhaltername", "required": true},
+        {"name": "constituency_size", "type": "integer", "description": "Wahlkreisgröße (Bevölkerung/Wählerzahl-Proxy)", "required": true}
+      ]
+    }
+  ]
+}

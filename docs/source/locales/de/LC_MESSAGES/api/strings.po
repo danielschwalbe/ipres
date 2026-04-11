@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/strings.rst:2
+msgid "Localisation Strings"
+msgstr ""
+
+#: ipres.strings:1 of
+msgid "Localisation strings and helpers for ipres display output."
+msgstr "Lokalisierungszeichenketten und Hilfsfunktionen für die Ausgabe von ipres."
+
+#: ipres.strings:3 of
+msgid ""
+"All user-visible strings (table column headers, captions, chart titles, "
+"labels) are stored here, keyed by "
+":class:`~ipres.election_config.Language`. Use :func:`t` to retrieve a "
+"translated string and :func:`format_number` to format integers with the "
+"appropriate thousands separator."
+msgstr ""
+"Alle für den Benutzer sichtbaren Zeichenketten (Tabellenspaltenköpfe, "
+"Beschriftungen, Diagrammtitel, Labels) werden hier gespeichert, gegliedert "
+"nach :class:`~ipres.election_config.Language`. Mit :func:`t` kann eine "
+"übersetzte Zeichenkette abgerufen und mit :func:`format_number` eine "
+"Ganzzahl mit dem passenden Tausendertrennzeichen formatiert werden."
+
+#: ipres.strings:8 of
+msgid ""
+"Default language is ``Language.DE`` so that all existing call sites that "
+"do not pass a language continue to produce German output unchanged."
+msgstr ""
+"Die Standardsprache ist ``Language.DE``, sodass alle bestehenden "
+"Aufrufstellen, die keine Sprache übergeben, weiterhin unverändert deutsche "
+"Ausgaben erzeugen."
+
+#: ipres.strings.format_number:1 of
+msgid "Format an integer with the locale-appropriate thousands separator."
+msgstr "Formatiert eine Ganzzahl mit dem sprachabhängigen Tausendertrennzeichen."
+
+#: ipres.strings.format_number:3 of
+msgid "German uses a narrow no-break space (U+202F); English uses a comma."
+msgstr "Deutsch verwendet ein schmales geschütztes Leerzeichen (U+202F); Englisch verwendet ein Komma."
+
+#: ../../source/api/strings.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.strings.format_number:5 of
+msgid "Integer to format."
+msgstr "Zu formatierende Ganzzahl."
+
+#: ipres.strings.format_number:6 ipres.strings.t:4 of
+msgid "Target language (default ``Language.DE``)."
+msgstr "Zielsprache (Standard: ``Language.DE``)."
+
+#: ../../source/api/strings.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.strings.format_number:8 of
+msgid "Formatted string, e.g. ``\"1 234 567\"`` (DE) or ``\"1,234,567\"`` (EN)."
+msgstr "Formatierte Zeichenkette, z. B. ``\"1 234 567\"`` (DE) oder ``\"1,234,567\"`` (EN)."
+
+#: ../../source/api/strings.rst
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.strings.t:1 of
+msgid "Return the translated string for *key* in *lang*, formatted with *kwargs*."
+msgstr "Gibt die übersetzte Zeichenkette für *key* in *lang* zurück, formatiert mit *kwargs*."
+
+#: ipres.strings.t:3 of
+msgid "String key defined in ``_STRINGS``."
+msgstr "In ``_STRINGS`` definierter Zeichenkettenschlüssel."
+
+#: ipres.strings.t:5 of
+msgid "Named placeholders forwarded to :meth:`str.format`."
+msgstr "Benannte Platzhalter, die an :meth:`str.format` weitergegeben werden."
+
+#: ipres.strings.t:7 of
+msgid "The translated, optionally formatted string."
+msgstr "Die übersetzte, optional formatierte Zeichenkette."
+
+#: ../../source/api/strings.rst
+msgid "Raises"
+msgstr "Ausnahmen"
+
+#: ipres.strings.t:9 of
+msgid "If *key* is not defined for *lang*."
+msgstr "Wenn *key* für *lang* nicht definiert ist."

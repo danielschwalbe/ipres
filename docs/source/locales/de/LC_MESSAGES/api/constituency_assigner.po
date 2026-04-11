@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/constituency_assigner.rst:2
+msgid "ConstituencyAssigner"
+msgstr "ConstituencyAssigner"
+
+#: ipres.constituency_assigner.ConstituencyAssigner:1 of
+msgid "Assigns constituencies to parties based on relative importance."
+msgstr "Weist Parteien Wahlkreise basierend auf relativer Bedeutung zu."
+
+#: ipres.constituency_assigner.ConstituencyAssigner:3 of
+msgid ""
+"This is the third of three evaluation steps performed after a finished "
+"election. It can be used standalone or as part of "
+":class:`~ipres.election_evaluator.ElectionEvaluator`."
+msgstr ""
+"Dies ist der dritte von drei Auswertungsschritten nach einer "
+"abgeschlossenen Wahl. Er kann eigenständig oder als Teil des "
+":class:`~ipres.election_evaluator.ElectionEvaluator` verwendet werden."
+
+#: ipres.constituency_assigner.ConstituencyAssigner:6 of
+msgid ""
+"Relative importance is derived from the vote distribution across "
+"constituencies via "
+":class:`~ipres.vote_matrix_analyzer.VoteMatrixAnalyzer`. The assignment "
+"algorithm is chosen via ``constituency_allocation_method``."
+msgstr ""
+"Die relative Bedeutung wird aus der Stimmenverteilung über Wahlkreise "
+"mithilfe des :class:`~ipres.vote_matrix_analyzer.VoteMatrixAnalyzer` "
+"abgeleitet. Der Zuweisungsalgorithmus wird über "
+"``constituency_allocation_method`` gewählt."
+
+#: ipres.constituency_assigner.ConstituencyAssigner:10 of
+msgid ""
+"When the election's ``constituency_representation`` is "
+"``GOVERNING_MAJORITY``, only votes for the winning parties are used to "
+"compute importance. The mode is derived automatically from "
+"``election.electionConfig.constituency_representation`` inside "
+":meth:`run`."
+msgstr ""
+"Wenn ``constituency_representation`` der Wahl ``GOVERNING_MAJORITY`` ist, "
+"werden zur Berechnung der Bedeutung nur Stimmen für die Gewinnerparteien "
+"verwendet. Der Modus wird innerhalb von :meth:`run` automatisch aus "
+"``election.electionConfig.constituency_representation`` abgeleitet."
+
+#: ../../source/api/constituency_assigner.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.constituency_assigner.ConstituencyAssigner:17 of
+msgid ""
+"Algorithm used to assign constituencies. When ``None`` (default), the "
+"value is inherited from "
+"``election.electionConfig.constituency_allocation_method``."
+msgstr ""
+"Algorithmus zur Zuweisung von Wahlkreisen. Bei ``None`` (Standard) wird "
+"der Wert aus "
+"``election.electionConfig.constituency_allocation_method`` übernommen."
+
+#: ipres.constituency_assigner.ConstituencyAssigner of
+msgid "type"
+msgstr ""
+
+#: ipres.constituency_assigner.ConstituencyAssigner:21 of
+msgid "ipres.allocation.ConstituencyAllocationMethod | None"
+msgstr ""
+
+#: ipres.constituency_assigner.ConstituencyAssigner:25 of
+msgid "Pre-built NumPy random generator. Takes precedence over ``seed``."
+msgstr "Vorgefertigter NumPy-Zufallsgenerator. Hat Vorrang vor ``seed``."
+
+#: ipres.constituency_assigner.ConstituencyAssigner:27 of
+msgid "numpy.random._generator.Generator | None"
+msgstr ""
+
+#: ipres.constituency_assigner.ConstituencyAssigner:31 of
+msgid ""
+"Seed for the random generator used in allocation. When ``None`` "
+"(default), the value is inherited from ``election.electionConfig.seed``."
+msgstr ""
+"Seed für den bei der Zuweisung verwendeten Zufallsgenerator. Bei ``None`` "
+"(Standard) wird der Wert aus ``election.electionConfig.seed`` übernommen."
+
+#: ipres.constituency_assigner.ConstituencyAssigner:34 of
+msgid "int | None"
+msgstr ""
+
+#: ipres.constituency_assigner.ConstituencyAssigner.run:1 of
+msgid ""
+"Assign constituencies to parties and return a constituency-to-party "
+"mapping."
+msgstr ""
+"Weist Parteien Wahlkreise zu und gibt eine Zuordnung von Wahlkreis zu "
+"Partei zurück."
+
+#: ipres.constituency_assigner.ConstituencyAssigner.run:3 of
+msgid "A finished election with a winner."
+msgstr "Eine abgeschlossene Wahl mit einem Sieger."
+
+#: ipres.constituency_assigner.ConstituencyAssigner.run:4 of
+msgid ""
+"Constituency counts per party as returned by "
+":class:`~ipres.constituency_count_determiner.ConstituencyCountDeterminer`."
+msgstr ""
+"Wahlkreisanzahl pro Partei, wie von "
+":class:`~ipres.constituency_count_determiner.ConstituencyCountDeterminer` "
+"zurückgegeben."
+
+#: ../../source/api/constituency_assigner.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.constituency_assigner.ConstituencyAssigner.run:7 of
+msgid "Dictionary mapping each constituency name to the party it represents."
+msgstr "Wörterbuch, das jeden Wahlkreisnamen der Partei zuordnet, die ihn vertritt."
+
+#: ../../source/api/constituency_assigner.rst
+msgid "Return type"
+msgstr "Rückgabetyp"

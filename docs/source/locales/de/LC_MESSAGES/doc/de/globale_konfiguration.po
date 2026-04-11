@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 00:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/doc/de/globale_konfiguration.md:1
+msgid "Wahlkonfiguration"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:3
+msgid "Erklärung der wichtigsten Verfahrensparameter"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:4
+msgid ""
+"Das Wahlverfahren hängt von einigen Parametern ab, von denen die "
+"folgenden drei die wichtigsten sind:"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:5
+msgid "Anzahl der Wahlkreise"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:6
+msgid ""
+"Wahlkreisrepräsentation: **Gesamtes Parlament** oder "
+"**Regierungsmehrheit**"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:7
+msgid "Regierungsmehrheit"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:9
+msgid "Durch diese drei Parameter wird die Größe des Parlaments festgelegt."
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:11
+msgid ""
+"Jeder Wahlkreis soll einen Repräsentanten im Parlament haben. Aus der "
+"Sicht eines Wahlkreises kann es dabei schon einen Unterschied machen, ob "
+"sein Repräsentant in der Regierungsfraktion sitzt oder nicht. Man könnte "
+"deshalb verlangen, dass jeder Wahlkreis einen Repräsentanten in der "
+"Regierungsfraktion hat. Da wir aber gleichzeitig allen Parteien das Recht"
+" zugestehen wollen, genauso viele eigene Kandidaten ins Parlament "
+"einzubringen, wie der Wähler direkt gewählt hat, ergeben sich dadurch "
+"große Parlamente."
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:13
+msgid ""
+"Anzahl der Wahlkreise * 2 = Anzahl der Regierungssitze = "
+"ceil(Regierungsmehrheit in % / 100 * Anzahl der Parlamentssitze) <br> "
+"Parlamentssitze ≈ int(200 * Anzahl Wahlkreise / Regierungsmehrheit in %)"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:16
+#, python-format
+msgid ""
+"Das ergäbe bei 299 Wahlkreisen und einer Regierungsmehrheit von 55 % "
+"int(200 ∗ 299 / 55) = 1087 Parlamentssitze."
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:18
+msgid ""
+"Wenn auf die Forderung nach Repräsentation durch die Regierungsmehrheit "
+"verzichtet wird, bestimmt sich die Parlamentsgröße einfach durch 2 * "
+"Anzahl Wahlkreise. Das ergäbe bei 299 Wahlkreisen 598 Parlamentssitze."
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:20
+msgid ""
+"Auch bei dem alten Wahlverfahren mit Überhangs- und Ausgleichsmandaten "
+"hatte nicht jeder Wahlkreis einen Repräsentanten in der "
+"Regierungsfraktion, und es hat niemanden gestört. Wie viel der "
+"Gesellschaft eine vollständige Repräsentation aller Wahlkreise in der "
+"Regierungsfraktion wert ist, ist eine gesamtgesellschaftliche Diskussion,"
+" die hier nicht vorweggenommen werden kann. In der Simulation ist die "
+"Wahlkreisrepräsentation deshalb konfigurierbar, damit beide Fälle "
+"durchgespielt werden können."
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:23
+msgid ""
+"Parametername: **ElectionConfig.constituency_representation** <br> "
+"Mögliche Werte:"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:25
+msgid "**ENTIRE_PARLIAMENT** (Ganzes Parlament)"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:26
+msgid "**GOVERNING_MAJORITY** (Regierungsmehrheit)"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:28
+#, python-format
+msgid ""
+"Wenn eine ja/nein Frage, wie z.B. \"Welche von zwei Parteien soll "
+"regieren?\" mit nur kleinen prozentualen Unterschieden vom Wähler "
+"entschieden wird, ist das Ergebnis eher als Zufall und nicht als "
+"Wählerwille zu werten. Es gibt immer Menschen, die ihre Entscheidung erst"
+" in der Wahlkabine treffen, und wäre die Wahl auch nur ein Tag später "
+"oder früher gewesen, hätten sie vielleicht anders entschieden. Der Brexit"
+" mit 51,9 % für \"Austritt\" und 48,1 % für \"Bleiben\", war eigentlich "
+"so eine Entscheidung, wo beide Gruppen im Grunde genommen gleich groß "
+"waren. Sie hätten auch losen können."
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:30
+msgid ""
+"Um solche stochastischen Effekte zu vermeiden, ist es sinnvoll einen "
+"\"Mindestgewinnerabstand\" einzuführen, um einen Wahlgang zu gewinnen. "
+"Dieser Abstand kann in Stimmenprozent oder in Mandaten angegeben, oder "
+"auch als qualifizierte Mehrheit ausgedrückt werden.  In der Simulation "
+"gibt es die Klasse **SuperMajorityMargin** um einen Abstand wahlweise in "
+"Sitzen oder in Prozent auszudücken."
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:33
+msgid "Ein Gewinnerabstand ist an zwei Stellen im Verfahren sinnvoll:"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:34
+msgid ""
+"Als ggf. zugesprochen Regierungsmehrheit im Parlament. Damit die "
+"Regierung die Mehrheit auch behält, wenn mal jemand krank ist, soll sie "
+"z. B. 10 Sitze mehr als die Hälfte der Parlamentssitze haben. Oder sie "
+"soll soviel mehr Sitze haben, dass sie rund 5 % mehr Stimmen als der Rest"
+" des Parlaments hat. Der Parameter, um den \"Regierungsabstand\" und "
+"damit indirekt die Regierungsmehrheit zu setzen, ist "
+"**ElectionConfig.parliament_majority_margin**."
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:35
+msgid ""
+"Als Gewinnermehrheit eines Wahldurchgangs. Um einen Wahlgang zu gewinnen,"
+" reichen nicht unbedingt 50 %, sondern "
+"**ElectionConfig.ballot_majority_margin**."
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:37
+msgid "Globale Konfiguration in der Simulation"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md:38
+#, python-brace-format
+msgid ""
+"In der Simulation hält die Klasse "
+"{class}`~ipres.election_config.ElectionConfig` alle Parameter, die für "
+"die gesamte Wahl gültig sind. Das wären im Einzelnen:"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid "Kurzbeschreibung"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid "constituencies_config"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid "Tabelle der Wahlkreise"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid "participating_parties"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid "Teilnehmende Parteien"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid "parliament_majority_margin"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid ""
+"\"Regierungsabstand\" in Sitzen oder Prozent. Wieviele Parlamentssitze "
+"oder Stimmentprozent, die Regierung mehr als die Opposition haben soll. "
+"Siehe Erklärung oben."
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid "draw_lots_strategy"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid ""
+"Standardmethode, wie man Gleichstände auflöst. Kann bein einzelnen "
+"Wahlgängen überschrieben werden. Standardwert: RANDOM (zufällig)"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid "seed"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid ""
+"Startwert für den Zufallsgenerator. Standard: None (Startwert wird "
+"zufällig gewählt.)"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid "constituency_representation"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid ""
+"Wahlkreisrepräsentation. Mögliche Werte: ENTIRE_PARLIAMENT, "
+"GOVERNING_MAJORITY. Siehe Erklärung im vorigen Kapitel.  Standard: "
+"ENTIRE_PARLIAMENT"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+msgid "Das Notebook"
+msgstr ""
+
+#: ../../source/doc/de/globale_konfiguration.md
+#, python-brace-format
+msgid ""
+"[notebooks/de/globale_konfiguration.ipynb](notebooks/de/globale_konfiguration.ipynb)"
+" demonstriert die Konfigurationsmöglichkeiten der "
+"{class}`~ipres.election_config.ElectionConfig` Klasse."
+msgstr ""
+

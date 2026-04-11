@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/en/constituency_count_determination.md:1
+msgid "Constituency Count Determination"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:3
+msgid ""
+"After seat allocation, the number of constituencies assigned to each "
+"party is determined. The core principle: half of a party's allocated "
+"seats are filled via direct constituency mandates – elected by citizens. "
+"The party fills the other half itself. This ensures democratic oversight "
+"by citizens on the one hand – voters know their representative personally"
+" – while on the other hand, parties can deliberately place subject-matter"
+" experts in Parliament who do not necessarily need to be close to the "
+"people."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:5
+msgid ""
+"**Base formula:** `constituency_count(party) = parliamentary_seats(party)"
+" // 2`"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:9
+msgid "The Integer Division Problem"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:11
+msgid ""
+"Dividing by 2 using integer division creates a structural issue: parties "
+"with an **odd** seat count lose half a constituency right through "
+"rounding down. This means the sum of the base allocations can be smaller "
+"than the total number of constituencies:"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:17
+msgid "**Example** (7 constituencies, 14 parliamentary seats):"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "Party"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "Seats"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "Base allocation (`// 2`)"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "A"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "10"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "5"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "B"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "3"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "1"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "C"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "0"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "**Σ**"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "14"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "**6** ← deficit 1"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:26
+msgid ""
+"The sum of the base allocations is 6, even though 7 constituencies must "
+"be assigned. The correction awards the missing +1 to one of the parties "
+"with an odd seat count (here B or C)."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:30
+msgid "Correction Strategy"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:32
+msgid ""
+"The missing +1 (or several, if multiple parties are affected) is awarded "
+"according to a configurable strategy. Only parties with an **odd** seat "
+"count are eligible, since only for them is a correction mathematically "
+"justified."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "Strategy"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "Description"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "`FAVOR_LARGE_PARTIES` *(default)*"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "The party (or parties) with the most seats receive the +1."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "`FAVOR_SMALL_PARTIES`"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "The party (or parties) with the fewest seats receive the +1."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "`PROPORTIONAL`"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "Random, weighted by seat count (larger parties more likely)."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "`PROPORTIONAL_REVERSED`"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "Random, inversely weighted (smaller parties more likely)."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "`RANDOM`"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "Uniform random selection among parties with odd seat counts."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "`NEGOTIATED`"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "An external callback function decides which parties receive the +1."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:43
+msgid ""
+"In the example above with `FAVOR_LARGE_PARTIES`: B has more seats than C,"
+" so B receives the +1 → B: 2, C: 0."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:45
+msgid ""
+"**Note**: The correction procedure also determines on a case-by-case "
+"basis whether a party with only one seat may fill it with a constituency "
+"representative."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:49
+msgid "Effect of `constituency_representation`"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:51
+msgid ""
+"This parameter (from the global configuration) controls which parties "
+"receive constituencies at all:"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:53
+msgid ""
+"**`ENTIRE_PARLIAMENT`** *(default)*: All parties receive constituencies "
+"proportional to their seats."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:54
+msgid ""
+"**`GOVERNING_MAJORITY`**: Only the governing parties receive "
+"constituencies. The opposition receives 0 constituencies."
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:58
+msgid "Configuration Parameters"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "Class"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "`quota_correction_strategy`"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "`ElectionEvaluator`"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "Correction strategy (default: `FAVOR_LARGE_PARTIES`)"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "`constituency_representation`"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "`ElectionConfig` + `ElectionEvaluator`"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md
+msgid "Which parties receive constituencies?"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:67
+msgid "Execution in the Simulation"
+msgstr ""
+
+#: ../../source/en/constituency_count_determination.md:69
+msgid ""
+"The class "
+"[`ConstituencyCountDeterminer`](../../src/ipres/constituency_count_determiner.py)"
+" performs this step. It takes the seat allocation result as input."
+msgstr ""
+

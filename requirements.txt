@@ -1,0 +1,12 @@
+numpy
+pandas
+ipywidgets
+matplotlib
+pyarrow
+ipyfilechooser
+pytest
+ipython
+sphinx
+sphinx_rtd_theme
+sphinx-intl
+myst-parser

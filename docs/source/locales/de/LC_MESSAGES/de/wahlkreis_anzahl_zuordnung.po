@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:1
+msgid "Wahlkreisanzahlzuordnung"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:3
+msgid ""
+"Nach der Mandatszuteilung wird festgelegt, wie viele Wahlkreise jeder "
+"Partei zugeteilt werden. Das Grundprinzip: Die Hälfte der einer Partei "
+"zustehenden Sitze wird über Direktmandate in Wahlkreisen besetzt – also "
+"durch den Bürger gewählt. Die andere Hälfte vergibt die Partei selbst. So"
+" wird einerseits demokratische Kontrolle durch den Bürger sichergestellt "
+"– man kennt seinen Abgeordneten persönlich –, andererseits können "
+"Parteien gezielt Fachleute ins Parlament entsenden, die nicht zwingend "
+"bürgernah auftreten müssen."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:5
+msgid "**Grundformel:** `Wahlkreisanzahl(Partei) = Parlamentssitze(Partei) // 2`"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:9
+msgid "Das Ganzzahlproblem"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:11
+msgid ""
+"Die ganzzahlige Division durch 2 erzeugt ein strukturelles Problem: "
+"Parteien mit einer **ungeraden** Sitzzahl verlieren durch das Abrunden "
+"jeweils ein halbes Wahlkreisrecht. Das führt dazu, dass die Summe der "
+"Grundzuteilungen kleiner sein kann als die Gesamtzahl der Wahlkreise:"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:17
+msgid "**Beispiel** (7 Wahlkreise, 14 Parlamentssitze):"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Partei"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Sitze"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Grundzuteilung (`// 2`)"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "A"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "10"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "5"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "B"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "3"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "1"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "C"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "0"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "**Σ**"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "14"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "**6** ← Defizit 1"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:26
+msgid ""
+"Die Summe der Grundzuteilungen ergibt 6, obwohl 7 Wahlkreise vergeben "
+"werden müssen. Die Korrektur gibt das fehlende +1 an eine der Parteien "
+"mit ungerader Sitzzahl (hier B oder C)."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:30
+msgid "Korrekturstrategie"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:32
+msgid ""
+"Das fehlende +1 (oder mehrere, falls mehrere Parteien betroffen sind) "
+"wird nach einer konfigurierbaren Strategie vergeben. Nur Parteien mit "
+"**ungerader** Sitzzahl kommen als Empfänger in Frage, da nur bei ihnen "
+"eine Korrektur mathematisch vertretbar ist."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Strategie"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Beschreibung"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "`FAVOR_LARGE_PARTIES` *(Standard)*"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Die Partei(en) mit den meisten Sitzen erhalten das +1."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "`FAVOR_SMALL_PARTIES`"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Die Partei(en) mit den wenigsten Sitzen erhalten das +1."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "`PROPORTIONAL`"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Zufällig, gewichtet nach Sitzzahl (größere Parteien wahrscheinlicher)."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "`PROPORTIONAL_REVERSED`"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Zufällig, umgekehrt gewichtet (kleinere Parteien wahrscheinlicher)."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "`RANDOM`"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Gleichverteilte Zufallsauswahl unter den Parteien mit ungerader Sitzzahl."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "`NEGOTIATED`"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Externe Callback-Funktion entscheidet, welche Parteien das +1 erhalten."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:43
+msgid ""
+"Im obigen Beispiel mit `FAVOR_LARGE_PARTIES`: B hat mehr Sitze als C, "
+"also erhält B das +1 → B: 2, C: 0."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:45
+msgid ""
+"**Hinweis**: Das Korrekturverfahren legt auch im Einzelfall fest, ob eine"
+" Partei mit nur einem Sitz diesen durch einen Wahlkreisvertreter besetzen"
+" darf."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:49
+msgid "Einfluss von `constituency_representation`"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:51
+msgid ""
+"Dieser Parameter (aus der globalen Konfiguration) steuert, welche "
+"Parteien überhaupt Wahlkreise erhalten:"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:53
+msgid ""
+"**`ENTIRE_PARLIAMENT`** *(Standard)*: Alle Parteien erhalten Wahlkreise "
+"proportional zu ihren Sitzen."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:54
+msgid ""
+"**`GOVERNING_MAJORITY`**: Nur die Regierungsparteien erhalten Wahlkreise."
+" Die Opposition erhält 0 Wahlkreise."
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:58
+msgid "Konfigurationsparameter"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Klasse"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "`quota_correction_strategy`"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "`ElectionEvaluator`"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Korrekturstrategie (Standard: `FAVOR_LARGE_PARTIES`)"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "`constituency_representation`"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "`ElectionConfig` + `ElectionEvaluator`"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md
+msgid "Wer erhält Wahlkreise?"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:67
+msgid "Ausführung in der Simulation"
+msgstr ""
+
+#: ../../source/de/wahlkreis_anzahl_zuordnung.md:69
+msgid ""
+"Die Klasse "
+"[`ConstituencyCountDeterminer`](../../src/ipres/constituency_count_determiner.py)"
+" führt diesen Schritt durch. Sie nimmt das Ergebnis der Mandatszuteilung "
+"als Eingabe entgegen."
+msgstr ""
+

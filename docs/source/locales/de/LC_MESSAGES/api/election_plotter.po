@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/election_plotter.rst:2
+msgid "ElectionPlotter"
+msgstr "ElectionPlotter"
+
+#: ipres.election_plotter:1 of
+msgid "Election result visualisation helpers."
+msgstr "Hilfsfunktionen zur Visualisierung von Wahlergebnissen."
+
+#: ipres.election_plotter.ElectionPlotter:1 of
+msgid "Helper class for plotting election results."
+msgstr "Hilfsklasse zur grafischen Darstellung von Wahlergebnissen."
+
+#: ipres.election_plotter.ElectionPlotter:3 of
+msgid "Separates visualization logic from the main ElectionResult class."
+msgstr "Trennt die Visualisierungslogik von der Hauptklasse ElectionResult."
+
+#: ../../source/api/election_plotter.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.election_plotter.ElectionPlotter.plot_seat_share_pie:1 of
+msgid "Visualise the seat distribution of this election result as a pie chart."
+msgstr "Stellt die Sitzverteilung dieses Wahlergebnisses als Tortendiagramm dar."
+
+#: ipres.election_plotter.ElectionPlotter.plot_seat_share_pie:3 of
+msgid "Chart title. Defaults to a generated label when ``None``."
+msgstr "Diagrammtitel. Wird bei ``None`` automatisch generiert."
+
+#: ipres.election_plotter.ElectionPlotter.plot_seat_share_pie:4 of
+msgid ""
+"If ``True``, coalition members are placed adjacent to each other and "
+"rendered with similar colours."
+msgstr ""
+"Bei ``True`` werden Koalitionsmitglieder nebeneinander platziert und mit "
+"ähnlichen Farben dargestellt."
+
+#: ipres.election_plotter.ElectionPlotter.plot_seat_share_pie:6 of
+msgid ""
+"Minimum number of seats required for a party to appear individually in "
+"the chart. Parties below this threshold are grouped under \"Sonstige\" "
+"(other)."
+msgstr ""
+"Mindestsitzanzahl, damit eine Partei einzeln im Diagramm erscheint. "
+"Parteien unterhalb dieser Schwelle werden unter „Sonstige" zusammengefasst."
+
+#: ../../source/api/election_plotter.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.election_plotter.ElectionPlotter.plot_seat_share_pie:10 of
+msgid ":class:`matplotlib.figure.Figure`"
+msgstr ":class:`matplotlib.figure.Figure`"

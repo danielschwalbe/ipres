@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 00:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:1
+msgid "Iteratives Verhältniswahlrecht mit garantiertem Gewinner"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:2
+msgid "Verfahrensbeschreibung"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:4
+msgid ""
+"Das Kernstück des Verfahrens ist ein iterativer Wahlprozess, der "
+"sicherstellt, dass am Ende immer eine Partei oder Koalition mit klarer "
+"Regierungsmehrheit hervorgeht – ohne dass dafür eine erzwungene Koalition"
+" nötig ist. Im Gegensatz zu den klassischen Mehrheitswahlverfahren, die "
+"durch Nichtlinearität auch Gewinner produzieren, sind die Stimmen der "
+"Verlierer bis zur letzen Iteration nicht verloren. Auch die, deren Partei"
+" ausgeschieden ist, dürfen erneut über die reduzierte Parteienliste "
+"abstimmen und ggf. nach dem Prinzip \"des kleineren\" Übels ihre Stimme "
+"einer anderen Partei, die noch im Rennen ist, geben."
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:7
+msgid "Schritt 1: Erste Verhältniswahl"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:9
+msgid ""
+"Es wird eine normale Verhältniswahl durchgeführt. Die Parteien werden "
+"nach ihrem prozentualen Stimmanteil geordnet."
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:11
+msgid ""
+"**Gibt es einen Gewinner?** Eine Partei oder eine freiwillig gebildete "
+"Koalition erreicht die absolute Mehrheit (ein vorab festgelegter "
+"Prozentsatz knapp über 50 %, so dass die Regierung auch bei Abwesenheit "
+"einzelner Abgeordneter handlungsfähig bleibt) → **Verfahren beendet.**"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:12
+msgid "**Kein Gewinner?** → Weiter mit Schritt 2."
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:14
+msgid "Schritt 2: Reduktion und erneuter Wahlgang"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:16
+msgid ""
+"Die Stimmenanteile werden beginnend mit der stärksten Partei kumuliert, "
+"bis **zwei Drittel** aller Stimmen erreicht oder überschritten sind. Nur "
+"die Parteien, die in dieser Summe enthalten sind, nehmen am nächsten "
+"Wahlgang teil. Alle Wähler – auch jene, deren Partei ausgeschieden ist – "
+"dürfen erneut abstimmen."
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:18
+msgid "Das Verfahren kehrt zu Schritt 1 zurück."
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:20
+msgid "Sonderfall: Nur noch zwei Parteien"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:22
+msgid "**Erster Durchgang mit zwei Parteien:** Wahlgang wird wiederholt."
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:23
+msgid ""
+"**Zweiter ergebnisloser Durchgang:** Ein Zufallsverfahren entscheidet (z."
+" B. minimalste prozentuale Unterschiede oder das Los)."
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:25
+msgid "Terminierung"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:27
+msgid ""
+"Das Verfahren terminiert garantiert, weil sich die Anzahl der antretenden"
+" Parteien in jeder Iteration reduziert, bis schließlich nur noch zwei "
+"übrig sind."
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:29
+msgid "Beispiel (drei Wahlgänge)"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "Partei"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "Wahlgang 1"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "Wahlgang 2"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "Wahlgang 3"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "A"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "28 %"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "35 %"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "52 % ✓"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "B"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "25 %"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "33 %"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "48 %"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "C"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "20 %"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "32 %"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "–"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "D"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "15 %"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "E"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md
+msgid "12 %"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:39
+msgid ""
+"*Nach Wahlgang 1:* A+B+C summieren sich auf 73 % ≥ 2/3 → D und E scheiden"
+" aus. *Nach Wahlgang 2:* A+B summieren sich auf 68 % ≥ 2/3 → C scheidet "
+"aus. *Wahlgang 3:* A erreicht 52 % → **A gewinnt.**"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:43
+msgid "Ausführung in der Simulation"
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:45
+#, python-brace-format
+msgid ""
+"In der Simulation wird eine Wahl gestartet, indem ein "
+"{class}`~ipres.election.Election`-Objekt erzeugt wird. Der Konstruktor "
+"erwartet ein {class}`~ipres.election_config.ElectionConfig`-Objekt mit "
+"der im ersten Schritt erstellten globalen Verfahrenskonfiguration."
+msgstr ""
+
+#: ../../source/doc/de/iterative_verhältniswahl.md:47
+msgid ""
+"Mithilfe der run() oder der start() Methode wird das Verfahren gestartet."
+" Die run() Methode führt das gesamte Verfahren aus, während die start() "
+"Methode nur den ersten Durchgang ausführt und eine Referenz auf den "
+"ausgeführten Durchgang zurückgibt."
+msgstr ""
+

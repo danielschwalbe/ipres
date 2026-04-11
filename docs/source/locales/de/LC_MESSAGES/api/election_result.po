@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/election_result.rst:2
+msgid "ElectionResult"
+msgstr "ElectionResult"
+
+#: ipres.election_result.ElectionResult:1 of
+msgid "Result of an election evaluation."
+msgstr "Ergebnis einer Wahlauswertung."
+
+#: ipres.election_result.ElectionResult:3 of
+msgid ""
+"Contains computed seat distributions, constituency assignments, and "
+"visualization methods. Immutable result object that keeps references to "
+"the election and evaluator for context."
+msgstr ""
+"Enthält berechnete Sitzverteilungen, Wahlkreiszuweisungen und "
+"Visualisierungsmethoden. Unveränderliches Ergebnisobjekt, das zur "
+"Kontextualisierung Referenzen auf Wahl und Auswerter hält."
+
+#: ../../source/api/election_result.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.election_result.ElectionResult.getConstituencyPartyAssignments:1 of
+msgid ""
+"Get constituency assignments as a dictionary mapping constituency names "
+"to party names."
+msgstr ""
+"Gibt die Wahlkreiszuweisungen als Wörterbuch zurück, das Wahlkreisnamen "
+"auf Parteinamen abbildet."
+
+#: ../../source/api/election_result.rst
+#: ipres.election_result.ElectionResult.getConstituencyPartyAssignments
+#: ipres.election_result.ElectionResult.getSeats of
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.election_result.ElectionResult.getGovernmentSeats:1 of
+msgid "Get the seat distribution for government parties only."
+msgstr "Gibt die Sitzverteilung ausschließlich für Regierungsparteien zurück."
+
+#: ../../source/api/election_result.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.election_result.ElectionResult.getGovernmentSeats:3 of
+msgid "Dictionary mapping government party names to their seat counts"
+msgstr "Wörterbuch, das Regierungsparteinamen ihren Sitzanzahlen zuordnet"
+
+#: ipres.election_result.ElectionResult.getSeats:1 of
+msgid ""
+"Get the seat distribution as a dictionary mapping party names to seat "
+"counts."
+msgstr ""
+"Gibt die Sitzverteilung als Wörterbuch zurück, das Parteinamen auf "
+"Sitzanzahlen abbildet."
+
+#: ipres.election_result.ElectionResult.get_constituency_assignment_table:1 of
+msgid "Creates a pandas DataFrame table showing constituency-party assignments."
+msgstr "Erstellt eine pandas-DataFrame-Tabelle mit den Wahlkreis-Partei-Zuweisungen."
+
+#: ipres.election_result.ElectionResult.get_constituency_assignment_table:3 of
+msgid ""
+"Sort order, either 'party' (default) or 'constituency' - 'party': Sort by"
+" party name, then constituency name - 'constituency': Sort by "
+"constituency name only"
+msgstr ""
+"Sortierreihenfolge, entweder 'party' (Standard) oder 'constituency' – "
+"'party': Sortierung nach Parteiname, dann Wahlkreisname – 'constituency': "
+"Sortierung nur nach Wahlkreisname"
+
+#: ipres.election_result.ElectionResult.get_constituency_assignment_table:7
+#: ipres.election_result.ElectionResult.get_constituency_summary_table:3
+#: ipres.election_result.ElectionResult.get_seat_distribution_table:3 of
+msgid "Styled DataFrame for display"
+msgstr "Gestalteter DataFrame zur Anzeige"
+
+#: ipres.election_result.ElectionResult.get_constituency_summary_table:1 of
+msgid ""
+"Creates a summary table showing how many constituencies each party "
+"received."
+msgstr ""
+"Erstellt eine Übersichtstabelle, die zeigt, wie viele Wahlkreise jede "
+"Partei erhalten hat."
+
+#: ipres.election_result.ElectionResult.get_seat_distribution_table:1 of
+msgid "Create a styled pandas DataFrame showing the seat distribution."
+msgstr "Erstellt einen gestalteten pandas-DataFrame mit der Sitzverteilung."
+
+#: ipres.election_result.ElectionResult.plot_seat_share_pie:1 of
+msgid "Visualisiert die Stimmenverteilung dieser Iteration als Tortendiagramm."
+msgstr ""
+
+#: ipres.election_result.ElectionResult.plot_seat_share_pie:3 of
+msgid "Titel des Diagramms"
+msgstr ""
+
+#: ipres.election_result.ElectionResult.plot_seat_share_pie:4 of
+msgid ""
+"Wenn True, werden Koalitionsmitglieder nebeneinander platziert und mit "
+"ähnlichen Farben dargestellt"
+msgstr ""
+
+#: ipres.election_result.ElectionResult.plot_seat_share_pie:6 of
+msgid ""
+"Mindestanzahl Sitze für separate Darstellung im Diagramm. Parteien mit "
+"weniger Sitzen werden unter \"Sonstige\" gruppiert."
+msgstr ""
+
+#: ipres.election_result.ElectionResult.plot_seat_share_pie:9 of
+msgid "matplotlib.figure.Figure"
+msgstr ""

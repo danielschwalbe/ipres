@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/bundestagswahl_loader.rst:2
+msgid "Bundestagswahl Loader"
+msgstr ""
+
+#: ipres.bundestagswahl_loader:1 of
+msgid "Loader for real Bundestagswahl data from Bundeswahlleiterin."
+msgstr "Lader für echte Bundestagswahl-Daten der Bundeswahlleiterin."
+
+#: ipres.bundestagswahl_loader:3 of
+msgid ""
+"This module provides functions to load real election results from "
+"official Bundestagswahl CSV files and convert them into a format suitable"
+" for simulation with ipres."
+msgstr ""
+"Dieses Modul stellt Funktionen bereit, um echte Wahlergebnisse aus "
+"offiziellen Bundestagswahl-CSV-Dateien zu laden und in ein für die "
+"Simulation mit ipres geeignetes Format umzuwandeln."
+
+#: ipres.bundestagswahl_loader:9 of
+msgid "Example Usage"
+msgstr "Verwendungsbeispiel"
+
+#: ipres.bundestagswahl_loader.filter_major_parties:1 of
+msgid "Filter vote matrix to include only major parties above threshold."
+msgstr "Filtert die Stimmenmatrix, sodass nur relevante Parteien oberhalb der Schwelle enthalten sind."
+
+#: ../../source/api/bundestagswahl_loader.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.bundestagswahl_loader.filter_major_parties:3 of
+msgid "Vote matrix DataFrame (with constituency_name as index)"
+msgstr "Stimmenmatrix-DataFrame (mit constituency_name als Index)"
+
+#: ipres.bundestagswahl_loader.filter_major_parties:4 of
+msgid "List of all party names"
+msgstr "Liste aller Parteinamen"
+
+#: ipres.bundestagswahl_loader.filter_major_parties:5 of
+msgid "Minimum percentage threshold (default 1.0%)"
+msgstr "Mindestschwelle in Prozent (Standard: 1,0 %)"
+
+#: ../../source/api/bundestagswahl_loader.rst
+msgid "Returns"
+msgstr "Rückgabewert"
+
+#: ipres.bundestagswahl_loader.filter_major_parties:7 of
+msgid "Tuple of (filtered_vote_matrix, filtered_party_names)"
+msgstr "Tupel aus (gefilterte_Stimmenmatrix, gefilterte_Parteinamen)"
+
+#: ../../source/api/bundestagswahl_loader.rst
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ipres.bundestagswahl_loader.load_bundestagswahl_data:1 of
+msgid "Load Bundestagswahl data for a specific year."
+msgstr "Lädt Bundestagswahl-Daten für ein bestimmtes Jahr."
+
+#: ipres.bundestagswahl_loader.load_bundestagswahl_data:3 of
+msgid "Election year (2013, 2017, 2021, 2025)"
+msgstr "Wahljahr (2013, 2017, 2021, 2025)"
+
+#: ipres.bundestagswahl_loader.load_bundestagswahl_data:4 of
+msgid "Directory containing BTW CSV files. If None, uses default."
+msgstr "Verzeichnis mit den BTW-CSV-Dateien. Bei None wird das Standardverzeichnis verwendet."
+
+#: ipres.bundestagswahl_loader.load_bundestagswahl_data:6 of
+msgid ""
+"- constituencies_df: DataFrame with constituency info (number, name, "
+"size) - vote_matrix_df: DataFrame with Zweitstimmen per party per "
+"constituency - party_names: List of party names in order"
+msgstr ""
+"- constituencies_df: DataFrame mit Wahlkreisinformationen (Nummer, Name, "
+"Größe) – vote_matrix_df: DataFrame mit Zweitstimmen pro Partei und "
+"Wahlkreis – party_names: Liste der Parteinamen in Reihenfolge"
+
+#: ipres.bundestagswahl_loader.load_bundestagswahl_data:8 of
+msgid "constituencies_df: DataFrame with constituency info (number, name, size)"
+msgstr "constituencies_df: DataFrame mit Wahlkreisinformationen (Nummer, Name, Größe)"
+
+#: ipres.bundestagswahl_loader.load_bundestagswahl_data:9 of
+msgid "vote_matrix_df: DataFrame with Zweitstimmen per party per constituency"
+msgstr "vote_matrix_df: DataFrame mit Zweitstimmen pro Partei und Wahlkreis"
+
+#: ipres.bundestagswahl_loader.load_bundestagswahl_data:10 of
+msgid "party_names: List of party names in order"
+msgstr "party_names: Liste der Parteinamen in Reihenfolge"
+
+#: ../../source/api/bundestagswahl_loader.rst
+msgid "Raises"
+msgstr "Ausnahmen"
+
+#: ipres.bundestagswahl_loader.load_bundestagswahl_data:13 of
+msgid "If data file doesn't exist"
+msgstr "Wenn die Datendatei nicht existiert"
+
+#: ipres.bundestagswahl_loader.load_bundestagswahl_data:14 of
+msgid "If year is not available"
+msgstr "Wenn das Jahr nicht verfügbar ist"

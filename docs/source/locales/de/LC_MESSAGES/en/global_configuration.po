@@ -1,0 +1,306 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/en/global_configuration.md:1
+msgid "Election Configuration"
+msgstr ""
+
+#: ../../source/en/global_configuration.md:3
+msgid "Explanation of the Main Procedure Parameters"
+msgstr ""
+
+#: ../../source/en/global_configuration.md:4
+msgid ""
+"The election procedure depends on several parameters, of which the "
+"following three are the most important:"
+msgstr ""
+
+#: ../../source/en/global_configuration.md:5
+msgid "Number of constituencies"
+msgstr ""
+
+#: ../../source/en/global_configuration.md:6
+msgid ""
+"Constituency representation: **Entire Parliament** or **Government "
+"Majority**"
+msgstr ""
+
+#: ../../source/en/global_configuration.md:7
+msgid "Government majority"
+msgstr ""
+
+#: ../../source/en/global_configuration.md:9
+msgid "These three parameters determine the size of the parliament."
+msgstr ""
+
+#: ../../source/en/global_configuration.md:11
+msgid ""
+"Each constituency should have a representative in parliament. From the "
+"perspective of a constituency, it can make a difference whether its "
+"representative sits in the government faction or not. One could therefore"
+" require that each constituency has a representative in the government "
+"faction. However, since we also want to grant all parties the right to "
+"bring as many of their own candidates into parliament as the voters have "
+"directly elected, this results in large parliaments."
+msgstr ""
+
+#: ../../source/en/global_configuration.md:13
+msgid ""
+"Number of constituencies * 2 = Number of government seats = "
+"ceil(Government majority in % / 100 * Number of parliament seats) <br> "
+"Parliament seats ≈ int(200 * Number of constituencies / Government "
+"majority in %)"
+msgstr ""
+
+#: ../../source/en/global_configuration.md:16
+msgid ""
+"With 299 constituencies and a government majority of 55%, this would "
+"result in int(200 ∗ 299 / 55) = 1087 parliament seats."
+msgstr ""
+
+#: ../../source/en/global_configuration.md:18
+msgid ""
+"If the requirement for representation through the government majority is "
+"waived, the parliament size is simply determined by 2 * Number of "
+"constituencies. With 299 constituencies, this would result in 598 "
+"parliament seats."
+msgstr ""
+
+#: ../../source/en/global_configuration.md:20
+msgid ""
+"Even with the old election procedure with overhang and compensatory "
+"mandates, not every constituency had a representative in the government "
+"faction, and nobody was bothered by it. How much complete representation "
+"of all constituencies in the government faction is worth to society is a "
+"societal discussion that cannot be anticipated here. In the simulation, "
+"constituency representation is therefore configurable so that both cases "
+"can be tested."
+msgstr ""
+
+#: ../../source/en/global_configuration.md:23
+msgid ""
+"Parameter name: **ElectionConfig.constituency_representation** <br> "
+"Possible values:"
+msgstr ""
+
+#: ../../source/en/global_configuration.md:25
+msgid "**ENTIRE_PARLIAMENT** (Entire Parliament)"
+msgstr ""
+
+#: ../../source/en/global_configuration.md:26
+msgid "**GOVERNING_MAJORITY** (Government Majority)"
+msgstr ""
+
+#: ../../source/en/global_configuration.md:28
+#, python-format
+msgid ""
+"When a yes/no question, such as \"Which of two parties should govern?\" "
+"is decided by voters with only small percentage differences, the result "
+"is more likely due to chance than voter intent. There are always people "
+"who make their decision only in the voting booth, and had the election "
+"been just one day later or earlier, they might have decided differently. "
+"Brexit with 51.9% for \"Leave\" and 48.1% for \"Remain\" was actually "
+"such a decision where both groups were essentially equal in size. They "
+"could have just as well drawn lots."
+msgstr ""
+
+#: ../../source/en/global_configuration.md:30
+msgid ""
+"To avoid such stochastic effects, it makes sense to introduce a \"minimum"
+" winner margin\" to win a voting round. This margin can be specified in "
+"percentage of votes or in mandates, or can also be expressed as a "
+"qualified majority. In the simulation, there is the "
+"**SuperMajorityMargin** class to express a margin either in seats or in "
+"percent."
+msgstr ""
+
+#: ../../source/en/global_configuration.md:33
+msgid "A winner margin makes sense at two points in the procedure:"
+msgstr ""
+
+#: ../../source/en/global_configuration.md:34
+msgid ""
+"As the possibly granted parliament majority. So that the government "
+"retains its majority even if someone is sick, it should have, for "
+"example, 10 seats more than half of the parliament seats. Or it should "
+"have so many more seats that it has around 5% more votes than the rest of"
+" parliament. The parameter to set the \"parliament margin\" and thus "
+"indirectly the parliament majority is "
+"**ElectionConfig.parliament_majority_margin**."
+msgstr ""
+
+#: ../../source/en/global_configuration.md:35
+msgid ""
+"As the winner threshold of a single voting round. To win a round, a "
+"contestant must exceed 50% by a small minimum margin. This is "
+"configurable via **ElectionConfig.ballot_majority_margin** (default: 2%, "
+"i.e. a contestant needs at least 52%)."
+msgstr ""
+
+#: ../../source/en/global_configuration.md:37
+msgid "Global Configuration in the Simulation"
+msgstr ""
+
+#: ../../source/en/global_configuration.md:38
+msgid ""
+"In the simulation, the "
+"[`ElectionConfig`](../../src/ipres/election_config.py) class holds all "
+"parameters that are valid for the entire election. These are in detail:"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "Brief Description"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "constituencies_config"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "Table of constituencies"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "participating_parties"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "Participating parties"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "parliament_majority_margin"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid ""
+"\"Parliament margin\" in seats or percent. How many parliament seats or "
+"vote percent the government should have more than the opposition. See "
+"explanation above."
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "ballot_majority_margin"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid ""
+"Minimum margin above 50% a contestant must reach in a single voting "
+"round. Default: 2% (i.e. 52%). See explanation above."
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "draw_lots_strategy"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid ""
+"Default method for resolving ties. Can be overridden in individual voting"
+" rounds. Default value: RANDOM (random)"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "seed"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid ""
+"Seed value for the random generator. Default: None (seed value is chosen "
+"randomly.)"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "constituency_representation"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid ""
+"Constituency representation. Possible values: ENTIRE_PARLIAMENT, "
+"GOVERNING_MAJORITY. See explanation in the previous chapter. Default: "
+"ENTIRE_PARLIAMENT"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "language"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid ""
+"Output language for tables and charts. Possible values: `Language.DE` "
+"(German, default), `Language.EN` (English). Affects column headers, "
+"captions, chart titles, and number formatting."
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "seat_distribution_method"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid ""
+"Default method for proportional seat distribution used by "
+"`SeatDistributor` and `ElectionEvaluator`. Possible values: "
+"`SAINTE_LAGUE`, `D_HONDT`, `HARE_NIEMEYER`. Default: `SAINTE_LAGUE`. Can "
+"be overridden in the individual evaluator classes."
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "quota_correction_strategy"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid ""
+"Default strategy for quota correction when parties have an odd seat "
+"count, used by `ConstituencyCountDeterminer` and `ElectionEvaluator`. "
+"Possible values: `FAVOR_LARGE_PARTIES`, `FAVOR_SMALL_PARTIES`, "
+"`PROPORTIONAL`, `PROPORTIONAL_REVERSED`, `RANDOM`, `NEGOTIATED`. Default:"
+" `FAVOR_LARGE_PARTIES`. Can be overridden in the individual evaluator "
+"classes."
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "constituency_allocation_method"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid ""
+"Default algorithm for constituency assignment used by "
+"`ConstituencyAssigner` and `ElectionEvaluator`. Possible values: "
+"`OPTIMAL`, `GREEDY`, `STABLE_MATCHING`. Default: `OPTIMAL`. Can be "
+"overridden in the individual evaluator classes."
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid "The notebook"
+msgstr ""
+
+#: ../../source/en/global_configuration.md
+msgid ""
+"[notebooks/en/global_configuration.ipynb](notebooks/en/global_configuration.ipynb)"
+" demonstrates the configuration options of the "
+"[`ElectionConfig`](../../src/ipres/election_config.py) class."
+msgstr ""
+

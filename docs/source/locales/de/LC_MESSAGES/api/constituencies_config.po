@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Daniel Schwalbe
+# This file is distributed under the same license as the IPRES – (Iterative
+# Proportional Representation) Election Simulation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IPRES – (Iterative Proportional Representation) "
+"Election Simulation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 00:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/constituencies_config.rst:2
+msgid "Constituencies Configuration"
+msgstr ""
+
+#: ipres.constituencies_config:1 of
+msgid ""
+"Constituency configuration, loading, and interactive selection for "
+"election simulations."
+msgstr ""
+"Wahlkreiskonfiguration, Laden und interaktive Auswahl für "
+"Wahlsimulationen."
+
+#: ../../source/api/constituencies_config.rst
+#: ipres.constituencies_config.ConstituenciesConfig.save of
+msgid "Parameters"
+msgstr "Parameter"
+
+#: ipres.constituencies_config.ConstituenciesConfig.save:1 of
+msgid ""
+"Save the constituencies DataFrame to CSV or Parquet. - If path is "
+"provided, use it. - If path is None in a Jupyter environment, provide a "
+"simple input widget. - If path is None in a GUI environment, open a file "
+"save dialog. The file format is determined by the filename suffix (.csv "
+"or .parquet). Returns the final path used."
+msgstr ""
+"Speichert den Wahlkreise-DataFrame als CSV oder Parquet. – Wenn ein Pfad "
+"angegeben ist, wird dieser verwendet. – Ist der Pfad None in einer "
+"Jupyter-Umgebung, wird ein einfaches Eingabe-Widget angezeigt. – Ist der "
+"Pfad None in einer GUI-Umgebung, öffnet sich ein Datei-Speicherdialog. Das "
+"Dateiformat wird anhand des Dateinamensuffixes (.csv oder .parquet) "
+"bestimmt. Gibt den tatsächlich verwendeten Pfad zurück."
+
+#: ipres.constituencies_config.ConstituenciesConfig.save of
+msgid "Return type"
+msgstr "Rückgabetyp"
