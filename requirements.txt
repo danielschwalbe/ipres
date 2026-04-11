@@ -10,3 +10,5 @@ sphinx
 sphinx_rtd_theme
 sphinx-intl
 myst-parser
+scipy
+jinja2
