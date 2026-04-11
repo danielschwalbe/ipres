@@ -4,6 +4,7 @@
 # Language
 - Document the entire code in English
 - Notebooks and Readmes in German and English
+- Commit messages in English
 - German user documentation (Notebooks and Readmes) is the source of truth from the author's perspective. Translate from there to English. 
 - Keep the user documentation always consistent.
 - Present English to the audience as default.
