@@ -33,8 +33,12 @@ def load_bundestagswahl_data(
         ValueError: If year is not available
     """
     if data_dir is None:
-        # Default to data/bundestagswahl relative to project root
-        data_dir = Path(__file__).parent.parent.parent / "data" / "bundestagswahl"
+        try:
+            from ipres.utils.paths import find_project_root
+            data_dir = find_project_root() / "data" / "bundestagswahl"
+        except FileNotFoundError:
+            # Fallback: dev mode with pip install -e . from project root
+            data_dir = Path(__file__).parent.parent.parent / "data" / "bundestagswahl"
 
     # Try the wahlkreise specific file first (newer format with headers)
     data_file = data_dir / f"btw{year}_wahlkreise.csv"
