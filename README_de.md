@@ -1,6 +1,7 @@
 🇬🇧 [English](README.md) | 🇩🇪 Deutsch
 
 ![Tests](https://github.com/danielschwalbe/ipres/actions/workflows/ci.yml/badge.svg)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD)
 
 # IPRES – Election Simulation
 
@@ -49,14 +50,16 @@ ipres/
 
 Die Jupyter Notebooks zeigen das Verfahren anhand konkreter Beispiele. Einstiegspunkte:
 
-| Notebook | Inhalt |
-|----------|--------|
-| [`kurzuebersicht.ipynb`](notebooks/de/kurzuebersicht.ipynb) | Vollständiger Ablauf an einem kleinen Beispiel |
-| [`iterative_verhältniswahl.ipynb`](notebooks/de/iterative_verhältniswahl.ipynb) | Wahlverfahren Schritt für Schritt |
-| [`bundestagswahl.ipynb`](notebooks/de/bundestagswahl.ipynb) | Simulation mit echten Bundestagswahl-Daten |
-| [`anwendungsbeispiel.ipynb`](notebooks/de/anwendungsbeispiel.ipynb) | Generische Wahl mit interaktiver Konfiguration |
-| [`wahlauswertung.ipynb`](notebooks/de/wahlauswertung.ipynb) | Sitzverteilung und Wahlkreiszuordnung |
-| [`spezialfälle.ipynb`](notebooks/de/spezialfälle.ipynb) | Grenzfälle und Sondersituationen |
+| Notebook | Inhalt | |
+|----------|--------|---|
+| [`kurzuebersicht.ipynb`](notebooks/de/kurzuebersicht.ipynb) | Vollständiger Ablauf an einem kleinen Beispiel | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD?labpath=notebooks%2Fde%2Fkurzuebersicht.ipynb) |
+| [`iterative_verhältniswahl.ipynb`](notebooks/de/iterative_verhältniswahl.ipynb) | Wahlverfahren Schritt für Schritt | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD?labpath=notebooks%2Fde%2Fiterative_verh%C3%A4ltniswahl.ipynb) |
+| [`bundestagswahl.ipynb`](notebooks/de/bundestagswahl.ipynb) | Simulation mit echten Bundestagswahl-Daten | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD?labpath=notebooks%2Fde%2Fbundestagswahl.ipynb) |
+| [`anwendungsbeispiel.ipynb`](notebooks/de/anwendungsbeispiel.ipynb) | Generische Wahl mit interaktiver Konfiguration | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD?labpath=notebooks%2Fde%2Fanwendungsbeispiel.ipynb) |
+| [`wahlauswertung.ipynb`](notebooks/de/wahlauswertung.ipynb) | Sitzverteilung und Wahlkreiszuordnung | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD?labpath=notebooks%2Fde%2Fwahlauswertung.ipynb) |
+| [`spezialfälle.ipynb`](notebooks/de/spezialfälle.ipynb) | Grenzfälle und Sondersituationen | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD?labpath=notebooks%2Fde%2Fspezialf%C3%A4lle.ipynb) |
+
+Die Notebooks können direkt im Browser ausgeführt werden – ohne lokale Installation. Ein Klick auf den [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD) öffnet das jeweilige Notebook in [Binder](https://mybinder.org), einer kostenlosen Plattform für interaktive Jupyter-Umgebungen. Beim ersten Start wird die Umgebung einmalig aufgebaut, was 1–5 Minuten dauern kann.
 
 Weitere Notebooks zu Konfigurationsdetails: `globale_konfiguration.ipynb`, `Parteien.ipynb`, `wahlkreise.ipynb`, `wahlteilnehmer.ipynb`, `vote_matrix.ipynb`
 

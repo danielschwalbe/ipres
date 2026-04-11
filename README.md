@@ -1,6 +1,7 @@
 🇬🇧 English | 🇩🇪 [Deutsch](README_de.md)
 
 ![Tests](https://github.com/danielschwalbe/ipres/actions/workflows/ci.yml/badge.svg)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD)
 
 # IPRES – Iterative Proportional Representation Election Simulation
 
@@ -49,14 +50,16 @@ ipres/
 
 The Jupyter Notebooks demonstrate the procedure using concrete examples. Entry points:
 
-| Notebook | Content |
-|----------|---------|
-| [`quick_overview.ipynb`](notebooks/en/quick_overview.ipynb) | Complete walkthrough with a small example |
-| [`iterative_proportional_election.ipynb`](notebooks/en/iterative_proportional_election.ipynb) | Electoral procedure step by step |
-| [`federal_election.ipynb`](notebooks/en/federal_election.ipynb) | Simulation using real federal election data |
-| [`application_example.ipynb`](notebooks/en/application_example.ipynb) | Generic election with interactive configuration |
-| [`election_evaluation.ipynb`](notebooks/en/election_evaluation.ipynb) | Seat allocation and constituency assignment |
-| [`special_cases.ipynb`](notebooks/en/special_cases.ipynb) | Edge cases and special situations |
+| Notebook | Content | |
+|----------|---------|---|
+| [`quick_overview.ipynb`](notebooks/en/quick_overview.ipynb) | Complete walkthrough with a small example | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD?labpath=notebooks%2Fen%2Fquick_overview.ipynb) |
+| [`iterative_proportional_election.ipynb`](notebooks/en/iterative_proportional_election.ipynb) | Electoral procedure step by step | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD?labpath=notebooks%2Fen%2Fiterative_proportional_election.ipynb) |
+| [`federal_election.ipynb`](notebooks/en/federal_election.ipynb) | Simulation using real federal election data | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD?labpath=notebooks%2Fen%2Ffederal_election.ipynb) |
+| [`application_example.ipynb`](notebooks/en/application_example.ipynb) | Generic election with interactive configuration | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD?labpath=notebooks%2Fen%2Fapplication_example.ipynb) |
+| [`election_evaluation.ipynb`](notebooks/en/election_evaluation.ipynb) | Seat allocation and constituency assignment | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD?labpath=notebooks%2Fen%2Felection_evaluation.ipynb) |
+| [`special_cases.ipynb`](notebooks/en/special_cases.ipynb) | Edge cases and special situations | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD?labpath=notebooks%2Fen%2Fspecial_cases.ipynb) |
+
+The notebooks can be run directly in the browser — without local installation. Click the [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD) to open the respective notebook in [Binder](https://mybinder.org), a free platform for interactive Jupyter environments. On the first launch, the environment is built once, which may take 1–5 minutes.
 
 Further notebooks covering configuration details: `global_configuration.ipynb`, `contestant.ipynb`, `vote_matrix.ipynb`
 
