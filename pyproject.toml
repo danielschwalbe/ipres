@@ -20,6 +20,7 @@ dependencies = [
   "pyarrow",
   "ipyfilechooser",
   "scipy",
+  "jinja2"
 ]
 
 [project.optional-dependencies]

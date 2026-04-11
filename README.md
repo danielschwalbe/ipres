@@ -14,8 +14,6 @@ A detailed description of the procedure can be found in the [Introduction](docs/
 
 **Note**: The HTML documentation must be built once (see [Documentation](#documentation)) and covers both the concepts and the API reference.
 
-The original concept document is located at [`concept/Wahlverfahren.docx`](concept/Wahlverfahren.docx) — its contents may be outdated.
-
 ---
 
 ## The Simulation

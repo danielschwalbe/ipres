@@ -14,8 +14,6 @@ Eine ausführliche Beschreibung des Verfahrens findet sich in der [Einführung](
 
 **Hinweis**: Die HTML-Dokumentation muss einmalig gebaut werden (siehe [Dokumentation](#dokumentation)) und enthält neben den Konzepten auch die API-Referenz.
 
-Das ursprüngliche Konzeptdokument liegt unter [`concept/Wahlverfahren.docx`](concept/Wahlverfahren.docx) — es kann inhaltlich veraltet sein.
-
 ---
 
 ## Die Simulation
