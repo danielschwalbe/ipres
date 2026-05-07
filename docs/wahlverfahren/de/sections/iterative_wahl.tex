@@ -69,121 +69,134 @@ ausreicht.
 
 \underline{Beispiel:}
 
-\bigskip
-\noindent
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-1.~Wahlgang
+\medskip\noindent
+\begin{tabular}{@{}>{\centering\arraybackslash}b{0.48\textwidth}@{\hspace{0.04\textwidth}}>{\centering\arraybackslash}b{0.48\textwidth}@{}}
 
-\begin{tikzpicture}[x=2.5cm, y=0.08cm]
-  \fill[diagrammHG] (0,0) rectangle (1,100);
-  % Segmente von unten nach oben
-  \fill[parteiA] (0,0)     rectangle (1,30);
-  \fill[parteiB] (0,30)    rectangle (1,52.5);
-  \fill[parteiC] (0,52.5)  rectangle (1,72.5);
-  \fill[parteiD] (0,72.5)  rectangle (1,82.5);
-  \fill[parteiE] (0,82.5)  rectangle (1,90.75);
-  \fill[parteiF] (0,90.75) rectangle (1,96.75);
-  \fill[parteiS] (0,96.75) rectangle (1,100);
-  % Rahmen
-  \draw (0,0) rectangle (1,100);
-  % Prozentbeschriftungen
-  \node[right] at (1,15)    {\small 30\,\%};
-  \node[right] at (1,41.25) {\small 22{,}5\,\%};
-  \node[right] at (1,62.5)  {\small 20\,\%};
-  \node[right] at (1,77.5)  {\small 10\,\%};
-  \node[right] at (1,86.6)  {\small 8{,}25\,\%};
-  \node[right] at (1,93.75) {\small 6\,\%};
-  % Parteikürzel links
-  \node[left] at (0,15)    {A};
-  \node[left] at (0,41.25) {B};
-  \node[left] at (0,62.5)  {C};
-  \node[left] at (0,77.5)  {D};
-  \node[left] at (0,86.6)  {E};
-  \node[left] at (0,93.75) {F};
-  \node[left] at (0,98.4)  {S};
-  % 66%-Linie
-  \draw[thick] (-0.3,66) -- (1,66);
-  \node[left] at (-0.3,66) {\small 66\,\%};
-\end{tikzpicture}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-2.~Wahlgang
+  % --- 1. Wahlgang ---
+  1.~Wahlgang
 
-\begin{tikzpicture}[x=2.5cm, y=0.08cm]
-  \fill[diagrammHG] (0,0) rectangle (1,100);
-  % Segmente: A=45%, C=30%, B=25%
-  \fill[parteiA] (0,0)  rectangle (1,45);
-  \fill[parteiC] (0,45) rectangle (1,75);
-  \fill[parteiB] (0,75) rectangle (1,100);
-  \draw (0,0) rectangle (1,100);
-  % Prozentbeschriftungen
-  \node[right] at (1,22.5) {\small 45\,\%};
-  \node[right] at (1,60)   {\small 30\,\%};
-  \node[right] at (1,87.5) {\small 25\,\%};
-  % Parteikürzel
-  \node[left] at (0,22.5) {A};
-  \node[left] at (0,60)   {C};
-  \node[left] at (0,87.5) {B};
-  % 66%-Linie
-  \draw[thick] (-0.3,66) -- (1,66);
-  \node[left] at (-0.3,66) {\small 66\,\%};
-\end{tikzpicture}
-\end{minipage}
+  \medskip
 
-\bigskip
-\noindent
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-3.~Wahlgang
+  \begin{tikzpicture}[x=2.5cm, y=0.08cm]
+    \fill[diagrammHG] (0,0) rectangle (1,100);
+    \fill[parteiA] (0,0)     rectangle (1,30);
+    \fill[parteiB] (0,30)    rectangle (1,52.5);
+    \fill[parteiC] (0,52.5)  rectangle (1,72.5);
+    \fill[parteiD] (0,72.5)  rectangle (1,82.5);
+    \fill[parteiE] (0,82.5)  rectangle (1,90.75);
+    \fill[parteiF] (0,90.75) rectangle (1,96.75);
+    \fill[parteiS] (0,96.75) rectangle (1,100);
+    \draw (0,0) rectangle (1,100);
+    % Prozentwerte innen
+    \node at (0.5,15)    {\small 30\,\%};
+    \node at (0.5,41.25) {\small 22{,}5\,\%};
+    \node at (0.5,62.5)  {\small 20\,\%};
+    \node at (0.5,77.5)  {\small 10\,\%};
+    \node at (0.5,86.6)  {\small 8{,}25\,\%};
+    \node at (0.5,93.75) {\small 6\,\%};
+    % Parteikürzel rechts
+    \node[right] at (1,15)    {A};
+    \node[right] at (1,41.25) {B};
+    \node[right] at (1,62.5)  {C};
+    \node[right] at (1,77.5)  {D};
+    \node[right] at (1,86.6)  {E};
+    \node[right] at (1,93.75) {F};
+    \node[right] at (1,98.4)  {S};
+    % Maßpfeil links (y=0 bis y=66)
+    \draw (0,0)  -- (-0.25,0);
+    \draw (0,66) -- (-0.25,66);
+    \draw[<->] (-0.25,0) -- (-0.25,66);
+    \node[left] at (-0.3,33) {\small 66\,\%};
+  \end{tikzpicture}
 
-\begin{tikzpicture}[x=2.5cm, y=0.08cm]
-  \fill[diagrammHG] (0,0) rectangle (1,100);
-  % A=47.5%, C=52.5%
-  \fill[parteiA] (0,0)    rectangle (1,47.5);
-  \fill[parteiC] (0,47.5) rectangle (1,100);
-  \draw (0,0) rectangle (1,100);
-  \node[right] at (1,23.75) {\small 47{,}5\,\%};
-  \node[right] at (1,73.75) {\small 52{,}5\,\%};
-  \node[left] at (0,23.75) {A};
-  \node[left] at (0,73.75) {C};
-  \draw[thick] (-0.3,66) -- (1,66);
-  \node[left] at (-0.3,66) {\small 66\,\%};
-\end{tikzpicture}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-Ergebnisverteilung
+  &
 
-\begin{tikzpicture}[x=2.5cm, y=0.08cm]
-  \fill[diagrammHG] (0,0) rectangle (1,100);
-  % C=51%, A=18.3%, B=13.8%, D=6.1%, E=5.1%, F=3.7%
-  \fill[parteiC] (0,0)    rectangle (1,51);
-  \fill[parteiA] (0,51)   rectangle (1,69.3);
-  \fill[parteiB] (0,69.3) rectangle (1,83.1);
-  \fill[parteiD] (0,83.1) rectangle (1,89.2);
-  \fill[parteiE] (0,89.2) rectangle (1,94.3);
-  \fill[parteiF] (0,94.3) rectangle (1,98);
-  \draw (0,0) rectangle (1,100);
-  % Labels
-  \node[right] at (1,25.5)  {\small 51\,\%};
-  \node[right] at (1,60.15) {\small 18{,}3\,\%};
-  \node[right] at (1,76.2)  {\small 13{,}8\,\%};
-  \node[right] at (1,86.15) {\small 6{,}1\,\%};
-  \node[right] at (1,91.75) {\small 5{,}1\,\%};
-  \node[right] at (1,96.15) {\small 3{,}7\,\%};
-  % Parteikürzel
-  \node[left] at (0,25.5)  {C};
-  \node[left] at (0,60.15) {A};
-  \node[left] at (0,76.2)  {B};
-  \node[left] at (0,86.15) {D};
-  \node[left] at (0,91.75) {E};
-  \node[left] at (0,96.15) {F};
-\end{tikzpicture}
-\end{minipage}
+  % --- 2. Wahlgang ---
+  2.~Wahlgang
+
+  \medskip
+
+  \begin{tikzpicture}[x=2.5cm, y=0.08cm]
+    \fill[diagrammHG] (0,0) rectangle (1,100);
+    \fill[parteiA] (0,0)  rectangle (1,45);
+    \fill[parteiC] (0,45) rectangle (1,75);
+    \fill[parteiB] (0,75) rectangle (1,100);
+    \draw (0,0) rectangle (1,100);
+    % Prozentwerte innen
+    \node at (0.5,22.5) {\small 45\,\%};
+    \node at (0.5,60)   {\small 30\,\%};
+    \node at (0.5,87.5) {\small 25\,\%};
+    % Parteikürzel rechts
+    \node[right] at (1,22.5) {A};
+    \node[right] at (1,60)   {C};
+    \node[right] at (1,87.5) {B};
+    % Maßpfeil links (y=0 bis y=66)
+    \draw (0,0)  -- (-0.25,0);
+    \draw (0,66) -- (-0.25,66);
+    \draw[<->] (-0.25,0) -- (-0.25,66);
+    \node[left] at (-0.3,33) {\small 66\,\%};
+  \end{tikzpicture}
+
+  \\[5em]
+
+  % --- 3. Wahlgang ---
+  3.~Wahlgang
+
+  \medskip
+
+  \begin{tikzpicture}[x=2.5cm, y=0.08cm]
+    \fill[diagrammHG] (0,0) rectangle (1,100);
+    \fill[parteiA] (0,0)    rectangle (1,47.5);
+    \fill[parteiC] (0,47.5) rectangle (1,100);
+    \draw (0,0) rectangle (1,100);
+    % Prozentwerte innen
+    \node at (0.5,23.75) {\small 47{,}5\,\%};
+    \node at (0.5,73.75) {\small 52{,}5\,\%};
+    % Parteikürzel rechts
+    \node[right] at (1,23.75) {A};
+    \node[right] at (1,73.75) {C};
+    % Maßpfeil links (y=0 bis y=66)
+    \draw (0,0)  -- (-0.25,0);
+    \draw (0,66) -- (-0.25,66);
+    \draw[<->] (-0.25,0) -- (-0.25,66);
+    \node[left] at (-0.3,33) {\small 66\,\%};
+  \end{tikzpicture}
+
+  &
+
+  % --- Ergebnisverteilung ---
+  Ergebnisverteilung
+
+  \medskip
+
+  \begin{tikzpicture}[x=2.5cm, y=0.08cm]
+    \fill[diagrammHG] (0,0) rectangle (1,100);
+    \fill[parteiC] (0,0)    rectangle (1,51);
+    \fill[parteiA] (0,51)   rectangle (1,69.3);
+    \fill[parteiB] (0,69.3) rectangle (1,83.1);
+    \fill[parteiD] (0,83.1) rectangle (1,89.2);
+    \fill[parteiE] (0,89.2) rectangle (1,94.3);
+    \fill[parteiF] (0,94.3) rectangle (1,98);
+    \draw (0,0) rectangle (1,100);
+    % Prozentwerte innen
+    \node at (0.5,25.5)  {\small 51\,\%};
+    \node at (0.5,60.15) {\small 18{,}3\,\%};
+    \node at (0.5,76.2)  {\small 13{,}8\,\%};
+    \node at (0.5,86.15) {\small 6{,}1\,\%};
+    \node at (0.5,91.75) {\small 5{,}1\,\%};
+    \node at (0.5,96.15) {\small 3{,}7\,\%};
+    % Parteikürzel rechts
+    \node[right] at (1,25.5)  {C};
+    \node[right] at (1,60.15) {A};
+    \node[right] at (1,76.2)  {B};
+    \node[right] at (1,86.15) {D};
+    \node[right] at (1,91.75) {E};
+    \node[right] at (1,96.15) {F};
+    % Phantom-Knoten für Ausrichtung (gleiche Breite wie Maßpfeil der anderen Diagramme)
+    \node[opacity=0] at (-0.3,33) {\small 66\,\%};
+  \end{tikzpicture}
+
+\end{tabular}
 
 \bigskip
 
