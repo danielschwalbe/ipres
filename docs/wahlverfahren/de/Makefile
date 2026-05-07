@@ -1,11 +1,13 @@
 MAIN = MehrheitsVerhältniswahl
 TEX  = pdflatex
+OUT  = dist
 
 .PHONY: pdf clean
 
 pdf:
-	$(TEX) -interaction=nonstopmode $(MAIN).tex
-	$(TEX) -interaction=nonstopmode $(MAIN).tex
+	mkdir -p $(OUT)
+	$(TEX) -interaction=nonstopmode -output-directory=$(OUT) $(MAIN).tex
+	$(TEX) -interaction=nonstopmode -output-directory=$(OUT) $(MAIN).tex
 
 clean:
-	rm -f *.aux *.log *.toc *.out *.pdf
+	rm -rf $(OUT)

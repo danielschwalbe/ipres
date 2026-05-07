@@ -1,12 +1,16 @@
 ﻿param([switch]$Clean)
 
+Set-Location $PSScriptRoot
+
 $main = "MehrheitsVerhältniswahl"
+$outDir = "dist"
 
 if ($Clean) {
-    Remove-Item -ErrorAction SilentlyContinue *.aux, *.log, *.toc, *.out, *.synctex.gz
-    Write-Host "Cleaned build artifacts."
+    Remove-Item -Recurse -Force -ErrorAction SilentlyContinue $outDir
+    Write-Host "Cleaned."
     return
 }
 
-pdflatex -interaction=nonstopmode "$main.tex"
-pdflatex -interaction=nonstopmode "$main.tex"
+New-Item -ItemType Directory -Force $outDir | Out-Null
+pdflatex -interaction=nonstopmode "-output-directory=$outDir" "$main.tex"
+pdflatex -interaction=nonstopmode "-output-directory=$outDir" "$main.tex"

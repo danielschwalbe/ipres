@@ -31,11 +31,26 @@ jobs:
           pip install -e .
           pip install sphinx sphinx_rtd_theme sphinx-intl myst-parser
 
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-extra texlive-fonts-recommended texlive-lang-german
+
       - name: Build English docs
         run: cd docs && make html
 
       - name: Build German docs
         run: cd docs && sphinx-build -b html -D language=de source build/html/de
+
+      - name: Build German PDF
+        run: make pdf
+        working-directory: docs/wahlverfahren/de
+
+      - name: Copy PDFs into docs site
+        run: |
+          mkdir -p docs/build/html/wahlverfahren
+          cp docs/wahlverfahren/de/dist/*.pdf docs/build/html/wahlverfahren/
 
       - uses: actions/configure-pages@v5
 
