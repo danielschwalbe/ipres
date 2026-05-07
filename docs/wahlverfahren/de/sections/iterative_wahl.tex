@@ -1,0 +1,406 @@
+\section{Iteratives Verhältniswahlrecht mit garantiertem Gewinner}
+
+\subsection{Verfahrensbeschreibung}
+
+Das Verhältniswahlrecht tendiert dazu, Koalitionen zu erzwingen, weil keine Partei die absolute
+Mehrheit erhält. Je mehr große Parteien es gibt, desto geringer ist die Wahrscheinlichkeit, dass
+der Wähler eine klar bevorzugt. Das im Folgenden vorgeschlagene iterative Wahlverfahren sorgt
+dafür, dass der Zwang zu zähneknirschenden Koalitionen mit faulen Kompromissen wegfällt. Es
+garantiert, dass am Ende immer eine Regierungsmehrheit entsteht. Dabei gibt es aber auch den
+Wählern, die im ersten Durchlauf \enquote{Verlierparteien} gewählt haben, in weiteren Durchläufen
+die Chance, im Sinne des kleinsten Übels mitzubestimmen, wer am Ende regieren wird. Das
+unterscheidet es von anderen mehrheitsbildenden Wahlverfahren.
+
+\begin{enumerate}
+  \item Im ersten Wahlschritt wird eine normale Verhältniswahl durchgeführt, bei der die Parteien
+    nach der Anzahl ihrer prozentualen Stimmenanteile geordnet werden. Wenn eine Partei die
+    absolute Mehrheit erhält oder sich eine Koalition bildet, die die absolute Mehrheit hat, ist
+    das Verfahren beendet und die Partei oder Koalition mit der absoluten Mehrheit hat die Wahl
+    gewonnen. Die \textbf{absolute Mehrheit} in diesem Sinne ist ein vorher definierter
+    Prozentsatz, der leicht über 50\,\% liegt. Man wird ihn so festsetzen, dass die
+    Regierungspartei/koalition ein paar Sitze mehr als die Hälfte bekommt, so dass sie
+    rechnerisch auch noch die Mehrheit hat, wenn mal jemand krank ist.
+
+  \item Wenn kein Gewinner feststeht, sind zwei Fälle zu unterscheiden:
+
+    \begin{enumerate}
+      \item Es standen nur zwei Parteien zur Auswahl. Dieser Fall unterteilt sich wieder in zwei
+        Fälle:
+
+        \begin{enumerate}[label=\roman*.]
+          \item Es war der erste Wahlgang mit dieser Zusammensetzung. In diesem Fall wird
+            Schritt~1 noch einmal wiederholt.
+
+          \item Es ist schon der zweite ergebnislose Wahlgang mit nur zwei Parteien. In diesem
+            Fall entscheidet ein Zufallsverfahren, beispielsweise minimale prozentuale
+            Unterschiede im Ergebnis, oder das Los.
+        \end{enumerate}
+
+      \item Es standen mehr als zwei Parteien zur Auswahl. In diesem Fall werden die prozentualen
+        Stimmanteile beginnend mit dem größten der Reihe nach aufsummiert, bis eine
+        Zweidrittelmehrheit erreicht oder gerade überschritten ist. Das bedeutet, dass mindestens
+        zwei Drittel der Wähler wollen, dass zumindest eine dieser Parteien regiert. Jetzt wird
+        wieder Schritt~1 ausgeführt, aber nur mit den so bestimmten Parteien. Alle Wähler dürfen
+        jetzt noch einmal über diese Parteien abstimmen.
+    \end{enumerate}
+\end{enumerate}
+
+Das Verfahren wird so lange wiederholt, bis es einen Gewinner gibt. Das Verfahren terminiert
+immer, da sich die Anzahl der zur Wahl stehenden Parteien in jedem Iterationsschritt reduziert,
+bis gegebenenfalls nur noch zwei Parteien übrig sind. Der Gedanke hinter dem Verfahren ist der,
+dass Menschen meistens auch eine Entscheidung treffen, wenn sie gezwungen werden, zwischen zwei
+Alternativen zu entscheiden -- und wenn es nur die des kleinsten Übels ist. Bei vielen
+Alternativen hingegen wählt der eine dies, der andere das. Koalitionen, wenn sie von Herzen
+kommen, sind mehreren Wahlgängen vorzuziehen, da sie dem Wählerwillen am nächsten kommen. Es
+besteht aber nicht mehr der Zwang, um jeden Preis zu koalieren, nur damit einer regieren kann.
+Die Parteien können sich überlegen, wie ihre Chancen in einem erneuten Wahlgang stehen würden
+und gegebenenfalls einen Koalitionspartner suchen oder nicht. Es kann durchaus vorkommen, dass
+sich zwei Parteien inhaltlich nahestehen, aber eben zwei verschiedene Mannschaften sind, die um
+die Gunst der Wähler eifern. In diesem Fall wäre eine Koalition auch aus Wählersicht anzuraten.
+
+Wenn beim ersten Durchlauf bereits eine Partei oder Koalition eine Regierungsmehrheit ($\geq$
+absolute Mehrheit) erzielen konnte, so erhält sie eine entsprechende Anzahl Sitze im Parlament
+zugeteilt. Andernfalls bekommt der Gewinner aus mehreren Wahlgängen eine der absoluten Mehrheit
+entsprechende Anzahl der Parlamentssitze zugesprochen. Die verbleibenden Sitze werden nach dem
+ursprünglichen Verhältnis beim ersten Wahlgang zwischen den anderen Parteien aufgeteilt. So ist
+sichergestellt, dass es immer eine Regierungsmehrheit gibt, aber auch kleinere Parteien in der
+Opposition repräsentiert sind, solange ihr Stimmenergebnis für wenigstens einen Abgeordneten
+ausreicht.
+
+\underline{Beispiel:}
+
+\bigskip
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+1.~Wahlgang
+
+\begin{tikzpicture}[x=2.5cm, y=0.08cm]
+  \fill[diagrammHG] (0,0) rectangle (1,100);
+  % Segmente von unten nach oben
+  \fill[parteiA] (0,0)     rectangle (1,30);
+  \fill[parteiB] (0,30)    rectangle (1,52.5);
+  \fill[parteiC] (0,52.5)  rectangle (1,72.5);
+  \fill[parteiD] (0,72.5)  rectangle (1,82.5);
+  \fill[parteiE] (0,82.5)  rectangle (1,90.75);
+  \fill[parteiF] (0,90.75) rectangle (1,96.75);
+  \fill[parteiS] (0,96.75) rectangle (1,100);
+  % Rahmen
+  \draw (0,0) rectangle (1,100);
+  % Prozentbeschriftungen
+  \node[right] at (1,15)    {\small 30\,\%};
+  \node[right] at (1,41.25) {\small 22{,}5\,\%};
+  \node[right] at (1,62.5)  {\small 20\,\%};
+  \node[right] at (1,77.5)  {\small 10\,\%};
+  \node[right] at (1,86.6)  {\small 8{,}25\,\%};
+  \node[right] at (1,93.75) {\small 6\,\%};
+  % Parteikürzel links
+  \node[left] at (0,15)    {A};
+  \node[left] at (0,41.25) {B};
+  \node[left] at (0,62.5)  {C};
+  \node[left] at (0,77.5)  {D};
+  \node[left] at (0,86.6)  {E};
+  \node[left] at (0,93.75) {F};
+  \node[left] at (0,98.4)  {S};
+  % 66%-Linie
+  \draw[thick] (-0.3,66) -- (1,66);
+  \node[left] at (-0.3,66) {\small 66\,\%};
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+2.~Wahlgang
+
+\begin{tikzpicture}[x=2.5cm, y=0.08cm]
+  \fill[diagrammHG] (0,0) rectangle (1,100);
+  % Segmente: A=45%, C=30%, B=25%
+  \fill[parteiA] (0,0)  rectangle (1,45);
+  \fill[parteiC] (0,45) rectangle (1,75);
+  \fill[parteiB] (0,75) rectangle (1,100);
+  \draw (0,0) rectangle (1,100);
+  % Prozentbeschriftungen
+  \node[right] at (1,22.5) {\small 45\,\%};
+  \node[right] at (1,60)   {\small 30\,\%};
+  \node[right] at (1,87.5) {\small 25\,\%};
+  % Parteikürzel
+  \node[left] at (0,22.5) {A};
+  \node[left] at (0,60)   {C};
+  \node[left] at (0,87.5) {B};
+  % 66%-Linie
+  \draw[thick] (-0.3,66) -- (1,66);
+  \node[left] at (-0.3,66) {\small 66\,\%};
+\end{tikzpicture}
+\end{minipage}
+
+\bigskip
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+3.~Wahlgang
+
+\begin{tikzpicture}[x=2.5cm, y=0.08cm]
+  \fill[diagrammHG] (0,0) rectangle (1,100);
+  % A=47.5%, C=52.5%
+  \fill[parteiA] (0,0)    rectangle (1,47.5);
+  \fill[parteiC] (0,47.5) rectangle (1,100);
+  \draw (0,0) rectangle (1,100);
+  \node[right] at (1,23.75) {\small 47{,}5\,\%};
+  \node[right] at (1,73.75) {\small 52{,}5\,\%};
+  \node[left] at (0,23.75) {A};
+  \node[left] at (0,73.75) {C};
+  \draw[thick] (-0.3,66) -- (1,66);
+  \node[left] at (-0.3,66) {\small 66\,\%};
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+Ergebnisverteilung
+
+\begin{tikzpicture}[x=2.5cm, y=0.08cm]
+  \fill[diagrammHG] (0,0) rectangle (1,100);
+  % C=51%, A=18.3%, B=13.8%, D=6.1%, E=5.1%, F=3.7%
+  \fill[parteiC] (0,0)    rectangle (1,51);
+  \fill[parteiA] (0,51)   rectangle (1,69.3);
+  \fill[parteiB] (0,69.3) rectangle (1,83.1);
+  \fill[parteiD] (0,83.1) rectangle (1,89.2);
+  \fill[parteiE] (0,89.2) rectangle (1,94.3);
+  \fill[parteiF] (0,94.3) rectangle (1,98);
+  \draw (0,0) rectangle (1,100);
+  % Labels
+  \node[right] at (1,25.5)  {\small 51\,\%};
+  \node[right] at (1,60.15) {\small 18{,}3\,\%};
+  \node[right] at (1,76.2)  {\small 13{,}8\,\%};
+  \node[right] at (1,86.15) {\small 6{,}1\,\%};
+  \node[right] at (1,91.75) {\small 5{,}1\,\%};
+  \node[right] at (1,96.15) {\small 3{,}7\,\%};
+  % Parteikürzel
+  \node[left] at (0,25.5)  {C};
+  \node[left] at (0,60.15) {A};
+  \node[left] at (0,76.2)  {B};
+  \node[left] at (0,86.15) {D};
+  \node[left] at (0,91.75) {E};
+  \node[left] at (0,96.15) {F};
+\end{tikzpicture}
+\end{minipage}
+
+\bigskip
+
+Im obigen Beispiel gewinnt Partei~C im 3.~Wahlgang die Wahl, obwohl A im ersten Wahlgang die
+stärkste Kraft war. Wenn A und B nach dem ersten Wahlgang eine Koalition eingegangen wären, wäre
+die Wahl damit beendet gewesen und A und B hätten gemeinsam regiert. Da sie aber unvereinbare
+Positionen oder Personen hatten, haben sie sich entschieden, in den nächsten Wahlgang zu gehen.
+Am zweiten Wahlgang nehmen nur so viele Parteien teil, wie gerade nötig ist, um über zwei Drittel
+der Wählerstimmen zu kommen. In diesem Fall waren das A, B und C. Beim zweiten Wahlgang konnte A
+seinen Vorsprung ausbauen und kommt nun auf 45\,\%. Interessanterweise haben C und B die
+Reihenfolge gewechselt, da offenbar mehr von den Wählern der im ersten Wahlgang ausgeschiedenen
+Parteien Partei~C zugetan waren als Partei~B.
+Da immer noch keine Partei die absolute Mehrheit hat und Koalitionen ausgeschlossen werden,
+kommt es im 3.~Wahlgang zur Stichwahl zwischen A und C. Interessanterweise verliert A bei der
+Stichwahl seine bisherige Führungsrolle, da die meisten ehemaligen B-Wähler C wählen. C hat
+somit die Wahl gewonnen und bekommt die absolute Mehrheit zugesprochen. Da es sich nur um eine
+zugesprochene absolute Mehrheit aufgrund von Stichwahlen handelt, ist das genaue prozentuale
+Ergebnis der Stichwahlen irrelevant: Der Sieger erhält nur die zugesprochene Anzahl Sitze. (In
+diesem Beispiel 51\,\%) Diese Regel ist deswegen wichtig, weil die Stichwahlen auch noch mit
+einem viel größeren Unterschied ausgehen könnten. Z.\,B.\ könnte A auch 70\,\% der Stimmen
+erhalten. Alle anderen Parteien wären dann absolut unterrepräsentiert, was nicht dem eigentlichen
+Volkswillen entspräche. Wenn im ersten Wahlgang eine Partei oder Koalition 70\,\% der Stimmen auf
+sich vereinen würde, wäre das eine andere Aussage. Dann wollen wirklich 70\,\% der Bevölkerung
+trotz der Vielzahl der anderen Angebote, dass diese Partei(en) regieren.
+
+Deswegen dürfen beim ersten Wahlgang erhaltene absolute Mehrheiten unverändert bestehen bleiben.
+
+\subsection{Verworfene Alternative}
+
+Anstatt die absolute Mehrheit der Stimmen zuzusprechen, könnte man auch einfach der
+Gewinnerpartei des Iterativen Verfahrens das Recht der Gesetzgebung zusprechen. Wozu überhaupt
+noch abstimmen? Sie gewinnen doch sowieso jede Abstimmung, da sie die absolute Mehrheit haben.
+Das führt aber auf die Frage, wozu man überhaupt Parlamente braucht. Wenn die Fraktionen sowieso
+immer genauso abstimmen, wie es ihr Fraktionsvorsitzender sagt, bräuchte man tatsächlich keine
+Parlamente mehr. Dann würde es ausreichen, einen Fraktionsvorsitzendenrat zu bilden, wo die
+Fraktionsvorsitzenden mit einem bestimmten Stimmgewicht abstimmen würden. Wenn der
+Fraktionsvorsitzende der Regierungspartei dann auch noch der Regierungschef wäre, wäre die
+Autokratie fertig.
+Aber so ist es ja nicht. Die Parlamentarier können oft in geheimer Wahl abstimmen und die
+Fraktionsvorsitzenden müssen ihre Fraktionsmitglieder überzeugen und können ihnen nicht
+befehlen. Bei manchen Fragen kann man sich nicht einmal auf die eigenen Parteimitglieder
+verlassen, sondern muss Verbündete in anderen Fraktionen suchen. Das ist genauso gewünscht,
+damit die Macht von Einzelnen nicht zu groß wird. Wichtige Fragen sollen nicht von Einzelnen
+entschieden werden, sondern von einer Gruppe von Menschen. Man geht aber davon aus, dass Menschen
+mit gleichen Grundüberzeugungen, wie man es von Mitgliedern einer Partei annehmen kann, sich
+meistens einigen werden. Manche Fragen werden allerdings auch innerhalb einer Partei so
+kontrovers diskutiert, dass eine Einigung nicht immer möglich ist. Je größer und heterogener eine
+Fraktion ist, desto schwieriger wird im Allgemeinen eine Einigung sein. Im Hinblick auf eine
+Machtbegrenzung macht es deshalb schon Sinn, als Ausgleich für die Machterhöhung durch
+Iterationswahlgewinn einen Zwang zur Einigung von mehr Menschen einzubauen. Das spricht dafür,
+der Regierungspartei tatsächlich mehr Mandate zuzusprechen und nicht die Regel aufzustellen, dass
+alle Gesetzesvorlagen der Regierungspartei als angenommen gelten, sofern nur die ganze
+Regierungsfraktion zustimmt -- unabhängig von ihrer Größe.
+
+\subsection{Mathematische Fragen zur Iterativen Verhältniswahl}
+
+\begin{enumerate}
+  \item Terminiert das Verfahren immer?
+  \item Muss man den Schnitt immer nach $\tfrac{2}{3}$ machen, oder käme auch ein anderes
+    Verhältnis infrage?
+\end{enumerate}
+
+Es bezeichne
+
+\begin{itemize}[label={}]
+  \item $A$ -- die Gesamtzahl der in einem Wahlgang abgegebenen Stimmen
+  \item $A_i$ -- die Anzahl der Stimmen, die für die $i$-te Partei in diesem Wahlgang abgegeben
+    wurde, wobei die Parteien absteigend nach ihren Stimmen geordnet sein sollen. D.\,h.\ wenn
+    Partei $X$ im Wahlgang $j$ die $i$-te Partei war, muss sie das im Wahlgang $j+1$ nicht
+    notwendigerweise auch wieder sein.
+\end{itemize}
+
+Für die relativen Stimmanteile $a_i = \frac{A_i}{A}$ gilt in jedem Wahlgang:
+
+\begin{align}
+  \text{I.} \quad & \sum_{i=1}^{n} a_i = 1
+    \quad \text{($n$ -- Anzahl teilnehmender Parteien in diesem Wahlgang)} \\[4pt]
+  \text{II.} \quad & a_k \geq a_l \quad \text{für } k < l
+\end{align}
+
+Um die Parteien zu bestimmen, die in den nächsten Wahlgang kommen, machen wir bei der relativen
+Schnittstimmenzahl $r$ ($0 < r < 1$) einen Schnitt, so dass gilt:
+
+\begin{align}
+  \text{III.} \quad & \sum_{i=1}^{s} a_i \geq r \\[4pt]
+  \text{IV.}  \quad & \sum_{i=1}^{s-1} a_i < r
+\end{align}
+
+Damit das Verfahren immer terminiert und sinnvolle Ergebnisse liefert, muss in jedem Durchgang
+außer dem letzten (d.\,h.\ $n = 2$) $s < n$ und $s > 1$ gelten. Für $n = 2$ gilt Regel 2a, die
+sicherstellt, dass es einen Gewinner gibt. Für alle anderen Durchgänge $j$ gilt: $n_{j+1} = s_j$.
+Also solange $s_j < n_j$ erfüllt ist, wird $n$ in jedem Durchgang kleiner bis irgendwann 2
+erreicht ist.
+Ohne Beschränkung der Allgemeinheit können wir annehmen, dass in jedem Wahlgang $\forall a_i \neq
+0$ gilt. Sollte in der Praxis doch jemals eine Partei in einem Wahlgang gar keine Stimme erhalten,
+nehmen wir diese aus der Liste und reduzieren $n$ entsprechend, so dass immer $a_n \neq 0$ gilt.
+
+Um zu beweisen, dass immer $s < n$ gilt, nehmen wir zuerst das Gegenteil an, d.\,h.
+
+\medskip
+Annahme A1: $s = n$
+
+\medskip\noindent
+und versuchen diese Behauptung zum Widerspruch zu führen. Da nie $s > n$ sein kann, muss dann
+$s < n$ gelten.
+
+Aus A1 und IV folgt
+\begin{equation}
+  \text{V.} \quad \sum_{i=1}^{n-1} a_i < r
+\end{equation}
+
+Addition von $a_n$ auf beiden Seiten ergibt
+\begin{equation}
+  \text{V'.} \quad \sum_{i=1}^{n-1} a_i + a_n < r + a_n
+\end{equation}
+
+aus (I) $\Rightarrow$ $1 < r + a_n$ $\Rightarrow$ $1 - a_n < r$
+\begin{equation}
+  \text{VI.} \quad a_n > 1 - r
+\end{equation}
+
+aus (II) $\Rightarrow$ $a_i \geq a_n$ für $i < n$
+\begin{equation}
+  \text{VII.} \quad \sum_{i=1}^{n-1} a_i \geq \sum_{i=1}^{n-1} a_n
+\end{equation}
+
+(VI.) $\Rightarrow$
+\begin{equation}
+  \text{VIII.} \quad \sum_{i=1}^{n-1} a_n > \sum_{i=1}^{n-1}(1-r) = (n-1)(1-r)
+\end{equation}
+
+(VII, VIII, VI) $\Rightarrow$
+\begin{equation}
+  \text{IX.} \quad \sum_{i=1}^{n} a_i = \sum_{i=1}^{n-1} a_i + a_n
+    > (n-1)(1-r) + a_n > (n-1)(1-r) + (1-r) = n(1-r)
+\end{equation}
+
+Also $\displaystyle\sum_{i=1}^{n} a_i > n(1-r)$.
+
+Das ist ein Widerspruch zu (I) genau dann wenn
+\begin{equation}
+  \text{X.} \quad n(1-r) \geq 1
+\end{equation}
+
+weil $\displaystyle\sum_{i=1}^{n} a_i > x$ nur für $x < 1$ gelten kann, da
+$\displaystyle\sum_{i=1}^{n} a_i = 1$ ist.
+
+A1 ist also nicht immer falsch, sondern die Ungültigkeit hängt von $n$ und $r$ ab.
+Um sicherzustellen, dass A1 falsch ist und damit $s < n$, muss gelten:
+\begin{equation}
+  \text{XI.} \quad n \geq \frac{1}{(1-r)} \quad \text{bzw.} \quad r \leq 1 - \frac{1}{n}
+\end{equation}
+
+Nach Voraussetzung ist $n > 2$. Für $n = 2$ haben wir unsere Sonderregelung, nach der wir den
+Verfahrensgewinner bestimmen. Wir brauchen, dass A1 falsch ist für:
+\begin{equation}
+  \text{XII.} \quad n \geq \frac{1}{(1-r)} = 3
+\end{equation}
+\begin{equation}
+  \text{XIII.} \quad r = \frac{2}{3}
+\end{equation}
+
+Das bedeutet, dass sich die Anzahl der zur Verfügung stehenden Parteien in jedem
+Iterationsschritt reduziert, bis nur noch zwei Parteien übrig bleiben -- vorausgesetzt wir
+schneiden bei zwei Dritteln. Wenn wir z.\,B.\ erst nach drei Vierteln schneiden würden, bräuchten
+wir eine Sonderregelung schon für drei Parteien im Wahlgang und nicht erst für zwei, da eine
+Reduktion auf zwei nicht mehr allgemeingültig garantiert werden könnte.
+
+Man kann sich das auch anschaulich gut vorstellen:
+
+Wenn drei Parteien im Spiel sind, die alle genau gleich viele Stimmen erhalten, dann können wir
+das Verfahren nicht anwenden, da Voraussetzung~IV nicht erfüllt ist. Wenn die Parteien aber auch
+nur minimale Stimmenunterschiede aufweisen (wovon bei Wahlen mit vielen Wählern und wenigen zur
+Wahl Stehenden auszugehen ist), wird eine Partei weniger als ein Drittel der Stimmen erhalten und
+die anderen beiden zusammen damit über zwei Drittel kommen, womit im nächsten Wahlgang nur die
+beiden drinbleiben. Würden wir aber bei drei Vierteln erst den Schnitt machen, würden bei drei
+Parteien minimale Ergebnisunterschiede keinesfalls eine Partei unter ein Viertel kommen lassen.
+Da müssten sich die Ergebnisse schon deutlich unterscheiden, was sein kann, aber nicht sein muss.
+Wären hingegen vier Parteien im Spiel, würden minimale Ergebnisunterschiede auch bei einem drei
+Viertel Schnitt eine Partei rausfliegen lassen.
+
+\subsection{Verfassungsänderungen}
+
+Aus gutem Grund dürfen Verfassungsänderungen nur mit einer besonders großen Mehrheit, der
+\enquote{Verfassungsmehrheit}, die in Deutschland zwei Drittel beträgt, durchgeführt werden.
+Verfassungsänderungen sollen nur mit einem breiten gesellschaftlichen Konsens möglich sein --
+auch über Parteigrenzen hinweg. Die Zwei-Drittel-Regelung kann nicht auf Parlamente mit
+zugesprochener absoluter Mehrheit angewendet werden, da dies einen größeren gesellschaftlichen
+Konsens vortäuschen würde, als tatsächlich vorhanden. Die Regierungspartei hat im Sinne des
+kleinsten Übels mehr Macht bekommen, als ihr eigentlich zustünde, damit wenigstens einer etwas
+entscheiden kann, auch wenn dadurch am Ende vielleicht nur die zweitbeste Lösung umgesetzt wird.
+Wenigstens wird etwas umgesetzt, was aus einem Guss ist.
+Dieses Prinzip des kleinsten Übels sollte aber nicht bei Grundsatzfragen zur Anwendung kommen.
+Hier muss richtig entschieden werden, da die Folgen von Fehlentscheidungen zu gravierend wären.
+Deswegen schlage ich vor, dass eine Verfassungskammer gebildet wird, die die Zusammensetzung hat,
+wie sie im ersten Wahlgang vom Wähler festgelegt worden ist. Alle Verfassungsänderungen müssen
+mit Zweidrittelmehrheit in dieser Kammer bestätigt werden. Wenn dazu größere überparteiliche
+Absprachen notwendig sind, dann ist das so und durchaus im Sinne des Erfinders.
+Die Verfassungskammer kann auch über Verfassungsänderungen hinaus genutzt werden, um andere
+verfassungsrechtlich relevante Entscheidungen zu treffen, wie z.\,B.\ die Wahl der
+Verfassungsrichter.
+Bei allen verfassungsrelevanten Entscheidungen geht man davon aus, dass die Verfassung
+eigentlich schon gut so ist, wie sie ist. Deswegen macht man es bewusst schwer, sie zu ändern,
+damit man sie nicht aus Versehen verschlimmbessert. Sie ist einmal durch einen breiten
+gesellschaftlichen Konsens zustande gekommen\footnote{Der Konsens, der zur Bildung der Verfassung
+der Bundesrepublik Deutschland geführt hat, mag nicht freiwillig zustande gekommen sein, sondern
+durch einen verlorenen Krieg. Er ist aber doch im Nachhinein von Millionen von Bundesdeutschen im
+Grundsatz akzeptiert worden, so dass man schon von einem gesamtgesellschaftlichen Konsens
+sprechen kann.} und nur ein mindestens genauso breiter gesellschaftlicher Konsens sollte sie
+wieder ändern können. Wenn der nicht zustande kommt, dann muss sie so bleiben, wie sie ist.
+Sollte ein gleich großer Konsens über Jahrzehnte nicht zustande kommen, dann ist es eben so und
+wir leben weiter in dem von den (geistigen) Vätern vorgegebenen Rahmen. Das Prinzip stößt nur an
+Grenzen bei Verfassungsrichtern, die im Gegensatz zu niedergeschriebenen Verfassungen mit der
+Zeit altern und ausgetauscht werden müssen. Deswegen muss auch da ein Verfahren geben, wie neue
+Verfassungsrichter bestimmt werden können, die in die Fußstapfen ihrer Vorgänger treten, ohne
+dass notwendigerweise die geforderte Zweidrittelmehrheit zustande kommt. Das Naheliegendste ist
+tatsächlich, die amtierenden Verfassungsrichter sich selbst Nachfolger suchen zu lassen. Sie
+sollen sie nicht nur vorschlagen können, sondern sie selbst bestimmen, außer die Politik greift
+mit Zweidrittelmehrheit ein. Von sich aus werden sie Nachfolger einsetzen, die in ihrem Geiste
+entscheiden werden.

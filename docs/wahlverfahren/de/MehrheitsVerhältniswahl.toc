@@ -1,0 +1,21 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{Zusammenfassung}{3}{Doc-Start}%
+\contentsline {section}{\numberline {1}Einleitung}{4}{section.1}%
+\contentsline {section}{\numberline {2}Iteratives Verhältniswahlrecht mit garantiertem Gewinner}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Verfahrensbeschreibung}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Verworfene Alternative}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Mathematische Fragen zur Iterativen Verhältniswahl}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Verfassungsänderungen}{10}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Personalisierung des Verhältniswahlrechts}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Keine parteilosen Kandidaten}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Wahl der Spitzenkandidaten durch das Volk}{12}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Verfahren zur Direktwahl von Abgeordneten ohne die Parteienzusammensetzung zu verändern}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Verfahren zur Zuweisung eines Wahlkreises zu einer Partei (Wahlkreisrepräsentationsverfahren)}{16}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Ungarischer Algorithmus zur Optimierung des Zuweisungsproblems}{21}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Anmerkungen}{23}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Landeslisten}{23}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Fünf-Prozent-Hürde}{23}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Kein CDU/CSU-Bündnis mehr}{23}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Mehrere Christliche Parteien}{24}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Anhang: Nutzung der Simulation}{24}{section.5}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

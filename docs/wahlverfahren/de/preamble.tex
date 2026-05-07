@@ -1,0 +1,53 @@
+% Kodierung und Sprache
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+% Schrift: Helvetica (wie Arial in Google Docs)
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Seitenformat
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+% Mathematik
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+% Diagramme
+\usepackage{tikz}
+\usetikzlibrary{calc, positioning, patterns}
+
+% Farben für Balkendiagramme
+\usepackage{xcolor}
+\definecolor{parteiA}{gray}{0.25}
+\definecolor{parteiB}{gray}{0.65}
+\definecolor{parteiC}{RGB}{100,160,220}
+\definecolor{parteiD}{RGB}{80,160,80}
+\definecolor{parteiE}{RGB}{200,60,60}
+\definecolor{parteiF}{RGB}{220,190,40}
+\definecolor{parteiS}{RGB}{160,120,40}
+\definecolor{diagrammHG}{RGB}{210,230,245}
+
+% Tabellen
+\usepackage{booktabs}
+\usepackage{array}
+
+% Listen
+\usepackage{enumitem}
+
+% Typografie
+\usepackage{microtype}
+\usepackage{csquotes}
+
+% Hyperlinks
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+
+% Grafiken (für Screenshots-Platzhalter im Anhang)
+\usepackage{graphicx}
+
+% Hilfsmakro: Skalierung für Balkendiagramme (100\% = 8\,cm)
+\newlength{\balkenhoehe}
+\setlength{\balkenhoehe}{8cm}
+\newcommand{\proztocm}[1]{\dimexpr#1\balkenhoehe/100\relax}

@@ -1,0 +1,95 @@
+\section{Anhang: Nutzung der Simulation}
+
+Die \href{https://github.com/danielschwalbe/ipres}{Simulation} ist ein in der
+\href{https://www.python.org}{Python}-Programmiersprache geschriebenes Projekt. Es enthält neben
+der \textbf{ipres} Python-Package viele Readmes und Beispielnotebooks.
+\href{https://jupyter.org}{Jupyter Notebooks} ist eine aus der Python-Welt stammende Technologie,
+die es erlaubt, Markdown (Dokumentation) und Code in einer Datei zusammenzufassen und interaktiv
+auszuführen. Das macht sie geeignet, um z.\,B.\ eben solche Wahlverfahren zu demonstrieren. Man
+kann Parameter ändern und live sehen, wie sie sich auswirken.
+
+Eigentlich müsste man einen Jupyter-Lab-Server starten, um die Notebooks auszuführen. Das Projekt
+verlinkt aber zu \href{https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD}{binder}, welches das
+Projekt in eine virtuelle Maschine kopiert und dort den Jupyter-Server bereits ausführt. Man muss
+nur ein bisschen Geduld haben, bis die Maschine gestartet ist. Bis dahin sieht es so aus:
+
+\begin{figure}[h]
+  \centering
+  % TODO: Screenshot einfügen
+  % \includegraphics[width=0.85\textwidth]{screenshots/binder_start.png}
+  \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}
+    \textit{[Screenshot: Binder-Startseite beim Laden der virtuellen Maschine]}
+    \vspace{2cm}}}
+  \caption{Binder lädt die virtuelle Maschine}
+\end{figure}
+
+Wenn die Maschine hochgefahren ist, wird man von folgendem Bildschirm begrüßt:
+
+\begin{figure}[h]
+  \centering
+  % TODO: Screenshot einfügen
+  % \includegraphics[width=0.85\textwidth]{screenshots/jupyterlab_start.png}
+  \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}
+    \textit{[Screenshot: JupyterLab-Startseite nach dem Hochfahren]}
+    \vspace{2cm}}}
+  \caption{JupyterLab nach dem Start}
+\end{figure}
+
+Um zu den Notebooks zu gelangen, muss man auf \texttt{notebooks} klicken.
+
+\begin{figure}[h]
+  \centering
+  % TODO: Screenshot einfügen
+  % \includegraphics[width=0.85\textwidth]{screenshots/notebooks_folder.png}
+  \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}
+    \textit{[Screenshot: Notebooks-Ordner mit \texttt{de/} und \texttt{en/} Unterordnern]}
+    \vspace{2cm}}}
+  \caption{Notebooks-Ordner}
+\end{figure}
+
+Und dann auf \texttt{de}, um zu den deutschen Notebooks zu gelangen.
+
+\begin{figure}[h]
+  \centering
+  % TODO: Screenshot einfügen
+  % \includegraphics[width=0.85\textwidth]{screenshots/notebooks_de.png}
+  \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}
+    \textit{[Screenshot: Inhalt des \texttt{notebooks/de/}-Ordners]}
+    \vspace{2cm}}}
+  \caption{Deutsche Notebooks}
+\end{figure}
+
+Hier kann man sich dann welche herauspicken, z.\,B.\ die \texttt{bundestagswahl.ipynb}.
+
+Durch Klick auf den Startpfeil wird die gerade markierte Zelle ausgeführt. Man beachte, dass die
+Zellen in der Regel von oben nach unten ausgeführt werden müssen, weil die unteren Zellen
+meistens (nicht immer) die Ergebnisse der oberen Zellen voraussetzen.
+
+\begin{figure}[h]
+  \centering
+  % TODO: Screenshot einfügen
+  % \includegraphics[width=0.85\textwidth]{screenshots/notebook_execution.png}
+  \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}
+    \textit{[Screenshot: Ausführung einer Notebook-Zelle mit Startpfeil]}
+    \vspace{2cm}}}
+  \caption{Ausführung einer Notebook-Zelle}
+\end{figure}
+
+Mithilfe der zwei Pfeile kann man auch das ganze Notebook auf einmal ausführen.
+
+\begin{figure}[h]
+  \centering
+  % TODO: Screenshot einfügen
+  % \includegraphics[width=0.85\textwidth]{screenshots/notebook_run_all.png}
+  \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}
+    \textit{[Screenshot: \enquote{Run All}-Schaltfläche zum Ausführen aller Zellen]}
+    \vspace{2cm}}}
+  \caption{Alle Zellen auf einmal ausführen}
+\end{figure}
+
+Wenn man am Code etwas ändern will, kann man die Zeilen einfach editieren und nochmal ausführen.
+Man könnte z.\,B.\ in der oberen Zelle andere Seeds eintragen und würde sehen, wie andere Parteien
+gewinnen.
+
+Falls man weitergehende Änderungen machen möchte, muss man deswegen heutzutage nicht unbedingt
+Python können. Die KIs können das auch und helfen gerne.
