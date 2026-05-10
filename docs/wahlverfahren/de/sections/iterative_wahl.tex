@@ -279,19 +279,19 @@ Es bezeichne
 
 Für die relativen Stimmanteile $a_i = \frac{A_i}{A}$ gilt in jedem Wahlgang:
 
-\begin{align}
+\begin{align*}
   \text{I.} \quad & \sum_{i=1}^{n} a_i = 1
     \quad \text{($n$ -- Anzahl teilnehmender Parteien in diesem Wahlgang)} \\[4pt]
   \text{II.} \quad & a_k \geq a_l \quad \text{für } k < l
-\end{align}
+\end{align*}
 
 Um die Parteien zu bestimmen, die in den nächsten Wahlgang kommen, machen wir bei der relativen
 Schnittstimmenzahl $r$ ($0 < r < 1$) einen Schnitt, so dass gilt:
 
-\begin{align}
+\begin{align*}
   \text{III.} \quad & \sum_{i=1}^{s} a_i \geq r \\[4pt]
   \text{IV.}  \quad & \sum_{i=1}^{s-1} a_i < r
-\end{align}
+\end{align*}
 
 Damit das Verfahren immer terminiert und sinnvolle Ergebnisse liefert, muss in jedem Durchgang
 außer dem letzten (d.\,h.\ $n = 2$) $s < n$ und $s > 1$ gelten. Für $n = 2$ gilt Regel 2a, die
@@ -312,60 +312,60 @@ und versuchen diese Behauptung zum Widerspruch zu führen. Da nie $s > n$ sein k
 $s < n$ gelten.
 
 Aus A1 und IV folgt
-\begin{equation}
+\begin{equation*}
   \text{V.} \quad \sum_{i=1}^{n-1} a_i < r
-\end{equation}
+\end{equation*}
 
 Addition von $a_n$ auf beiden Seiten ergibt
-\begin{equation}
+\begin{equation*}
   \text{V'.} \quad \sum_{i=1}^{n-1} a_i + a_n < r + a_n
-\end{equation}
+\end{equation*}
 
 aus (I) $\Rightarrow$ $1 < r + a_n$ $\Rightarrow$ $1 - a_n < r$
-\begin{equation}
+\begin{equation*}
   \text{VI.} \quad a_n > 1 - r
-\end{equation}
+\end{equation*}
 
 aus (II) $\Rightarrow$ $a_i \geq a_n$ für $i < n$
-\begin{equation}
+\begin{equation*}
   \text{VII.} \quad \sum_{i=1}^{n-1} a_i \geq \sum_{i=1}^{n-1} a_n
-\end{equation}
+\end{equation*}
 
 (VI.) $\Rightarrow$
-\begin{equation}
+\begin{equation*}
   \text{VIII.} \quad \sum_{i=1}^{n-1} a_n > \sum_{i=1}^{n-1}(1-r) = (n-1)(1-r)
-\end{equation}
+\end{equation*}
 
 (VII, VIII, VI) $\Rightarrow$
-\begin{equation}
+\begin{equation*}
   \text{IX.} \quad \sum_{i=1}^{n} a_i = \sum_{i=1}^{n-1} a_i + a_n
     > (n-1)(1-r) + a_n > (n-1)(1-r) + (1-r) = n(1-r)
-\end{equation}
+\end{equation*}
 
 Also $\displaystyle\sum_{i=1}^{n} a_i > n(1-r)$.
 
 Das ist ein Widerspruch zu (I) genau dann wenn
-\begin{equation}
+\begin{equation*}
   \text{X.} \quad n(1-r) \geq 1
-\end{equation}
+\end{equation*}
 
 weil $\displaystyle\sum_{i=1}^{n} a_i > x$ nur für $x < 1$ gelten kann, da
 $\displaystyle\sum_{i=1}^{n} a_i = 1$ ist.
 
 A1 ist also nicht immer falsch, sondern die Ungültigkeit hängt von $n$ und $r$ ab.
 Um sicherzustellen, dass A1 falsch ist und damit $s < n$, muss gelten:
-\begin{equation}
+\begin{equation*}
   \text{XI.} \quad n \geq \frac{1}{(1-r)} \quad \text{bzw.} \quad r \leq 1 - \frac{1}{n}
-\end{equation}
+\end{equation*}
 
 Nach Voraussetzung ist $n > 2$. Für $n = 2$ haben wir unsere Sonderregelung, nach der wir den
 Verfahrensgewinner bestimmen. Wir brauchen, dass A1 falsch ist für:
-\begin{equation}
+\begin{equation*}
   \text{XII.} \quad n \geq \frac{1}{(1-r)} = 3
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
   \text{XIII.} \quad r = \frac{2}{3}
-\end{equation}
+\end{equation*}
 
 Das bedeutet, dass sich die Anzahl der zur Verfügung stehenden Parteien in jedem
 Iterationsschritt reduziert, bis nur noch zwei Parteien übrig bleiben -- vorausgesetzt wir
