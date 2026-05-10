@@ -298,3 +298,6 @@ http-client.private.env.json
 
 # Word Documentation
 concept/Wahlverfahren.docx
+
+# Screenshot backups
+docs/**/screenshots/backup/

@@ -1,3 +1,4 @@
+\clearpage
 \section{Anhang: Nutzung der Simulation}
 
 Die \href{https://github.com/danielschwalbe/ipres}{Simulation} ist ein in der
@@ -13,49 +14,35 @@ verlinkt aber zu \href{https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD}{bin
 Projekt in eine virtuelle Maschine kopiert und dort den Jupyter-Server bereits ausführt. Man muss
 nur ein bisschen Geduld haben, bis die Maschine gestartet ist. Bis dahin sieht es so aus:
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  % TODO: Screenshot einfügen
-  % \includegraphics[width=0.85\textwidth]{screenshots/binder_start.png}
-  \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}
-    \textit{[Screenshot: Binder-Startseite beim Laden der virtuellen Maschine]}
-    \vspace{2cm}}}
+  \includegraphics[width=0.85\textwidth]{screenshots/binder_start.png}
   \caption{Binder lädt die virtuelle Maschine}
 \end{figure}
 
 Wenn die Maschine hochgefahren ist, wird man von folgendem Bildschirm begrüßt:
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  % TODO: Screenshot einfügen
-  % \includegraphics[width=0.85\textwidth]{screenshots/jupyterlab_start.png}
-  \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}
-    \textit{[Screenshot: JupyterLab-Startseite nach dem Hochfahren]}
-    \vspace{2cm}}}
+  \includegraphics[width=0.85\textwidth]{screenshots/binder_loaded.png}
   \caption{JupyterLab nach dem Start}
 \end{figure}
 
 Um zu den Notebooks zu gelangen, muss man auf \texttt{notebooks} klicken.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  % TODO: Screenshot einfügen
-  % \includegraphics[width=0.85\textwidth]{screenshots/notebooks_folder.png}
-  \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}
-    \textit{[Screenshot: Notebooks-Ordner mit \texttt{de/} und \texttt{en/} Unterordnern]}
-    \vspace{2cm}}}
-  \caption{Notebooks-Ordner}
+  \includegraphics[width=0.85\textwidth]{screenshots/binder_loaded_language.png}
+   \caption{Notebooks-Ordner}
 \end{figure}
+
+\clearpage
 
 Und dann auf \texttt{de}, um zu den deutschen Notebooks zu gelangen.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  % TODO: Screenshot einfügen
-  % \includegraphics[width=0.85\textwidth]{screenshots/notebooks_de.png}
-  \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}
-    \textit{[Screenshot: Inhalt des \texttt{notebooks/de/}-Ordners]}
-    \vspace{2cm}}}
+  \clipbox{0pt {\height-7cm} 0pt 0pt} {\includegraphics[width=0.85\textwidth]{screenshots/notebooks_overview.png}}
   \caption{Deutsche Notebooks}
 \end{figure}
 
@@ -65,27 +52,32 @@ Durch Klick auf den Startpfeil wird die gerade markierte Zelle ausgeführt. Man 
 Zellen in der Regel von oben nach unten ausgeführt werden müssen, weil die unteren Zellen
 meistens (nicht immer) die Ergebnisse der oberen Zellen voraussetzen.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  % TODO: Screenshot einfügen
-  % \includegraphics[width=0.85\textwidth]{screenshots/notebook_execution.png}
-  \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}
-    \textit{[Screenshot: Ausführung einer Notebook-Zelle mit Startpfeil]}
-    \vspace{2cm}}}
+   \clipbox{0pt {\height-7cm} 0pt 0pt}{\includegraphics[width=0.85\textwidth]{screenshots/example_run_cell.png}}
   \caption{Ausführung einer Notebook-Zelle}
 \end{figure}
 
-Mithilfe der zwei Pfeile kann man auch das ganze Notebook auf einmal ausführen.
+\clearpage
+Mithilfe der zwei Pfeile kann man auch das ganze Notebook auf einmal ausführen:
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  % TODO: Screenshot einfügen
-  % \includegraphics[width=0.85\textwidth]{screenshots/notebook_run_all.png}
-  \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}
-    \textit{[Screenshot: \enquote{Run All}-Schaltfläche zum Ausführen aller Zellen]}
-    \vspace{2cm}}}
+  \clipbox{0pt {\height-7cm} 0pt 0pt}{\includegraphics[width=0.85\textwidth]{screenshots/example_run_all.png}}
   \caption{Alle Zellen auf einmal ausführen}
 \end{figure}
+
+Dann wird man gefragt, ob man den Kernel neu starten möchte.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{screenshots/restart_kernel.png}
+  \caption{Kernel neu starten}
+\end{figure}
+
+Solange man am Notebook nichts geändert hat, kann man hier immer ja sagen. Nur wenn man durch fortgesetztes Experimentieren
+die Variablen in einen Zustand bekommen hat, der sich aus dem Notebookcode nicht rekonstruieren lässt, muss man wissen, dass
+das Ergebnis nach dem Kernelneustart weg sein wird.
 
 Wenn man am Code etwas ändern will, kann man die Zeilen einfach editieren und nochmal ausführen.
 Man könnte z.\,B.\ in der oberen Zelle andere Seeds eintragen und würde sehen, wie andere Parteien
