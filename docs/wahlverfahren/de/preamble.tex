@@ -45,6 +45,8 @@
 \usepackage{needspace}
 \newcommand{\runinhead}[1]{\needspace{3\baselineskip}\textbf{#1}}
 \newcommand{\runinheadul}[1]{\needspace{3\baselineskip}\underline{#1}}
+\AddToHook{cmd/section/before}{\needspace{8\baselineskip}}
+\AddToHook{cmd/subsection/before}{\needspace{7\baselineskip}}
 
 % Hyperlinks
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue]{hyperref}
