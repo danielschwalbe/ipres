@@ -312,7 +312,8 @@ Da die Gesamtsumme~1 ist, folgt:
 \begin{equation}
   \sum_{i=1}^{n-k} a_i = 1 - \sum_{i=n-k+1}^{n} a_i < 1 - \frac{k}{n} = \frac{n-k}{n}
 \end{equation}
-Also muss mindestens eines der ersten $n-k$ Elemente kleiner als $\frac{1}{n}$ sein. Da die
+Wären alle $a_i \geq \frac{1}{n}$ für $i \leq n-k$, so wäre ihre Summe $\geq \frac{n-k}{n}$,
+im Widerspruch zu~(3). Also muss mindestens eines kleiner als $\frac{1}{n}$ sein. Da die
 $a_i$ absteigend geordnet sind, gilt dann für alle nachfolgenden:
 \begin{equation}
   a_i < \frac{1}{n} \quad \text{für alle } i \geq i^*
