@@ -298,14 +298,17 @@ $\lfloor x \rfloor$ die größte ganze Zahl $\leq x$ bezeichnet (Abrunden).
 
 \begin{hilfssatz}
 Für die $k$ schwächsten Parteien gilt:
-\begin{equation*}
+\begin{equation}
   \sum_{i=n-k+1}^{n} a_i \leq \frac{k}{n}
-\end{equation*}
+\end{equation}
 \end{hilfssatz}
 
 \begin{proof}
-Durch Widerspruch. Annahme: $\displaystyle\sum_{i=n-k+1}^{n} a_i > \frac{k}{n}$. Da die
-Gesamtsumme~1 ist, folgt:
+  Durch Widerspruch. Annahme:
+\begin{equation}
+  \sum_{i=n-k+1}^{n} a_i > \frac{k}{n}
+\end{equation}
+Da die Gesamtsumme~1 ist, folgt:
 \begin{equation}
   \sum_{i=1}^{n-k} a_i = 1 - \sum_{i=n-k+1}^{n} a_i < 1 - \frac{k}{n} = \frac{n-k}{n}
 \end{equation}
