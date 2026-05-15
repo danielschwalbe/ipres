@@ -1,0 +1,47 @@
+name: Mutation Testing
+
+on:
+  workflow_dispatch:
+    inputs:
+      module:
+        description: "Specific module (e.g. apportionment.py) — empty = all core modules"
+        required: false
+        default: ""
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  mutation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -e ".[dev]"
+
+      - name: Run mutation tests
+        run: |
+          if [ -n "${{ github.event.inputs.module }}" ]; then
+            mutmut run --paths-to-mutate "src/ipres/${{ github.event.inputs.module }}"
+          else
+            mutmut run
+          fi
+
+      - name: Show surviving mutants
+        if: always()
+        run: mutmut results
+
+      - name: Upload cache
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mutmut-cache-${{ github.run_id }}
+          path: .mutmut-cache
+          retention-days: 14

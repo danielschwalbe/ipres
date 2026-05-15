@@ -298,3 +298,7 @@ http-client.private.env.json
 
 # Word Documentation
 concept/Wahlverfahren.docx
+
+# mutmut
+mutants/
+.mutmut-cache
