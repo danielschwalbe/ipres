@@ -277,28 +277,24 @@ Es bezeichne
     notwendigerweise auch wieder sein.
 \end{itemize}
 
-Für die relativen Stimmanteile $a_i = \frac{A_i}{A}$ gilt in jedem Wahlgang:
+Für die relativen Stimmanteile $a_i = \frac{A_i}{A}$ gelten in jedem Wahlgang folgende
+Bedingungen, wobei $r$ ($0 < r < 1$) die relative Schnittstimmenzahl und $s$ der Index der
+letzten in den nächsten Wahlgang einziehenden Partei ist:
 
-\begin{align*}
-  \text{I.} \quad & \sum_{i=1}^{n} a_i = 1
-    \quad \text{($n$ -- Anzahl teilnehmender Parteien in diesem Wahlgang)} \\[4pt]
-  \text{II.} \quad & a_k \geq a_l \quad \text{für } k < l
-\end{align*}
-
-Um die Parteien zu bestimmen, die in den nächsten Wahlgang kommen, machen wir bei der relativen
-Schnittstimmenzahl $r$ ($0 < r < 1$) einen Schnitt, so dass gilt:
-
-\begin{align*}
-  \text{III.} \quad & \sum_{i=1}^{s} a_i \geq r \\[4pt]
-  \text{IV.}  \quad & \sum_{i=1}^{s-1} a_i < r
-\end{align*}
+\begin{itemize}[label={}]
+  \item[(I)]   $\displaystyle\sum_{i=1}^{n} a_i = 1$
+    \quad ($n$ -- Anzahl teilnehmender Parteien in diesem Wahlgang)
+  \item[(II)]  $a_k \geq a_l$ \quad für $k < l$
+  \item[(III)] $\displaystyle\sum_{i=1}^{s} a_i \geq r$
+  \item[(IV)]  $\displaystyle\sum_{i=1}^{s-1} a_i < r$
+  \item[\phantom{(IV)}] $\forall i: a_i \neq 0$ \quad
+    (Parteien ohne Stimmen werden aus der Liste entfernt)
+\end{itemize}
 
 Damit das Verfahren terminiert, ist zu zeigen, dass sich die Anzahl der zur Wahl stehenden
 Parteien in jedem Schritt strikt reduziert. Wir beweisen eine stärkere Aussage: Bei $n \geq 3$
-Parteien scheiden in jedem Schritt mindestens $\lfloor n(1-r) \rfloor$ Parteien aus.
-Ohne Beschränkung der Allgemeinheit können wir annehmen, dass in jedem Wahlgang $\forall i:
-a_i \neq 0$ gilt. Sollte in der Praxis doch jemals eine Partei gar keine Stimme erhalten,
-nehmen wir diese aus der Liste und reduzieren $n$ entsprechend.
+Parteien scheiden in jedem Schritt mindestens $\lfloor n(1-r) \rfloor$ Parteien aus, wobei
+$\lfloor x \rfloor$ die größte ganze Zahl $\leq x$ bezeichnet (Abrunden).
 
 \begin{hilfssatz}
 Für die $k$ schwächsten Parteien gilt:
