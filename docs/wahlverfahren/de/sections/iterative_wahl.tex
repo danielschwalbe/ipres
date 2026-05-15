@@ -306,14 +306,14 @@ Für die $k$ schwächsten Parteien gilt:
 \begin{proof}
 Durch Widerspruch. Annahme: $\displaystyle\sum_{i=n-k+1}^{n} a_i > \frac{k}{n}$. Da die
 Gesamtsumme~1 ist, folgt:
-\begin{equation*}
+\begin{equation}
   \sum_{i=1}^{n-k} a_i = 1 - \sum_{i=n-k+1}^{n} a_i < 1 - \frac{k}{n} = \frac{n-k}{n}
-\end{equation*}
+\end{equation}
 Also muss mindestens eines der ersten $n-k$ Elemente kleiner als $\frac{1}{n}$ sein. Da die
 $a_i$ absteigend geordnet sind, gilt dann für alle nachfolgenden:
-\begin{equation*}
+\begin{equation}
   a_i < \frac{1}{n} \quad \text{für alle } i \geq i^*
-\end{equation*}
+\end{equation}
 Insbesondere für alle $k$ letzten Elemente: $\displaystyle\sum_{i=n-k+1}^{n} a_i < \frac{k}{n}$
 --- Widerspruch.
 \end{proof}
@@ -324,13 +324,13 @@ Es scheiden mindestens $\lfloor n(1-r) \rfloor$ Parteien aus.
 
 \begin{proof}
 Aus dem Hilfssatz folgt für die verbleibenden $n-k$ Parteien:
-\begin{equation*}
+\begin{equation}
   \sum_{i=1}^{n-k} a_i = 1 - \sum_{i=n-k+1}^{n} a_i \geq 1 - \frac{k}{n}
-\end{equation*}
+\end{equation}
 Bedingung~(III) ist also für $s = n-k$ erfüllt, wenn:
-\begin{equation*}
+\begin{equation}
   1 - \frac{k}{n} \geq r \quad \Longleftrightarrow \quad k \leq n(1-r)
-\end{equation*}
+\end{equation}
 Da $k$ ganzzahlig sein muss, scheiden also mindestens $\lfloor n(1-r) \rfloor$ Parteien aus.
 \end{proof}
 
