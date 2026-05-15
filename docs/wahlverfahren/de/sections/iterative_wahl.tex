@@ -293,85 +293,74 @@ Schnittstimmenzahl $r$ ($0 < r < 1$) einen Schnitt, so dass gilt:
   \text{IV.}  \quad & \sum_{i=1}^{s-1} a_i < r
 \end{align*}
 
-Damit das Verfahren immer terminiert und sinnvolle Ergebnisse liefert, muss in jedem Durchgang
-außer dem letzten (d.\,h.\ $n = 2$) $s < n$ und $s > 1$ gelten. Für $n = 2$ gilt Regel 2a, die
-sicherstellt, dass es einen Gewinner gibt. Für alle anderen Durchgänge $j$ gilt: $n_{j+1} = s_j$.
-Also solange $s_j < n_j$ erfüllt ist, wird $n$ in jedem Durchgang kleiner bis irgendwann 2
-erreicht ist.
-Ohne Beschränkung der Allgemeinheit können wir annehmen, dass in jedem Wahlgang $\forall a_i \neq
-0$ gilt. Sollte in der Praxis doch jemals eine Partei in einem Wahlgang gar keine Stimme erhalten,
-nehmen wir diese aus der Liste und reduzieren $n$ entsprechend, so dass immer $a_n \neq 0$ gilt.
+Damit das Verfahren terminiert, ist zu zeigen, dass sich die Anzahl der zur Wahl stehenden
+Parteien in jedem Schritt strikt reduziert. Wir beweisen eine stärkere Aussage: Bei $n \geq 3$
+Parteien scheiden in jedem Schritt mindestens $\lfloor n(1-r) \rfloor$ Parteien aus.
+Ohne Beschränkung der Allgemeinheit können wir annehmen, dass in jedem Wahlgang $\forall i:
+a_i \neq 0$ gilt. Sollte in der Praxis doch jemals eine Partei gar keine Stimme erhalten,
+nehmen wir diese aus der Liste und reduzieren $n$ entsprechend.
 
-Um zu beweisen, dass immer $s < n$ gilt, nehmen wir zuerst das Gegenteil an, d.\,h.
-
-\medskip
-Annahme A1: $s = n$
-
-\medskip\noindent
-und versuchen diese Behauptung zum Widerspruch zu führen. Da nie $s > n$ sein kann, muss dann
-$s < n$ gelten.
-
-Aus A1 und IV folgt
+\begin{hilfssatz}
+Für die $k$ schwächsten Parteien gilt:
 \begin{equation*}
-  \text{V.} \quad \sum_{i=1}^{n-1} a_i < r
+  \sum_{i=n-k+1}^{n} a_i \leq \frac{k}{n}
 \end{equation*}
+\end{hilfssatz}
 
-Addition von $a_n$ auf beiden Seiten ergibt
+\begin{proof}
+Durch Widerspruch. Annahme: $\displaystyle\sum_{i=n-k+1}^{n} a_i > \frac{k}{n}$. Da die
+Gesamtsumme~1 ist, folgt:
 \begin{equation*}
-  \text{V'.} \quad \sum_{i=1}^{n-1} a_i + a_n < r + a_n
+  \sum_{i=1}^{n-k} a_i = 1 - \sum_{i=n-k+1}^{n} a_i < 1 - \frac{k}{n} = \frac{n-k}{n}
 \end{equation*}
-
-aus (I) $\Rightarrow$ $1 < r + a_n$ $\Rightarrow$ $1 - a_n < r$
+Also muss mindestens eines der ersten $n-k$ Elemente kleiner als $\frac{1}{n}$ sein. Da die
+$a_i$ absteigend geordnet sind, gilt dann für alle nachfolgenden:
 \begin{equation*}
-  \text{VI.} \quad a_n > 1 - r
+  a_i < \frac{1}{n} \quad \text{für alle } i \geq i^*
 \end{equation*}
+Insbesondere für alle $k$ letzten Elemente: $\displaystyle\sum_{i=n-k+1}^{n} a_i < \frac{k}{n}$
+--- Widerspruch.
+\end{proof}
 
-aus (II) $\Rightarrow$ $a_i \geq a_n$ für $i < n$
+\begin{hauptsatz}
+Es scheiden mindestens $\lfloor n(1-r) \rfloor$ Parteien aus.
+\end{hauptsatz}
+
+\begin{proof}
+Aus dem Hilfssatz folgt für die verbleibenden $n-k$ Parteien:
 \begin{equation*}
-  \text{VII.} \quad \sum_{i=1}^{n-1} a_i \geq \sum_{i=1}^{n-1} a_n
+  \sum_{i=1}^{n-k} a_i = 1 - \sum_{i=n-k+1}^{n} a_i \geq 1 - \frac{k}{n}
 \end{equation*}
-
-(VI.) $\Rightarrow$
+Bedingung~(III) ist also für $s = n-k$ erfüllt, wenn:
 \begin{equation*}
-  \text{VIII.} \quad \sum_{i=1}^{n-1} a_n > \sum_{i=1}^{n-1}(1-r) = (n-1)(1-r)
+  1 - \frac{k}{n} \geq r \quad \Longleftrightarrow \quad k \leq n(1-r)
 \end{equation*}
+Da $k$ ganzzahlig sein muss, scheiden also mindestens $\lfloor n(1-r) \rfloor$ Parteien aus.
+\end{proof}
 
-(VII, VIII, VI) $\Rightarrow$
-\begin{equation*}
-  \text{IX.} \quad \sum_{i=1}^{n} a_i = \sum_{i=1}^{n-1} a_i + a_n
-    > (n-1)(1-r) + a_n > (n-1)(1-r) + (1-r) = n(1-r)
-\end{equation*}
+\runinhead{Folgerungen für konkrete Schnittstimmenzahlen}
 
-Also $\displaystyle\sum_{i=1}^{n} a_i > n(1-r)$.
+\begin{itemize}
+  \item \textbf{$r = \frac{1}{2}$:} Es scheiden mindestens $\lfloor \frac{n}{2} \rfloor$
+    Parteien aus. Für $n = 2$ scheidet mindestens $\lfloor 1 \rfloor = 1$ Partei aus; eine
+    Sonderregelung für $n = 2$ ist nicht nötig.
 
-Das ist ein Widerspruch zu (I) genau dann wenn
-\begin{equation*}
-  \text{X.} \quad n(1-r) \geq 1
-\end{equation*}
+  \item \textbf{$r = \frac{2}{3}$:} Es scheiden mindestens $\lfloor \frac{n}{3} \rfloor$
+    Parteien aus. Für $n = 3$ scheidet mindestens $\lfloor 1 \rfloor = 1$ Partei aus.
+    Für $n = 2$ gilt $\lfloor \frac{2}{3} \rfloor = 0$, d.\,h.\ es scheidet keine Partei
+    garantiert aus~-- eine Sonderregelung für $n = 2$ ist also notwendig.
 
-weil $\displaystyle\sum_{i=1}^{n} a_i > x$ nur für $x < 1$ gelten kann, da
-$\displaystyle\sum_{i=1}^{n} a_i = 1$ ist.
+  \item \textbf{$r = \frac{3}{4}$:} Es scheiden mindestens $\lfloor \frac{n}{4} \rfloor$
+    Parteien aus. Für $n = 2$ und $n = 3$ gilt $\lfloor \frac{n}{4} \rfloor = 0$; eine
+    Sonderregelung ist für beide Fälle notwendig.
+\end{itemize}
 
-A1 ist also nicht immer falsch, sondern die Ungültigkeit hängt von $n$ und $r$ ab.
-Um sicherzustellen, dass A1 falsch ist und damit $s < n$, muss gelten:
-\begin{equation*}
-  \text{XI.} \quad n \geq \frac{1}{(1-r)} \quad \text{bzw.} \quad r \leq 1 - \frac{1}{n}
-\end{equation*}
+\textbf{Allgemein} gilt: Die Sonderregelung wird genau dann nur für $n = 2$ benötigt~-- und
+nicht auch für $n = 3$~-- wenn $\lfloor 3(1-r) \rfloor \geq 1$, also $r \leq \frac{2}{3}$.
+Der größtmögliche Wert, der diese Bedingung noch erfüllt, ist damit $r = \frac{2}{3}$.
 
-Nach Voraussetzung ist $n > 2$. Für $n = 2$ haben wir unsere Sonderregelung, nach der wir den
-Verfahrensgewinner bestimmen. Wir brauchen, dass A1 falsch ist für:
-\begin{equation*}
-  \text{XII.} \quad n \geq \frac{1}{(1-r)} = 3
-\end{equation*}
-\begin{equation*}
-  \text{XIII.} \quad r = \frac{2}{3}
-\end{equation*}
-
-Das bedeutet, dass sich die Anzahl der zur Verfügung stehenden Parteien in jedem
-Iterationsschritt reduziert, bis nur noch zwei Parteien übrig bleiben -- vorausgesetzt wir
-schneiden bei zwei Dritteln. Wenn wir z.\,B.\ erst nach drei Vierteln schneiden würden, bräuchten
-wir eine Sonderregelung schon für drei Parteien im Wahlgang und nicht erst für zwei, da eine
-Reduktion auf zwei nicht mehr allgemeingültig garantiert werden könnte.
+Wenn wir z.\,B.\ erst nach drei Vierteln schneiden würden, bräuchten wir eine Sonderregelung
+schon für drei Parteien im Wahlgang und nicht erst für zwei.
 
 Man kann sich das auch anschaulich gut vorstellen:
 
