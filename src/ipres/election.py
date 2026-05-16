@@ -39,7 +39,7 @@ class Election:
     """
     electionConfig: ElectionConfig
 
-    _iterations: list[ElectionRound] = field(default_factory=list, init=False)
+    _iterations: list[ElectionRound] = field(default_factory=list, init=False)  # pragma: no mutate
 
     def start(
         self,

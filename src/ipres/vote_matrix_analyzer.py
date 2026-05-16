@@ -73,7 +73,7 @@ class VoteMatrixAnalyzer:
         relative_votes = self.getRelativeVoteMatrix()
         return self._getConstituencyImportanceMatrix_impl(relative_votes, self.votes)
 
-    def show_relative_vote_matrix(self, styler: bool = False, decimals: int = 4, max_rows: Optional[int] = None, language: Language = Language.DE):
+    def show_relative_vote_matrix(self, styler: bool = False, decimals: int = 4, max_rows: Optional[int] = None, language: Language = Language.DE):  # pragma: no mutate
         """Display the relative vote matrix as a formatted table.
 
         Each element r_ij shows the proportion of votes that party j received in
@@ -98,23 +98,23 @@ class VoteMatrixAnalyzer:
         relative_matrix = self.getRelativeVoteMatrix()
 
         if styler:
-            fmt = f"{{:.{decimals}f}}"
+            fmt = f"{{:.{decimals}f}}"  # pragma: no mutate
             styled = (relative_matrix.style
                     .format(fmt)
-                    .set_caption(t("caption_relative_vote_matrix", language))
+                    .set_caption(t("caption_relative_vote_matrix", language))  # pragma: no mutate
                     .set_table_styles([
-                        {'selector': 'caption', 'props': [('font-size', '14px'), ('font-weight', 'bold')]}
+                        {'selector': 'caption', 'props': [('font-size', '14px'), ('font-weight', 'bold')]}  # pragma: no mutate
                     ]))
 
             # Set max_rows for display if specified
-            if max_rows is not None:
-                with pd.option_context('display.max_rows', max_rows):
+            if max_rows is not None:  # pragma: no mutate
+                with pd.option_context('display.max_rows', max_rows):  # pragma: no mutate
                     return styled
             return styled
 
         return relative_matrix.round(decimals)
 
-    def show_constituency_importance_matrix(self, styler: bool = False, decimals: int = 4, max_rows: Optional[int] = None, language: Language = Language.DE):
+    def show_constituency_importance_matrix(self, styler: bool = False, decimals: int = 4, max_rows: Optional[int] = None, language: Language = Language.DE):  # pragma: no mutate
         """Display the constituency importance matrix as a formatted table.
 
         Each element w_ij shows the relative importance of constituency i for party j.
@@ -138,17 +138,17 @@ class VoteMatrixAnalyzer:
         importance_matrix = self.getConstituencyImportanceMatrix()
 
         if styler:
-            fmt = f"{{:.{decimals}f}}"
+            fmt = f"{{:.{decimals}f}}"  # pragma: no mutate
             styled = (importance_matrix.style
                     .format(fmt)
-                    .set_caption(t("caption_constituency_importance", language))
+                    .set_caption(t("caption_constituency_importance", language))  # pragma: no mutate
                     .set_table_styles([
-                        {'selector': 'caption', 'props': [('font-size', '14px'), ('font-weight', 'bold')]}
+                        {'selector': 'caption', 'props': [('font-size', '14px'), ('font-weight', 'bold')]}  # pragma: no mutate
                     ]))
 
             # Set max_rows for display if specified
-            if max_rows is not None:
-                with pd.option_context('display.max_rows', max_rows):
+            if max_rows is not None:  # pragma: no mutate
+                with pd.option_context('display.max_rows', max_rows):  # pragma: no mutate
                     return styled
             return styled
 

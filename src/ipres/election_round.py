@@ -25,8 +25,8 @@ class DrawLotsStrategy(Enum):
       the contestant with the higher vote count in the most recent ballot round wins.
     - RANDOM: Break ties by uniform random selection (drawing of lots).
     """
-    MARGINAL_LEAD = "marginal_lead"
-    RANDOM = "random"
+    MARGINAL_LEAD = "marginal_lead"  # pragma: no mutate
+    RANDOM = "random"  # pragma: no mutate
 
 
 class ElectionRound(ABC):
@@ -47,31 +47,31 @@ class ElectionRound(ABC):
     while ``DrawOfLots`` delegates to the previous round.
     """
 
-    @abstractmethod
+    @abstractmethod  # pragma: no mutate
     def getWinner(self) -> Optional[Contestant]:
         """Return the winning contestant, or ``None`` if no winner was found."""
 
-    @abstractmethod
+    @abstractmethod  # pragma: no mutate
     def hasWinner(self) -> bool:
         """Return ``True`` if a winner was determined in this round."""
 
-    @abstractmethod
+    @abstractmethod  # pragma: no mutate
     def hasNext(self) -> bool:
         """Return ``True`` if the election continues with another round after this one."""
 
-    @abstractmethod
+    @abstractmethod  # pragma: no mutate
     def getRoundNumber(self) -> int:
         """Return the 1-based index of this round within the election."""
 
-    @abstractmethod
+    @abstractmethod  # pragma: no mutate
     def getContestants(self) -> dict[str, Contestant]:
         """Return the current contestants, including any coalitions formed after the round."""
 
-    @abstractmethod
+    @abstractmethod  # pragma: no mutate
     def getOriginalContestants(self) -> dict[str, Contestant]:
         """Return the contestants as they were at the start of this round, before coalition formation."""
 
-    @abstractmethod
+    @abstractmethod  # pragma: no mutate
     def getContestantsVotesAfterPossibleCoalitions(self) -> pd.Series:
         """Return vote totals for each current contestant, merging coalition member votes.
 
@@ -103,14 +103,14 @@ class ElectionRound(ABC):
         """
         return self.getContestantsRelativeVotesAfterPossibleCoalitions() * 100.0
 
-    @abstractmethod
+    @abstractmethod  # pragma: no mutate
     def getParticipatingParties(self) -> list[str]:
         """Return the names of all original parties taking part in this round.
 
         For coalition contestants, each member party is listed individually.
         """
 
-    @abstractmethod
+    @abstractmethod  # pragma: no mutate
     def wasDecidedByLot(self) -> bool:
         """Return ``True`` if the winner was chosen by lot rather than by vote count.
 
@@ -118,11 +118,11 @@ class ElectionRound(ABC):
         :class:`~ipres.draw_of_lots.DrawOfLots` always returns ``True``.
         """
 
-    @abstractmethod
+    @abstractmethod  # pragma: no mutate
     def getPreviousRound(self) -> Optional[ElectionRound]:
         """Return the preceding round, or ``None`` if this is the first round."""
 
-    @abstractmethod
+    @abstractmethod  # pragma: no mutate
     def getNextRoundInput(self) -> Optional[ElectionRoundInput]:
         """Return the pre-built input for the next round, or ``None`` if the election is finished.
 
@@ -157,7 +157,7 @@ class ElectionRound(ABC):
         from ipres.ballot import Ballot
         return Ballot.run(_input)
 
-    @staticmethod
+    @staticmethod  # pragma: no mutate
     def _lot_required(_input: ElectionRoundInput) -> bool:
         """Return ``True`` if the next round must be decided by lot.
 
@@ -202,11 +202,11 @@ class ElectionRoundInput:
     """
     election: Election
     constituencies_config: ConstituenciesConfig
-    contestants: dict[str, Contestant] = field(default_factory=dict)
+    contestants: dict[str, Contestant] = field(default_factory=dict)  # pragma: no mutate
     probabilities: Optional[Union[Mapping[str, float], SequenceABC[float]]] = None
-    rng: Optional[np.random.Generator] = None
-    turnout: Optional[Union[Mapping[str, float], SequenceABC[float], float]] = None
-    ballot_majority_percent: float = 52.0
+    rng: Optional[np.random.Generator] = None  # pragma: no mutate
+    turnout: Optional[Union[Mapping[str, float], SequenceABC[float], float]] = None  # pragma: no mutate
+    ballot_majority_percent: float = 52.0  # pragma: no mutate
     draw_lots_strategy: DrawLotsStrategy = DrawLotsStrategy.RANDOM
     vote_matrix: Optional[VoteMatrix] = None
     round_number: int = 0

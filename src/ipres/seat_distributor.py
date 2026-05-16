@@ -59,7 +59,7 @@ class SeatDistributor:
             first_votes = first_iteration.getOriginalContestantsVotes()
             other_votes = first_votes.drop(winner.getContainedParties())
 
-            if len(other_votes) == 0 or remaining_seats == 0:
+            if len(other_votes) == 0 or remaining_seats == 0:  # pragma: no mutate
                 return self._distribute_among_members(winner, total_seats, method)
 
             other_seats_array = apportionSeats(

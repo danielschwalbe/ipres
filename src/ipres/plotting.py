@@ -20,9 +20,9 @@ def plotSharePie(party_totals: Sequence[float] | np.ndarray, labels: Sequence[st
     Returns:
         :class:`matplotlib.figure.Figure`
     """
-    fig, ax = plt.subplots(figsize=(6, 6))
+    fig, ax = plt.subplots(figsize=(6, 6))  # pragma: no mutate
     ax.pie(party_totals, labels=labels,
-           autopct=lambda pct: f"{pct:.2f}%", startangle=90, counterclock=False)
+           autopct=lambda pct: f"{pct:.2f}%", startangle=90, counterclock=False)  # pragma: no mutate
     ax.axis('equal')
     ax.set_title(title)
     return fig
@@ -39,11 +39,11 @@ def plotSeatPie(seats_arr: Sequence[int] | np.ndarray, labels: Sequence[str], ti
     Returns:
         :class:`matplotlib.figure.Figure`
     """
-    fig, ax = plt.subplots(figsize=(6, 6))
+    fig, ax = plt.subplots(figsize=(6, 6))  # pragma: no mutate
     total_seats = int(np.sum(seats_arr))
     ax.pie(seats_arr, labels=labels,
            autopct=(lambda pct: f"{int(round(pct * total_seats / 100.0))}"),
-           startangle=90, counterclock=False)
+           startangle=90, counterclock=False)  # pragma: no mutate
     ax.axis('equal')
     ax.set_title(title)
     return fig

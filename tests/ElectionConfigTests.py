@@ -1,6 +1,7 @@
 import pytest
 import pandas as pd
 from ipres import ElectionConfig, ConstituenciesConfig, SeatDistributionMethod
+from ipres.election_config import ConstituencyRepresentation
 from ipres.super_majority_margin import SuperMajorityMargin, MarginUnit
 
 
@@ -238,3 +239,94 @@ def test_ballot_and_parliament_majority_are_independent():
     )
     assert config.getParliamentMajorityPercent() == 60.0
     assert config.getBallotMajorityPercent() == 53.0
+
+
+def test_parliament_majority_margin_seats_from_percent():
+    """parliamentMajorityMarginSeats with PERCENT margin must use ceil(seats * pct / 100).
+
+    Mutant #884: * (pct/100) → / (pct/100) gives 100 / 0.1 = 1000.
+    Mutant #885: * (pct/100) → * (pct*100) gives 100 * 1000 = 100000.
+    Mutant #886: / 100.0 → / 101.0 gives ceil(100 * 10/101) = ceil(9.9) = 10 (same here,
+    but with 101 constituencies / 1% margin: original = 3, mutant = 2).
+
+    50 constituencies (100 seats), 10% margin: ceil(100 * 10/100) = 10.
+    """
+    cc = make_simple_cc(50)
+    config = ElectionConfig(
+        constituencies_config=cc,
+        participating_parties=["A", "B"],
+        parliament_majority_margin=SuperMajorityMargin(10.0, MarginUnit.PERCENT),
+    )
+    assert config.parliamentMajorityMarginSeats == 10
+
+
+def test_parliament_majority_margin_seats_from_percent_101_constituencies():
+    """Kills mutant #886 (/ 101.0 instead of / 100.0): ceil(202 * 1/101) = 2, not 3.
+
+    101 constituencies (202 seats), 1% margin: ceil(202 * 1/100) = ceil(2.02) = 3.
+    Mutant #886: ceil(202 * 1/101) = ceil(2.0) = 2.
+    """
+    cc = make_simple_cc(101)
+    config = ElectionConfig(
+        constituencies_config=cc,
+        participating_parties=["A", "B"],
+        parliament_majority_margin=SuperMajorityMargin(1.0, MarginUnit.PERCENT),
+    )
+    assert config.parliamentMajorityMarginSeats == 3
+
+
+def test_parliament_majority_margin_percent_from_seats_unequal_case():
+    """parliamentMajorityMarginPercent with SEATS margin must use 100 * value / seats.
+
+    Mutant #883 inverts the unit check, taking the PERCENT branch (returns value=5.0).
+    Here margin=5 SEATS with 20 total seats gives 5/20 * 100 = 25.0%, not 5.0%.
+    """
+    cc = make_simple_cc(10)  # 20 total seats
+    config = ElectionConfig(
+        constituencies_config=cc,
+        participating_parties=["A", "B"],
+        parliament_majority_margin=SuperMajorityMargin(5, MarginUnit.SEATS),
+    )
+    assert config.parliamentMajorityMarginPercent == pytest.approx(25.0)
+
+
+def test_ballot_majority_percent_from_seats():
+    """getBallotMajorityPercent with SEATS margin uses 100 * value / seats.
+
+    Mutant #894: 101.0 * value / seats → 50 + 10.1 = 60.1.
+    Mutant #895: 100.0 / value / seats → 50 + 0.1 = 50.1.
+    Mutant #896: 100.0 * value * seats → astronomically large.
+
+    50 constituencies (100 seats), 10-seat ballot margin:
+    50 + 100.0 * 10 / 100 = 60.0%.
+    """
+    cc = make_simple_cc(50)
+    config = ElectionConfig(
+        constituencies_config=cc,
+        participating_parties=["A", "B"],
+        ballot_majority_margin=SuperMajorityMargin(10, MarginUnit.SEATS),
+    )
+    assert config.getBallotMajorityPercent() == pytest.approx(60.0)
+
+
+def test_parliamentary_seats_governing_majority_with_adjustment():
+    """parliamentarySeats for GOVERNING_MAJORITY uses P += 1 when ceil under-counts.
+
+    Mutants #919–922 corrupt the P += 1 adjustment in _get_parliamentary_seats.
+
+    C=11 constituencies, M=55% margin: P = int(200*11/105) = 20.
+    ceil(105*20/100) = ceil(21.0) = 21 < 22 = 2*11 → P += 1 → P = 21.
+
+    Mutant #920 (P = 1): parliamentarySeats = 1.
+    Mutant #921 (P -= 1): parliamentarySeats = 19.
+    Mutant #922 (P += 2): parliamentarySeats = 22.
+    Mutant #919 (< 2/C = 0.18): 21 < 0.18 = False → no increment → parliamentarySeats = 20.
+    """
+    cc = make_simple_cc(11)
+    config = ElectionConfig(
+        constituencies_config=cc,
+        participating_parties=["A", "B"],
+        parliament_majority_margin=SuperMajorityMargin(55.0, MarginUnit.PERCENT),
+        constituency_representation=ConstituencyRepresentation.GOVERNING_MAJORITY,
+    )
+    assert config.parliamentarySeats == 21

@@ -22,7 +22,7 @@ class ElectionResult:
     seats: dict[str, int]
     constituency_assignments: dict[str, str]
     party_constituency_counts: dict[str, int]
-    _plotter: 'ElectionPlotter' = field(init=False, repr=False, default=None)
+    _plotter: 'ElectionPlotter' = field(init=False, repr=False, default=None)  # pragma: no mutate
 
     def __post_init__(self):
         from ipres.election_plotter import ElectionPlotter
@@ -150,7 +150,7 @@ class ElectionResult:
 
         return style
 
-    def plot_seat_share_pie(self, title: Optional[str] = None, group_coalitions: bool = True, min_seats_for_display: int = 5):
+    def plot_seat_share_pie(self, title: Optional[str] = None, group_coalitions: bool = True, min_seats_for_display: int = 5):  # pragma: no mutate
         """Visualisiert die Stimmenverteilung dieser Iteration als Tortendiagramm.
 
         Args:

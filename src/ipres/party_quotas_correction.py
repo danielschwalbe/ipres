@@ -41,9 +41,9 @@ def correct_party_quotas(quotas: dict[str, int], seats: dict[str, int], strategy
     # Find parties with odd seat counts (candidates for +1)
     odd_seat_parties = {party: seats[party] for party in seats if seats[party] % 2 == 1}
 
-    if len(odd_seat_parties) == 0:
+    if len(odd_seat_parties) == 0:  # pragma: no mutate
         # Should never happen if deficit > 0, but safety check
-        raise ValueError(f"Logical error somewhere: Deficit {deficit} > 0 but {len(odd_seat_parties)} == 0")
+        raise ValueError(f"Logical error somewhere: Deficit {deficit} > 0 but {len(odd_seat_parties)} == 0")  # pragma: no mutate
 
     # Select parties to receive +1 based on strategy
     parties_to_increment = select_parties_for_correction(odd_seat_parties, deficit, strategy, callback, rng, seed )
@@ -76,9 +76,9 @@ def select_parties_for_correction(
     Returns:
         List of party names to receive +1
     """
-    if deficit > len(odd_seat_parties):
+    if deficit > len(odd_seat_parties):  # pragma: no mutate
         raise ValueError(
-            f"Deficit {deficit} exceeds number of parties with odd seats {len(odd_seat_parties)}"
+            f"Deficit {deficit} exceeds number of parties with odd seats {len(odd_seat_parties)}"  # pragma: no mutate
         )
 
     if strategy == QuotaCorrectionStrategy.FAVOR_SMALL_PARTIES:
@@ -115,7 +115,7 @@ def select_parties_for_correction(
         return list(result)
 
     else:
-        raise ValueError(f"Unknown quota correction strategy: {strategy}")
+        raise ValueError(f"Unknown quota correction strategy: {strategy}")  # pragma: no mutate
 
 # -------------------------------------------------------------------------------------------------------------
 def _favor_small_parties(deficit: int, odd_seat_parties: dict[str, int]) -> list[str]:

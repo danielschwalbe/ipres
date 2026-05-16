@@ -4,7 +4,8 @@ import pandas as pd
 import pytest
 
 from ipres.vote_matrix_analyzer import (
-    getConstituencyImportanceMatrix
+    VoteMatrixAnalyzer,
+    getConstituencyImportanceMatrix,
 )
 
 def _create_votes_from_relative(relative_votes: pd.DataFrame, total_votes_per_constituency: int = 1000) -> pd.DataFrame:
@@ -116,3 +117,61 @@ def test_getConstituencyImportanceMatrix_balanced_distribution():
         # For party B: r_ij = 0.4, sum = 1.2, M = 3
         # w_ij = 2 * 0.4 / 0.8 = 1.0
         assert math.isclose(importance_matrix.loc[constituency, "B"], 1.0, abs_tol=1e-10)
+
+
+# ---- getRelativeVoteMatrix: empty / error checks ----
+
+def _simple_analyzer() -> VoteMatrixAnalyzer:
+    votes = pd.DataFrame({"A": [600, 400], "B": [300, 700]}, index=["C1", "C2"])
+    return VoteMatrixAnalyzer(votes)
+
+
+def test_relative_vote_matrix_raises_on_empty_dataframe():
+    """Mutants #937 (or→and) and #938 (XX-prefix): empty DataFrame must still raise.
+
+    #937: 'or' → 'and' makes the check False when votes is not None but empty.
+    #938: anchored match fails if message starts with 'XX'.
+    """
+    analyzer = VoteMatrixAnalyzer(pd.DataFrame())
+    with pytest.raises(ValueError, match=r"^No votes available"):
+        analyzer.getRelativeVoteMatrix()
+
+
+def test_relative_vote_matrix_single_vote_constituency():
+    """Mutant #941: replace(0, nan) → replace(1, nan).
+
+    A constituency with exactly 1 total vote must get relative share 1.0,
+    not NaN/0 as the mutant produces (it replaces the denominator 1 with NaN).
+    """
+    votes = pd.DataFrame({"A": [1, 500], "B": [0, 500]}, index=["C1", "C2"])
+    result = VoteMatrixAnalyzer(votes).getRelativeVoteMatrix()
+    assert math.isclose(result.loc["C1", "A"], 1.0, abs_tol=1e-10)
+    assert math.isclose(result.loc["C1", "B"], 0.0, abs_tol=1e-10)
+
+
+# ---- show_relative_vote_matrix ----
+
+def test_show_relative_vote_matrix_returns_dataframe():
+    """Mutant #950: relative_matrix = None → None.round() raises AttributeError."""
+    result = _simple_analyzer().show_relative_vote_matrix()
+    assert isinstance(result, pd.DataFrame)
+
+
+def test_show_relative_vote_matrix_styler_not_none():
+    """Mutant #961: styled = None → returns None instead of a Styler."""
+    result = _simple_analyzer().show_relative_vote_matrix(styler=True)
+    assert result is not None
+
+
+# ---- show_constituency_importance_matrix ----
+
+def test_show_constituency_importance_matrix_returns_dataframe():
+    """Mutant #966: importance_matrix = None → None.round() raises AttributeError."""
+    result = _simple_analyzer().show_constituency_importance_matrix()
+    assert isinstance(result, pd.DataFrame)
+
+
+def test_show_constituency_importance_matrix_styler_not_none():
+    """Mutant #977: styled = None → returns None instead of a Styler."""
+    result = _simple_analyzer().show_constituency_importance_matrix(styler=True)
+    assert result is not None

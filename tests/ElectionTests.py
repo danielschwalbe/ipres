@@ -186,3 +186,114 @@ def test_election_run_callback():
 
         assert len(called_its) == 1
         assert called_its[0] == it
+
+
+# ---- start(votes=...) ----
+
+def test_start_with_votes_injects_votes():
+    """start(votes=...) must inject the given votes into the first round.
+
+    Mutant #1384: with_votes call replaced by current_input = None → Ballot.run(None) crashes.
+    """
+    cc = make_simple_cc()
+    config = ElectionConfig(constituencies_config=cc, participating_parties=["A", "B"])
+    election = Election(electionConfig=config)
+
+    ballot = election.start(votes={"A": 600, "B": 400})
+
+    votes = ballot._vote_matrix.getVotes()
+    assert int(votes.loc["C1", "A"]) == 600
+    assert int(votes.loc["C1", "B"]) == 400
+
+
+# ---- runNextIteration ----
+
+def test_run_next_iteration_starts_when_no_prior_rounds():
+    """runNextIteration on a fresh election starts the first round.
+
+    Mutant #1385: == 0 → != 0 — empty election goes to else branch → None.getNextRoundInput() crashes.
+    Mutant #1386: == 0 → == 1 — same crash (0 != 1 → else branch).
+    """
+    cc = make_simple_cc()
+    config = ElectionConfig(constituencies_config=cc, participating_parties=["A", "B"])
+    election = Election(electionConfig=config)
+
+    result = election.runNextIteration()
+
+    assert isinstance(result, Ballot)
+    assert election.getNumberOfIterations() == 1
+
+
+def test_run_next_iteration_continues_from_last_round():
+    """runNextIteration after a first round continues from that round's output.
+
+    Mutant #1387: iterationInput is None → is not None — inverted None check uses None as input → crash.
+    Mutant #1388: current_input = None → crash.
+    """
+    cc = make_simple_cc()
+    config = ElectionConfig(constituencies_config=cc, participating_parties=["A", "B", "C"])
+    election = Election(electionConfig=config)
+
+    ballot1 = election.start(votes={"A": 400, "B": 350, "C": 250})
+    if ballot1.hasWinner():
+        pytest.skip("First ballot unexpectedly produced a winner.")
+
+    result = election.runNextIteration()
+
+    assert isinstance(result, ElectionRound)
+    assert election.getNumberOfIterations() == 2
+
+
+# ---- iterations property ----
+
+def test_iterations_property_returns_tuple():
+    """election.iterations is a tuple, not a bound method.
+
+    Mutant #1395: @property removed → attribute access returns the method object.
+    """
+    cc = make_simple_cc()
+    config = ElectionConfig(constituencies_config=cc, participating_parties=["A", "B"])
+    election = Election(electionConfig=config)
+
+    assert isinstance(election.iterations, tuple)
+
+
+# ---- getFirstIteration / getLastIteration ----
+
+def test_get_first_iteration_returns_none_when_empty():
+    """getFirstIteration returns None before any round has been run.
+
+    Mutant #1397: > 0 → >= 0 — len([]) >= 0 is always True → IndexError on empty list.
+    """
+    cc = make_simple_cc()
+    config = ElectionConfig(constituencies_config=cc, participating_parties=["A", "B"])
+    election = Election(electionConfig=config)
+
+    assert election.getFirstIteration() is None
+
+
+def test_get_last_iteration_returns_none_when_empty():
+    """getLastIteration returns None before any round has been run.
+
+    Mutant #1401: > 0 → >= 0 — len([]) >= 0 is always True → IndexError on empty list.
+    """
+    cc = make_simple_cc()
+    config = ElectionConfig(constituencies_config=cc, participating_parties=["A", "B"])
+    election = Election(electionConfig=config)
+
+    assert election.getLastIteration() is None
+
+
+# ---- hadOutrightWinner ----
+
+def test_had_outright_winner_raises_when_unfinished():
+    """hadOutrightWinner raises Exception if the election has not concluded.
+
+    Mutant #1414: XX-prefix on error message — anchored '^Election' match fails.
+    """
+    cc = make_simple_cc()
+    config = ElectionConfig(constituencies_config=cc, participating_parties=["A", "B"])
+    election = Election(electionConfig=config)
+
+    with pytest.raises(Exception, match=r"^Election is not finished"):
+        election.hadOutrightWinner()

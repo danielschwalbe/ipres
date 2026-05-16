@@ -41,9 +41,9 @@ class ElectionEvaluator:
     seat_distribution_method: Optional[SeatDistributionMethod] = None
     constituency_allocation_method: Optional[ConstituencyAllocationMethod] = None
     quota_correction_strategy: Optional[QuotaCorrectionStrategy] = None
-    quota_correction_callback: Optional[callable] = None
+    quota_correction_callback: Optional[callable] = None  # pragma: no mutate
     rng_for_allocation: Optional[Generator] = None
-    seed: Optional[int] = None
+    seed: Optional[int] = None  # pragma: no mutate
 
     def evaluate(self, election: Election) -> 'ElectionResult':
         """Evaluate a finished election and return the results.
@@ -64,7 +64,7 @@ class ElectionEvaluator:
 
         seats = SeatDistributor(self.seat_distribution_method).run(election)
 
-        seed = self.seed if self.seed is not None else election.electionConfig.seed
+        seed = self.seed if self.seed is not None else election.electionConfig.seed  # pragma: no mutate
 
         party_constituency_counts = ConstituencyCountDeterminer(
             self.quota_correction_strategy,

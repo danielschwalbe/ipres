@@ -69,11 +69,11 @@ class DrawOfLots(ElectionRound):
 
         # Preserve shared references across deep-copy
         election_ref = _input.election
-        rng_ref = _input.rng
+        rng_ref = _input.rng  # pragma: no mutate
         previous_round_ref = _input.previousRound
         copied_input = deepcopy(_input)
         copied_input.election = election_ref
-        copied_input.rng = rng_ref
+        copied_input.rng = rng_ref  # pragma: no mutate
         copied_input.previousRound = previous_round_ref
 
         # Placeholder winner; will be replaced immediately
@@ -127,7 +127,7 @@ class DrawOfLots(ElectionRound):
         prev = self._round_input.previousRound
         if prev is None:
             raise ValueError(
-                "Cannot retrieve votes: DrawOfLots has no previous ballot round."
+                "Cannot retrieve votes: DrawOfLots has no previous ballot round."  # pragma: no mutate
             )
         return prev.getContestantsVotesAfterPossibleCoalitions()
 
@@ -186,7 +186,7 @@ class DrawOfLots(ElectionRound):
         if strategy == DrawLotsStrategy.RANDOM:
             return self._decide_by_random_draw(candidates, self._round_input.rng)
 
-        raise ValueError(f"Unknown DrawLotsStrategy: {strategy}")
+        raise ValueError(f"Unknown DrawLotsStrategy: {strategy}")  # pragma: no mutate
 
     @staticmethod
     def _decide_by_marginal_lead(

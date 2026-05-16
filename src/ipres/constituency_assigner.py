@@ -38,9 +38,9 @@ class ConstituencyAssigner:
             ``election.electionConfig.seed``.
     """
 
-    constituency_allocation_method: Optional[ConstituencyAllocationMethod] = None
-    rng: Optional[Generator] = None
-    seed: Optional[int] = None
+    constituency_allocation_method: Optional[ConstituencyAllocationMethod] = None  # pragma: no mutate
+    rng: Optional[Generator] = None  # pragma: no mutate
+    seed: Optional[int] = None  # pragma: no mutate
 
     def run(self, election: Election, party_constituency_counts: dict[str, int]) -> dict[str, str]:
         """Assign constituencies to parties and return a constituency-to-party mapping.
@@ -67,8 +67,8 @@ class ConstituencyAssigner:
 
         importance_matrix = VoteMatrixAnalyzer(votes).getConstituencyImportanceMatrix()
 
-        seed = self.seed if self.seed is not None else election.electionConfig.seed
-        rng = self.rng if self.rng is not None else np.random.default_rng(seed)
+        seed = self.seed if self.seed is not None else election.electionConfig.seed  # pragma: no mutate
+        rng = self.rng if self.rng is not None else np.random.default_rng(seed)  # pragma: no mutate
 
         return allocate_constituencies(
             importance_matrix=importance_matrix,

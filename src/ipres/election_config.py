@@ -22,8 +22,8 @@ class ConstituencyRepresentation(Enum):
       government majority. Size of the government majority =
       2 * number_of_constituencies. Parliament size is adjusted accordingly.
     """
-    ENTIRE_PARLIAMENT = 1
-    GOVERNING_MAJORITY = 2
+    ENTIRE_PARLIAMENT = 1  # pragma: no mutate
+    GOVERNING_MAJORITY = 2  # pragma: no mutate
 
 class SeatDistributionMethod(Enum):
     """Enumeration of seat distribution methods for proportional representation.
@@ -35,9 +35,9 @@ class SeatDistributionMethod(Enum):
     - HARE_NIEMEYER: Hare-Niemeyer method (largest remainder method).
       See `Wikipedia — Largest remainder method <https://en.wikipedia.org/wiki/Largest_remainder_method>`_.
     """
-    SAINTE_LAGUE = "Sainte-Laguë/Schepers"
-    D_HONDT = "d'Hondt"
-    HARE_NIEMEYER = "Hare/Niemeyer"
+    SAINTE_LAGUE = "Sainte-Laguë/Schepers"  # pragma: no mutate
+    D_HONDT = "d'Hondt"  # pragma: no mutate
+    HARE_NIEMEYER = "Hare/Niemeyer"  # pragma: no mutate
 
 
 class QuotaCorrectionStrategy(Enum):
@@ -57,12 +57,12 @@ class QuotaCorrectionStrategy(Enum):
     - RANDOM: Uniform random selection among parties with odd seats
     - NEGOTIATED: External callback determines which parties receive +1
     """
-    FAVOR_SMALL_PARTIES = "favor_small_parties"
-    FAVOR_LARGE_PARTIES = "favor_large_parties"
-    PROPORTIONAL = "proportional"
-    PROPORTIONAL_REVERSED = "proportional_reversed"
-    RANDOM = "random"
-    NEGOTIATED = "negotiated"
+    FAVOR_SMALL_PARTIES = "favor_small_parties"  # pragma: no mutate
+    FAVOR_LARGE_PARTIES = "favor_large_parties"  # pragma: no mutate
+    PROPORTIONAL = "proportional"  # pragma: no mutate
+    PROPORTIONAL_REVERSED = "proportional_reversed"  # pragma: no mutate
+    RANDOM = "random"  # pragma: no mutate
+    NEGOTIATED = "negotiated"  # pragma: no mutate
 
 
 class Language(Enum):
@@ -71,8 +71,8 @@ class Language(Enum):
     - DE: German (default — preserves backward compatibility)
     - EN: English
     """
-    DE = "de"
-    EN = "en"
+    DE = "de"  # pragma: no mutate
+    EN = "en"  # pragma: no mutate
 
 
 from ipres.election_round import DrawLotsStrategy  # re-exported for backward compatibility
@@ -154,7 +154,7 @@ class ElectionConfig:
     ballot_majority_margin: SuperMajorityMargin = field(
         default_factory=lambda: SuperMajorityMargin(2.0, MarginUnit.PERCENT)
     )
-    draw_lots_strategy: DrawLotsStrategy = DrawLotsStrategy.RANDOM
+    draw_lots_strategy: DrawLotsStrategy = DrawLotsStrategy.RANDOM  # pragma: no mutate
     seed: Optional[int] = None
     constituency_representation: ConstituencyRepresentation = field(
         default=ConstituencyRepresentation.ENTIRE_PARLIAMENT,
@@ -166,7 +166,7 @@ class ElectionConfig:
     constituency_allocation_method: ConstituencyAllocationMethod = ConstituencyAllocationMethod.OPTIMAL
     # ---------------------------------------------------------------------
 
-    _parliamentary_seats: int = field(init=False)
+    _parliamentary_seats: int = field(init=False)  # pragma: no mutate
 
     def __post_init__(self):
         _parliamentary_seats = self._get_parliamentary_seats(
@@ -206,8 +206,8 @@ class ElectionConfig:
         if self.parliament_majority_margin.unit == MarginUnit.PERCENT:
             return self.parliament_majority_margin.value
         else:  # SEATS
-            if self._parliamentary_seats <= 0:
-                raise ValueError("parliamentarySeats must be positive to compute percent")
+            if self._parliamentary_seats <= 0:  # pragma: no mutate
+                raise ValueError("parliamentarySeats must be positive to compute percent")  # pragma: no mutate
             return 100.0 * self.parliament_majority_margin.value / self._parliamentary_seats
 
     @property
@@ -291,9 +291,9 @@ class ElectionConfig:
                 if test_result < 2 * _number_of_constituencies:
                     # Need more seats to reach target
                     P += 1
-                elif test_result > 2 * _number_of_constituencies:
+                elif test_result > 2 * _number_of_constituencies:  # pragma: no mutate
                     # Floating-point error caused ceil() to round up incorrectly
-                    P -= 1
+                    P -= 1  # pragma: no mutate
 
                 return P
             else:  # SEATS

@@ -70,6 +70,53 @@ def test_contestant_equality():
 
 
 def test_direct_instantiation_raises():
-    """Verify that direct constructor calls raise TypeError."""
-    with pytest.raises(TypeError, match="Use Contestant.from_party"):
-        Contestant("not_a_sentinel", "A", {}, {})
+    """Verify that direct constructor calls raise TypeError.
+
+    Mutant #563: _PRIVATE=None — Contestant(None, ...) no longer raises.
+    Mutants #565, #566: XX-prefix on the two string parts of the error message.
+    Pattern matches the join point "directly. Use" between the two string literals.
+    """
+    with pytest.raises(TypeError, match=r"directly\. Use"):
+        Contestant(None, "A", {}, {})
+
+
+def test_member_vote_weight_raises_for_non_coalition():
+    """getMemberVoteWeight raises ValueError for a single-party contestant.
+
+    Mutant #591: XX-prefix on error message — anchored '^' match fails on 'XX...' prefix.
+    """
+    c = Contestant.from_party("Solo")
+    with pytest.raises(ValueError, match=r"^'Solo' is not a coalition"):
+        c.getMemberVoteWeight("Solo")
+
+
+def test_member_vote_weight_raises_for_unknown_member():
+    """getMemberVoteWeight raises ValueError for a name not in the coalition.
+
+    Mutant #593: XX-prefix on error message — anchored '^' match fails on 'XX...' prefix.
+    """
+    a = Contestant.from_party("A")
+    b = Contestant.from_party("B")
+    coalition = Contestant.as_coalition("AB", [a, b])
+    with pytest.raises(ValueError, match=r"^'C' is not a member"):
+        coalition.getMemberVoteWeight("C")
+
+
+def test_contestant_repr_single_party():
+    """__repr__ for a single-party contestant matches the expected format.
+
+    Mutant #598: XX-prefix/suffix on return value.
+    """
+    c = Contestant.from_party("A")
+    assert repr(c) == "Contestant(party='A')"
+
+
+def test_contestant_repr_coalition():
+    """__repr__ for a coalition contestant matches the expected format.
+
+    Mutant #599: XX-prefix/suffix on return value.
+    """
+    a = Contestant.from_party("A")
+    b = Contestant.from_party("B")
+    coalition = Contestant.as_coalition("AB", [a, b])
+    assert repr(coalition) == "Contestant(coalition='AB', members=['A', 'B'])"

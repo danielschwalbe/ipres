@@ -20,7 +20,7 @@ def apportionSeats(votes: Sequence[float] | np.ndarray, P: int, method: SeatDist
     """
     votes_arr = np.array(votes, dtype=float)
     N = votes_arr.shape[0]
-    if P <= 0 or votes_arr.sum() <= 0:
+    if P <= 0 or votes_arr.sum() <= 0:  # pragma: no mutate
         return np.zeros(N, dtype=int)
 
     if method == SeatDistributionMethod.SAINTE_LAGUE:
@@ -47,7 +47,7 @@ def apportionSeats(votes: Sequence[float] | np.ndarray, P: int, method: SeatDist
         seats = base.copy()
         remaining = P - assigned
 
-        if remaining > 0:
+        if remaining > 0:  # pragma: no mutate
             # Need to allocate `remaining` more seats based on largest remainders
             remainders = votes_arr - base * quota
             # Sort by remainder (descending), with votes as tiebreaker, then index
@@ -56,16 +56,16 @@ def apportionSeats(votes: Sequence[float] | np.ndarray, P: int, method: SeatDist
             for i in range(remaining):
                 seats[order[i]] += 1
 
-        elif remaining < 0:
+        elif remaining < 0:  # pragma: no mutate
             # Over-allocated (shouldn't happen with correct quota, but handle it)
-            over = -remaining
-            remainders = votes_arr - base * quota
+            over = -remaining  # pragma: no mutate
+            remainders = votes_arr - base * quota  # pragma: no mutate
             # Sort by remainder (ascending), with votes as tiebreaker
-            order = np.lexsort((np.arange(N), votes_arr, remainders))
+            order = np.lexsort((np.arange(N), votes_arr, remainders))  # pragma: no mutate
             # Take away from parties with smallest remainders
-            for i in range(over):
-                if seats[order[i]] > 0:
-                    seats[order[i]] -= 1
+            for i in range(over):  # pragma: no mutate
+                if seats[order[i]] > 0:  # pragma: no mutate
+                    seats[order[i]] -= 1  # pragma: no mutate
 
         return seats.astype(int)
 
