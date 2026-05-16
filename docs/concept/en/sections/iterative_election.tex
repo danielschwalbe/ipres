@@ -1,0 +1,433 @@
+\clearpage
+\section{Iterative Proportional Representation with Guaranteed Winner}
+
+\subsection{Procedure Description}
+
+Proportional representation tends to force coalitions because no party receives an absolute
+majority. The more large parties there are, the lower the probability that
+voters clearly prefer one. The iterative electoral procedure proposed below ensures
+that the compulsion to form grudging coalitions with rotten compromises is eliminated. It
+guarantees that a governing majority always emerges in the end. However, it also gives
+voters who chose \enquote{losing parties} in the first round the opportunity in further rounds
+to help determine, in the sense of the lesser evil, who will ultimately govern. This
+distinguishes it from other majority-forming electoral procedures.
+
+\begin{enumerate}
+  \item In the first voting step, a normal proportional election is conducted in which the parties
+    are ordered according to their percentage of votes. If a party receives an
+    absolute majority or if a coalition is formed that has an absolute majority,
+    the procedure is terminated and the party or coalition with the absolute majority has won the election.
+    The \textbf{absolute majority} in this sense is a predefined
+    percentage that is slightly above 50\,\%. It will be set so that the
+    governing party/coalition gets a few seats more than half, so that it
+    still has the majority mathematically even when someone is sick.
+
+  \item If no winner is determined, two cases must be distinguished:
+
+    \begin{enumerate}
+      \item Only two parties were available for selection. This case is again divided into two
+        cases:
+
+        \begin{enumerate}[label=\roman*.]
+          \item It was the first round with this composition. In this case,
+            step~1 is repeated once more.
+
+          \item It is already the second inconclusive round with only two parties. In this
+            case, a random procedure decides, for example minimal percentage
+            differences in the result, or drawing lots.
+        \end{enumerate}
+
+      \item More than two parties were available for selection. In this case, the percentage
+        vote shares are summed up in order, starting with the largest, until a
+        two-thirds majority is reached or just exceeded. This means that at least
+        two-thirds of the voters want at least one of these parties to govern. Now
+        step~1 is executed again, but only with the parties determined in this way. All voters are
+        now allowed to vote again on these parties.
+    \end{enumerate}
+\end{enumerate}
+
+The procedure is repeated until there is a winner. The procedure always terminates
+because the number of parties running for election is reduced in each iteration step,
+until possibly only two parties remain. The idea behind the procedure is that
+people usually also make a decision when they are forced to choose between two
+alternatives --- even if it's only the lesser of two evils. With many
+alternatives, however, one person chooses this, another that. Coalitions, when they
+come from the heart, are preferable to multiple rounds of voting, as they come closest to the will of the voters. However,
+there is no longer the compulsion to form coalitions at any cost just so that someone can govern.
+The parties can consider how their chances would stand in another round of voting
+and possibly seek a coalition partner or not. It may well happen that
+two parties are content-wise close, but are simply two different teams competing
+for the favor of the voters. In this case, a coalition would also be advisable from the voters' perspective.
+
+If in the first round a party or coalition was already able to achieve a governing majority ($\geq$
+absolute majority), it receives a corresponding number of seats allocated in parliament.
+Otherwise, the winner from multiple rounds of voting receives a number of parliamentary seats
+corresponding to the absolute majority. The remaining seats are distributed among the
+other parties according to the original ratio in the first round. This
+ensures that there is always a governing majority, but also that smaller parties in the
+opposition are represented, as long as their vote result is sufficient for at least one representative.
+
+\bigskip
+
+\runinheadul{Example:}
+
+\medskip\noindent
+\begin{tabular}{@{}>{\centering\arraybackslash}b{0.48\textwidth}@{\hspace{0.04\textwidth}}>{\centering\arraybackslash}b{0.48\textwidth}@{}}
+
+  % --- 1st Round ---
+  1st Round
+
+  \medskip
+
+  \begin{tikzpicture}[x=2.5cm, y=0.08cm]
+    \fill[diagrammHG] (0,0) rectangle (1,100);
+    \fill[parteiA] (0,0)     rectangle (1,30);
+    \fill[parteiB] (0,30)    rectangle (1,52.5);
+    \fill[parteiC] (0,52.5)  rectangle (1,72.5);
+    \fill[parteiD] (0,72.5)  rectangle (1,82.5);
+    \fill[parteiE] (0,82.5)  rectangle (1,90.75);
+    \fill[parteiF] (0,90.75) rectangle (1,96.75);
+    \fill[parteiS] (0,96.75) rectangle (1,100);
+    \draw (0,0) rectangle (1,100);
+    % Percentage values inside
+    \node at (0.5,15)    {\small 30\,\%};
+    \node at (0.5,41.25) {\small 22{,}5\,\%};
+    \node at (0.5,62.5)  {\small 20\,\%};
+    \node at (0.5,77.5)  {\small 10\,\%};
+    \node at (0.5,86.6)  {\small 8{,}25\,\%};
+    \node at (0.5,93.75) {\small 6\,\%};
+    % Party abbreviations on the right
+    \node[right] at (1,15)    {A};
+    \node[right] at (1,41.25) {B};
+    \node[right] at (1,62.5)  {C};
+    \node[right] at (1,77.5)  {D};
+    \node[right] at (1,86.6)  {E};
+    \node[right] at (1,93.75) {F};
+    \node[right] at (1,98.4)  {S};
+    % Dimension arrow on the left (y=0 to y=66)
+    \draw (0,0)  -- (-0.25,0);
+    \draw (0,66) -- (-0.25,66);
+    \draw[<->] (-0.25,0) -- (-0.25,66);
+    \node[left] at (-0.3,33) {\small 66\,\%};
+  \end{tikzpicture}
+
+  &
+
+  % --- 2nd Round ---
+  2nd Round
+
+  \medskip
+
+  \begin{tikzpicture}[x=2.5cm, y=0.08cm]
+    \fill[diagrammHG] (0,0) rectangle (1,100);
+    \fill[parteiA] (0,0)  rectangle (1,45);
+    \fill[parteiC] (0,45) rectangle (1,75);
+    \fill[parteiB] (0,75) rectangle (1,100);
+    \draw (0,0) rectangle (1,100);
+    % Percentage values inside
+    \node at (0.5,22.5) {\small 45\,\%};
+    \node at (0.5,60)   {\small 30\,\%};
+    \node at (0.5,87.5) {\small 25\,\%};
+    % Party abbreviations on the right
+    \node[right] at (1,22.5) {A};
+    \node[right] at (1,60)   {C};
+    \node[right] at (1,87.5) {B};
+    % Dimension arrow on the left (y=0 to y=66)
+    \draw (0,0)  -- (-0.25,0);
+    \draw (0,66) -- (-0.25,66);
+    \draw[<->] (-0.25,0) -- (-0.25,66);
+    \node[left] at (-0.3,33) {\small 66\,\%};
+  \end{tikzpicture}
+
+\end{tabular}
+
+\bigskip
+
+\noindent
+\begin{tabular}{@{}>{\centering\arraybackslash}b{0.48\textwidth}@{\hspace{0.04\textwidth}}>{\centering\arraybackslash}b{0.48\textwidth}@{}}
+
+  % --- 3rd Round ---
+  3rd Round
+
+  \medskip
+
+  \begin{tikzpicture}[x=2.5cm, y=0.08cm]
+    \fill[diagrammHG] (0,0) rectangle (1,100);
+    \fill[parteiA] (0,0)    rectangle (1,47.5);
+    \fill[parteiC] (0,47.5) rectangle (1,100);
+    \draw (0,0) rectangle (1,100);
+    % Percentage values inside
+    \node at (0.5,23.75) {\small 47{,}5\,\%};
+    \node at (0.5,73.75) {\small 52{,}5\,\%};
+    % Party abbreviations on the right
+    \node[right] at (1,23.75) {A};
+    \node[right] at (1,73.75) {C};
+    % Dimension arrow on the left (y=0 to y=66)
+    \draw (0,0)  -- (-0.25,0);
+    \draw (0,66) -- (-0.25,66);
+    \draw[<->] (-0.25,0) -- (-0.25,66);
+    \node[left] at (-0.3,33) {\small 66\,\%};
+  \end{tikzpicture}
+
+  &
+
+  % --- Result Distribution ---
+  Result Distribution
+
+  \medskip
+
+  \begin{tikzpicture}[x=2.5cm, y=0.08cm]
+    \fill[diagrammHG] (0,0) rectangle (1,100);
+    \fill[parteiC] (0,0)    rectangle (1,51);
+    \fill[parteiA] (0,51)   rectangle (1,69.3);
+    \fill[parteiB] (0,69.3) rectangle (1,83.1);
+    \fill[parteiD] (0,83.1) rectangle (1,89.2);
+    \fill[parteiE] (0,89.2) rectangle (1,94.3);
+    \fill[parteiF] (0,94.3) rectangle (1,98);
+    \draw (0,0) rectangle (1,100);
+    % Percentage values inside
+    \node at (0.5,25.5)  {\small 51\,\%};
+    \node at (0.5,60.15) {\small 18{,}3\,\%};
+    \node at (0.5,76.2)  {\small 13{,}8\,\%};
+    \node at (0.5,86.15) {\small 6{,}1\,\%};
+    \node at (0.5,91.75) {\small 5{,}1\,\%};
+    \node at (0.5,96.15) {\small 3{,}7\,\%};
+    % Party abbreviations on the right
+    \node[right] at (1,25.5)  {C};
+    \node[right] at (1,60.15) {A};
+    \node[right] at (1,76.2)  {B};
+    \node[right] at (1,86.15) {D};
+    \node[right] at (1,91.75) {E};
+    \node[right] at (1,96.15) {F};
+    % Phantom node for alignment (same width as dimension arrow of other diagrams)
+    \node[opacity=0] at (-0.3,33) {\small 66\,\%};
+  \end{tikzpicture}
+
+\end{tabular}
+
+\bigskip
+
+In the above example, party~C wins the election in the 3rd round, even though A was the
+strongest force in the first round. If A and B had formed a coalition after the first round,
+the election would have been over and A and B would have governed together. But since they had incompatible
+positions or persons, they decided to proceed to the next round.
+Only as many parties participate in the second round as are just necessary to exceed two-thirds
+of the votes. In this case, that was A, B, and C. In the second round, A
+was able to expand its lead and now reaches 45\,\%. Interestingly, C and B have
+switched places, as apparently more of the voters of the parties eliminated in the first round
+were more inclined toward party~C than party~B.
+Since still no party has the absolute majority and coalitions are ruled out,
+the 3rd round comes down to a runoff between A and C. Interestingly, A loses its
+previous leading role in the runoff, as most former B-voters vote for C. C has
+thus won the election and is awarded the absolute majority.
+
+Since this is only an
+awarded absolute majority due to runoffs, the exact percentage
+result of the runoffs is irrelevant: The winner only receives the awarded number of seats. (In
+this example 51\,\%) This rule is important because the runoffs could also end with
+a much larger difference. For example, A could also receive 70\,\% of the votes.
+All other parties would then be absolutely underrepresented, which would not correspond to the actual
+will of the people.
+
+If in the first round a party or coalition were to unite 70\,\% of the votes,
+that would be a different statement. Then 70\,\% of the population really want
+this party/parties to govern, despite the multitude of other options.
+
+Therefore, absolute majorities obtained in the first round may remain unchanged.
+
+\subsection{Rejected Alternative}
+
+Instead of awarding the absolute majority of votes, one could simply grant the
+winner party of the iterative procedure the right to legislate. Why vote at all
+anymore? They win every vote anyway since they have the absolute majority.
+However, this leads to the question of why we need parliaments at all. If the factions always
+vote exactly as their faction leader says anyway, we would indeed no longer need
+parliaments. Then it would be sufficient to form a faction leaders' council, where the
+faction leaders would vote with a certain voting weight. If the
+faction leader of the governing party were also the head of government,
+autocracy would be complete.
+
+But that's not how it is. Parliamentarians can often vote by secret ballot and the
+faction leaders must convince their faction members and cannot
+command them. For some questions, one cannot even rely on one's own party members,
+but must seek allies in other factions. This is exactly as desired,
+so that the power of individuals does not become too great. Important questions should not be
+decided by individuals, but by a group of people.
+
+However, one assumes that people
+with the same basic convictions, as can be assumed from members of a party,
+will usually come to an agreement. However, some questions are also so
+controversially discussed within a party that agreement is not always possible. The larger and more heterogeneous a
+faction is, the more difficult an agreement will generally be.
+
+In view of
+limiting power, it therefore makes sense to build in a compulsion to reach agreement among more people
+as compensation for the increase in power through an iterative election win. This speaks in favor of
+actually awarding the governing party more mandates and not establishing the rule that
+all legislative proposals of the governing party are considered adopted as long as only the entire
+governing faction agrees --- regardless of its size.
+
+\subsection{Mathematical Questions on Iterative Proportional Representation}
+
+\begin{enumerate}
+  \item Does the procedure always terminate?
+  \item Must the cut always be made at $\tfrac{2}{3}$, or would another
+    ratio also be possible?
+\end{enumerate}
+
+Let
+
+\begin{itemize}[label={}]
+  \item $A$ -- the total number of votes cast in a round
+  \item $A_i$ -- the number of votes cast for the $i$-th party in this round,
+    where the parties should be ordered in descending order by their votes. I.e., if
+    party $X$ was the $i$-th party in round $j$, it does not
+    necessarily have to be so again in round $j+1$.
+\end{itemize}
+
+For the relative vote shares $a_i = \frac{A_i}{A}$, the following
+conditions apply in each round, where $r$ ($0 < r < 1$) is the relative cutoff vote number and $s$ is the index of the
+last party entering the next round:
+
+\begin{itemize}[label={}]
+  \item[(I)]   $\displaystyle\sum_{i=1}^{n} a_i = 1$
+    \quad ($n$ -- number of participating parties in this round)
+  \item[(II)]  $a_k \geq a_l$ \quad for $k < l$
+  \item[(III)] $\displaystyle\sum_{i=1}^{s} a_i \geq r$
+  \item[(IV)]  $\displaystyle\sum_{i=1}^{s-1} a_i < r$
+  \item[\phantom{(IV)}] $\forall i: a_i \neq 0$ \quad
+    (Parties without votes are removed from the list)
+\end{itemize}
+
+For the procedure to terminate, it must be shown that the number of parties running for election
+is strictly reduced in each step. We prove a stronger statement: With $n \geq 3$
+parties, at least $\lfloor n(1-r) \rfloor$ parties are eliminated in each step, where
+$\lfloor x \rfloor$ denotes the largest integer $\leq x$ (floor function).
+
+\begin{lemma}
+For the $k$ weakest parties:
+\begin{equation}
+  \sum_{i=n-k+1}^{n} a_i \leq \frac{k}{n}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+  By contradiction. Assumption:
+\begin{equation}
+  \sum_{i=n-k+1}^{n} a_i > \frac{k}{n}
+\end{equation}
+Since the total sum is~1, it follows:
+\begin{equation}
+  \sum_{i=1}^{n-k} a_i = 1 - \sum_{i=n-k+1}^{n} a_i < 1 - \frac{k}{n} = \frac{n-k}{n}
+\end{equation}
+If all $a_i \geq \frac{1}{n}$ for $i \leq n-k$, their sum would be $\geq \frac{n-k}{n}$,
+in contradiction to~(3). Therefore, at least one must be smaller than $\frac{1}{n}$. Since the
+$a_i$ are ordered in descending order, it then applies to all following:
+\begin{equation}
+  a_i < \frac{1}{n} \quad \text{for all } i \geq i^*
+\end{equation}
+In particular for all $k$ last elements: $\displaystyle\sum_{i=n-k+1}^{n} a_i < \frac{k}{n}$
+--- contradiction.
+\end{proof}
+
+\begin{maintheorem}
+At least $\lfloor n(1-r) \rfloor$ parties are eliminated.
+\end{maintheorem}
+
+\begin{proof}
+From the lemma, it follows for the remaining $n-k$ parties:
+\begin{equation}
+  \sum_{i=1}^{n-k} a_i = 1 - \sum_{i=n-k+1}^{n} a_i \geq 1 - \frac{k}{n}
+\end{equation}
+Condition~(III) is thus satisfied for $s = n-k$ if:
+\begin{equation}
+  1 - \frac{k}{n} \geq r \quad \Longleftrightarrow \quad k \leq n(1-r)
+\end{equation}
+Since $k$ must be an integer, at least $\lfloor n(1-r) \rfloor$ parties are eliminated.
+\end{proof}
+
+\runinhead{Conclusions for Specific Cutoff Vote Numbers}
+
+\begin{itemize}
+  \item \textbf{$r = \frac{1}{2}$:} At least $\lfloor \frac{n}{2} \rfloor$
+    parties are eliminated. For $n = 2$, at least $\lfloor 1 \rfloor = 1$ party is eliminated; a
+    special rule for $n = 2$ is not necessary.
+
+  \item \textbf{$r = \frac{2}{3}$:} At least $\lfloor \frac{n}{3} \rfloor$
+    parties are eliminated. For $n = 3$, at least $\lfloor 1 \rfloor = 1$ party is eliminated.
+    For $n = 2$, $\lfloor \frac{2}{3} \rfloor = 0$, i.e., no party is
+    guaranteed to be eliminated~-- a special rule for $n = 2$ is therefore necessary.
+
+  \item \textbf{$r = \frac{3}{4}$:} At least $\lfloor \frac{n}{4} \rfloor$
+    parties are eliminated. For $n = 2$ and $n = 3$, $\lfloor \frac{n}{4} \rfloor = 0$; a
+    special rule is necessary for both cases.
+\end{itemize}
+
+\textbf{In general}: The special rule is needed only for $n = 2$~-- and
+not also for $n = 3$~-- if and only if $\lfloor 3(1-r) \rfloor \geq 1$, i.e., $r \leq \frac{2}{3}$.
+The largest possible value that still satisfies this condition is thus $r = \frac{2}{3}$.
+
+If we were to cut only at three-quarters, for example, we would need a special rule
+already for three parties in the round and not just for two.
+
+This can also be easily visualized:
+
+If three parties are in play that all receive exactly the same number of votes, then we cannot
+apply the procedure because prerequisite~IV is not satisfied. However, if the parties also
+show only minimal vote differences (which can be assumed in elections with many voters and few
+candidates), one party will receive less than one-third of the votes and
+the other two together will thus exceed two-thirds, meaning only the
+two will remain in the next round. But if we were to make the cut at three-quarters, with three
+parties, minimal result differences would by no means let a party fall below one-quarter.
+The results would have to differ significantly, which can happen but doesn't have to.
+If, on the other hand, four parties were in play, minimal result differences would also
+cause a party to be eliminated even with a three-quarter cut.
+
+\subsection{Constitutional Amendments}
+
+For good reason, constitutional amendments may only be made with a particularly large majority, the
+\enquote{constitutional majority}, which in Germany amounts to two-thirds. Constitutional amendments should only be possible with broad social consensus ---
+even across party lines. The two-thirds rule cannot be applied to parliaments with
+an awarded absolute majority, as this would feign a broader social
+consensus than actually exists.
+
+The governing party has received more power in the sense of the
+lesser evil than it is actually entitled to, so that at least someone can
+decide something, even if ultimately perhaps only the second-best solution is implemented.
+At least something is implemented that is coherent.
+
+This principle of the lesser evil should not apply to fundamental questions, however.
+Here, correct decisions must be made, as the consequences of wrong decisions would be too serious.
+
+Therefore, I propose that a constitutional chamber be formed that has the composition
+as determined by the voter in the first round. All constitutional amendments must be
+confirmed with a two-thirds majority in this chamber. If larger cross-party
+agreements are necessary for this, then that's how it is and entirely as intended.
+
+The constitutional chamber can also be used beyond constitutional amendments to make other
+constitutionally relevant decisions, such as the election of
+constitutional judges.
+
+For all constitutionally relevant decisions, it is assumed that the constitution
+is actually already good as it is. Therefore, it is deliberately made difficult to change it,
+so that it is not accidentally made worse. It was once created through broad
+social consensus\footnote{The consensus that led to the formation of the constitution
+of the Federal Republic of Germany may not have come about voluntarily, but
+through a lost war. However, it has subsequently been accepted in principle by millions of West Germans,
+so that one can indeed speak of a society-wide consensus.} and only at least an equally broad social consensus should be able to
+change it again. If it cannot be achieved, then it must remain as it is.
+
+Should an equally large consensus not be achieved for decades, then that's how it is and
+we continue to live within the framework set by the (intellectual) fathers.
+
+The principle only reaches
+limits with constitutional judges who, unlike written constitutions,
+age over time and must be replaced. Therefore, there must also be a procedure for how new
+constitutional judges can be determined who follow in the footsteps of their predecessors, without
+the required two-thirds majority necessarily being achieved.
+
+The most obvious solution is
+actually to let the sitting constitutional judges choose their own successors. They
+should not only be able to propose them, but determine them themselves, unless politics intervenes
+with a two-thirds majority. On their own, they will appoint successors who will
+decide in their spirit.

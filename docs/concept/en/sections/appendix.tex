@@ -1,0 +1,87 @@
+\clearpage
+\section{Appendix: Using the Simulation}
+
+The \href{https://github.com/danielschwalbe/ipres}{simulation} is a project written in the
+\href{https://www.python.org}{Python} programming language. In addition to
+the \textbf{ipres} Python package, it contains many readmes and example notebooks.
+\href{https://jupyter.org}{Jupyter Notebooks} is a technology originating from the Python world
+that allows markdown (documentation) and code to be combined in one file and executed
+interactively. This makes it suitable for demonstrating such electoral procedures, for example. One can
+change parameters and see live how they affect the outcome.
+
+Actually, one would have to start a Jupyter Lab server to execute the notebooks. However, the project
+links to \href{https://mybinder.org/v2/gh/danielschwalbe/ipres/HEAD}{binder}, which
+copies the project into a virtual machine and already runs the Jupyter server there. One just needs
+a bit of patience until the machine has started. Until then, it looks like this:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{screenshots/binder_start.png}
+  \caption{Binder loading the virtual machine}
+\end{figure}
+
+When the machine has booted up, one is greeted by the following screen:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{screenshots/binder_loaded.png}
+  \caption{JupyterLab after startup}
+\end{figure}
+
+To get to the notebooks, one must click on \texttt{notebooks}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{screenshots/binder_loaded_language.png}
+   \caption{Notebooks folder}
+\end{figure}
+
+\clearpage
+
+And then on \texttt{en} to get to the English notebooks.
+
+\begin{figure}[H]
+  \centering
+  \clipbox{0pt {\height-7cm} 0pt 0pt} {\includegraphics[width=0.85\textwidth]{screenshots/notebooks_overview.png}}
+  \caption{English notebooks}
+\end{figure}
+
+Here one can then pick one out, e.g., \texttt{federal\_election.ipynb}.
+
+By clicking on the start arrow, the currently selected cell is executed. Note that the
+cells generally must be executed from top to bottom, because the lower cells
+usually (not always) require the results of the upper cells.
+
+\begin{figure}[H]
+  \centering
+   \clipbox{0pt {\height-7cm} 0pt 0pt}{\includegraphics[width=0.85\textwidth]{screenshots/example_run_cell.png}}
+  \caption{Execution of a notebook cell}
+\end{figure}
+
+\clearpage
+Using the two arrows, one can also execute the entire notebook at once:
+
+\begin{figure}[H]
+  \centering
+  \clipbox{0pt {\height-7cm} 0pt 0pt}{\includegraphics[width=0.85\textwidth]{screenshots/example_run_all.png}}
+  \caption{Execute all cells at once}
+\end{figure}
+
+Then one will be asked whether to restart the kernel.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{screenshots/restart_kernel.png}
+  \caption{Restart kernel}
+\end{figure}
+
+As long as one has not changed anything in the notebook, one can always say yes here. Only if through continued experimentation
+one has brought the variables into a state that cannot be reconstructed from the notebook code, must one know that
+the result will be gone after the kernel restart.
+
+If one wants to change something in the code, one can simply edit the lines and execute them again.
+One could, for example, enter different seeds in the upper cell and would see how other parties
+win.
+
+If one wants to make more extensive changes, one does not necessarily need to
+know Python nowadays. AIs can do that too and are happy to help.

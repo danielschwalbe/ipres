@@ -1,0 +1,70 @@
+% Encoding and Language
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+% Font: Helvetica (like Arial in Google Docs)
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Page format
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+% Mathematics
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{maintheorem}{Main Theorem}
+
+% Diagrams
+\usepackage{tikz}
+\usetikzlibrary{calc, positioning, patterns}
+
+% Colors for bar charts
+\usepackage{xcolor}
+\definecolor{parteiA}{gray}{0.25}
+\definecolor{parteiB}{gray}{0.65}
+\definecolor{parteiC}{RGB}{100,160,220}
+\definecolor{parteiD}{RGB}{80,160,80}
+\definecolor{parteiE}{RGB}{200,60,60}
+\definecolor{parteiF}{RGB}{220,190,40}
+\definecolor{parteiS}{RGB}{160,120,40}
+\definecolor{diagrammHG}{RGB}{210,230,245}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{array}
+
+% Lists
+\usepackage{enumitem}
+
+% Typography
+\usepackage{microtype}
+\usepackage{csquotes}
+\widowpenalty=10000
+\clubpenalty=10000
+\usepackage[ragged]{footmisc}
+\usepackage{needspace}
+\newcommand{\runinhead}[1]{\needspace{3\baselineskip}\textbf{#1}}
+\newcommand{\runinheadul}[1]{\needspace{3\baselineskip}\underline{#1}}
+\AddToHook{cmd/section/before}{\needspace{8\baselineskip}}
+\AddToHook{cmd/subsection/before}{\needspace{7\baselineskip}}
+
+% Hyperlinks
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue]{hyperref}
+
+% Graphics (for screenshots placeholder in appendix)
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{assets/}{../assets/}}
+
+\usepackage{adjustbox}
+
+% Helper macro: Scaling for bar charts (100\% = 8\,cm)
+\newlength{\balkenhoehe}
+\setlength{\balkenhoehe}{8cm}
+\newcommand{\proztocm}[1]{\dimexpr#1\balkenhoehe/100\relax}

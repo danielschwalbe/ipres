@@ -3,6 +3,7 @@ name: Build and deploy docs
 on:
   push:
     branches: [main]
+  pull_request:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -31,11 +32,31 @@ jobs:
           pip install -e .
           pip install sphinx sphinx_rtd_theme sphinx-intl myst-parser
 
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-extra texlive-fonts-recommended texlive-lang-german
+
       - name: Build English docs
         run: cd docs && make html
 
       - name: Build German docs
         run: cd docs && sphinx-build -b html -D language=de source build/html/de
+
+      - name: Build German PDF
+        run: make pdf
+        working-directory: docs/concept/de
+
+      - name: Build English PDF
+        run: make pdf
+        working-directory: docs/concept/en
+
+      - name: Copy PDFs into docs site
+        run: |
+          mkdir -p docs/build/html/concept
+          cp docs/concept/de/dist/*.pdf docs/build/html/concept/
+          cp docs/concept/en/dist/*.pdf docs/build/html/concept/
 
       - uses: actions/configure-pages@v5
 
@@ -45,6 +66,7 @@ jobs:
 
   deploy:
     needs: build
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

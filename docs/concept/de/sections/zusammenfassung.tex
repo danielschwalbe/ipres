@@ -1,0 +1,29 @@
+\section*{Zusammenfassung}
+\addcontentsline{toc}{section}{Zusammenfassung}
+
+Das Dokument entwickelt ein verbessertes Verfahren zur Bundestagswahl aus drei Bausteinen:
+
+\begin{enumerate}
+  \item \textbf{Iteratives Verhältniswahlrecht} --- Aufeinanderfolgende Wahlgänge stellen sicher,
+    dass es immer einen Wahlgewinner gibt, der mindestens von der Hälfte des Volkes gewählt wurde.
+    Proportionalität wird auf die Opposition beschränkt. Koalitionen sind nach wie vor möglich,
+    aber auch ohne sie ist Regierungsfähigkeit sichergestellt.
+
+  \item \textbf{Direkte Wahl der Spitzenkandidaten} --- Jede Partei tritt mit drei
+    Spitzenkandidaten an. Jeder Wähler gibt eine \enquote{Parteienstimme} (bestimmt die
+    Sitzverteilung im Parlament) und eine \enquote{Spitzenkandidatenstimme} ab. Mit der
+    Spitzenkandidatenstimme wählt er den Spitzenkandidaten seiner Partei.
+
+  \item \textbf{Personelle Vertretung jedes Wahlkreises} --- Wähler können nicht mehr direkt
+    bestimmen, welche Partei ihren Wahlkreis vertreten soll. Das wird durch einen Algorithmus
+    festgelegt, der anhand der Parteienstimmenverteilung die relative Wichtigkeit des Wahlkreises
+    für eine Partei ermittelt und die Wahlkreise so Parteien zuweist, dass die relative
+    Gesamtwichtigkeit maximiert wird.
+    Jede Partei muss aber auf Wahlkreisebene drei Abgeordnetenkandidaten stellen. Die Wähler
+    können für jede Partei in ihrem Wahlkreis (nicht nur für die eigene), den ihnen genehm\-sten
+    Abgeordneten bestimmen. Der Abgeordnetenkandidat der zugewiesenen Partei mit den meisten
+    Stimmen gewinnt den Wahlkreis.
+\end{enumerate}
+
+Eine Open-Source-Simulation des Verfahrens steht als
+\href{https://github.com/danielschwalbe/ipres}{GitHub-Projekt} zur Verfügung.

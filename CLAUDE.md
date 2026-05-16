@@ -1,5 +1,11 @@
 # Unit Tests
-- Source the .venv to run unit tests
+- Source the .venv to run unit tests: `source .venv/bin/activate && pytest`
+- Single test file: `pytest tests/AllocationTests.py`
+- With coverage: `pytest --cov=ipres --cov-report=term-missing`
+
+# Documentation
+- Build PDF (German electoral procedure): `cd docs/concept/de && make pdf` → output in `dist/`
+- Build Sphinx HTML: `cd docs && make html` → output in `build/html/`
 
 # Language
 - Document the entire code in English
