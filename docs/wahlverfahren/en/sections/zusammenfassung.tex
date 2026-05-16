@@ -1,0 +1,28 @@
+\section*{Summary}
+\addcontentsline{toc}{section}{Summary}
+
+This document develops an improved electoral procedure for the Bundestag based on three building blocks:
+
+\begin{enumerate}
+  \item \textbf{Iterative Proportional Representation} --- Successive rounds of voting ensure
+    that there is always an election winner who has been elected by at least half of the people.
+    Proportionality is limited to the opposition. Coalitions remain possible,
+    but governmental capability is guaranteed even without them.
+
+  \item \textbf{Direct Election of Lead Candidates} --- Each party runs with three
+    lead candidates. Every voter casts a \enquote{party vote} (which determines the
+    seat distribution in parliament) and a \enquote{lead candidate vote}. With the
+    lead candidate vote, voters select their party's lead candidate.
+
+  \item \textbf{Personal Representation of Each Constituency} --- Voters can no longer directly
+    determine which party should represent their constituency. This is determined by an algorithm
+    that calculates the relative importance of the constituency for each party based on the party vote
+    distribution and assigns constituencies to parties in a way that maximizes the total relative
+    importance.
+    Each party must nominate three candidate representatives at the constituency level. Voters
+    can select the most suitable representative for every party in their constituency (not just their own).
+    The candidate representative of the assigned party with the most votes wins the constituency.
+\end{enumerate}
+
+An open-source simulation of the procedure is available as a
+\href{https://github.com/danielschwalbe/ipres}{GitHub project}.

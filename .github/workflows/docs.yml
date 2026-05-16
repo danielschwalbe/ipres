@@ -48,10 +48,15 @@ jobs:
         run: make pdf
         working-directory: docs/wahlverfahren/de
 
+      - name: Build English PDF
+        run: make pdf
+        working-directory: docs/wahlverfahren/en
+
       - name: Copy PDFs into docs site
         run: |
           mkdir -p docs/build/html/wahlverfahren
           cp docs/wahlverfahren/de/dist/*.pdf docs/build/html/wahlverfahren/
+          cp docs/wahlverfahren/en/dist/*.pdf docs/build/html/wahlverfahren/
 
       - uses: actions/configure-pages@v5
 
