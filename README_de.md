@@ -78,6 +78,41 @@ source .venv/bin/activate
 pytest
 ```
 
+### Mutation Testing
+
+Mutation Testing prüft die Qualität der Unit Tests, indem kleine Änderungen (Mutationen) im Quellcode vorgenommen werden. Überlebt eine Mutation (die Tests schlagen nicht fehl), deutet das auf eine Lücke in den Tests hin.
+
+**Lokal ausführen:**
+
+```bash
+source .venv/bin/activate
+
+# Alle Module testen
+mutmut run
+
+# Nur ein bestimmtes Modul testen (schneller)
+mutmut run --paths-to-mutate src/ipres/apportionment.py
+
+# Ergebnisse anzeigen
+mutmut results
+
+# Details zu überlebenden Mutanten
+mutmut show <id>
+
+# HTML-Report generieren (optional)
+mutmut html
+```
+
+**In GitHub Actions:**
+
+Der Workflow kann manuell über die GitHub Actions UI ausgeführt werden:
+1. Gehe zu "Actions" → "Mutation Testing"
+2. Klicke auf "Run workflow"
+3. Optional: Gib ein spezifisches Modul an (z.B. `apportionment.py`)
+4. Starte den Workflow
+
+Die Ergebnisse und der `.mutmut-cache` werden als Artefakt gespeichert.
+
 ### Dokumentation
 
 Die API-Dokumentation wird mit Sphinx generiert. Abhängigkeiten installieren:
