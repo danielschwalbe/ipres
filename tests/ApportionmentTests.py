@@ -268,6 +268,30 @@ def test_consistency_across_methods():
                 f"Method {method.name} with votes {votes} gave negative seats"
 
 
+def test_sainte_lague_exact_seat_allocation():
+    # Distinguishes correct divisors (1,3,5,...) from (1,4,7,...): with votes=[100,18]
+    # and P=3, quotients 100 > 33.3 > 20 > 18 give A all 3 seats; mutated divisors
+    # produce 100 > 25 > 18, which gives A only 2 seats.
+    seats = apportionSeats([100, 18], 3, SeatDistributionMethod.SAINTE_LAGUE)
+    assert np.array_equal(seats, [3, 0])
+
+
+def test_hare_niemeyer_tiebreaker_larger_votes_wins():
+    """When remainders tie, the party with more votes receives the extra seat."""
+    # votes=[6,4,2], P=3, quota=4: A base=1 rem=2, B base=1 rem=0, C base=0 rem=2.
+    # A and C tie on remainder; A wins because it has more votes (6 > 2).
+    seats = apportionSeats([6, 4, 2], 3, SeatDistributionMethod.HARE_NIEMEYER)
+    assert np.array_equal(seats, [2, 1, 0])
+
+
+def test_hare_niemeyer_extra_seat_by_largest_remainder():
+    """The extra seat must go to the party with the largest fractional remainder."""
+    # votes=[3,2,1], P=2, quota=3: A base=1 rem=0, B base=0 rem=2, C base=0 rem=1.
+    # B has the largest remainder and receives the single extra seat.
+    seats = apportionSeats([3, 2, 1], 2, SeatDistributionMethod.HARE_NIEMEYER)
+    assert np.array_equal(seats, [1, 1, 0])
+
+
 def test_proportionality():
     """Test that seat percentages roughly match vote percentages."""
     votes = np.array([1000, 2000, 3000])
