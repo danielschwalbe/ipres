@@ -4,7 +4,7 @@
 - With coverage: `pytest --cov=ipres --cov-report=term-missing`
 
 # Documentation
-- Build PDF (German electoral procedure): `cd docs/wahlverfahren/de && make pdf` → output in `dist/`
+- Build PDF (German electoral procedure): `cd docs/concept/de && make pdf` → output in `dist/`
 - Build Sphinx HTML: `cd docs && make html` → output in `build/html/`
 
 # Language

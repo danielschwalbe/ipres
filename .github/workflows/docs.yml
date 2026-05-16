@@ -46,17 +46,17 @@ jobs:
 
       - name: Build German PDF
         run: make pdf
-        working-directory: docs/wahlverfahren/de
+        working-directory: docs/concept/de
 
       - name: Build English PDF
         run: make pdf
-        working-directory: docs/wahlverfahren/en
+        working-directory: docs/concept/en
 
       - name: Copy PDFs into docs site
         run: |
-          mkdir -p docs/build/html/wahlverfahren
-          cp docs/wahlverfahren/de/dist/*.pdf docs/build/html/wahlverfahren/
-          cp docs/wahlverfahren/en/dist/*.pdf docs/build/html/wahlverfahren/
+          mkdir -p docs/build/html/concept
+          cp docs/concept/de/dist/*.pdf docs/build/html/concept/
+          cp docs/concept/en/dist/*.pdf docs/build/html/concept/
 
       - uses: actions/configure-pages@v5
 
