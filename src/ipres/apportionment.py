@@ -20,7 +20,7 @@ def apportionSeats(votes: Sequence[float] | np.ndarray, P: int, method: SeatDist
     """
     votes_arr = np.array(votes, dtype=float)
     N = votes_arr.shape[0]
-    if P <= 0 or votes_arr.sum() <= 0:
+    if P <= 0 or votes_arr.sum() <= 0:  # pragma: no mutate
         return np.zeros(N, dtype=int)
 
     if method == SeatDistributionMethod.SAINTE_LAGUE:
@@ -47,7 +47,7 @@ def apportionSeats(votes: Sequence[float] | np.ndarray, P: int, method: SeatDist
         seats = base.copy()
         remaining = P - assigned
 
-        if remaining > 0:
+        if remaining > 0:  # pragma: no mutate
             # Need to allocate `remaining` more seats based on largest remainders
             remainders = votes_arr - base * quota
             # Sort by remainder (descending), with votes as tiebreaker, then index

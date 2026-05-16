@@ -7,6 +7,7 @@ from ipres import (
     ElectionEvaluator, ConstituencyRepresentation, ElectionRoundInput, DrawLotsStrategy,
 )
 from ipres.allocation import ConstituencyAllocationMethod
+from ipres.seat_distributor import SeatDistributor
 
 
 def make_simple_cc(num_constituencies=10, size=10000):
@@ -704,3 +705,14 @@ def test_decisionNeededPartyReduction_without_reduction():
         "Should return False when same number of parties (2) from start to finish"
     assert len(election.getFirstIteration().getParticipatingParties()) == 2
     assert len(election.getLastIteration().getParticipatingParties()) == 2
+
+
+def test_seat_distributor_default_method_is_none():
+    """SeatDistributor() without arguments must default to seat_distribution_method=None,
+    so that run() falls back to election.electionConfig.seat_distribution_method.
+
+    Mutant #1001: default changed to "" — the not-None check passes, run() tries to use
+    "" as the method and fails inside apportionSeats.
+    """
+    distributor = SeatDistributor()
+    assert distributor.seat_distribution_method is None

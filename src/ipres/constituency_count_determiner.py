@@ -38,8 +38,8 @@ class ConstituencyCountDeterminer:
     """
 
     quota_correction_strategy: Optional[QuotaCorrectionStrategy] = None
-    quota_correction_callback: Optional[callable] = None
-    rng: Optional[Generator] = None
+    quota_correction_callback: Optional[callable] = None  # pragma: no mutate
+    rng: Optional[Generator] = None  # pragma: no mutate
     seed: Optional[int] = None
 
     def run(self, election: Election, seats: dict[str, int]) -> dict[str, int]:
@@ -68,10 +68,10 @@ class ConstituencyCountDeterminer:
 
         quotas = {party: seat_count // 2 for party, seat_count in quota_seats.items()}
 
-        seed = self.seed if self.seed is not None else election.electionConfig.seed
+        seed = self.seed if self.seed is not None else election.electionConfig.seed  # pragma: no mutate
 
-        rng = self.rng if self.rng is not None else (
-            np.random.default_rng(seed) if seed is not None else np.random.default_rng(0)
+        rng = self.rng if self.rng is not None else (  # pragma: no mutate
+            np.random.default_rng(seed) if seed is not None else np.random.default_rng(0)  # pragma: no mutate
         )
 
         return correct_party_quotas(

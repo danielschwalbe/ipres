@@ -173,3 +173,57 @@ def test_election_round_run_creates_draw_of_lots_when_lot_required():
 
     assert isinstance(result, DrawOfLots)
     assert result.wasDecidedByLot() is True
+
+
+# ---- Error cases ----
+
+def test_run_requires_previous_round():
+    """DrawOfLots.run raises ValueError when previousRound is None.
+
+    Mutant #794: XX-prefix on error message — anchored '^DrawOfLots' match fails.
+    """
+    cc = make_cc()
+    election = make_election(cc)
+    contestants = contestantsDictFromParties(["A", "B"])
+    inp = ElectionRoundInput(
+        election=election,
+        constituencies_config=cc,
+        contestants=contestants,
+        ballot_majority_percent=55.0,
+    )
+    with pytest.raises(ValueError, match=r"^DrawOfLots requires"):
+        DrawOfLots.run(inp)
+
+
+def test_draw_of_lots_round_number_after_two_ballots():
+    """DrawOfLots is round 3 when preceded by two ballot rounds.
+
+    Mutant #805: += 1 → = 1 (always sets to 1, not 3).
+    Mutant #806: += 1 → -= 1 (gives 1, not 3).
+    Mutant #807: += 1 → += 2 (gives 4, not 3).
+    """
+    cc = make_cc()
+    election = make_election(cc)
+    ballot2 = _run_two_identical_ballots(cc, election, {"A": 50.0, "B": 50.0}, rng_seed=10)
+    lot_inp = _lot_input_from(ballot2, DrawLotsStrategy.RANDOM)
+
+    draw = DrawOfLots.run(lot_inp)
+
+    assert draw.getRoundNumber() == 3
+
+
+def test_random_draw_with_rng_none_uses_python_random():
+    """DrawOfLots with rng=None falls back to random.choice without crashing.
+
+    Mutant #825: 'rng is not None' → 'rng is None' — with rng=None it calls
+    None.choice(...) → AttributeError. Original correctly uses random.choice.
+    """
+    cc = make_cc()
+    election = make_election(cc)
+    ballot2 = _run_two_identical_ballots(cc, election, {"A": 50.0, "B": 50.0}, rng_seed=11)
+    lot_inp = _lot_input_from(ballot2, DrawLotsStrategy.RANDOM)
+    lot_inp.rng = None
+
+    draw = DrawOfLots.run(lot_inp)
+
+    assert draw.getWinner().name in ("A", "B")

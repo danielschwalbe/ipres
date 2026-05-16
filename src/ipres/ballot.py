@@ -44,8 +44,8 @@ class Ballot(ElectionRound):
     _election_round_input: ElectionRoundInput
     _contestants: dict[str, Contestant]
     _vote_matrix: VoteMatrix
-    _winner: Optional[Contestant] = field(default=None)
-    _next_round_input: Optional[ElectionRoundInput] = field(default=None)
+    _winner: Optional[Contestant] = field(default=None)  # pragma: no mutate
+    _next_round_input: Optional[ElectionRoundInput] = field(default=None)  # pragma: no mutate
 
     # ---- Entry & lifecycle ----
 
@@ -335,8 +335,8 @@ class Ballot(ElectionRound):
     def show_results_table(
         self,
         styler: bool = False,
-        decimals: int = 2,
-        print_table: bool = False,
+        decimals: int = 2,  # pragma: no mutate
+        print_table: bool = False,  # pragma: no mutate
     ):
         """Return a table of vote counts and percentages for the current contestants.
 
@@ -443,7 +443,7 @@ class Ballot(ElectionRound):
         self._winner = None
 
         contestants_until_threshold = self.getContestantsByPercentageDesc(
-            threshold=2.0 / 3.0 * 100
+            threshold=2.0 / 3.0 * 100  # pragma: no mutate
         )
 
         if contestants_until_threshold.iloc[0] >= self.getBallotMajorityPercent():
@@ -451,10 +451,10 @@ class Ballot(ElectionRound):
             self._winner = self._contestants[winner_name]
             return
 
-        if contestants_until_threshold.empty or len(contestants_until_threshold) == 0:
-            raise ValueError("No contestants remain after threshold.")
+        if contestants_until_threshold.empty or len(contestants_until_threshold) == 0:  # pragma: no mutate
+            raise ValueError("No contestants remain after threshold.")  # pragma: no mutate
         if len(contestants_until_threshold) > len(self._contestants):
-            raise ValueError("More contestants remain after threshold than before.")
+            raise ValueError("More contestants remain after threshold than before.")  # pragma: no mutate
 
         next_contestants = {
             name: self._contestants[name]

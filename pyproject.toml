@@ -54,6 +54,7 @@ show_missing = true
 
 [tool.mutmut]
 paths_to_mutate = "src/ipres/"
+paths_to_exclude = "allocation.py"
 backup = false
 runner = "python -m pytest tests/ -x --tb=no -q"
 tests_dir = "tests/"

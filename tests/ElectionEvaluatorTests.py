@@ -489,3 +489,55 @@ def test_outright_winner_below_parliament_threshold_gets_assigned_majority():
 
     # Winner is assigned exactly the parliament majority
     assert result.seats['A'] == parliament_majority_seats
+
+
+def test_evaluate_raises_with_correct_message_on_unfinished_election():
+    """evaluate() must raise with a message identifying the unfinished election.
+
+    Mutant #131 changes the message to "XXCannot evaluate...XX", which would not
+    match. The existing test only checks that any Exception is raised; this test
+    pins down the message text.
+    """
+    cc = make_constituencies(['WK1', 'WK2'])
+    config = ElectionConfig(
+        constituencies_config=cc,
+        participating_parties=['A', 'B'],
+        seed=1,
+    )
+    election = Election(electionConfig=config)
+    with pytest.raises(Exception, match=r"^Cannot evaluate"):
+        make_evaluator().evaluate(election)
+
+
+def test_percentages_after_coalitions_sum_to_100():
+    """getContestantsPercentagesAfterPossibleCoalitions must return values in [0, 100] summing to 100.
+
+    Mutant #151 multiplies the relative votes by 101.0 instead of 100.0, making the
+    sum 101.0 and individual values 1 % too large.
+
+    With A holding 70 % of votes: percentages['A'] == 70.0, sum == 100.0.
+    """
+    election = run_election_outright(CC10, {'A': 70, 'B': 30})
+    percentages = election.getLastIteration().getContestantsPercentagesAfterPossibleCoalitions()
+    assert percentages.sum() == pytest.approx(100.0)
+    assert percentages['A'] == pytest.approx(70.0)
+
+
+def test_outright_winner_exactly_at_parliament_threshold_gets_proportional_seats():
+    """Winner whose vote share equals the parliament threshold exactly must get proportional seats.
+
+    Mutant #1027 in seat_distributor.py: ``<`` becomes ``<=`` in
+    ``_winner_needs_assigned_majority``, causing a winner at exactly the threshold
+    to take Path 1 (assigned majority) instead of Path 2 (proportional).
+
+    Setup: 1 constituency (2 total seats), 5 % parliament margin (threshold = 55.0 %).
+    A=55 votes, B=45 votes → A's percentage = 55.0 % == threshold.
+
+    Original (``<``): 55.0 < 55.0 = False → proportional Sainte-Laguë → A=1, B=1.
+    Mutant  (``<=``): 55.0 <= 55.0 = True → assigned majority → A gets ceil(55 %×2)=2, B=0.
+    """
+    cc = make_constituencies(['WK1'])
+    election = run_election_outright(cc, {'A': 55, 'B': 45})
+    result = make_evaluator().evaluate(election)
+    assert result.seats['A'] == 1
+    assert result.seats['B'] == 1

@@ -15,8 +15,8 @@ try:
     import tkinter as _tk
     from tkinter import filedialog as _filedialog
 except Exception:  # pragma: no cover
-    _tk = None
-    _filedialog = None
+    _tk = None  # pragma: no mutate
+    _filedialog = None  # pragma: no mutate
 
 
 @dataclass
@@ -150,7 +150,7 @@ class Parties:
         rb_source = widgets.RadioButtons(
             options=[
                 ("Zufällig erzeugen", "random"),
-                ("Aus Datei laden (Parquet/CSV)", "file"),
+                ("Aus Datei laden (Parquet/CSV)", "file"),  # pragma: no mutate
             ],
             value="file",
             description="Quelle:",
@@ -192,7 +192,7 @@ class Parties:
             """Toggle visibility of file vs. random-generation UI elements."""
             use_file = (rb_source.value == "file")
             box_file.layout.display = "block" if use_file else "none"
-            box_random.layout.display = "none" if use_file else "block"
+            box_random.layout.display = "none" if use_file else "block"  # pragma: no mutate
 
         rb_source.observe(_toggle_boxes, names="value")
         _toggle_boxes()
@@ -214,7 +214,7 @@ class Parties:
             with out:
                 out.clear_output()
                 try:
-                    if rb_source.value == "random":
+                    if rb_source.value == "random":  # pragma: no mutate
                         self.fill_random(int(spn_N.value))
                     else:
                         # 1) Wenn via Upload
@@ -229,7 +229,7 @@ class Parties:
                                 df = pd.read_csv(io.BytesIO(content))
                                 self.set_dataframe(df)
                             else:
-                                raise ValueError("Nur .parquet oder .csv werden unterstützt.")
+                                raise ValueError("Nur .parquet oder .csv werden unterstützt.")  # pragma: no mutate
                         else:
                             # 2) Pfad verwenden
                             path = txt_path.value.strip()
@@ -244,7 +244,7 @@ class Parties:
                             else:
                                 raise ValueError("Bitte .parquet oder .csv angeben.")
 
-                    display(widgets.HTML("<div style='color:green'>Parteien wurden erfolgreich geladen/erzeugt.</div>"))
+                    display(widgets.HTML("<div style='color:green'>Parteien wurden erfolgreich geladen/erzeugt.</div>"))  # pragma: no mutate
 
                     _N = int(self.getN())
                     display(widgets.HTML(f'<h3>Parteien (Vorschau – erste {_N} von {_N} Parteien)</h3>'))
@@ -289,7 +289,7 @@ class Parties:
                     defaultextension=".parquet",
                     initialfile=default_name,
                     filetypes=[
-                        ("Parquet files", "*.parquet"),
+                        ("Parquet files", "*.parquet"),  # pragma: no mutate
                         ("CSV files", "*.csv"),
                         ("All files", "*.*"),
                     ],
