@@ -16,13 +16,13 @@ Wenn der Bundeskanzler sein Amt nicht mehr ausüben sollte, konnte er nach der a
 Wenn tatsächlich nur die Person des Bundeskanzlers ausgetauscht werden soll, sind keine Bundestagswahlen erforderlich. Kanzlerneuwahlen reichen aus.
 
 **Anmerkung:**
-Das konstruktive Misstrauensvotum wurde als Lehre aus der Weimarer Republik eingeführt, da das dort bestehende destruktive Misstrauensvotum als eine Ursache für deren Instabilität gesehen wurde. Viele Parteien waren sich zwar oft in der Ablehnung der jeweils Regierenden einig, konnten sich jedoch selbst nicht auf eine neue Regierung einigen. Da das iterative Wahlsystem Regierungsbildung auch ohne Koalitionen selbst in einer zersplitterten Parteienlandschaft ermöglicht, ist die Gefahr von andauernd zerbrechenden Koalitionen viel geringer, so dass man auf das konstruktive Misstrauensvotum wahrscheinlich verzichten und durch das temporär konstruktive ersetzen kann.
+Das konstruktive Misstrauensvotum wurde als Lehre aus der Weimarer Republik eingeführt, da das dort bestehende destruktive Misstrauensvotum als eine Ursache für deren Instabilität gesehen wurde. Viele Parteien waren sich zwar oft in der Ablehnung der jeweils Regierenden einig, konnten sich jedoch selbst nicht auf eine neue Regierung einigen. Da das iterative Wahlsystem Regierungsbildung auch ohne Koalitionen selbst in einer zersplitterten Parteienlandschaft ermöglicht, ist die Gefahr von andauernd zerbrechenden Koalitionen viel geringer, so dass man auf das konstruktive Misstrauensvotum m. E. verzichten und durch das temporär konstruktive ersetzen kann.
 
 #### Kanzlerneuwahlen
 Bei Kanzlerneuwahlen wird nicht der ganze Bundestag neu gewählt, sondern nur der Bundeskanzler selbst. Das Parteienverhältnis im Bundestag und eine eventuelle Regierungskoalition bleiben bestehen.
  Die Partei, die ursprünglich den Bundeskanzler gestellt hat, muss wieder drei Spitzenkandidaten präsentieren, aus der der Wähler dann einen auswählt. Von den drei Spitzenkandidaten muss wenigstens einer, nämlich der Ersatz für den alten Bundeskanzler, neu sein. Die beiden anderen Kandidaten dürfen aber müssen nicht dieselben wie bei der ursprünglichen Bundestagswahl sein.
 
-### 
+### Bundestagsneuwahlen
 
 Außerdem erfordert die indirekte Wahl des Bundeskanzlers durch das Volk eine andere Ablöseregelung als das konstruktive Misstrauensvotum nach Artikel 67 GG. 
 
