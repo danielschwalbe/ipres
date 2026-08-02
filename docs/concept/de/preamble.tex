@@ -58,6 +58,18 @@
 \AddToHook{cmd/section/before}{\needspace{8\baselineskip}}
 \AddToHook{cmd/subsection/before}{\needspace{7\baselineskip}}
 
+% Vierte Gliederungsebene: \subsubsubsection als eigenständige, nummerierte
+% Überschrift unterhalb von \subsubsection (Alias für \paragraph)
+\let\subsubsubsection\paragraph
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\RedeclareSectionCommand[
+  beforeskip=-1.5ex plus -1ex minus -.2ex,
+  afterskip=1em,
+  font=\normalfont\bfseries,
+  indent=0pt
+]{paragraph}
+
 % Hyperlinks
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue]{hyperref}
 
