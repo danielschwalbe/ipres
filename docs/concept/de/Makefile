@@ -1,4 +1,4 @@
-MAINS = MehrheitsVerhältniswahl ÄnderungenImVerfassungsgefüge
+MAINS = MehrheitsVerhältniswahl VerfassungsgefügeÄnderungen
 TEX   = pdflatex
 OUT   = dist
 

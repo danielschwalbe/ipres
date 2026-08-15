@@ -2,7 +2,7 @@
 
 Set-Location $PSScriptRoot
 
-$mains = @("MehrheitsVerhältniswahl", "ÄnderungenImVerfassungsgefüge")
+$mains = @("MehrheitsVerhältniswahl", "VerfassungsgefügeÄnderungen")
 $outDir = "dist"
 
 if ($Clean) {
