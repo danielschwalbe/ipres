@@ -2,7 +2,7 @@
 
 Set-Location $PSScriptRoot
 
-$main = "MehrheitsVerhältniswahl"
+$mains = @("MehrheitsVerhältniswahl", "ÄnderungenImVerfassungsgefüge")
 $outDir = "dist"
 
 if ($Clean) {
@@ -12,5 +12,7 @@ if ($Clean) {
 }
 
 New-Item -ItemType Directory -Force $outDir | Out-Null
-pdflatex -interaction=nonstopmode "-output-directory=$outDir" "$main.tex"
-pdflatex -interaction=nonstopmode "-output-directory=$outDir" "$main.tex"
+foreach ($main in $mains) {
+    pdflatex -interaction=nonstopmode "-output-directory=$outDir" "$main.tex"
+    pdflatex -interaction=nonstopmode "-output-directory=$outDir" "$main.tex"
+}

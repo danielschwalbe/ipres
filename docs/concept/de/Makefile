@@ -1,13 +1,15 @@
-MAIN = MehrheitsVerhältniswahl
-TEX  = pdflatex
-OUT  = dist
+MAINS = MehrheitsVerhältniswahl ÄnderungenImVerfassungsgefüge
+TEX   = pdflatex
+OUT   = dist
 
 .PHONY: pdf clean
 
 pdf:
 	mkdir -p $(OUT)
-	$(TEX) -interaction=nonstopmode -output-directory=$(OUT) $(MAIN).tex
-	$(TEX) -interaction=nonstopmode -output-directory=$(OUT) $(MAIN).tex
+	@for m in $(MAINS); do \
+		$(TEX) -interaction=nonstopmode -output-directory=$(OUT) "$$m.tex"; \
+		$(TEX) -interaction=nonstopmode -output-directory=$(OUT) "$$m.tex"; \
+	done
 
 clean:
 	rm -rf $(OUT)
