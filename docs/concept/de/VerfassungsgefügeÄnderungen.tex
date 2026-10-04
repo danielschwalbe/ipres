@@ -1,5 +1,14 @@
 \documentclass[a4paper, 12pt, numbers=noenddot, parskip=half]{scrartcl}
+
+% Querverweise in das Dokument MehrheitsVerhältniswahl (muss vor hyperref geladen werden).
+% Externe Labels werden mit dem Präfix MV- referenziert, z.B. \ref{MV-subsec:verfassungsaenderungen}.
+% Voraussetzung: MehrheitsVerhältniswahl wurde vorher gebaut (dist/MehrheitsVerhältniswahl.aux).
+\usepackage{xr-hyper}
 \input{preamble}
+\externaldocument[MV-]{dist/MehrheitsVerhältniswahl}[MehrheitsVerhältniswahl.pdf]
+% Einheitlicher Verweis auf einen Abschnitt in MehrheitsVerhältniswahl (Label ohne MV-Präfix angeben)
+\newcommand{\mvref}[1]{Dokument \enquote{Mehrheitssicherndes Verhältniswahlverfahren},
+  Abschnitt~\ref{MV-#1} \enquote{\nameref{MV-#1}}}
 
 \begin{document}
 
