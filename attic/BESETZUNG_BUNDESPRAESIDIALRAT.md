@@ -62,7 +62,7 @@ Nur Fristen und Verfahrensfragen können einem Bundesgesetz überlassen werden.
 Auch wer den Rat beherrscht, kann nicht nach Belieben Bundeskanzler und Bundestag absetzen.
 Er braucht dafür entweder den gemessenen Volkswillen (Abschnitt „Vorgezogene Bundestags- oder Kanzlerkandidatennachwahlen auf Volkes Wunsch hin“) oder eine stichhaltige Begründung, die das Bundesverfassungsgericht überprüfen kann (Abschnitt „Absetzung des Kanzlers oder Auflösung des Bundestags durch den Bundespräsidialrat“).
 Ein Missbrauch setzt also voraus, dass auch das Bundesverfassungsgericht unterwandert ist.
-Das unterscheidet den Bundespräsidialrat von nicht gewählten Organen in sogenannten Vormundschaftsdemokratien wie Thailand, die gewählte Regierungen nach politischem Gutdünken absetzen.
+Das unterscheidet den Bundespräsidialrat von nicht gewählten Organen in sogenannten Vormundschaftsdemokratien (*tutelary democracy*) wie Thailand, die gewählte Regierungen nach politischem Gutdünken absetzen.
 
 Schwerer zu kontrollieren ist ein unterwanderter Rat, der einfach nichts tut, also kein Veto einlegt und keine Neuwahlen anordnet.
 Gegen eine Mehrheit, die über viele Jahre Zweidrittelmehrheiten in Verfassungskammer und Bundesrat erringt, hilft letztlich keine Besetzungsregel, wie Ungarn und Polen gezeigt haben.
