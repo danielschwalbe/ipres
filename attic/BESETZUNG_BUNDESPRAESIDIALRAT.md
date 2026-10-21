@@ -78,6 +78,8 @@ Die Staffelung verschafft dem Volk aber die Zeit, die nach Abschnitt „Härtung
 
 ## Weitere Literatur aus der Recherche
 
+- Zusammenfassung des Dokuments der Venedig-Kommission CDL-PI(2025)023: [VENEDIG_KOMMISSION_CDL-PI-2025-023.md](VENEDIG_KOMMISSION_CDL-PI-2025-023.md)
+
 - Steven Levitsky, Daniel Ziblatt: *How Democracies Die*, 2018 (Kapern der „Schiedsrichter“: Gerichte, Wahlbehörden, Staatsanwaltschaften)
 - Kim Lane Scheppele: „Autocratic Legalism“, University of Chicago Law Review 85 (2018) (Ungarn: Gericht vergrößern und Zuständigkeiten erweitern)
 - David Landau: „Abusive Constitutionalism“, UC Davis Law Review 47 (2013)
