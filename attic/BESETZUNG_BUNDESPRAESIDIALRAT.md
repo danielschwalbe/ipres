@@ -79,6 +79,7 @@ Die Staffelung verschafft dem Volk aber die Zeit, die nach Abschnitt „Härtung
 ## Weitere Literatur aus der Recherche
 
 - Zusammenfassung des Dokuments der Venedig-Kommission CDL-PI(2025)023: [VENEDIG_KOMMISSION_CDL-PI-2025-023.md](VENEDIG_KOMMISSION_CDL-PI-2025-023.md)
+- Zusammenfassung Lübbe-Wolff, „How to Prevent Blockage of Judicial Appointments“ (Verfassungsblog 2022, Losverfahren als Ersatzmechanismus): [LUEBBE-WOLFF_BLOCKADE_RICHTERWAHL.md](LUEBBE-WOLFF_BLOCKADE_RICHTERWAHL.md)
 
 - Steven Levitsky, Daniel Ziblatt: *How Democracies Die*, 2018 (Kapern der „Schiedsrichter“: Gerichte, Wahlbehörden, Staatsanwaltschaften)
 - Kim Lane Scheppele: „Autocratic Legalism“, University of Chicago Law Review 85 (2018) (Ungarn: Gericht vergrößern und Zuständigkeiten erweitern)
