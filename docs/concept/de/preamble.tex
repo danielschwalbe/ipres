@@ -55,12 +55,17 @@
 \usepackage{needspace}
 \newcommand{\runinhead}[1]{\needspace{3\baselineskip}\textbf{#1}}
 \newcommand{\runinheadul}[1]{\needspace{3\baselineskip}\underline{#1}}
-\AddToHook{cmd/section/before}{\needspace{8\baselineskip}}
-\AddToHook{cmd/subsection/before}{\needspace{7\baselineskip}}
-\AddToHook{cmd/subsubsection/before}{\needspace{5\baselineskip}}
-\AddToHook{cmd/paragraph/before}{\needspace{4\baselineskip}}
+% Mindestplatz vor Überschriften; direkt nach einer Überschrift entfällt er,
+% damit die übergeordnete Überschrift nicht allein am Seitenende stehen bleibt
+\makeatletter
+\newcommand{\headingspace}[1]{\if@nobreak\else\needspace{#1\baselineskip}\fi}
+\makeatother
+\AddToHook{cmd/section/before}{\headingspace{8}}
+\AddToHook{cmd/subsection/before}{\headingspace{7}}
+\AddToHook{cmd/subsubsection/before}{\headingspace{5}}
+\AddToHook{cmd/paragraph/before}{\headingspace{4}}
 % \subsubsubsection ist eine Kopie von \paragraph (siehe unten) und braucht einen eigenen Hook
-\AddToHook{cmd/subsubsubsection/before}{\needspace{4\baselineskip}}
+\AddToHook{cmd/subsubsubsection/before}{\headingspace{4}}
 
 % Vierte Gliederungsebene: \subsubsubsection als eigenständige, nummerierte
 % Überschrift unterhalb von \subsubsection (Alias für \paragraph)
