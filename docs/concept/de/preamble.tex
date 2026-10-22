@@ -57,6 +57,10 @@
 \newcommand{\runinheadul}[1]{\needspace{3\baselineskip}\underline{#1}}
 \AddToHook{cmd/section/before}{\needspace{8\baselineskip}}
 \AddToHook{cmd/subsection/before}{\needspace{7\baselineskip}}
+\AddToHook{cmd/subsubsection/before}{\needspace{5\baselineskip}}
+\AddToHook{cmd/paragraph/before}{\needspace{4\baselineskip}}
+% \subsubsubsection ist eine Kopie von \paragraph (siehe unten) und braucht einen eigenen Hook
+\AddToHook{cmd/subsubsubsection/before}{\needspace{4\baselineskip}}
 
 % Vierte Gliederungsebene: \subsubsubsection als eigenständige, nummerierte
 % Überschrift unterhalb von \subsubsection (Alias für \paragraph)
