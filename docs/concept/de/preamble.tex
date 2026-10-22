@@ -71,16 +71,18 @@
   beforeskip=-1.5ex plus -1ex minus -.2ex,
   afterskip=1em,
   font=\normalfont\bfseries,
-  indent=0pt
+  indent=0pt,
+  tocraggedentrytext=true
 ]{paragraph}
 
-% Hyperlinks
-\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue]{hyperref}
-
 % Grafiken (für Screenshots-Platzhalter im Anhang)
+% float muss vor hyperref geladen werden, sonst entstehen doppelte Sprungziele (figure.N, table.N)
 \usepackage{graphicx}
 \usepackage{float}
 \graphicspath{{assets/}{../assets/}}
+
+% Hyperlinks
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue]{hyperref}
 
 \usepackage{adjustbox}
 
