@@ -1,5 +1,14 @@
 \documentclass[a4paper, 12pt, numbers=noenddot, parskip=half]{scrartcl}
+
+% Cross-references into the document MajorityAssuredPR (must be loaded before hyperref).
+% External labels are referenced with the prefix MV-, e.g. \ref{MV-subsec:constitutional-amendments}.
+% Prerequisite: MajorityAssuredPR has been built first (dist/MajorityAssuredPR.aux).
+\usepackage{xr-hyper}
 \input{preamble}
+\externaldocument[MV-]{dist/MajorityAssuredPR}[MajorityAssuredPR.pdf]
+% Uniform reference to a section in MajorityAssuredPR (give the label without the MV- prefix)
+\newcommand{\mvref}[1]{document \enquote{Majority-Assured Proportional Representation},
+  Section~\ref{MV-#1} \enquote{\nameref{MV-#1}}}
 
 \begin{document}
 
@@ -12,15 +21,13 @@
   \vspace{1cm}
   {\normalsize Daniel Schwalbe\par}
   \vspace{1cm}
-  {\normalsize Draft --- August 2026\par}
+  {\normalsize Draft --- October 2026\par}
   \vfill
 \end{titlepage}
 
 \tableofcontents
 \newpage
 
-% TODO: sections not yet translated from the German original
-% (docs/concept/de/sections/staats_struktur_änderungen.tex,
-% nachfolge_regelungen.tex, demokratisches_gegengewicht.tex)
+\input{sections/constitutional_structure}
 
 \end{document}

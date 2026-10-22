@@ -38,6 +38,7 @@
 % Tables
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{tabularx}
 
 % Lists
 \usepackage{enumitem}
@@ -51,16 +52,39 @@
 \usepackage{needspace}
 \newcommand{\runinhead}[1]{\needspace{3\baselineskip}\textbf{#1}}
 \newcommand{\runinheadul}[1]{\needspace{3\baselineskip}\underline{#1}}
-\AddToHook{cmd/section/before}{\needspace{8\baselineskip}}
-\AddToHook{cmd/subsection/before}{\needspace{7\baselineskip}}
+% Minimum space before headings; skipped directly after another heading,
+% so that the parent heading is not left alone at the bottom of a page
+\makeatletter
+\newcommand{\headingspace}[1]{\if@nobreak\else\needspace{#1\baselineskip}\fi}
+\makeatother
+\AddToHook{cmd/section/before}{\headingspace{8}}
+\AddToHook{cmd/subsection/before}{\headingspace{7}}
+\AddToHook{cmd/subsubsection/before}{\headingspace{5}}
+\AddToHook{cmd/paragraph/before}{\headingspace{4}}
+% \subsubsubsection is a copy of \paragraph (see below) and needs its own hook
+\AddToHook{cmd/subsubsubsection/before}{\headingspace{4}}
 
-% Hyperlinks
-\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue]{hyperref}
+% Fourth heading level: \subsubsubsection as a separate, numbered
+% heading below \subsubsection (alias for \paragraph)
+\let\subsubsubsection\paragraph
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\RedeclareSectionCommand[
+  beforeskip=-1.5ex plus -1ex minus -.2ex,
+  afterskip=1em,
+  font=\normalfont\bfseries,
+  indent=0pt,
+  tocraggedentrytext=true
+]{paragraph}
 
 % Graphics (for screenshots placeholder in appendix)
+% float must be loaded before hyperref, otherwise link destinations are duplicated (figure.N, table.N)
 \usepackage{graphicx}
 \usepackage{float}
 \graphicspath{{assets/}{../assets/}}
+
+% Hyperlinks
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue]{hyperref}
 
 \usepackage{adjustbox}
 
@@ -68,3 +92,10 @@
 \newlength{\balkenhoehe}
 \setlength{\balkenhoehe}{8cm}
 \newcommand{\proztocm}[1]{\dimexpr#1\balkenhoehe/100\relax}
+
+% Cross-references with automatic names, e.g. \cref{subsec:...} -> "Section 5.5"
+% (must be loaded after hyperref and amsthm, hence at the end of the preamble)
+\usepackage[english,capitalise,nameinlink]{cleveref}
+% \subsubsubsection is an alias for \paragraph, for which cleveref has no name
+\crefname{paragraph}{Section}{Sections}
+\Crefname{paragraph}{Section}{Sections}
