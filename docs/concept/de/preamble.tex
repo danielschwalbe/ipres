@@ -84,3 +84,10 @@
 \newlength{\balkenhoehe}
 \setlength{\balkenhoehe}{8cm}
 \newcommand{\proztocm}[1]{\dimexpr#1\balkenhoehe/100\relax}
+
+% Querverweise mit automatischer Bezeichnung, z.B. \cref{subsec:...} -> "Abschnitt 5.5"
+% (muss nach hyperref und amsthm geladen werden, daher am Ende der Präambel)
+\usepackage[ngerman,nameinlink]{cleveref}
+% \subsubsubsection ist ein Alias für \paragraph, dafür kennt cleveref keinen Namen
+\crefname{paragraph}{Abschnitt}{Abschnitte}
+\Crefname{paragraph}{Abschnitt}{Abschnitte}
