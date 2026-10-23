@@ -19,6 +19,19 @@ Eine ausführliche Beschreibung des Verfahrens findet sich in der [Einführung](
 
 ---
 
+## Diskussionspapiere
+
+Die Konzepte hinter dem Projekt gibt es auch als Diskussionspapiere (PDF):
+
+| Papier | Deutsch | Englisch |
+|--------|---------|----------|
+| Mehrheitssicherndes Verhältniswahlverfahren | [PDF](https://danielschwalbe.github.io/ipres/concept/MehrheitsVerh%C3%A4ltniswahl.pdf) | [PDF](https://danielschwalbe.github.io/ipres/concept/MajorityAssuredPR.pdf) |
+| Vorschläge zur Änderung des Verfassungsgefüges | [PDF](https://danielschwalbe.github.io/ipres/concept/Verfassungsgef%C3%BCge%C3%84nderungen.pdf) | [PDF](https://danielschwalbe.github.io/ipres/concept/ConstitutionalStructureReform.pdf) |
+
+Die PDFs werden bei jedem Push auf den `main`-Branch aus den LaTeX-Quellen in `docs/concept/` neu gebaut.
+
+---
+
 ## Die Simulation
 
 ### Projektstruktur
@@ -39,10 +52,10 @@ ipres/
 │   └── en/             # Englische Notebooks
 ├── tests/              # Unit Tests
 ├── docs/               # Sphinx-Dokumentation (API-Referenz + Konzepte)
+│   └── concept/        # Diskussionspapiere (LaTeX-Quellen)
 ├── data/
 │   ├── bundestagswahl/ # Echte BTW-Ergebnisse (1949–2025, kerg-Format)
 │   └── examples/       # Beispieldaten
-├── concept/            # Ursprüngliches Konzeptdokument (möglicherweise veraltet)
 └── attic/              # Notizen und Schnipsel (nicht Teil des Projekts)
 ```
 

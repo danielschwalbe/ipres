@@ -19,6 +19,19 @@ A detailed description of the procedure can be found in the [Introduction](docs/
 
 ---
 
+## Discussion Papers
+
+The concepts behind the project are also available as discussion papers (PDF):
+
+| Paper | English | German |
+|-------|---------|--------|
+| Majority-Assured Proportional Representation | [PDF](https://danielschwalbe.github.io/ipres/concept/MajorityAssuredPR.pdf) | [PDF](https://danielschwalbe.github.io/ipres/concept/MehrheitsVerh%C3%A4ltniswahl.pdf) |
+| Constitutional Structure Reform | [PDF](https://danielschwalbe.github.io/ipres/concept/ConstitutionalStructureReform.pdf) | [PDF](https://danielschwalbe.github.io/ipres/concept/Verfassungsgef%C3%BCge%C3%84nderungen.pdf) |
+
+The PDFs are rebuilt from the LaTeX sources in `docs/concept/` on every push to the `main` branch.
+
+---
+
 ## The Simulation
 
 ### Project Structure
@@ -39,10 +52,10 @@ ipres/
 │   └── en/             # English notebooks
 ├── tests/              # Unit tests
 ├── docs/               # Sphinx documentation (API reference + concepts)
+│   └── concept/        # Discussion papers (LaTeX sources)
 ├── data/
 │   ├── bundestagswahl/ # Real federal election results (1949–2025, kerg format)
 │   └── examples/       # Example data
-├── concept/            # Original concept document (may be outdated)
 └── attic/              # Notes and snippets (not part of the project)
 ```
 
