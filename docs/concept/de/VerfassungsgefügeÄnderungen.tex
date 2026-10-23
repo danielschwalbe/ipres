@@ -1,0 +1,35 @@
+\documentclass[a4paper, 12pt, numbers=noenddot, parskip=half]{scrartcl}
+
+% Querverweise in das Dokument MehrheitsVerhältniswahl (muss vor hyperref geladen werden).
+% Externe Labels werden mit dem Präfix MV- referenziert, z.B. \ref{MV-subsec:verfassungsaenderungen}.
+% Voraussetzung: MehrheitsVerhältniswahl wurde vorher gebaut (dist/MehrheitsVerhältniswahl.aux).
+\usepackage{xr-hyper}
+\input{preamble}
+% PDF-Betrachter lesen den Dateinamen im Link als PDFDocEncoding (Latin-1), nicht als UTF-8.
+% Deshalb steht das "ä" im Link als Byte ^^e4; ein direkt geschriebenes "ä" ergäbe "Ã¤".
+\externaldocument[MV-]{dist/MehrheitsVerhältniswahl}[MehrheitsVerh\string^^e4ltniswahl.pdf]
+% Einheitlicher Verweis auf einen Abschnitt in MehrheitsVerhältniswahl (Label ohne MV-Präfix angeben)
+\newcommand{\mvref}[1]{Dokument \enquote{Mehrheitssicherndes Verhältniswahlverfahren},
+  Abschnitt~\ref{MV-#1} \enquote{\nameref{MV-#1}}}
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{6cm}
+  {\LARGE Vorschläge zur Änderung des Verfassungsgefüges\par}
+  \vspace{2cm}
+  {\normalsize Ein Diskussionsbeitrag\par}
+  \vspace{1cm}
+  {\normalsize Daniel Schwalbe\par}
+  \vspace{1cm}
+  {\normalsize Entwurf --- Oktober 2026\par}
+  \vfill
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\input{sections/staats_struktur_änderungen}
+
+\end{document}

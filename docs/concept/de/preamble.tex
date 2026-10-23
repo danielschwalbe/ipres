@@ -1,0 +1,101 @@
+% Kodierung und Sprache
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+% Schrift: Helvetica (wie Arial in Google Docs)
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Seitenformat
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+% Mathematik
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{hilfssatz}{Hilfssatz}
+\newtheorem{hauptsatz}{Hauptsatz}
+
+% Diagramme
+\usepackage{tikz}
+\usetikzlibrary{calc, positioning, patterns}
+
+% Farben für Balkendiagramme
+\usepackage{xcolor}
+\definecolor{parteiA}{gray}{0.25}
+\definecolor{parteiB}{gray}{0.65}
+\definecolor{parteiC}{RGB}{100,160,220}
+\definecolor{parteiD}{RGB}{80,160,80}
+\definecolor{parteiE}{RGB}{200,60,60}
+\definecolor{parteiF}{RGB}{220,190,40}
+\definecolor{parteiS}{RGB}{160,120,40}
+\definecolor{diagrammHG}{RGB}{210,230,245}
+
+% Tabellen
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+
+% Listen
+\usepackage{enumitem}
+
+% Typografie
+\usepackage{microtype}
+\usepackage{csquotes}
+\widowpenalty=10000
+\clubpenalty=10000
+\usepackage[ragged]{footmisc}
+\usepackage{needspace}
+\newcommand{\runinhead}[1]{\needspace{3\baselineskip}\textbf{#1}}
+\newcommand{\runinheadul}[1]{\needspace{3\baselineskip}\underline{#1}}
+% Mindestplatz vor Überschriften; direkt nach einer Überschrift entfällt er,
+% damit die übergeordnete Überschrift nicht allein am Seitenende stehen bleibt
+\makeatletter
+\newcommand{\headingspace}[1]{\if@nobreak\else\needspace{#1\baselineskip}\fi}
+\makeatother
+\AddToHook{cmd/section/before}{\headingspace{8}}
+\AddToHook{cmd/subsection/before}{\headingspace{7}}
+\AddToHook{cmd/subsubsection/before}{\headingspace{5}}
+\AddToHook{cmd/paragraph/before}{\headingspace{4}}
+% \subsubsubsection ist eine Kopie von \paragraph (siehe unten) und braucht einen eigenen Hook
+\AddToHook{cmd/subsubsubsection/before}{\headingspace{4}}
+
+% Vierte Gliederungsebene: \subsubsubsection als eigenständige, nummerierte
+% Überschrift unterhalb von \subsubsection (Alias für \paragraph)
+\let\subsubsubsection\paragraph
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\RedeclareSectionCommand[
+  beforeskip=-1.5ex plus -1ex minus -.2ex,
+  afterskip=1em,
+  font=\normalfont\bfseries,
+  indent=0pt,
+  tocraggedentrytext=true
+]{paragraph}
+
+% Grafiken (für Screenshots-Platzhalter im Anhang)
+% float muss vor hyperref geladen werden, sonst entstehen doppelte Sprungziele (figure.N, table.N)
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{assets/}{../assets/}}
+
+% Hyperlinks
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue]{hyperref}
+
+\usepackage{adjustbox}
+
+% Hilfsmakro: Skalierung für Balkendiagramme (100\% = 8\,cm)
+\newlength{\balkenhoehe}
+\setlength{\balkenhoehe}{8cm}
+\newcommand{\proztocm}[1]{\dimexpr#1\balkenhoehe/100\relax}
+
+% Querverweise mit automatischer Bezeichnung, z.B. \cref{subsec:...} -> "Abschnitt 5.5"
+% (muss nach hyperref und amsthm geladen werden, daher am Ende der Präambel)
+\usepackage[ngerman,nameinlink]{cleveref}
+% \subsubsubsection ist ein Alias für \paragraph, dafür kennt cleveref keinen Namen
+\crefname{paragraph}{Abschnitt}{Abschnitte}
+\Crefname{paragraph}{Abschnitt}{Abschnitte}
