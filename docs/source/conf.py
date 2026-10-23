@@ -5,6 +5,7 @@
 
 import sys
 from pathlib import Path
+from sphinx.util.nodes import process_only_nodes
 sys.path.insert(0, str(Path(__file__).parents[2] / "src"))
 
 # -- Project information -----------------------------------------------------
@@ -50,8 +51,15 @@ def _on_builder_inited(app):
         app.config.exclude_patterns.append('de')
 
 
+def _on_doctree_read(app, doctree):
+    # Resolve 'only' blocks when reading; otherwise toctrees with external links
+    # from the other language's block still show up in the navigation
+    process_only_nodes(doctree, app.tags)
+
+
 def setup(app):
     app.connect('builder-inited', _on_builder_inited)
+    app.connect('doctree-read', _on_doctree_read)
 
 
 # -- Options for HTML output -------------------------------------------------
