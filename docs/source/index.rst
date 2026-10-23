@@ -49,6 +49,7 @@ IPRES – Iterative Proportional Representation Election Simulation
       :caption: Concepts:
 
       en/introduction
+      en/global_configuration
       en/iterative_proportional_election
       en/seat_allocation
       en/constituency_count_determination
